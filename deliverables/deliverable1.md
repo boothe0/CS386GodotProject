@@ -76,28 +76,60 @@ Quotes:
 
 Assessment: Must have / Nice to have / Don’t care
 ### Interview 7
-Who:
+Who: Mac Carter
 
-When:
+When: 1/31/25
 
-Customer Segment:
+Customer Segment: Action-adventure game enthusiasts, enjoys narrative-driven experiences
 
 Key Insights:
+Players enjoy strong narratives but feel the traditional action-adventure structure can be predictable.
+
+Fast-paced, arena-style combat is appealing, especially if it integrates well with the storytelling.
+
+Players are looking for games that respect their time while still offering depth and engagement.
+
+A unique gameplay loop is attractive as long as it maintains the storytelling traditions of the genre.
 
 Quotes:
+"If the arenas are unique and there’s an engaging story pushing me forward, that would hook me."
+
+"Sometimes I feel like I know exactly what’s going to happen next because I’ve played similar games before."
+
+"Something that respects my time but still has depth."
 
 Assessment: Must have / Nice to have / Don’t care
+Must-have: Engaging combat, meaningful story, rewarding progression system
+Nice-to-have: Customization, co-op, unique art style
+Don’t care: Large open-world exploration, grinding for progression
+
 ### Interview 8
-Who:
+Who: Melanie Nagel
 
-When:
+When: 2/1/25
 
-Customer Segment:
+Customer Segment: Casual gamers looking for a more engaging, plot driven experience
 
 Key Insights:
+Casual gamers want a game that gets to the action quickly without long introductory sections.
+
+Arena-based combat is appealing if it still integrates a strong story.
+
+Time efficiency is an important factor—games that allow for quick, engaging sessions are preferable.
+
+Players are open to innovation in gameplay style, as long as the fundamentals (fun combat and story) are strong.
 
 Quotes:
+"If a game has a good story but takes too long to get to the fun parts, I tend to lose interest."
+
+"If it gives me something different than what’s already out there, I’d definitely want to try it."
+
+"Something that’s fun in shorter bursts but still immersive would be perfect."
 
 Assessment: Must have / Nice to have / Don’t care
+Must-have: Quick and engaging gameplay, strong story, smooth mechanics
+Nice-to-have: Multiplayer, character classes
+Don’t care: Large open-world exploration, side quests for XP
+
 ## Refined Value Statement
 To be completed after interviews are done…
