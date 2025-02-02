@@ -16,17 +16,17 @@ Quotes:
 
 Assessment: Must have / Nice to have / Don’t care
 ### Interview 2
-Who:
+Who: Max Anthony
 
-When:
+When: 2/1/25
 
-Customer Segment:
+Customer Segment: Huge fan of RTS games, strategy games, tactical shooters, soulslikes
 
-Key Insights:
+Key Insights: Enjoys layers in combat and gameplay, likes trail and error, feels that without alternate strategies games get boring
 
-Quotes:
+Quotes: "I'm not a fan of roguelite games usually because the entire replayable part is usually only available if you know what you're doing, so there's no way to really learn and get better other than dying a bunch and hoping you eventually figure it out"
 
-Assessment: Must have / Nice to have / Don’t care
+Assessment: Must have / Nice to have / **Don’t care**
 ### Interview 3
 Who: Audrey Miller
 
