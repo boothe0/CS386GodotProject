@@ -3,7 +3,12 @@ extends CharacterBody2D
 const SPEED = 150
 @onready var animated_sprite = $AnimatedSprite2D  # Get the sprite node
 var projectile_scene = preload("res://scenes/projectile.tscn")
-var health = 5
+@export var health = 5
+signal health_update
+
+# initialization calls go here
+func _ready():
+	health_update.emit()
 
 func _physics_process(delta):
 	var direction = Vector2.ZERO
@@ -50,6 +55,7 @@ func shoot():
 
 func take_damage(amount):
 	health -= amount
+	health_update.emit()
 	print("Player health: ", health)
 	if health <= 0:
 		die()
@@ -57,3 +63,4 @@ func take_damage(amount):
 func die():
 	print("Player died")
 	queue_free()
+	
