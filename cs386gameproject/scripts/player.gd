@@ -2,8 +2,13 @@ extends CharacterBody2D
 
 const SPEED = 150
 @onready var animated_sprite = $AnimatedSprite2D  # Get the sprite node
+@onready var health_bar = $"../PlayerUI/HealthBar"
 var projectile_scene = preload("res://scenes/projectile.tscn")
 var health = 5
+
+# initialization calls go here
+func _ready():
+	health_bar.max_value = health
 
 func _physics_process(delta):
 	var direction = Vector2.ZERO
@@ -50,6 +55,7 @@ func shoot():
 
 func take_damage(amount):
 	health -= amount
+	health_bar.value = health # update health bar
 	print("Player health: ", health)
 	if health <= 0:
 		die()
@@ -57,3 +63,4 @@ func take_damage(amount):
 func die():
 	print("Player died")
 	queue_free()
+	
