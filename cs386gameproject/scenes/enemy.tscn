@@ -1,7 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://d1he61wxuea23"]
+[gd_scene load_steps=23 format=3 uid="uid://d1he61wxuea23"]
 
-[ext_resource type="Script" path="res://scripts/enemy_detection.gd" id="1_hfuff"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_hfuff"]
 [ext_resource type="Texture2D" uid="uid://sjiaenrl1wqh" path="res://assets/16x16 Magical Forest Asset Pack/Characters/GoblinCharacter-Idle.png" id="2_wqalq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bstlm"]
+radius = 7.0
+height = 18.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u3asi"]
 atlas = ExtResource("2_wqalq")
@@ -158,15 +162,20 @@ animations = [{
 "speed": 4.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ujonq"]
-radius = 6.0
-height = 16.0
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_jof74"]
 radius = 70.0
 
-[node name="Enemy" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_yg8bk"]
+radius = 11.0
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_hfuff")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CapsuleShape2D_bstlm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ftuvv")
@@ -174,13 +183,18 @@ animation = &"walk_down"
 autoplay = "idle_down"
 frame_progress = 0.988216
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_ujonq")
-
 [node name="DetectionArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource("CircleShape2D_jof74")
 
+[node name="AttackArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+shape = SubResource("CircleShape2D_yg8bk")
+
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
