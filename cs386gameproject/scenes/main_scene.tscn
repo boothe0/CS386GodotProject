@@ -72,7 +72,7 @@ position = Vector2(416, 165)
 
 [node name="PlayerUI" type="CanvasLayer" parent="."]
 
-[node name="HealthBar" type="ProgressBar" parent="PlayerUI"]
+[node name="HealthBar" type="ProgressBar" parent="PlayerUI" node_paths=PackedStringArray("player")]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -87,3 +87,4 @@ max_value = 10.0
 value = 10.0
 show_percentage = false
 script = ExtResource("4_d7btm")
+player = NodePath("../../Player")
