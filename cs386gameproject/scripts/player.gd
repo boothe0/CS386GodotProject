@@ -10,7 +10,7 @@ signal health_update
 func _ready():
 	health_update.emit()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = Vector2.ZERO
 
 	if Input.is_action_pressed("move_right"):
