@@ -23,4 +23,37 @@ the game
 The game should have a distinct opening music theme and menu. Could make music using online software.
 - Should have a start button and an animation when starting up the game to showcase the title.
 
+## Setting
+The current proposed setting is the ancient Greek underworld, with the player beginning at the entrance to the underworld and progressing deeper into different locations throughout the game (ex: the River Styx, Asphodel, the gates of horn and ivory).
 
+## Characters
+### Player Character
+- Backstory: 
+- Motivation: 
+- Personality: 
+### Additional Characters
+- Could be characters from Greek mythology that the player character can interact with and receive advice or warnings from between the arena fights (ex: Thanatos, Charon, Hades)
+- Likewise, the enemies the player battles could be mythological spirits and monsters such as the Furies, Cerberus, and the oneiroi
+
+## Game Progression
+- Can change this structure, this is just a very basic outline to start with
+### Opening Scene
+- This scene should introduce the plot and involve the player's descent into the underworld, providing a compelling introduction while not taking up too much time
+### Level 1:
+- Arena Setting: 
+- Enemies: 
+- Attacks: 
+- Outcomes: 
+### Interlude Scene
+- A brief scene to provide more information about the player and story while moving the player to the next level
+### Level 2: 
+- Levels beyond 1 could include different sublevels, depending on the outcome of the previous level
+- Arena Setting: 
+- Enemies: 
+- Attacks: 
+- Outcomes:
+
+- ... To be continued, depending on how much we have time to implement
+
+## Endings
+- Could feature different stories and artwork so the player is compelled to keep playing to achieve unique endings
