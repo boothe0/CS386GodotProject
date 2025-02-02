@@ -52,29 +52,33 @@ Quotes:
 
 Assessment: Must have / Nice to have / Don’t care
 ### Interview 5
-Who:
+Who: Audrey Miller
 
-When:
+When: 2/1/25
 
-Customer Segment:
+Customer Segment: Enjoys story over gameplay and especially games like Red Dead Redemption and Firewatch.
 
-Key Insights:
+Key Insights: When games have nature elements it increases interest. Art style and direction are important to if the game captures interest.
 
-Quotes:
+Quotes: “I would say there is more gameplay but the cutscenes are good quality when they are there.” “I like to see my characters well”
 
-Assessment: Must have / Nice to have / Don’t care
+Assessment: Must have / Nice to have / Don’t care Must have: Nature, Good story. Nice to have: Good gameplay and atmosphere, 
+seeing the character well. Don’t care: About the perspective of the game if it’s in first person, top down or third person.
+
 ### Interview 6
-Who:
+Who: Willam Merritt 
 
-When:
+When: 2/1/25
 
-Customer Segment:
+Customer Segment: Competitive gamer but enjoys several action games like Hades, Risk of Rain 2
+and others.
 
-Key Insights:
+Key Insights: There has to be good game presentation to get him interested and there should be good connections between the environment and the story.
 
-Quotes:
+Quotes: “Cyberpunk is really the genre that is missing something for me but fantasy games like final fantasy also touch on this idea”
 
-Assessment: Must have / Nice to have / Don’t care
+Assessment: Must have / Nice to have / Don’t care Must have: Good characters, Replayability. Nice to have: Somehow connected to cyberpunk/futuristic setting. Dont care: About how long the game is and the perspective the game is played in.
+
 ### Interview 7
 Who: Mac Carter
 
