@@ -28,31 +28,6 @@ Quotes:
 
 Assessment: Must have / Nice to have / Don’t care
 ### Interview 3
-Who:
-
-When:
-
-Customer Segment:
-
-Key Insights:
-
-Quotes:
-
-Assessment: Must have / Nice to have / Don’t care
-### Interview 4
-Who:
-
-When:
-
-Customer Segment:
-
-Key Insights:
-
-Quotes:
-
-Assessment: Must have / Nice to have / Don’t care
-### Interview 5
-<<<<<<< HEAD
 Who: Audrey Miller
 
 When: 2/1/25
@@ -63,11 +38,10 @@ Key Insights: When games have nature elements it increases interest. Art style a
 
 Quotes: “I would say there is more gameplay but the cutscenes are good quality when they are there.” “I like to see my characters well”
 
-Assessment: Must have / Nice to have / Don’t care Must have: Nature, Good story. Nice to have: Good gameplay and atmosphere, 
+Assessment: Must have / Nice to have / Don’t care Must have: Nature, Good story. Nice to have: Good gameplay and atmosphere,
 seeing the character well. Don’t care: About the perspective of the game if it’s in first person, top down or third person.
-
-### Interview 6
-Who: Willam Merritt 
+### Interview 4
+Who: Willam Merritt
 
 When: 2/1/25
 
@@ -79,8 +53,28 @@ Key Insights: There has to be good game presentation to get him interested and t
 Quotes: “Cyberpunk is really the genre that is missing something for me but fantasy games like final fantasy also touch on this idea”
 
 Assessment: Must have / Nice to have / Don’t care Must have: Good characters, Replayability. Nice to have: Somehow connected to cyberpunk/futuristic setting. Dont care: About how long the game is and the perspective the game is played in.
+### Interview 5
+Who: Katie Stephenson
 
-=======
+When: 1/30/2025
+
+Customer Segment: Action/adventure game player looking for a good balance between action and narrative
+
+Key Insights:
+- Neither action sessions nor narrative scenes should be too long - a good balance between the two is necessary to maintain player interest
+- Well-designed combat mechanics are essential to a game with action elements
+- Arena-based gameplay would combine well with an action/adventure game, especially if it allowed for different settings and different types of attacks
+
+Quotes:
+- "I tend to get tired of games that have uneven pacing and do the same thing for too long."
+- "If the combat mechanics are awkward or hard to use, it takes me right out of the game."
+- "I'd definitely be interested in trying a game with arena combat, especially if there were different types of arenas to fight in."
+
+Assessment: Must have / Nice to have / Don’t care
+- Must have: Engaging gameplay, good pacing, well-designed combat mechanics
+- Nice to have: Strong artwork, immersive setting
+- Don't care: Complex puzzle-solving
+### Interview 6
 Who: Veronica Costea
 
 When: 1/31/2025
@@ -102,30 +96,6 @@ Assessment: Must have / Nice to have / Don’t care
 - Must have: Compelling story, immersive setting, easy-to-learn combat mechanics
 - Nice to have: High-stakes adventure, exploration, character development
 - Don't care: Customization, competing for points
-  
-### Interview 6
-Who: Katie Stephenson
-
-When: 1/30/2025
-
-Customer Segment: Action/adventure game player looking for a good balance between action and narrative
-
-Key Insights:
-- Neither action sessions nor narrative scenes should be too long - a good balance between the two is necessary to maintain player interest
-- Well-designed combat mechanics are essential to a game with action elements
-- Arena-based gameplay would combine well with an action/adventure game, especially if it allowed for different settings and different types of attacks
-
-Quotes:
-- "I tend to get tired of games that have uneven pacing and do the same thing for too long."
-- "If the combat mechanics are awkward or hard to use, it takes me right out of the game."
-- "I'd definitely be interested in trying a game with arena combat, especially if there were different types of arenas to fight in."
-
-Assessment: Must have / Nice to have / Don’t care
-- Must have: Engaging gameplay, good pacing, well-designed combat mechanics
-- Nice to have: Strong artwork, immersive setting
-- Don't care: Complex puzzle-solving
-  
->>>>>>> main
 ### Interview 7
 Who: Mac Carter
 
