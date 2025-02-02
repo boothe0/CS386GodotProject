@@ -52,32 +52,50 @@ Quotes:
 
 Assessment: Must have / Nice to have / Don’t care
 ### Interview 5
-Who: Audrey Miller
+Who: Veronica Costea
 
-When: 2/1/25
+When: 1/31/2025
 
-Customer Segment: Enjoys story over gameplay and especially games like Red Dead Redemption and Firewatch.
+Customer Segment: Casual adventure game player with a strong interest in engaging stories and well-developed settings
 
-Key Insights: When games have nature elements it increases interest. Art style and direction are important to if the game captures interest.
+Key Insights: 
+- Adventure players are drawn to games that are highly immersive and give them a reason to play beyond just gaining points
+- Casual gamers are put off by combat that is too complex and involved to learn fairly quickly
+- Having unique enemies and weapons that are related to the story would make arena-based combat more engaging
 
-Quotes: “I would say there is more gameplay but the cutscenes are good quality when they are there.” “I like to see my characters well”
+Quotes:
+- "I love games that I can lose myself in."
+- "Getting points doesn't matter to me as much as the story."
+- "Something that's not too hard to learn, I don't want to spend more time struggling to figure out the game than I do actually playing it."
+- "I like combat when it's really connected to a story."
 
-Assessment: Must have / Nice to have / Don’t care Must have: Nature, Good story. Nice to have: Good gameplay and atmosphere, 
-seeing the character well. Don’t care: About the perspective of the game if it’s in first person, top down or third person.
-
+Assessment: Must have / Nice to have / Don’t care
+- Must have: Compelling story, immersive setting, easy-to-learn combat mechanics
+- Nice to have: High-stakes adventure, exploration, character development
+- Don't care: Customization, competing for points
+  
 ### Interview 6
-Who: Willam Merritt 
+Who: Katie Stephenson
 
-When: 2/1/25
+When: 1/30/2025
 
-Customer Segment: Competitive gamer but enjoys several action games like Hades, Risk of Rain 2
-and others.
+Customer Segment: Action/adventure game player looking for a good balance between action and narrative
 
-Key Insights: There has to be good game presentation to get him interested and there should be good connections between the environment and the story.
+Key Insights:
+- Neither action sessions nor narrative scenes should be too long - a good balance between the two is necessary to maintain player interest
+- Well-designed combat mechanics are essential to a game with action elements
+- Arena-based gameplay would combine well with an action/adventure game, especially if it allowed for different settings and different types of attacks
 
-Quotes: “Cyberpunk is really the genre that is missing something for me but fantasy games like final fantasy also touch on this idea”
+Quotes:
+- "I tend to get tired of games that have uneven pacing and do the same thing for too long."
+- "If the combat mechanics are awkward or hard to use, it takes me right out of the game."
+- "I'd definitely be interested in trying a game with arena combat, especially if there were different types of arenas to fight in."
 
-Assessment: Must have / Nice to have / Don’t care Must have: Good characters, Replayability. Nice to have: Somehow connected to cyberpunk/futuristic setting. Dont care: About how long the game is and the perspective the game is played in.
+Assessment: Must have / Nice to have / Don’t care
+- Must have: Engaging gameplay, good pacing, well-designed combat mechanics
+- Nice to have: Strong artwork, immersive setting
+- Don't care: Complex puzzle-solving
+  
 
 ### Interview 7
 Who: Mac Carter

@@ -2,6 +2,13 @@ extends CharacterBody2D
 
 const SPEED = 150
 @onready var animated_sprite = $AnimatedSprite2D  # Get the sprite node
+var projectile_scene = preload("res://scenes/projectile.tscn")
+@export var health = 5
+signal health_update
+
+# initialization calls go here
+func _ready():
+	health_update.emit()
 
 func _physics_process(delta):
 	var direction = Vector2.ZERO
@@ -36,3 +43,24 @@ func _physics_process(delta):
 		# Play idle animation based on the last movement
 		if animated_sprite.animation.begins_with("walk"):
 			animated_sprite.play("idle_" + animated_sprite.animation.split("_")[1])
+
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
+		
+func shoot():
+	var projectile = projectile_scene.instantiate()
+	get_parent().add_child(projectile)
+	projectile.global_position = global_position
+	projectile.set_direction(get_global_mouse_position(), global_position)
+
+func take_damage(amount):
+	health -= amount
+	health_update.emit()
+	print("Player health: ", health)
+	if health <= 0:
+		die()
+		
+func die():
+	print("Player died")
+	queue_free()
+	
