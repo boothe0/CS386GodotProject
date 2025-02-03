@@ -22,21 +22,9 @@ Ethan: Created a temporary group of assets to use for initial developing. Added 
 
 Elizabeth: Created a project pannel to organize tasks to do each week. Connected godot to the github repository and set up a basic title menu to integrate with the main game. Set up a supporting documents folder with an outline of what our game will look like going forward and goals we have for implementations. Contributed ideas to the team and communicated any issues that arose on my end when they came up.
 
+Asher: 
+
 ## 2. Retrospective
-
-In your weekly meeting, you should spend a few minutes discussing how the group is functioning. What aspects of the group dynamics contribute to the success of the project? In addition, raise any issues—best done directly but with humor and kindness—that you believe are interfering with the effectiveness of the group and your ability to complete the project on time.
-
-The project retrospective is an opportunity for the group and each individual to reflect on their experience with the project and improve the way the group works together. Make five lists:
-
-Appreciations: highlights of contributions from team members
-Successes: what went well
-Failures: what did not go well
-Barriers: things that are blocking the maximum performance of the team
-What we should try next time. 
-
-The retrospective should be an open and safe space for the team to reflect on and discuss what works well (and what doesn't!) so you can improve. Don't make it personal, and don't take it personally. Be open to criticism and offer constructive and polite critiques. Focus on how to improve the quality of your team and the product you are developing.
-
-
 
 Appreciations: 
 People that would respond when I needed further clarity about what the project is going to be about in more detail. The speed and in-depth testing that groupmates take to make sure features are correct in iterations of the game. We were able to connect godot to the version control system and utilize it effectivly right from the start.
@@ -44,14 +32,25 @@ People that would respond when I needed further clarity about what the project i
 Successes: 
 We thought of the overall vision for the game, with a lot of ideas for different mechanics. We have a good basis to start from, and were able to divide the work based on our individual strengths.
 
-Failures: 
+Failures: Too early to say that we have had hiccups, we have a solid base for the game's design and we're already beginning progress on development
 
 Barriers: Some lack of communication made it hard to get things going/finished in a timely manner. We had a hard time setting up a good time to meet up and discuss the project.
 
-
+What we should do next time: Have a weekday check-in meeting to keep up to date with other members progress.
 
 ## 3. Next steps
-
-Think about what needs to be done and assign tasks. Update your activity management system with new tasks, actual hours spent in the activities, and corresponding GitHub issues.  Summarize these tasks here.
-
-We need to be better at getting back to one another in a timely manner. Communication will make the project go much more smoothly and allow features and mechanics to be implemented much faster, allowing more time for any refinement that will most likely come later.
+Elizabeth
+- Dodge system
+- movement related
+Chandler
+- Game bounds
+- Teleporters
+Camelia
+- Main character design
+- General theming
+Asher
+- Enemy waves
+- Enemy HP indicators
+Ethan
+- Melee and Ranged player attacks
+- Basic comsumable
