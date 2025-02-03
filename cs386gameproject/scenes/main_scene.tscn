@@ -61,6 +61,10 @@ zoom = Vector2(3, 3)
 process_callback = 0
 position_smoothing_enabled = true
 
+[node name="Timer" type="Timer" parent="Player"]
+wait_time = 2.0
+one_shot = true
+
 [node name="GroundLayer" type="TileMapLayer" parent="."]
 use_parent_material = true
 position = Vector2(253, 152)
@@ -88,3 +92,5 @@ value = 10.0
 show_percentage = false
 script = ExtResource("4_d7btm")
 player = NodePath("../../Player")
+
+[connection signal="timeout" from="Player/Timer" to="Player" method="_on_timer_timeout"]
