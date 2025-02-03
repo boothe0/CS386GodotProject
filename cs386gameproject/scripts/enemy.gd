@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+# onready and export variables at the beginning
+@onready var animated_sprite = $AnimatedSprite2D  
+
 const SPEED = 80
 const ATTACK_COOLDOWN = 1.5
 const ATTACK_DAMAGE = 1
@@ -10,7 +13,6 @@ var health = 3
 var can_attack = true
 var in_attack_range = false  # New variable to track attack range
 
-@onready var animated_sprite = $AnimatedSprite2D  
 
 # Move enemy and play animations
 func _physics_process(_delta: float) -> void:

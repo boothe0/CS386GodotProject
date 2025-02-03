@@ -1,11 +1,15 @@
 extends CharacterBody2D
 
-const SPEED = 150
+# exported and onready variables first
 @onready var animated_sprite = $AnimatedSprite2D  # Get the sprite node
+@export var health = 5
+#constants going here
+const SPEED = 150
+# the rest of the variables down here
 var projectile_scene = preload("res://scenes/projectile.tscn")
 var can_dodge = true
 var dash_direction = Vector2()
-@export var health = 5
+# signals go here (should be in a separate file if many more are added later on)
 signal health_update
 
 
@@ -31,7 +35,7 @@ func _physics_process(_delta):
 	direction = direction.normalized()
 	velocity = direction * SPEED
 	move_and_slide()
-	
+	const SPEED = 150
 	# Play correct animation (prioritizing horizontal movement)
 	if direction.x != 0:
 		if direction.x > 0:
