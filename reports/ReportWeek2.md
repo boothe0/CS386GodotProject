@@ -42,15 +42,19 @@ What we should do next time: Have a weekday check-in meeting to keep up to date 
 Elizabeth
 - Dodge system
 - movement related
+  
 Chandler
 - Game bounds
 - Teleporters
+  
 Camelia
 - Main character design
 - General theming
+  
 Asher
 - Enemy waves
 - Enemy HP indicators
+  
 Ethan
 - Melee and Ranged player attacks
 - Basic comsumable
