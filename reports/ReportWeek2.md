@@ -26,6 +26,8 @@ Asher: HP bar features and signal updates to when player takes damage, useful fo
 
 Camelia: Expanded on the project planning document to include a template for the game layout. Took part in team discussions and contributed an idea for the theme and storyline of the game.
 
+Chandler: Provided ideas and feedback on game systems and feature implementation.
+
 ## 2. Retrospective
 
 Appreciations: 
