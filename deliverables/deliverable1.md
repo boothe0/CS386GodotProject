@@ -164,4 +164,4 @@ Nice-to-have: Multiplayer, character classes
 Don’t care: Large open-world exploration, side quests for XP
 
 ## Refined Value Statement
-To be completed after interviews are done…
+We provide fans of the action roguelike genre with a brief yet unique and dense experience that can be enjoyed without a major time commitment.
