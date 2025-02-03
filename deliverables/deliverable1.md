@@ -11,8 +11,8 @@ When: 2/2/25
 Customer Segment: Casual gamer who enjoys a wide variety of gameplay and narrative genres
 
 Key Insights:
-- Smooth, intuitive controls are a key part of an arena shooter’s gameplay
-- A visual style that is vibrant, expressive, and full of character can contribute heavily to the appeal of a 2d game
+- Smooth, intuitive controls are a key part of an arena shooter’s gameplay.
+- A visual style that is vibrant, expressive, and full of character can contribute heavily to the appeal of a 2d game.
 - It doesn’t matter as much which gameplay and narrative elements are involved, as long as there is clearly a reason why they are involved.
 - Having a purpose and story behind the character’s items and abilities can provide character depth without needing them explained.
 
