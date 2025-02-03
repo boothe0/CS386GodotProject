@@ -24,6 +24,8 @@ Elizabeth: Created a project pannel to organize tasks to do each week. Connected
 
 Asher: HP bar features and signal updates to when player takes damage, useful for future features. Also fixed bug behind player and enemy movement being blurry due to camera's rendering setting. 
 
+Camelia: Expanded on the project planning document to include a template for the game layout. Took part in team discussions and contributed an idea for the theme and storyline of the game.
+
 ## 2. Retrospective
 
 Appreciations: 
