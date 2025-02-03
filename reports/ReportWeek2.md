@@ -20,6 +20,8 @@ Describe what each individual has contributed to the project in the last week.  
 
 Ethan: Created a temporary group of assets to use for initial developing. Added character movement and attacks, with enemy detection ai and attacking. Created projectile attacks that the player can use to defeat the enemies. Fixed a few bugs. Contributed to team discussions and helped think of the basic mechanics for the game.
 
+Elizabeth: Created a project pannel to organize tasks to do each week. Connected godot to the github repository and set up a basic title menu to integrate with the main game. Set up a supporting documents folder with an outline of what our game will look like going forward and goals we have for implementations. Contributed ideas to the team and communicated any issues that arose on my end when they came up.
+
 ## 2. Retrospective
 
 In your weekly meeting, you should spend a few minutes discussing how the group is functioning. What aspects of the group dynamics contribute to the success of the project? In addition, raise any issues—best done directly but with humor and kindness—that you believe are interfering with the effectiveness of the group and your ability to complete the project on time.
@@ -37,14 +39,14 @@ The retrospective should be an open and safe space for the team to reflect on an
 
 
 Appreciations: 
-People that would respond when I needed further clarity about what the project is going to be about in more detail. The speed and in-depth testing that groupmates take to make sure features are correct in iterations of the game.
+People that would respond when I needed further clarity about what the project is going to be about in more detail. The speed and in-depth testing that groupmates take to make sure features are correct in iterations of the game. We were able to connect godot to the version control system and utilize it effectivly right from the start.
 
 Successes: 
-We thought of the overall vision for the game, with a lot of ideas for different mechanics.
+We thought of the overall vision for the game, with a lot of ideas for different mechanics. We have a good basis to start from, and were able to divide the work based on our individual strengths.
 
 Failures: 
 
-Barriers: Some lack of communication made it hard to get things going/finished in a timely manner.
+Barriers: Some lack of communication made it hard to get things going/finished in a timely manner. We had a hard time setting up a good time to meet up and discuss the project.
 
 
 
