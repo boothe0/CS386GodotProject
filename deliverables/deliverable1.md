@@ -4,17 +4,28 @@ Our group has decided to make an arena game with adventure elements. The player 
 We provide fans of the action-adventure games with a novel approach to a highly saturated and repetitive genre by providing a new gameplay loop in the form of arena combat while still maintaining the story elements that fans of the genre expect and are accustomed to.
 ## Interviews
 ### Interview 1
-Who:
+Who: Iain Foster
 
-When:
+When: 2/2/25
 
-Customer Segment:
+Customer Segment: Casual gamer who enjoys a wide variety of gameplay and narrative genres
 
 Key Insights:
+- Smooth, intuitive controls are a key part of an arena shooter’s gameplay
+- A visual style that is vibrant, expressive, and full of character can contribute heavily to the appeal of a 2d game
+- It doesn’t matter as much which gameplay and narrative elements are involved, as long as there is clearly a reason why they are involved.
+- Having a purpose and story behind the character’s items and abilities can provide character depth without needing them explained.
 
 Quotes:
+- “I like things to look like they have soul, that someone cared about it … like it meant something to the creator.”
+- “Things are chained together, you’re not struggling to figure out what you need to do next.”
+- “Gameplay is very important for a game like this, but if you can make the narrative work, that’s a bonus.”
 
 Assessment: Must have / Nice to have / Don’t care
+- Must have: Interesting designs, tight controls, dynamic combat
+- Nice to have: Compelling story, innovative items
+- Don’t care: Competitive elements, commonplace genre elements
+
 ### Interview 2
 Who: Max Anthony
 
