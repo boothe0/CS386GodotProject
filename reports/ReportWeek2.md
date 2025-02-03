@@ -22,7 +22,7 @@ Ethan: Created a temporary group of assets to use for initial developing. Added 
 
 Elizabeth: Created a project pannel to organize tasks to do each week. Connected godot to the github repository and set up a basic title menu to integrate with the main game. Set up a supporting documents folder with an outline of what our game will look like going forward and goals we have for implementations. Contributed ideas to the team and communicated any issues that arose on my end when they came up.
 
-Asher: 
+Asher: HP bar features and signal updates to when player takes damage, useful for future features. Also fixed bug behind player and enemy movement being blurry due to camera's rendering setting.
 
 ## 2. Retrospective
 
