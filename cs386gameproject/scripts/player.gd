@@ -1,10 +1,18 @@
 extends CharacterBody2D
 
-const SPEED = 150
+# exported and onready variables first
 @onready var animated_sprite = $AnimatedSprite2D  # Get the sprite node
-var projectile_scene = preload("res://scenes/projectile.tscn")
 @export var health = 5
+#constants going here
+const SPEED = 150
+# the rest of the variables down here
+var projectile_scene = preload("res://scenes/projectile.tscn")
+var can_dodge = true
+var dash_direction = Vector2()
+# signals go here (should be in a separate file if many more are added later on)
 signal health_update
+
+
 
 # initialization calls go here
 func _ready():
@@ -27,7 +35,7 @@ func _physics_process(_delta):
 	direction = direction.normalized()
 	velocity = direction * SPEED
 	move_and_slide()
-
+	const SPEED = 150
 	# Play correct animation (prioritizing horizontal movement)
 	if direction.x != 0:
 		if direction.x > 0:
@@ -47,6 +55,9 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
 		
+	if Input.is_action_just_pressed("dodge") and can_dodge:
+		# if spacebar is pressed it starts the timer
+		$Timer.start()
 func shoot():
 	var projectile = projectile_scene.instantiate()
 	get_parent().add_child(projectile)
@@ -64,3 +75,7 @@ func die():
 	print("Player died")
 	queue_free()
 	
+	
+func _on_timer_timeout() -> void:
+	# testing cooldown timer for dodge
+	print("On 2 second cooldown")
