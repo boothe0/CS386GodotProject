@@ -6,9 +6,10 @@ const ATTACK_DAMAGE = 1
 
 var player = null
 var direction = Vector2.ZERO
-var health = 3
 var can_attack = true
 var in_attack_range = false  # New variable to track attack range
+@export var health = 3
+signal health_update
 
 @onready var animated_sprite = $AnimatedSprite2D  
 
@@ -41,7 +42,7 @@ func attack():
 # Take damage from player
 func take_damage(amount):
 	health -= amount
-	print("Enemy health: ", health)  # Debugging
+	health_update.emit()
 	if health <= 0:
 		die()
 		

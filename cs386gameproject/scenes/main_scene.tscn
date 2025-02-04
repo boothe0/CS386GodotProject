@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=12 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="2_psmqu"]
 [ext_resource type="PackedScene" uid="uid://d1he61wxuea23" path="res://scenes/enemy.tscn" id="3_n8vaq"]
 [ext_resource type="Script" path="res://scripts/health_bar.gd" id="4_d7btm"]
+[ext_resource type="Script" path="res://scripts/EnemyHealthBar.gd" id="4_p1aji"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -44,6 +45,12 @@ texture = ExtResource("2_psmqu")
 [sub_resource type="TileSet" id="TileSet_7fs3h"]
 sources/0 = SubResource("TileSetAtlasSource_df4cm")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nugsw"]
+bg_color = Color(0.133196, 0.133196, 0.133196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eoqfu"]
+bg_color = Color(1, 0, 0, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pomkq"]
 bg_color = Color(0.169245, 0.169245, 0.169245, 1)
 
@@ -69,6 +76,18 @@ tile_set = SubResource("TileSet_7fs3h")
 
 [node name="Enemy" parent="." instance=ExtResource("3_n8vaq")]
 position = Vector2(416, 165)
+
+[node name="EnemyHealthBar" type="ProgressBar" parent="Enemy"]
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = -11.0
+theme_override_styles/background = SubResource("StyleBoxFlat_nugsw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_eoqfu")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+script = ExtResource("4_p1aji")
 
 [node name="PlayerUI" type="CanvasLayer" parent="."]
 
