@@ -4,6 +4,9 @@ enum WeaponType {SWORD, PROJECTILE}
 
 @onready var animated_sprite = $AnimatedSprite2D
 @export var health = 5
+# changing the dash_speed will change how far the dash is
+@export var dash_speed = 20
+@export var friction = .5
 @onready var sword: Node2D = $Sword
 var last_direction = Vector2.DOWN 
 var last_movement_direction = Vector2.DOWN
@@ -11,6 +14,7 @@ var last_attack_direction = Vector2.DOWN
 var projectile_scene = preload("res://scenes/projectile.tscn")
 var can_dodge = true
 var current_weapon = WeaponType.SWORD
+var dash_direction = Vector2()
 
 # Constants
 const SPEED = 150
@@ -37,7 +41,6 @@ func _physics_process(_delta):
 		direction.y += 1
 	elif Input.is_action_pressed("move_up"):
 		direction.y -= 1
-
 	# Normalize movement direction
 	if direction.length() > 0:
 		last_movement_direction = direction.normalized()
@@ -58,8 +61,15 @@ func _physics_process(_delta):
 
 	# Handle dodge
 	if Input.is_action_just_pressed("dodge") and can_dodge:
+		can_dodge = false
+		dash_direction = direction.normalized()
+		velocity = dash_direction * dash_speed
+		# type cast velocity when combining with any other type other than Vector2
+		velocity += Vector2(1.0 - (friction * _delta), 1.0 - (friction * _delta))
+		# move and collide not move and slide for this
+		move_and_collide(velocity)
+		# moves down to the timer block
 		$Timer.start()
-
 func update_movement_animation():
 	# If the sword is attacking, don't change facing direction yet
 	if sword.attacking:
@@ -107,7 +117,8 @@ func swing_sword():
 	# After the attack, return to movement-based facing
 	print("Attack finished, returning to movement animation")  # Debug
 	update_movement_animation()
-
+		
+	
 func get_idle_animation(direction: Vector2) -> String:
 	if direction == Vector2.RIGHT:
 		return "idle_right"
@@ -146,4 +157,5 @@ func die():
 	queue_free()
 
 func _on_timer_timeout() -> void:
-	print("On 2 second cooldown")  # Debug for dodge cooldown
+	print("On timer") # debug statement
+	can_dodge = true
