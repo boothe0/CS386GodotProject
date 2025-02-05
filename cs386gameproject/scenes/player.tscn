@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://cmxv3umec3ewx"]
+[gd_scene load_steps=22 format=3 uid="uid://cmxv3umec3ewx"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ucs4q"]
 [ext_resource type="Texture2D" uid="uid://db6a0gcvmsdqe" path="res://assets/16x16 Magical Forest Asset Pack/Characters/KnightCharacter-Idle.png" id="2_80bxb"]
+[ext_resource type="PackedScene" uid="uid://cbkptu6ifigqp" path="res://scenes/sword.tscn" id="3_iswpw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h468s"]
 atlas = ExtResource("2_80bxb")
@@ -173,3 +174,7 @@ autoplay = "idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_nrny4")
+
+[node name="Sword" parent="." instance=ExtResource("3_iswpw")]
+position = Vector2(-5, 4)
+rotation = -2.61799

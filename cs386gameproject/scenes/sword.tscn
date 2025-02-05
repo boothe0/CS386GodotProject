@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbkptu6ifigqp"]
+
+[ext_resource type="Script" path="res://scripts/sword.gd" id="1_kp4im"]
+[ext_resource type="Texture2D" uid="uid://bq5svy4eevgis" path="res://assets/16x16 Magical Forest Asset Pack/Weapons/Weapons.png" id="1_ks1js"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5t2in"]
+radius = 3.00935
+height = 13.9703
+
+[node name="Sword" type="Node2D"]
+z_index = 6
+rotation = 0.785398
+script = ExtResource("1_kp4im")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ks1js")
+centered = false
+offset = Vector2(-2.345, -13.515)
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8.48528, -8.48528)
+rotation = 0.680678
+skew = 0.0820305
+shape = SubResource("CapsuleShape2D_5t2in")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -61,7 +61,7 @@ bg_color = Color(0.898275, 2.59906e-06, 1.2514e-06, 1)
 position = Vector2(-509, -312)
 
 [node name="Player" parent="." instance=ExtResource("1_6hm0t")]
-position = Vector2(220, 155)
+position = Vector2(195, 143)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
@@ -93,9 +93,54 @@ value = 10.0
 show_percentage = false
 script = ExtResource("4_p1aji")
 
+[node name="Enemy2" parent="." instance=ExtResource("3_n8vaq")]
+position = Vector2(62, 226)
+
+[node name="EnemyHealthBar" type="ProgressBar" parent="Enemy2"]
+offset_left = -16.0
+offset_top = -14.0
+offset_right = 14.0
+offset_bottom = -10.0
+theme_override_styles/background = SubResource("StyleBoxFlat_nugsw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_eoqfu")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+script = ExtResource("4_p1aji")
+
+[node name="Enemy3" parent="." instance=ExtResource("3_n8vaq")]
+position = Vector2(95, 73)
+
+[node name="EnemyHealthBar" type="ProgressBar" parent="Enemy3"]
+offset_left = -16.0
+offset_top = -14.0
+offset_right = 14.0
+offset_bottom = -10.0
+theme_override_styles/background = SubResource("StyleBoxFlat_nugsw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_eoqfu")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+script = ExtResource("4_p1aji")
+
+[node name="Enemy4" parent="." instance=ExtResource("3_n8vaq")]
+position = Vector2(250, 256)
+
+[node name="EnemyHealthBar" type="ProgressBar" parent="Enemy4"]
+offset_left = -16.0
+offset_top = -14.0
+offset_right = 14.0
+offset_bottom = -10.0
+theme_override_styles/background = SubResource("StyleBoxFlat_nugsw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_eoqfu")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+script = ExtResource("4_p1aji")
+
 [node name="PlayerUI" type="CanvasLayer" parent="."]
 
-[node name="HealthBar" type="ProgressBar" parent="PlayerUI" node_paths=PackedStringArray("player")]
+[node name="HealthBar" type="ProgressBar" parent="PlayerUI"]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -110,6 +155,5 @@ max_value = 10.0
 value = 10.0
 show_percentage = false
 script = ExtResource("4_d7btm")
-player = NodePath("../../Player")
 
 [connection signal="timeout" from="Player/Timer" to="Player" method="_on_timer_timeout"]
