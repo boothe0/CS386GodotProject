@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://djw3k8gpkkily"]
+
+[ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/PotionsPack1.png" id="1_76lb3"]
+[ext_resource type="Script" path="res://scripts/heal_potion.gd" id="1_jgg1e"]
+
+[node name="HealPotion" type="Node2D"]
+script = ExtResource("1_jgg1e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 6
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("1_76lb3")
+offset = Vector2(0, 1.71)
+region_enabled = true
+region_rect = Rect2(5, 260, 22, 27)
