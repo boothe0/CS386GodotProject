@@ -10,9 +10,7 @@ enum WeaponType {SWORD, PROJECTILE}
 @export var dash_speed = 20
 @export var friction = .5
 @onready var sword: Node2D = $Sword
-@onready var bar_timer = $"../TimerBar/BarTimer"
 @onready var dodge_timer = $DodgeTimer
-@onready var timer_line = $"../TimerBar"
 var last_direction = Vector2.DOWN 
 var last_movement_direction = Vector2.DOWN
 var last_attack_direction = Vector2.DOWN 
