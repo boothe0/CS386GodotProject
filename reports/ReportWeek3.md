@@ -51,5 +51,5 @@ Chandler
 
 Asher
 
-- Implementing Ability interface
+- Consumable item abstract class
 - Comsumable items interface
