@@ -4,10 +4,15 @@ enum WeaponType {SWORD, PROJECTILE}
 
 @onready var animated_sprite = $AnimatedSprite2D
 @export var health = 5
+# from the stamina_bar script
+@export var dodge_val = 1
 # changing the dash_speed will change how far the dash is
 @export var dash_speed = 20
 @export var friction = .5
 @onready var sword: Node2D = $Sword
+@onready var bar_timer = $"../TimerBar/BarTimer"
+@onready var dodge_timer = $DodgeTimer
+@onready var timer_line = $"../TimerBar"
 var last_direction = Vector2.DOWN 
 var last_movement_direction = Vector2.DOWN
 var last_attack_direction = Vector2.DOWN 
@@ -22,13 +27,13 @@ const SPEED = 150
 
 # Signals
 signal health_update
-
+signal dodge_update
 # Initialization
 func _ready():
 	health_update.emit()
-
-	sword.hide()  # Start hidden
-
+	dodge_update.emit()
+	sword.hide()  # Start hiddena
+  
 func _physics_process(_delta):
 	var direction = Vector2.ZERO
 
@@ -54,18 +59,20 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("use_potion"):
 		use_heal_potion()
 
+
 	# Handle attack input
 	if Input.is_action_just_pressed("attack"):
 		if current_weapon == WeaponType.PROJECTILE:
 			print("shooting projectile") # Debug
-			shoot()
+			shoot() 
+
 		elif current_weapon == WeaponType.SWORD:
 			print("swinging sword") # Debug
 			swing_sword()
 
 	# Handle dodge
 	if Input.is_action_just_pressed("dodge") and can_dodge:
-		can_dodge = false
+		_dodge()
 		dash_direction = direction.normalized()
 		velocity = dash_direction * dash_speed
 		# type cast velocity when combining with any other type other than Vector2
@@ -73,8 +80,7 @@ func _physics_process(_delta):
 		# move and collide not move and slide for this
 		move_and_collide(velocity)
 		# moves down to the timer block
-		$Timer.start()
-		
+		$DodgeTimer.start()
 func update_movement_animation():
 	# If the sword is attacking OR using a potion, don't change facing direction
 	if sword.attacking:
@@ -161,9 +167,7 @@ func die():
 	print("Player died")
 	queue_free()
 
-func _on_timer_timeout() -> void:
-	print("On timer") # debug statement
-	can_dodge = true
+
 	
 func heal(amount):
 	if health >= 5:
@@ -200,3 +204,24 @@ func use_heal_potion():
 	# After using the potion, return to movement-based facing
 	print("Potion use finished, returning to movement animation")  # Debug
 	update_movement_animation()
+
+
+func _dodge():
+	# decrement value to make it dissapear
+	dodge_val -= 1
+	if dodge_val == 0:
+		can_dodge = false
+		dodge_update.emit()
+	# wait for the dodge_timer to run out
+	await dodge_timer.timeout
+	# add back the value to make it reappear
+	dodge_val += 1  
+	# update again
+	dodge_update.emit()
+	can_dodge = true
+
+
+		
+
+	
+	
