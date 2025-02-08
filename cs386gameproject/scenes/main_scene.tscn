@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=17 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="2_psmqu"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://scripts/health_bar.gd" id="4_d7btm"]
 [ext_resource type="Script" path="res://scripts/EnemyHealthBar.gd" id="4_p1aji"]
 [ext_resource type="Script" path="res://scenes/stamina_bar.gd" id="5_up0xu"]
+[ext_resource type="Texture2D" uid="uid://bkqvruvbllys5" path="res://assets/16x16 Magical Forest Asset Pack/Weapons/sword.png" id="7_4u7mj"]
+[ext_resource type="Texture2D" uid="uid://d3xpsm57h6yw4" path="res://assets/Projectiles/Projectiles/bolt1UI.png" id="7_qaerf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -174,5 +176,26 @@ max_value = 10.0
 value = 10.0
 show_percentage = false
 script = ExtResource("4_d7btm")
+
+[node name="BoltUI" type="TextureRect" parent="PlayerUI"]
+visible = false
+anchors_preset = -1
+anchor_right = 0.016
+anchor_bottom = 0.025
+offset_left = 16.0
+offset_top = 533.0
+offset_right = 37.568
+offset_bottom = 556.8
+texture = ExtResource("7_qaerf")
+
+[node name="SwordUI" type="TextureRect" parent="PlayerUI"]
+anchors_preset = -1
+anchor_right = 0.016
+anchor_bottom = 0.025
+offset_left = 13.0
+offset_top = 533.0
+offset_right = 34.568
+offset_bottom = 556.8
+texture = ExtResource("7_4u7mj")
 
 [connection signal="timeout" from="Player/DodgeTimer" to="Player" method="_on_timer_timeout"]
