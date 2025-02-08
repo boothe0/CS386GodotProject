@@ -15,6 +15,7 @@ var projectile_scene = preload("res://scenes/projectile.tscn")
 var can_dodge = true
 var current_weapon = WeaponType.SWORD
 var dash_direction = Vector2()
+@onready var heal_potion: Node2D = $HealPotion
 
 # Constants
 const SPEED = 150
@@ -50,6 +51,9 @@ func _physics_process(_delta):
 	# Update facing direction based on mouse position
 	update_movement_animation()
 
+	if Input.is_action_just_pressed("use_potion"):
+		use_heal_potion()
+
 	# Handle attack input
 	if Input.is_action_just_pressed("attack"):
 		if current_weapon == WeaponType.PROJECTILE:
@@ -70,8 +74,9 @@ func _physics_process(_delta):
 		move_and_collide(velocity)
 		# moves down to the timer block
 		$Timer.start()
+		
 func update_movement_animation():
-	# If the sword is attacking, don't change facing direction yet
+	# If the sword is attacking OR using a potion, don't change facing direction
 	if sword.attacking:
 		return
 
@@ -159,3 +164,39 @@ func die():
 func _on_timer_timeout() -> void:
 	print("On timer") # debug statement
 	can_dodge = true
+	
+func heal(amount):
+	if health >= 5:
+		print("Health is already full!")  # Debug
+		return  # Prevent overhealing
+
+	health = min(health + amount, 5)  # Prevent health from exceeding 5
+	health_update.emit()
+	print("Player healed: ", health)
+
+func use_heal_potion():
+	# If already at max health, don't use the potion
+	if health >= 5:
+		print("Health is full! Can't use potion.")
+		return
+
+	# Make the player face the potion direction and lock it
+	update_attack_direction()
+	var heal_animation = get_idle_animation(last_attack_direction)
+	animated_sprite.play(heal_animation)  # Lock player facing direction
+	print("Using potion in direction:", last_attack_direction)  # Debugging
+
+	# Temporarily prevent movement-based animation updates
+	sword.attacking = true  # Reuse the same lock system from the sword
+
+	# Start potion use and wait until it's fully done
+	heal_potion.show()
+	heal_potion.set_potion_direction(last_attack_direction)  # Set potion direction
+	await heal_potion.use_heal_potion()  # Wait for potion animation to finish
+
+	# Allow movement animations again after potion animation is done
+	sword.attacking = false  
+
+	# After using the potion, return to movement-based facing
+	print("Potion use finished, returning to movement animation")  # Debug
+	update_movement_animation()
