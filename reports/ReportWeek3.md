@@ -18,7 +18,8 @@ Project repo: https://github.com/boothe0/CS386GodotProject
 
 Describe what each individual has contributed to the project in the last week.  Provide some supporting documentation (e.g., an issue number, commit id, corresponding meeting date, etc.).  If someone didn't do anything, please be honest and explain why. **Activity that advances your project toward completion is expected every week and should be reflected in your Git repository!**
 
-
+Elizabeth Booth: Implemented a dodging system with a cooldown timer. Added a UI element to visually represent the single charge of the dodge mechanic. Contributued
+to team discussions about meeting times and game designs going forward.
 
 ## 2. Retrospective
 
