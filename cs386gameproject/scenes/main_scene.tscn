@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=17 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="2_psmqu"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://scripts/health_bar.gd" id="4_d7btm"]
 [ext_resource type="Script" path="res://scripts/EnemyHealthBar.gd" id="4_p1aji"]
 [ext_resource type="Script" path="res://scenes/stamina_bar.gd" id="5_up0xu"]
+[ext_resource type="Texture2D" uid="uid://bkqvruvbllys5" path="res://assets/16x16 Magical Forest Asset Pack/Weapons/sword.png" id="7_4u7mj"]
+[ext_resource type="Texture2D" uid="uid://d3xpsm57h6yw4" path="res://assets/Projectiles/Projectiles/bolt1UI.png" id="7_qaerf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -148,10 +150,16 @@ script = ExtResource("4_p1aji")
 [node name="PlayerUI" type="CanvasLayer" parent="."]
 
 [node name="StaminaBar" type="ProgressBar" parent="PlayerUI"]
-offset_left = -1.0
-offset_top = 582.0
-offset_right = 243.0
-offset_bottom = 609.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -117.0
+offset_top = -20.0
+offset_right = 239.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_qm72p")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dwgug")
 max_value = 1.0
@@ -174,5 +182,16 @@ max_value = 10.0
 value = 10.0
 show_percentage = false
 script = ExtResource("4_d7btm")
+
+[node name="BoltUI" type="TextureRect" parent="PlayerUI"]
+visible = false
+offset_right = 47.0
+offset_bottom = 49.0
+texture = ExtResource("7_qaerf")
+
+[node name="SwordUI" type="TextureRect" parent="PlayerUI"]
+offset_right = 49.0
+offset_bottom = 44.0
+texture = ExtResource("7_4u7mj")
 
 [connection signal="timeout" from="Player/DodgeTimer" to="Player" method="_on_timer_timeout"]
