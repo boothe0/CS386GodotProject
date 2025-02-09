@@ -27,6 +27,8 @@ Camelia: Worked on designs for the player character and ideas for the game story
 
 Chandler: Worked on boundaries for the arena. Worked on art and writing design focused on the main character, setting, and primary story. Provided feedback and ideas on the team's vision of the game's design.
 
+Ethan: Created a melee system using a sword for now. Added healing to the player.
+
 ## 2. Retrospective
 
 Appreciations: 
@@ -60,3 +62,8 @@ Asher
 
 - Consumable item abstract class
 - Comsumable items interface
+
+Ethan 
+
+- Create new potions and consumables
+- Create new weapon types and weapon attacks
