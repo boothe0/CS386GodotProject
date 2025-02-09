@@ -25,6 +25,8 @@ Asher: Implemented enemy health bars to ui, added enemy spawners. Lead disscussi
 
 Camelia: Worked on designs for the player character and ideas for the game storyline. Contributed to team discussion about game designs.
 
+Chandler: Worked on boundaries for the arena. Worked on art and writing design focused on the main character, setting, and primary story. Provided feedback and ideas on the team's vision of the game's design.
+
 ## 2. Retrospective
 
 Appreciations: 
