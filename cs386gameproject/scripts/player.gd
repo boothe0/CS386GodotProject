@@ -5,6 +5,8 @@ enum WeaponType {SWORD, PROJECTILE}
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var swordIcon = $"../PlayerUI/SwordUI"
 @onready var boltIcon = $"../PlayerUI/BoltUI"
+@onready var spacebar_text = $"../PlayerUI/StaminaBar/SpaceBarIndicator"
+
 @export var health = 5
 # from the stamina_bar script
 @export var dodge_val = 1
@@ -21,7 +23,6 @@ var can_dodge = true
 var current_weapon = WeaponType.SWORD
 var dash_direction = Vector2()
 @onready var heal_potion: Node2D = $HealPotion
-
 # Constants
 const SPEED = 150
 
@@ -216,13 +217,17 @@ func _dodge():
 	if dodge_val == 0:
 		can_dodge = false
 		dodge_update.emit()
+		spacebar_text.modulate.a = .5
+		
 	# wait for the dodge_timer to run out
 	await dodge_timer.timeout
 	# add back the value to make it reappear
 	dodge_val += 1  
 	# update again
 	dodge_update.emit()
+	spacebar_text.modulate.a = 1
 	can_dodge = true
+	
 
 
 		
