@@ -3,6 +3,8 @@ extends CharacterBody2D
 enum WeaponType {SWORD, PROJECTILE}
 
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var swordIcon = $"../PlayerUI/SwordUI"
+@onready var boltIcon = $"../PlayerUI/BoltUI"
 @export var health = 5
 # from the stamina_bar script
 @export var dodge_val = 1
@@ -99,9 +101,13 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("switch_sword"):
 		current_weapon = WeaponType.SWORD
 		print("Switched to Sword") # debug
+		swordIcon.visible = true
+		boltIcon.visible = false
 	elif event.is_action_pressed("switch_projectile"):
 		current_weapon = WeaponType.PROJECTILE
 		print("Switched to Projectile") # debug
+		swordIcon.visible = false
+		boltIcon.visible = true
 
 # Handle shooting projectiles
 func shoot():
