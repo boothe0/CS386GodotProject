@@ -21,6 +21,8 @@ Describe what each individual has contributed to the project in the last week.  
 Elizabeth Booth: Implemented a dodging system with a cooldown timer. Added a UI element to visually represent the single charge of the dodge mechanic. Contributued
 to team discussions about meeting times and game designs going forward.
 
+Asher: Implemented enemy health bars to ui, added enemy spawners. Lead disscussion in finding a unifying theme between each team member's idea of the game.
+
 ## 2. Retrospective
 
 Appreciations: 
