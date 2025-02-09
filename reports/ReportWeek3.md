@@ -23,6 +23,8 @@ to team discussions about meeting times and game designs going forward.
 
 Asher: Implemented enemy health bars to ui, added enemy spawners. Lead disscussion in finding a unifying theme between each team member's idea of the game.
 
+Camelia: Worked on designs for the player character and ideas for the game storyline. Contributed to team discussion about game designs.
+
 ## 2. Retrospective
 
 Appreciations: 
