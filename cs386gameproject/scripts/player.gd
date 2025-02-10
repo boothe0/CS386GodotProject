@@ -5,20 +5,20 @@ enum WeaponType {SWORD, PROJECTILE}
 @onready var animated_sprite = $AnimatedSprite2D
 
 @onready var spacebar_text = $"../PlayerUI/StaminaBar/SpaceBarIndicator"
+@onready var stamina_bar = $"../PlayerUI/StaminaBar"
 
 @export var health = 5
+@export var stamina = 10
 # from the stamina_bar script
-@export var dodge_val = 1
+@export var dodge_cost = 3
 # changing the dash_speed will change how far the dash is
 @export var dash_speed = 20
 @export var friction = .5
 @onready var sword: Node2D = $Sword
-@onready var dodge_timer = $DodgeTimer
 var last_direction = Vector2.DOWN 
 var last_movement_direction = Vector2.DOWN
 var last_attack_direction = Vector2.DOWN 
 var projectile_scene = preload("res://scenes/projectile.tscn")
-var can_dodge = true
 var current_weapon = WeaponType.SWORD
 var dash_direction = Vector2()
 var weapon_animation_done = true
@@ -28,12 +28,11 @@ const SPEED = 150
 
 # Signals
 signal health_update
-signal dodge_update
+signal dodge_used
 # Initialization
 func _ready():
 	health_update.emit()
-	dodge_update.emit()
-	sword.hide()  # Start hiddena
+	sword.hide()  # Start hidden
   
 func _physics_process(_delta):
 	var direction = Vector2.ZERO
@@ -60,7 +59,6 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("use_potion"):
 		use_heal_potion()
 
-
 	# Handle attack input
 	if Input.is_action_just_pressed("attack"):
 		if current_weapon == WeaponType.PROJECTILE:
@@ -76,16 +74,17 @@ func _physics_process(_delta):
 		shoot()
 	
 	# Handle dodge
-	if Input.is_action_just_pressed("dodge") and can_dodge:
-		_dodge()
+	if Input.is_action_just_pressed("dodge"):
+		if stamina_bar.value < dodge_cost:
+			return
+		emit_used_dodge_signal()
 		dash_direction = direction.normalized()
 		velocity = dash_direction * dash_speed
 		# type cast velocity when combining with any other type other than Vector2
 		velocity += Vector2(1.0 - (friction * _delta), 1.0 - (friction * _delta))
 		# move and collide not move and slide for this
 		move_and_collide(velocity)
-		# moves down to the timer block
-		$DodgeTimer.start()
+	
 func update_movement_animation():
 	# If the sword is attacking OR using a potion, don't change facing direction
 	if sword.attacking:
@@ -165,8 +164,6 @@ func die():
 	print("Player died")
 	queue_free()
 
-
-	
 func heal(amount):
 	if health >= 5:
 		print("Health is already full!")  # Debug
@@ -203,27 +200,5 @@ func use_heal_potion():
 	print("Potion use finished, returning to movement animation")  # Debug
 	update_movement_animation()
 
-
-func _dodge():
-	# decrement value to make it dissapear
-	dodge_val -= 1
-	if dodge_val == 0:
-		can_dodge = false
-		dodge_update.emit()
-		spacebar_text.modulate.a = .5
-		
-	# wait for the dodge_timer to run out
-	await dodge_timer.timeout
-	# add back the value to make it reappear
-	dodge_val += 1  
-	# update again
-	dodge_update.emit()
-	spacebar_text.modulate.a = 1
-	can_dodge = true
-	
-
-
-		
-
-	
-	
+func emit_used_dodge_signal():
+	dodge_used.emit()
