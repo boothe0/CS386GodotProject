@@ -3,8 +3,7 @@ extends CharacterBody2D
 enum WeaponType {SWORD, PROJECTILE}
 
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var swordIcon = $"../PlayerUI/SwordUI"
-@onready var boltIcon = $"../PlayerUI/BoltUI"
+
 @onready var spacebar_text = $"../PlayerUI/StaminaBar/SpaceBarIndicator"
 @onready var stamina_bar = $"../PlayerUI/StaminaBar"
 
@@ -22,6 +21,7 @@ var last_attack_direction = Vector2.DOWN
 var projectile_scene = preload("res://scenes/projectile.tscn")
 var current_weapon = WeaponType.SWORD
 var dash_direction = Vector2()
+var weapon_animation_done = true
 @onready var heal_potion: Node2D = $HealPotion
 # Constants
 const SPEED = 150
@@ -68,7 +68,11 @@ func _physics_process(_delta):
 		elif current_weapon == WeaponType.SWORD:
 			print("swinging sword") # Debug
 			swing_sword()
-
+			weapon_animation_done = true
+	# Handle ranged attack
+	if Input.is_action_just_pressed("ranged_attack") and weapon_animation_done != false:
+		shoot()
+	
 	# Handle dodge
 	if Input.is_action_just_pressed("dodge"):
 		if stamina_bar.value < dodge_cost:
@@ -96,18 +100,6 @@ func update_movement_animation():
 	elif last_movement_direction == Vector2.DOWN:
 		animated_sprite.play("walk_down")
 
-# Handle weapon switching
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("switch_sword"):
-		current_weapon = WeaponType.SWORD
-		print("Switched to Sword") # debug
-		swordIcon.visible = true
-		boltIcon.visible = false
-	elif event.is_action_pressed("switch_projectile"):
-		current_weapon = WeaponType.PROJECTILE
-		print("Switched to Projectile") # debug
-		swordIcon.visible = false
-		boltIcon.visible = true
 
 # Handle shooting projectiles
 func shoot():
@@ -118,6 +110,7 @@ func shoot():
 
 # Handle sword attack
 func swing_sword():
+	weapon_animation_done = false
 	# Update facing direction to match attack direction and lock it
 	update_attack_direction()
 	var attack_animation = get_idle_animation(last_attack_direction)
