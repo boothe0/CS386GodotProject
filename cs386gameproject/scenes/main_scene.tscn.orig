@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=17 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
 [ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="2_psmqu"]
-[ext_resource type="Script" path="res://scripts/stamina_bar.gd" id="4_2cfse"]
 [ext_resource type="Script" path="res://scripts/health_bar.gd" id="4_d7btm"]
+[ext_resource type="Script" path="res://scripts/EnemyHealthBar.gd" id="4_p1aji"]
+[ext_resource type="Script" path="res://scenes/stamina_bar.gd" id="5_up0xu"]
 [ext_resource type="Texture2D" uid="uid://dt6rcat0j8ruc" path="res://assets/16x16 Magical Forest Asset Pack/Weapons/sword.png" id="7_4u7mj"]
 [ext_resource type="Texture2D" uid="uid://dpgfy6i08x4e7" path="res://assets/Projectiles/Projectiles/bolt1UI.png" id="7_qaerf"]
 
@@ -72,6 +73,9 @@ zoom = Vector2(3, 3)
 process_callback = 0
 position_smoothing_enabled = true
 
+[node name="DodgeTimer" type="Timer" parent="Player"]
+wait_time = 2.0
+
 [node name="GroundLayer" type="TileMapLayer" parent="."]
 use_parent_material = true
 position = Vector2(253, 152)
@@ -90,10 +94,11 @@ offset_bottom = -20.0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_qm72p")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dwgug")
-max_value = 10.0
-value = 10.0
+max_value = 1.0
+value = 1.0
 show_percentage = false
-script = ExtResource("4_2cfse")
+<<<<<<< HEAD
+=======
 
 [node name="SpaceBarIndicator" type="Label" parent="PlayerUI/StaminaBar"]
 layout_mode = 1
@@ -106,15 +111,23 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Space"
 horizontal_alignment = 1
-
-[node name="RegenTimer" type="Timer" parent="PlayerUI/StaminaBar"]
+>>>>>>> origin
 
 [node name="HealthBar" type="ProgressBar" parent="PlayerUI"]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
+<<<<<<< HEAD
+offset_left = 10.0
+offset_top = -7.0
+offset_right = 8401.0
+offset_bottom = 1214.0
+=======
+
 offset_top = -20.0
 offset_right = 250.0
+
+>>>>>>> origin
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_pomkq")
 theme_override_styles/fill = SubResource("StyleBoxFlat_omlwu")
@@ -123,6 +136,7 @@ value = 10.0
 show_percentage = false
 script = ExtResource("4_d7btm")
 
+[node name="SpawnTimer" type="Timer" parent="."]
 [node name="BoltUI" type="TextureRect" parent="PlayerUI"]
 visible = false
 offset_right = 47.0
@@ -134,4 +148,4 @@ offset_right = 49.0
 offset_bottom = 44.0
 texture = ExtResource("7_4u7mj")
 
-[node name="SpawnTimer" type="Timer" parent="."]
+[connection signal="timeout" from="Player/DodgeTimer" to="Player" method="_on_timer_timeout"]
