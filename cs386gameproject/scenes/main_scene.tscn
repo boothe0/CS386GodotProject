@@ -93,7 +93,6 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_dwgug")
 max_value = 10.0
 value = 10.0
 show_percentage = false
-
 script = ExtResource("4_2cfse")
 
 [node name="SpaceBarIndicator" type="Label" parent="PlayerUI/StaminaBar"]
@@ -114,10 +113,8 @@ horizontal_alignment = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-
 offset_top = -20.0
 offset_right = 250.0
-
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_pomkq")
 theme_override_styles/fill = SubResource("StyleBoxFlat_omlwu")
@@ -126,7 +123,6 @@ value = 10.0
 show_percentage = false
 script = ExtResource("4_d7btm")
 
-[node name="SpawnTimer" type="Timer" parent="."]
 [node name="BoltUI" type="TextureRect" parent="PlayerUI"]
 visible = false
 offset_right = 47.0
