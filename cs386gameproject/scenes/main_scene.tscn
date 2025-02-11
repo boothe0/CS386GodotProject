@@ -1,14 +1,10 @@
-
-[gd_scene load_steps=14 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=13 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
 [ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="2_psmqu"]
 [ext_resource type="Script" path="res://scripts/stamina_bar.gd" id="4_2cfse"]
 [ext_resource type="Script" path="res://scripts/health_bar.gd" id="4_d7btm"]
-
-[ext_resource type="Texture2D" uid="uid://dt6rcat0j8ruc" path="res://assets/16x16 Magical Forest Asset Pack/Weapons/sword.png" id="7_4u7mj"]
-[ext_resource type="Texture2D" uid="uid://dpgfy6i08x4e7" path="res://assets/Projectiles/Projectiles/bolt1UI.png" id="7_qaerf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -61,6 +57,8 @@ bg_color = Color(0.169245, 0.169245, 0.169245, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omlwu"]
 bg_color = Color(0.898275, 2.59906e-06, 1.2514e-06, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l3c56"]
 
 [node name="MainScene" type="Node2D"]
 position = Vector2(-509, -312)
@@ -125,7 +123,28 @@ value = 10.0
 show_percentage = false
 script = ExtResource("4_d7btm")
 
-
 [node name="SpawnTimer" type="Timer" parent="."]
 
-[node name="SpawnTimer" type="Timer" parent="."]
+[node name="SpawnTimer2" type="Timer" parent="."]
+
+[node name="ArenaBoundary" type="StaticBody2D" parent="." groups=["boundary"]]
+collision_layer = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArenaBoundary"]
+position = Vector2(255, 10)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_l3c56")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ArenaBoundary"]
+position = Vector2(-1, 155)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_l3c56")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="ArenaBoundary"]
+position = Vector2(255, 310)
+shape = SubResource("WorldBoundaryShape2D_l3c56")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="ArenaBoundary"]
+position = Vector2(507, 155)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_l3c56")
