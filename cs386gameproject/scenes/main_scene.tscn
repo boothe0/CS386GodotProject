@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=14 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
 [ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="2_psmqu"]
 [ext_resource type="Script" path="res://scripts/stamina_bar.gd" id="4_2cfse"]
 [ext_resource type="Script" path="res://scripts/health_bar.gd" id="4_d7btm"]
+[ext_resource type="Texture2D" uid="uid://cv0m3vwjkbcon" path="res://assets/UI_Elements/abilities_placeholder.png" id="6_a6u3b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -84,9 +85,10 @@ tile_set = SubResource("TileSet_7fs3h")
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 250.0
-offset_bottom = -20.0
+offset_left = 800.0
+offset_top = -598.0
+offset_right = 1050.0
+offset_bottom = -578.0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_qm72p")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dwgug")
@@ -101,7 +103,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
+offset_top = -20.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Space"
@@ -113,8 +116,10 @@ horizontal_alignment = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -20.0
-offset_right = 250.0
+offset_left = 800.0
+offset_top = -623.0
+offset_right = 1050.0
+offset_bottom = -603.0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_pomkq")
 theme_override_styles/fill = SubResource("StyleBoxFlat_omlwu")
@@ -122,6 +127,37 @@ max_value = 10.0
 value = 10.0
 show_percentage = false
 script = ExtResource("4_d7btm")
+
+[node name="Ability1" type="TextureRect" parent="PlayerUI"]
+offset_left = 1093.0
+offset_right = 1150.0
+offset_bottom = 59.0
+texture = ExtResource("6_a6u3b")
+expand_mode = 1
+
+[node name="Ability2" type="TextureRect" parent="PlayerUI"]
+offset_left = 1093.0
+offset_top = 80.0
+offset_right = 1150.0
+offset_bottom = 140.0
+texture = ExtResource("6_a6u3b")
+expand_mode = 1
+
+[node name="Ability3" type="TextureRect" parent="PlayerUI"]
+offset_left = 1093.0
+offset_top = 160.0
+offset_right = 1150.0
+offset_bottom = 224.0
+texture = ExtResource("6_a6u3b")
+expand_mode = 1
+
+[node name="Ability4" type="TextureRect" parent="PlayerUI"]
+offset_left = 1089.0
+offset_top = 240.0
+offset_right = 1150.0
+offset_bottom = 309.0
+texture = ExtResource("6_a6u3b")
+expand_mode = 1
 
 [node name="SpawnTimer" type="Timer" parent="."]
 
