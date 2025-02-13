@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=13 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
 [ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="2_psmqu"]
 [ext_resource type="Script" path="res://scripts/stamina_bar.gd" id="4_2cfse"]
 [ext_resource type="Script" path="res://scripts/health_bar.gd" id="4_d7btm"]
+[ext_resource type="PackedScene" uid="uid://c63dsnmtidj3h" path="res://scenes/consumables/heal_potion.tscn" id="6_qx2dl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -120,37 +121,63 @@ max_value = 10.0
 value = 10.0
 show_percentage = false
 script = ExtResource("4_d7btm")
+metadata/_edit_use_anchors_ = true
 
-[node name="Container" type="Container" parent="PlayerUI"]
-offset_left = 1030.0
-offset_right = 1070.0
+[node name="Consumable_1" type="HBoxContainer" parent="PlayerUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -152.0
+offset_right = -102.0
 offset_bottom = 40.0
+grow_horizontal = 0
 scale = Vector2(3, 3.48)
 
-[node name="Label" type="Label" parent="PlayerUI/Container"]
+[node name="Label" type="Label" parent="PlayerUI/Consumable_1"]
 layout_mode = 2
 text = "Z"
 
-[node name="Container2" type="Container" parent="PlayerUI"]
-offset_left = 1030.0
+[node name="ConsumableSlot1" parent="PlayerUI/Consumable_1" instance=ExtResource("6_qx2dl")]
+layout_mode = 2
+
+[node name="Consumable_2" type="HBoxContainer" parent="PlayerUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -152.0
 offset_top = 140.0
-offset_right = 1070.0
+offset_right = -102.0
 offset_bottom = 180.0
+grow_horizontal = 0
 scale = Vector2(3, 3.48)
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="PlayerUI/Container2"]
+[node name="Label" type="Label" parent="PlayerUI/Consumable_2"]
 layout_mode = 2
-text = "X"
+text = "X
+"
 
-[node name="Container3" type="Container" parent="PlayerUI"]
-offset_left = 1030.0
+[node name="ConsumableSlot1" parent="PlayerUI/Consumable_2" instance=ExtResource("6_qx2dl")]
+layout_mode = 2
+
+[node name="Consumable_3" type="HBoxContainer" parent="PlayerUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -152.0
 offset_top = 280.0
-offset_right = 1070.0
+offset_right = -102.0
 offset_bottom = 320.0
+grow_horizontal = 0
 scale = Vector2(3, 3.48)
 
-[node name="Label" type="Label" parent="PlayerUI/Container3"]
+[node name="Label" type="Label" parent="PlayerUI/Consumable_3"]
 layout_mode = 2
-text = "C"
+text = "C
+"
+
+[node name="ConsumableSlot1" parent="PlayerUI/Consumable_3" instance=ExtResource("6_qx2dl")]
+layout_mode = 2
 
 [node name="SpawnTimer" type="Timer" parent="."]
