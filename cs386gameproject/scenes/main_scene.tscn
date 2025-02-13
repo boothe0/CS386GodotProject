@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=12 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
 [ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="2_psmqu"]
 [ext_resource type="Script" path="res://scripts/stamina_bar.gd" id="4_2cfse"]
 [ext_resource type="Script" path="res://scripts/health_bar.gd" id="4_d7btm"]
-[ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/PotionsPack1.png" id="6_opgjy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -58,10 +57,6 @@ bg_color = Color(0.169245, 0.169245, 0.169245, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omlwu"]
 bg_color = Color(0.898275, 2.59906e-06, 1.2514e-06, 1)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4v2qi"]
-atlas = ExtResource("6_opgjy")
-region = Rect2(0, 0, 30, 30)
 
 [node name="MainScene" type="Node2D"]
 position = Vector2(-509, -312)
@@ -126,67 +121,36 @@ value = 10.0
 show_percentage = false
 script = ExtResource("4_d7btm")
 
-[node name="ConsumableSlot1" type="TextureRect" parent="PlayerUI"]
-clip_contents = true
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -122.0
-offset_top = -1.0
-offset_right = -82.0
-offset_bottom = 39.0
-grow_horizontal = 0
+[node name="Container" type="Container" parent="PlayerUI"]
+offset_left = 1030.0
+offset_right = 1070.0
+offset_bottom = 40.0
 scale = Vector2(3, 3.48)
-texture = SubResource("AtlasTexture_4v2qi")
 
-[node name="Label" type="Label" parent="PlayerUI/ConsumableSlot1"]
-layout_mode = 0
-offset_left = 3.33333
-offset_top = 15.5172
-offset_right = 43.3333
-offset_bottom = 38.5172
+[node name="Label" type="Label" parent="PlayerUI/Container"]
+layout_mode = 2
 text = "Z"
 
-[node name="ConsumableSlot2" type="TextureRect" parent="PlayerUI"]
-clip_contents = true
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -122.0
-offset_top = 157.0
-offset_right = -82.0
-offset_bottom = 197.0
-grow_horizontal = 0
+[node name="Container2" type="Container" parent="PlayerUI"]
+offset_left = 1030.0
+offset_top = 140.0
+offset_right = 1070.0
+offset_bottom = 180.0
 scale = Vector2(3, 3.48)
-texture = SubResource("AtlasTexture_4v2qi")
 
-[node name="Label" type="Label" parent="PlayerUI/ConsumableSlot2"]
-layout_mode = 0
-offset_left = 3.33333
-offset_top = 15.5172
-offset_right = 43.3333
-offset_bottom = 38.5172
+[node name="Label" type="Label" parent="PlayerUI/Container2"]
+layout_mode = 2
 text = "X"
 
-[node name="ConsumableSlot3" type="TextureRect" parent="PlayerUI"]
-clip_contents = true
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -122.0
-offset_top = 300.0
-offset_right = -82.0
-offset_bottom = 340.0
-grow_horizontal = 0
+[node name="Container3" type="Container" parent="PlayerUI"]
+offset_left = 1030.0
+offset_top = 280.0
+offset_right = 1070.0
+offset_bottom = 320.0
 scale = Vector2(3, 3.48)
-texture = SubResource("AtlasTexture_4v2qi")
 
-[node name="Label" type="Label" parent="PlayerUI/ConsumableSlot3"]
-layout_mode = 0
-offset_left = 3.33333
-offset_top = 15.5172
-offset_right = 43.3333
-offset_bottom = 38.5172
+[node name="Label" type="Label" parent="PlayerUI/Container3"]
+layout_mode = 2
 text = "C"
 
 [node name="SpawnTimer" type="Timer" parent="."]
