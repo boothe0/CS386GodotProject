@@ -130,7 +130,7 @@ Grading criteria (2 points): Describe what would be considered the Minimal Viabl
 ## 6. Use cases
 
 Include a UML use case diagram for your project. There are many drawing tools that you can use.  I recommend the one we used in class, draw.io.
-![UML Use Case Diagram]((https://i.imgur.com/kv2C0d6.png))
+![UML Use Case Diagram](https://i.imgur.com/kv2C0d6.png)
 Grading criteria (5 points): Follow correctly the UML specification. The actors should be coherent with what was listed in sections 1 and 2. The use case diagram should be coherent with the list of requirements (section 3). The level of granularity of each use case should be adequate. The use cases should be adequately named.
 
 Present one complete use case description (textual) for each member of the group. Therefore, if the group has 4 members, 4 use case descriptions are necessary. As the grading will not be individual, the group is responsible for keeping the quality and consistency of the whole document – avoid just splitting the work. Choose the most important use cases to describe. Follow the template provided in the slides.
