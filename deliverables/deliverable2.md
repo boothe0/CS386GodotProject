@@ -136,6 +136,30 @@ Grading criteria (5 points): Follow correctly the UML specification. The actors 
 Present one complete use case description (textual) for each member of the group. Therefore, if the group has 4 members, 4 use case descriptions are necessary. As the grading will not be individual, the group is responsible for keeping the quality and consistency of the whole document – avoid just splitting the work. Choose the most important use cases to describe. Follow the template provided in the slides.
 
 1. Main menu - Camelia
+- Use Case: Engaging with main menu
+- Actor: Player
+- Trigger: Player decides to open game.
+- Pre-condition: Player has not opened game.
+- Post-condition: Player has achieved desired result after engaging with menu.
+- Success Scenario: 
+- 1. Player opens game.
+- 2. Menu screen appears with three buttons: Start, Options, and Quit.
+- 3. Player clicks on desired button.
+- If the button is Start: 
+- 4. Title screen is replaced by gameplay screen.
+- 5. The game starts.
+- If the button is Options:
+- 4. Title screen is replaced by options screen.
+- If the button is Quit:
+- 4. Game closes.
+- Alternate Scenario:
+- 1. Player does not click on any buttons.
+- 2. Game closes after sufficiently long period of inactivity.
+
+Corresponding User Interface:
+
+![Main Menu Use Case](https://i.imgur.com/zjJUJfM.png)
+
 2. Ranged Combat - Asher
    - Players should be able to attack enemies at a range. Players should also be able to purchase upgrades for these attacks so they become stronger
    - ![Projectile Story](https://i.imgur.com/FvVaygD.png)
@@ -144,14 +168,11 @@ Present one complete use case description (textual) for each member of the group
 5. Shop interface - Elizabeth
    - Elizabeth- At the end of each round, a pop-up menu will display showing each item's affects, price, short description and visual icon that the user can click on to purchase with coins they have accumulated from the previous round.
    - ![Shop Story](https://i.imgur.com/MnKEXl0.png)
-4. Melee Combat
-5. Consumables
 
 After each use case description, add a sketch of the corresponding user interface. This will be a good opportunity to start thinking about usability. 
 
 Grading criteria (8 points): Follow the template to describe the use cases. Present an interface sketch for each use case. Describe the use case as a dialog between the user and the system. Do not use UI language in the description of the use case.
 
-Elizabeth- At the end of each round, a pop-up menu will display showing each item's affects, price, short description and visual icon that the user can click on to purchase with coins they have accumulated from the previous round.
 ## 7. User stories
 
 Write two user stories for each member of the group. They can be related to the same features described in the use cases or to different ones. Adopt the following format: "As a <ROLE>, I want <SOMETHING> so that <GOAL>." 
@@ -159,6 +180,13 @@ Write two user stories for each member of the group. They can be related to the 
 - As a player I want to buy upgrades for my ranged attacks to slay more enemies and feel stronger.
 - As a player I want to look at the gear I have obtained over the course of the game to get a sense of progression.
 - As a player I want to know how many coins is needed to buy a certain item so I know whether to save or buy that round.
+- As a player, I want to access the main menu so I can start the game, exit the game, or adjust game options.
+     - Priority Level: 1
+     - Estimated Time: 1 hour
+- As a player, I want to see the health bar for my character as it updates with each attack so that I can determine how well I am doing in the game.
+     - Priority Level: 2
+     - Estimated Time: 3 hours
+
 Establish a priority level for each user story and estimate how many hours each one will demand using the planning poker approach.
 
 Grading criteria (6 points): Use the provided format. The user stories should be in an adequate level of granularity (not too broad nor too specific). Provide the priority and estimation for each user story.
