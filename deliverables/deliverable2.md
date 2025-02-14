@@ -134,7 +134,7 @@ Present one complete use case description (textual) for each member of the group
 1. Main menu - Camelia
 2. Ranged Combat - Asher
    - As a player I want to attack enemies at range to have additional combat depth
-   - [Projectile Story](https://i.imgur.com/FvVaygD.png)
+   - ![Projectile Story](https://i.imgur.com/FvVaygD.png)
 4. Melee Combat
 5. Consumables
 6. Shop interface
