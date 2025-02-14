@@ -143,7 +143,7 @@ Present one complete use case description (textual) for each member of the group
 4. Consumables
 5. Shop interface - Elizabeth
    - Elizabeth- At the end of each round, a pop-up menu will display showing each item's affects, price, short description and visual icon that the user can click on to purchase with coins they have accumulated from the previous round.
-   - ![Shop Story](https://imgur.com/a/lis6ZfR)
+   - ![Shop Story](https://i.imgur.com/MnKEXl0.png)
 4. Melee Combat
 5. Consumables
 6. Shop interface
