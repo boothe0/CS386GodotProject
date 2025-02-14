@@ -147,17 +147,12 @@ Present one complete use case description (textual) for each member of the group
 4. Melee Combat
 5. Consumables
 6. Shop interface
->>>>>>> 3798d6a9a523e4ca15618e18e0beccedc074f926
-
 
 After each use case description, add a sketch of the corresponding user interface. This will be a good opportunity to start thinking about usability. 
 
 Grading criteria (8 points): Follow the template to describe the use cases. Present an interface sketch for each use case. Describe the use case as a dialog between the user and the system. Do not use UI language in the description of the use case.
 
 Elizabeth- At the end of each round, a pop-up menu will display showing each item's affects, price, short description and visual icon that the user can click on to purchase with coins they have accumulated from the previous round.
-
-![UseCaseShop](https://www.dropbox.com/scl/fi/u261cwjwoejeccsf2u87y/useCaseShopSystem.drawio.pdf?rlkey=vjqk6ysxkmtxxnyvg3v2c8v82&st=0e5kudif&dl=0)
-
 ## 7. User stories
 
 Write two user stories for each member of the group. They can be related to the same features described in the use cases or to different ones. Adopt the following format: "As a <ROLE>, I want <SOMETHING> so that <GOAL>." 
