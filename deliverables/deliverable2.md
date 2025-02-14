@@ -144,7 +144,7 @@ Grading criteria (5 points): Follow correctly the UML specification. The actors 
 Present one complete use case description (textual) for each member of the group. Therefore, if the group has 4 members, 4 use case descriptions are necessary. As the grading will not be individual, the group is responsible for keeping the quality and consistency of the whole document – avoid just splitting the work. Choose the most important use cases to describe. Follow the template provided in the slides.
 
 1. Main menu
-2. Ranged Combat
+2. Ranged Combat - Asher
 3. Melee Combat
 4. Consumables
 5. Shop interface
