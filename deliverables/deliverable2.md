@@ -5,11 +5,11 @@ Problem statement
 Provide a statement to summarize the problem solved by your project according to the following structure (which is based on the OpenUP Vision Template):
 
 The problem of
-Currently there is no short form roguelike game that takes little time to complete while still being satisfying
+No short form roguelike being available 
 affects
-Fans of the roguelike genre who don't have the time to sit and play a run of their favorite game genre.
+busy fans of the genre, who don't have the time to play long runs
 the impact of which is
-Fans of the genre aren't able to play their favorite games because they usually take too much time for someone who is busy to sit down and enjoy them.
+players being unable to enjoy their favorite genre
 
 Example of a problem statement: “The problem of inefficient prioritization of homework assignments affects college students; the impact of which is delivering assignments past due and receiving low grades.” The problem should read as a problem (must be something bad that makes people spend time or money in an inefficient way.
 Product Position Statement
@@ -17,17 +17,17 @@ Product Position Statement
 A product position statement communicates the intent of the application and the importance of the project to all concerned personnel. The product should mitigate the aforementioned problem. Provide a statement according to the following structure:
 
 For
-[target customer]
+Busy Roguelite fans
 Who
-[statement of the need or opportunity]
-The (product name)
-[product name] is a [product category]
+have limited time to enojy roguelites
+The Tiny Roguelite
+Tiny Roguelie is a Roguelite
 That
-[statement of key benefit; that is, the compelling reason to buy]
+presents a short form version of a rouge-lite game
 Unlike
-[primary competitive alternative]
+other games such as  The Binding of Isaac, Gungeon, or Slay the Spire which take upto an hour+ to complete a single run.
 Our product
-[statement of primary differentiation]
+takes much less time to playthrough for those who do not have the time to commit to a run of those longer-form games.
 
 Example of a product position statement: “For college students who have many parallel homework assignments, MyPrioritizationApp is a planning app that crowdsources the identification of complexity and time necessary to accomplish assignments, supporting the informed prioritization; unlike myHomework Student Planner, our product does not rely on the judgment of a student who hasn’t started the homework yet.” Make sure your product position statement is related to your problem.
 Value proposition and customer segment
@@ -38,10 +38,15 @@ Example:
 Value proposition: MyPrioritizationApp is a crowdsourced planning app {(i) what your product is} that allows college students {(ii) target costumer} to make better use of their time {(iii) the value your product provides}, prioritizing homework based on more accurate information of required time and complexity of the assignments {(iv) why your product is unique}.”
 Consumer segment: College students who have many parallel homework assignments
 
+Value proposition: Tiny Roguelite is a roguelite game that allows busy fans of the genre to play their favorite genre without requiring a large time commitment, providing a short-form game with all the features of traditional games in the same genre.
+Consumer segment: Busy Roguelite Fans with little time. 
+
 Grading criteria (3 points, 1 for each section): The content of the subsections should contain all the required elements, follow the provided template, and be consistent with each other. The text should not contain typos or grammar issues.
 2. Stakeholders
 
 Make a list of all stakeholders of the project with a brief description of each one of them, emphasizing any responsibilities with the project. Examples of stakeholders include users, clients, competitors, detractors, developers, etc.
+
+
 
 Grading criteria (1 point): The stakeholders can’t be too generic or specific. The list should reflect what was described in Section 1.
 3. Functional requirements (features)
