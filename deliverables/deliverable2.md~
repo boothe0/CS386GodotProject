@@ -146,6 +146,7 @@ Present one complete use case description (textual) for each member of the group
    - ![Shop Story](https://i.imgur.com/MnKEXl0.png)
 4. Melee Combat
 5. Consumables
+6. Shop interface
 
 After each use case description, add a sketch of the corresponding user interface. This will be a good opportunity to start thinking about usability. 
 
@@ -157,9 +158,7 @@ Elizabeth- At the end of each round, a pop-up menu will display showing each ite
 Write two user stories for each member of the group. They can be related to the same features described in the use cases or to different ones. Adopt the following format: "As a <ROLE>, I want <SOMETHING> so that <GOAL>." 
 - As a player I want to attack enemies at range to have additional combat depth.
 - As a player I want to buy upgrades for my ranged attacks to slay more enemies and feel stronger.
-- As a player I want to look at the gear I have obtained over the course of the game to get a sense of progression.
-- As a player I want to know how many coins is needed to buy a certain item so I know whether to save or buy that round.
-Establish a priority level for each user story and estimate how many hours each one will demand using the planning poker approach.
+Establish a priority level for each user story and estimate how many hours each one will demand using the planning poker approach. 
 
 Grading criteria (6 points): Use the provided format. The user stories should be in an adequate level of granularity (not too broad nor too specific). Provide the priority and estimation for each user story.
 
