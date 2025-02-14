@@ -31,12 +31,16 @@ Grading criteria (3 points, 1 for each section): The content of the subsections 
 Make a list of all stakeholders of the project with a brief description of each one of them, emphasizing any responsibilities with the project. Examples of stakeholders include users, clients, competitors, detractors, developers, etc.
 
 - Casual fans of the roguelike genre
+   - Casual fans play the game to enjoy a shorter experience they can fit into their schedule.
 
 - Busy die hard fans of the roguelite genre
+   - Die hard fans play the game to try something unique while interacting with the game's community.
 
-- Other companies that develop roguelike games
+- The Game Developers (us)
+   - We add features and content according to the wants and needs of the player.
 
 - Content creators that cover roguelikes
+   - Content creators play and review our game to generate traction.
 
 Grading criteria (1 point): The stakeholders can’t be too generic or specific. The list should reflect what was described in Section 1.
 
@@ -126,7 +130,7 @@ Grading criteria (2 points): Describe what would be considered the Minimal Viabl
 ## 6. Use cases
 
 Include a UML use case diagram for your project. There are many drawing tools that you can use.  I recommend the one we used in class, draw.io.
-
+![UML Use Case Diagram]((https://i.imgur.com/kv2C0d6.png))
 Grading criteria (5 points): Follow correctly the UML specification. The actors should be coherent with what was listed in sections 1 and 2. The use case diagram should be coherent with the list of requirements (section 3). The level of granularity of each use case should be adequate. The use cases should be adequately named.
 
 Present one complete use case description (textual) for each member of the group. Therefore, if the group has 4 members, 4 use case descriptions are necessary. As the grading will not be individual, the group is responsible for keeping the quality and consistency of the whole document – avoid just splitting the work. Choose the most important use cases to describe. Follow the template provided in the slides.
