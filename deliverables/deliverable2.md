@@ -137,7 +137,7 @@ Present one complete use case description (textual) for each member of the group
 
 1. Main menu - Camelia
 2. Ranged Combat - Asher
-   - As a player I want to attack enemies at range to have additional combat depth
+   - Players should be able to attack enemies at a range. Players should also be able to purchase upgrades for these attacks so they become stronger
    - ![Projectile Story](https://i.imgur.com/FvVaygD.png)
 4. Melee Combat
 5. Consumables
@@ -151,7 +151,8 @@ Grading criteria (8 points): Follow the template to describe the use cases. Pres
 ## 7. User stories
 
 Write two user stories for each member of the group. They can be related to the same features described in the use cases or to different ones. Adopt the following format: "As a <ROLE>, I want <SOMETHING> so that <GOAL>." 
-
+- As a player I want to attack enemies at range to have additional combat depth.
+- As a player I want to buy upgrades for my ranged attacks to slay more enemies and feel stronger.
 Establish a priority level for each user story and estimate how many hours each one will demand using the planning poker approach. 
 
 Grading criteria (6 points): Use the provided format. The user stories should be in an adequate level of granularity (not too broad nor too specific). Provide the priority and estimation for each user story.
