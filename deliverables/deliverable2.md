@@ -5,11 +5,11 @@ Problem statement
 Provide a statement to summarize the problem solved by your project according to the following structure (which is based on the OpenUP Vision Template):
 
 The problem of
-[describe the problem]
+Currently there is no short form roguelike game that takes little time to complete while still being satisfying
 affects
-[the stakeholders affected by the problem]
+Fans of the roguelike genre who don't have the time to sit and play a run of their favorite game genre.
 the impact of which is
-[what is the impact of the problem? What does it cost?]
+Fans of the genre aren't able to play their favorite games because they usually take too much time for someone who is busy to sit down and enjoy them.
 
 Example of a problem statement: “The problem of inefficient prioritization of homework assignments affects college students; the impact of which is delivering assignments past due and receiving low grades.” The problem should read as a problem (must be something bad that makes people spend time or money in an inefficient way.
 Product Position Statement
