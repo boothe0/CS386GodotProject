@@ -133,9 +133,11 @@ Present one complete use case description (textual) for each member of the group
 
 1. Main menu - Camelia
 2. Ranged Combat - Asher
-3. Melee Combat
-4. Consumables
-5. Shop interface
+   - As a player I want to attack enemies at range to have additional combat depth
+   - [Projectile Story](https://i.imgur.com/FvVaygD.png)
+4. Melee Combat
+5. Consumables
+6. Shop interface
 
 
 After each use case description, add a sketch of the corresponding user interface. This will be a good opportunity to start thinking about usability. 
