@@ -144,7 +144,7 @@ Grading criteria (8 points): Follow the template to describe the use cases. Pres
 
 Elizabeth- At the end of each round, a pop-up menu will display showing each item's affects, price, short description and visual icon that the user can click on to purchase with coins they have accumulated from the previous round.
 
-![UseCaseShop](https://drive.google.com/u/1/drive-viewer/AKGpihakuf-rOcyGtrCWNyj8hB9bIr7_4jti_3g8JLRXpdowIOSo5aQK7AZev41KC5BYrxUgCPArlOkcw5BiF8bjebLY8ljGt-S5qZA=s1600-rw-v1)
+![UseCaseShop](https://www.dropbox.com/scl/fi/u261cwjwoejeccsf2u87y/useCaseShopSystem.drawio.pdf?rlkey=vjqk6ysxkmtxxnyvg3v2c8v82&st=0e5kudif&dl=0)
 
 ## 7. User stories
 
