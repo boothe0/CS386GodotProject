@@ -31,12 +31,16 @@ Grading criteria (3 points, 1 for each section): The content of the subsections 
 Make a list of all stakeholders of the project with a brief description of each one of them, emphasizing any responsibilities with the project. Examples of stakeholders include users, clients, competitors, detractors, developers, etc.
 
 - Casual fans of the roguelike genre
+   - Casual fans play the game to enjoy a shorter experience they can fit into their schedule.
 
 - Busy die hard fans of the roguelite genre
+   - Die hard fans play the game to try something unique while interacting with the game's community.
 
-- Other companies that develop roguelike games
+- The Game Developers (us)
+   - We add features and content according to the wants and needs of the player.
 
 - Content creators that cover roguelikes
+   - Content creators play and review our game to generate traction.
 
 Grading criteria (1 point): The stakeholders can’t be too generic or specific. The list should reflect what was described in Section 1.
 
@@ -126,16 +130,24 @@ Grading criteria (2 points): Describe what would be considered the Minimal Viabl
 ## 6. Use cases
 
 Include a UML use case diagram for your project. There are many drawing tools that you can use.  I recommend the one we used in class, draw.io.
-
+![UML Use Case Diagram](https://i.imgur.com/kv2C0d6.png)
 Grading criteria (5 points): Follow correctly the UML specification. The actors should be coherent with what was listed in sections 1 and 2. The use case diagram should be coherent with the list of requirements (section 3). The level of granularity of each use case should be adequate. The use cases should be adequately named.
 
 Present one complete use case description (textual) for each member of the group. Therefore, if the group has 4 members, 4 use case descriptions are necessary. As the grading will not be individual, the group is responsible for keeping the quality and consistency of the whole document – avoid just splitting the work. Choose the most important use cases to describe. Follow the template provided in the slides.
 
 1. Main menu - Camelia
 2. Ranged Combat - Asher
+<<<<<<< HEAD
 3. Melee Combat
 4. Consumables
 5. Shop interface - Elizabeth
+=======
+   - Players should be able to attack enemies at a range. Players should also be able to purchase upgrades for these attacks so they become stronger
+   - ![Projectile Story](https://i.imgur.com/FvVaygD.png)
+4. Melee Combat
+5. Consumables
+6. Shop interface
+>>>>>>> 3798d6a9a523e4ca15618e18e0beccedc074f926
 
 
 After each use case description, add a sketch of the corresponding user interface. This will be a good opportunity to start thinking about usability. 
@@ -143,13 +155,11 @@ After each use case description, add a sketch of the corresponding user interfac
 Grading criteria (8 points): Follow the template to describe the use cases. Present an interface sketch for each use case. Describe the use case as a dialog between the user and the system. Do not use UI language in the description of the use case.
 
 Elizabeth- At the end of each round, a pop-up menu will display showing each item's affects, price, short description and visual icon that the user can click on to purchase with coins they have accumulated from the previous round.
-
-![UseCaseShop](https://www.dropbox.com/scl/fi/u261cwjwoejeccsf2u87y/useCaseShopSystem.drawio.pdf?rlkey=vjqk6ysxkmtxxnyvg3v2c8v82&st=0e5kudif&dl=0)
-
 ## 7. User stories
 
 Write two user stories for each member of the group. They can be related to the same features described in the use cases or to different ones. Adopt the following format: "As a <ROLE>, I want <SOMETHING> so that <GOAL>." 
-
+- As a player I want to attack enemies at range to have additional combat depth.
+- As a player I want to buy upgrades for my ranged attacks to slay more enemies and feel stronger.
 Establish a priority level for each user story and estimate how many hours each one will demand using the planning poker approach. 
 
 Grading criteria (6 points): Use the provided format. The user stories should be in an adequate level of granularity (not too broad nor too specific). Provide the priority and estimation for each user story.
