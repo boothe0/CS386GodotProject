@@ -185,9 +185,26 @@ Corresponding User Interface:
 ![Melee Story](https://i.imgur.com/DZ1zfc0.png)
 
 5. Consumables
+
 6. Shop interface - Elizabeth
-   - Elizabeth- At the end of each round, a pop-up menu will display showing each item's affects, price, short description and visual icon that the user can click on to purchase with coins they have accumulated from the previous round.
-   - ![Shop Story](https://i.imgur.com/MnKEXl0.png)
+- **Use Case:** At the end of the round a pop-up menu displays item's affects, price, short description and visual icon.
+- **Actor:** Shop
+- **Trigger:** End of the round
+- **Pre-conditions:** Player completed the previous round
+- **Post-conditions:** A menu is displayed with the items shown
+- **Success Scenario:**
+1. Player reaches the end of the round
+2. A short pause signaling its completion
+3. A pop-up menu showing items for sale
+4. Player can see the prices of items and a visual icon for each
+- **Alternate Scenario #1:**
+1. Player does not reach the end of the round
+2. A short pause showing player has lost
+3. A restart option is shown
+
+- **Corresponding User Interface:**
+
+![Shop Story](https://i.imgur.com/MnKEXl0.png)
 
 After each use case description, add a sketch of the corresponding user interface. This will be a good opportunity to start thinking about usability. 
 
@@ -199,7 +216,11 @@ Write two user stories for each member of the group. They can be related to the 
 - As a player I want to attack enemies at range to have additional combat depth.
 - As a player I want to buy upgrades for my ranged attacks to slay more enemies and feel stronger.
 - As a player I want to look at the gear I have obtained over the course of the game to get a sense of progression.
+     - Priority Level: 1
+     - Estimated Time: 4 hours
 - As a player I want to know how many coins is needed to buy a certain item so I know whether to save or buy that round.
+     - Priority Level: 2
+     - Estimated Time: 1 hour
 - As a player, I want to access the main menu so I can start the game, exit the game, or adjust game options.
      - Priority Level: 1
      - Estimated Time: 1 hour
