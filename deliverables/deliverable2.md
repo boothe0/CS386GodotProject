@@ -165,22 +165,22 @@ Corresponding User Interface:
    - ![Projectile Story](https://i.imgur.com/FvVaygD.png)
 
 3. Melee Combat - Chandler
-   - **Use Case:** Player attacks enemy with a melee attack
-   - **Actor:** Player
-   - **Trigger:** Player presses the corresponding button
-   - **Pre-conditions:** Player is in the gameplay stage
-   - **Post-condition:** Player's attack damages enemy
-   - **Success Scenario:**
-         1. Player is within melee range of the enemy
-         2. Player presses the button for a melee attack
-         3. Melee attack hits enemy
-         4. Enemy loses life according to the attack's power
-   - **Alternate Scenario #1:**
-         1. Player is not in melee attack range
-         2. Player presses the button for a melee attack
-         3. Melee attack misses
-   - **Corresponding User Interface:**
-   ![Melee Story](https://i.imgur.com/DZ1zfc0.png)
+- **Use Case:** Player attacks enemy with a melee attack
+- **Actor:** Player
+- **Trigger:** Player presses the corresponding button
+- **Pre-conditions:** Player is in the gameplay stage
+- **Post-condition:** Player's attack damages enemy
+- **Success Scenario:**
+   1. Player is within melee range of the enemy
+   2. Player presses the button for a melee attack
+   3. Melee attack hits enemy
+   4. Enemy loses life according to the attack's power
+- **Alternate Scenario #1:**
+   1. Player is not in melee attack range
+   2. Player presses the button for a melee attack
+   3. Melee attack misses
+**Corresponding User Interface:**
+![Melee Story](https://i.imgur.com/DZ1zfc0.png)
 
 5. Consumables
 6. Shop interface - Elizabeth
