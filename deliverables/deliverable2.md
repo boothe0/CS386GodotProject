@@ -171,15 +171,17 @@ Corresponding User Interface:
 - **Pre-conditions:** Player is in the gameplay stage
 - **Post-condition:** Player's attack damages enemy
 - **Success Scenario:**
-   1. Player is within melee range of the enemy
-   2. Player presses the button for a melee attack
-   3. Melee attack hits enemy
-   4. Enemy loses life according to the attack's power
+1. Player is within melee range of the enemy
+2. Player presses the button for a melee attack
+3. Melee attack hits enemy
+4. Enemy loses life according to the attack's power
 - **Alternate Scenario #1:**
-   1. Player is not in melee attack range
-   2. Player presses the button for a melee attack
-   3. Melee attack misses
-**Corresponding User Interface:**
+1. Player is not in melee attack range
+2. Player presses the button for a melee attack
+3. Melee attack misses
+
+- **Corresponding User Interface:**
+
 ![Melee Story](https://i.imgur.com/DZ1zfc0.png)
 
 5. Consumables
@@ -204,10 +206,10 @@ Write two user stories for each member of the group. They can be related to the 
 - As a player, I want to see the health bar for my character as it updates with each attack so that I can determine how well I am doing in the game.
      - Priority Level: 2
      - Estimated Time: 3 hours
--As a player, I want to the range of my melee attack so that I know if I am close enough for it to hit an enemy.
+- As a player, I want to the range of my melee attack so that I know if I am close enough for it to hit an enemy.
      - Priority Level: 3
      - Estimated Time: 4 hours
--As a player, I want to see how much damage my attacks are doing so that I can plan how to attack enemies
+- As a player, I want to see how much damage my attacks are doing so that I can plan how to attack enemies
      - Priority Level: 3
      - Estimated Time: 2 hours
 
