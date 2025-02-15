@@ -161,7 +161,20 @@ Corresponding User Interface:
 ![Main Menu Use Case](https://i.imgur.com/zjJUJfM.png)
 
 2. Ranged Combat - Asher
-   - Players should be able to attack enemies at a range. Players should also be able to purchase upgrades for these attacks so they become stronger
+   - **Use Case:** Player attacks enemy with ranged attack
+   - **Actor:** Player
+   - **Trigger:** Player inputs button associated with ranged attack
+   - **Pre-conditions:** Player is in combat phase
+   - **Post-condition:** Player's attack damages enemy
+   - **Success Scenario:**
+     1. Projectile spawns next to the player
+     2. Projectile moves in the direction of where player aimed
+     3. Projectile hits enemy
+     4. Enemy loses health
+   - **Alternate Scenario #1:**
+     1. Projectile misses enemy
+     2. Projectile collides with playable area walls
+     3. Projectile dissapears
    - ![Projectile Story](https://i.imgur.com/FvVaygD.png)
 
 3. Melee Combat - Chandler
