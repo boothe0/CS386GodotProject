@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=15 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/stamina_bar.gd" id="4_2cfse"]
 [ext_resource type="Script" path="res://scripts/health_bar.gd" id="4_d7btm"]
 [ext_resource type="Texture2D" uid="uid://cv0m3vwjkbcon" path="res://assets/UI_Elements/abilities_placeholder.png" id="6_a6u3b"]
+[ext_resource type="Texture2D" uid="uid://dg7ahj488wk44" path="res://assets/VariPixels PotionsPack 02112022 Update/PotionsPack0.png" id="7_3lh5j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -136,6 +137,18 @@ offset_bottom = 64.0
 grow_horizontal = 0
 texture = ExtResource("6_a6u3b")
 expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="PlayerUI/Ability1"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -49.0
+offset_top = 13.0
+offset_right = -9.0
+offset_bottom = 53.0
+grow_horizontal = 0
+texture = ExtResource("7_3lh5j")
 
 [node name="Ability2" type="TextureRect" parent="PlayerUI"]
 anchors_preset = 1
