@@ -163,9 +163,27 @@ Corresponding User Interface:
 2. Ranged Combat - Asher
    - Players should be able to attack enemies at a range. Players should also be able to purchase upgrades for these attacks so they become stronger
    - ![Projectile Story](https://i.imgur.com/FvVaygD.png)
-3. Melee Combat
-4. Consumables
-5. Shop interface - Elizabeth
+
+3. Melee Combat - Chandler
+   - **Use Case:** Player attacks enemy with a melee attack
+   - **Actor:** Player
+   - **Trigger:** Player presses the corresponding button
+   - **Pre-conditions:** Player is in the gameplay stage
+   - **Post-condition:** Player's attack damages enemy
+   - **Success Scenario:**
+      1. Player is within melee range of the enemy
+      2. Player presses the button for a melee attack
+      3. Melee attack hits enemy
+      4. Enemy loses life according to the attack's power
+   - **Alternate Scenario #1:**
+      1. Player is not in melee attack range
+      2. Player presses the button for a melee attack
+      3. Melee attack misses
+   - **Corresponding User Interface:**
+   - ![Melee Story](https://i.imgur.com/DZ1zfc0.png)
+
+5. Consumables
+6. Shop interface - Elizabeth
    - Elizabeth- At the end of each round, a pop-up menu will display showing each item's affects, price, short description and visual icon that the user can click on to purchase with coins they have accumulated from the previous round.
    - ![Shop Story](https://i.imgur.com/MnKEXl0.png)
 
