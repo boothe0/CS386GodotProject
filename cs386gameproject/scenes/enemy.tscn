@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://d1he61wxuea23"]
+[gd_scene load_steps=26 format=3 uid="uid://d1he61wxuea23"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_hfuff"]
 [ext_resource type="Texture2D" uid="uid://sjiaenrl1wqh" path="res://assets/16x16 Magical Forest Asset Pack/Characters/GoblinCharacter-Idle.png" id="2_wqalq"]
+[ext_resource type="Script" path="res://scripts/EnemyHealthBar.gd" id="3_hi8vk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bstlm"]
 radius = 7.0
@@ -168,6 +169,12 @@ radius = 70.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_yg8bk"]
 radius = 11.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7vkb"]
+bg_color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2gjpx"]
+bg_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
+
 [node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
 collision_mask = 2
@@ -193,6 +200,18 @@ shape = SubResource("CircleShape2D_jof74")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 shape = SubResource("CircleShape2D_yg8bk")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -19.0
+offset_top = -16.0
+offset_right = 19.0
+offset_bottom = -11.0
+theme_override_styles/background = SubResource("StyleBoxFlat_c7vkb")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2gjpx")
+max_value = 3.0
+value = 3.0
+show_percentage = false
+script = ExtResource("3_hi8vk")
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
