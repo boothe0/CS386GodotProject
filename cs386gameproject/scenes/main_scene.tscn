@@ -1,16 +1,16 @@
-[gd_scene load_steps=18 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=19 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
 [ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="2_psmqu"]
 [ext_resource type="Script" path="res://scripts/stamina_bar.gd" id="4_2cfse"]
 [ext_resource type="Script" path="res://scripts/health_bar.gd" id="4_d7btm"]
+[ext_resource type="Texture2D" uid="uid://cv0m3vwjkbcon" path="res://assets/UI_Elements/abilities_placeholder.png" id="6_a6u3b"]
 [ext_resource type="PackedScene" uid="uid://c63dsnmtidj3h" path="res://scenes/consumables/heal_potion.tscn" id="6_qx2dl"]
 [ext_resource type="Script" path="res://scripts/consumable_1.gd" id="6_rmjn2"]
 [ext_resource type="Script" path="res://scripts/emitter.gd" id="7_0snu2"]
 [ext_resource type="Script" path="res://scripts/consumable_2.gd" id="8_irr0b"]
 [ext_resource type="Script" path="res://scripts/consumable_3.gd" id="9_xpxfm"]
-[ext_resource type="Texture2D" uid="uid://cv0m3vwjkbcon" path="res://assets/UI_Elements/abilities_placeholder.png" id="6_a6u3b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -90,9 +90,9 @@ tile_set = SubResource("TileSet_7fs3h")
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -352.0
+offset_left = -452.0
 offset_top = 40.0
-offset_right = -102.0
+offset_right = -202.0
 offset_bottom = 60.0
 grow_horizontal = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_qm72p")
@@ -120,9 +120,9 @@ horizontal_alignment = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -352.0
+offset_left = -452.0
 offset_top = 10.0
-offset_right = -102.0
+offset_right = -202.0
 offset_bottom = 30.0
 grow_horizontal = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_pomkq")
@@ -194,44 +194,40 @@ text = "C
 layout_mode = 2
 
 [node name="Ability1" type="TextureRect" parent="PlayerUI"]
+z_index = -1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -57.0
-offset_bottom = 64.0
+offset_left = -102.0
+offset_top = 20.0
+offset_right = -2.0
+offset_bottom = 160.0
 grow_horizontal = 0
 texture = ExtResource("6_a6u3b")
 expand_mode = 1
 
 [node name="Ability2" type="TextureRect" parent="PlayerUI"]
+z_index = -1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -57.0
-offset_top = 180.0
-offset_bottom = 244.0
+offset_left = -102.0
+offset_top = 160.0
+offset_right = -2.0
+offset_bottom = 300.0
 grow_horizontal = 0
 texture = ExtResource("6_a6u3b")
 expand_mode = 1
 
 [node name="Ability3" type="TextureRect" parent="PlayerUI"]
+z_index = -1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -57.0
-offset_top = 120.0
-offset_bottom = 184.0
-grow_horizontal = 0
-texture = ExtResource("6_a6u3b")
-expand_mode = 1
-
-[node name="Ability4" type="TextureRect" parent="PlayerUI"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -57.0
-offset_top = 60.0
-offset_bottom = 124.0
+offset_left = -102.0
+offset_top = 300.0
+offset_right = -2.0
+offset_bottom = 440.0
 grow_horizontal = 0
 texture = ExtResource("6_a6u3b")
 expand_mode = 1
