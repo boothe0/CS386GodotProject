@@ -255,6 +255,10 @@ Grading criteria (6 points): Use the provided format. The user stories should be
 
 The user stories should be registered in your GitHub issue tracker. Include here the link for your issue tracker and a screenshot of what you did. 
 
+Link to issue tracker: [https://github.com/boothe0/CS386GodotProject/issues](https://github.com/boothe0/CS386GodotProject/issues)
+
+![Issue Tracker](https://i.imgur.com/Yk8x1Az.png)
+
 Grading criteria (1 point): Provide the URL and screenshot of the issue tracker. The user stories should be registered there.
 
 ## Format
