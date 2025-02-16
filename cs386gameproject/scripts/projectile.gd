@@ -25,3 +25,6 @@ func _on_body_entered(body: Node2D) -> void:
 		print("Enemy hit! Applying damage.") # debugging
 		body.take_damage(damage)
 		queue_free()
+	
+	if body.is_in_group("boundary"):
+		queue_free()

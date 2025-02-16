@@ -63,6 +63,8 @@ bg_color = Color(0.169245, 0.169245, 0.169245, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omlwu"]
 bg_color = Color(0.898275, 2.59906e-06, 1.2514e-06, 1)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l3c56"]
+
 [node name="MainScene" type="Node2D"]
 position = Vector2(-509, -312)
 script = ExtResource("1_l6k43")
@@ -191,3 +193,27 @@ layout_mode = 2
 
 [node name="Emitter" type="Node" parent="."]
 script = ExtResource("7_0snu2")
+
+[node name="SpawnTimer2" type="Timer" parent="."]
+
+[node name="ArenaBoundary" type="StaticBody2D" parent="." groups=["boundary"]]
+collision_layer = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArenaBoundary"]
+position = Vector2(255, 10)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_l3c56")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ArenaBoundary"]
+position = Vector2(-1, 155)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_l3c56")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="ArenaBoundary"]
+position = Vector2(255, 310)
+shape = SubResource("WorldBoundaryShape2D_l3c56")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="ArenaBoundary"]
+position = Vector2(507, 155)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_l3c56")
