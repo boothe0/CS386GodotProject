@@ -90,7 +90,6 @@ func _physics_process(_delta):
 		move_and_collide(velocity)
 	
 	if Input.is_action_just_pressed("use_potion_1"):
-		print("emitting consume 1 signal") # debug
 		Emitter.emit_signal("consumable_1")
 		
 	if Input.is_action_just_pressed("use_potion_2"):
@@ -130,7 +129,6 @@ func swing_sword():
 	update_attack_direction()
 	var attack_animation = get_idle_animation(last_attack_direction)
 	animated_sprite.play(attack_animation)  # Force player to face attack direction
-	print("Swinging sword in direction:", last_attack_direction)  # Debugging
 	
 	# Start sword attack and wait until it's fully done
 	sword.show()
@@ -138,7 +136,6 @@ func swing_sword():
 	await sword.attack()  # Wait until attack is complete
 
 	# After the attack, return to movement-based facing
-	print("Attack finished, returning to movement animation")  # Debug
 	update_movement_animation()
 		
 	
