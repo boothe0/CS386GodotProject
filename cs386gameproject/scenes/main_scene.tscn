@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=17 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
@@ -6,6 +6,10 @@
 [ext_resource type="Script" path="res://scripts/stamina_bar.gd" id="4_2cfse"]
 [ext_resource type="Script" path="res://scripts/health_bar.gd" id="4_d7btm"]
 [ext_resource type="PackedScene" uid="uid://c63dsnmtidj3h" path="res://scenes/consumables/heal_potion.tscn" id="6_qx2dl"]
+[ext_resource type="Script" path="res://scripts/consumable_1.gd" id="6_rmjn2"]
+[ext_resource type="Script" path="res://scripts/emitter.gd" id="7_0snu2"]
+[ext_resource type="Script" path="res://scripts/consumable_2.gd" id="8_irr0b"]
+[ext_resource type="Script" path="res://scripts/consumable_3.gd" id="9_xpxfm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -132,12 +136,13 @@ offset_right = -102.0
 offset_bottom = 40.0
 grow_horizontal = 0
 scale = Vector2(3, 3.48)
+script = ExtResource("6_rmjn2")
 
 [node name="Label" type="Label" parent="PlayerUI/Consumable_1"]
 layout_mode = 2
 text = "Z"
 
-[node name="ConsumableSlot1" parent="PlayerUI/Consumable_1" instance=ExtResource("6_qx2dl")]
+[node name="TextureRect" parent="PlayerUI/Consumable_1" instance=ExtResource("6_qx2dl")]
 layout_mode = 2
 
 [node name="Consumable_2" type="HBoxContainer" parent="PlayerUI"]
@@ -152,13 +157,14 @@ grow_horizontal = 0
 scale = Vector2(3, 3.48)
 size_flags_horizontal = 4
 size_flags_vertical = 4
+script = ExtResource("8_irr0b")
 
 [node name="Label" type="Label" parent="PlayerUI/Consumable_2"]
 layout_mode = 2
 text = "X
 "
 
-[node name="ConsumableSlot1" parent="PlayerUI/Consumable_2" instance=ExtResource("6_qx2dl")]
+[node name="TextureRect" parent="PlayerUI/Consumable_2" instance=ExtResource("6_qx2dl")]
 layout_mode = 2
 
 [node name="Consumable_3" type="HBoxContainer" parent="PlayerUI"]
@@ -171,13 +177,17 @@ offset_right = -102.0
 offset_bottom = 320.0
 grow_horizontal = 0
 scale = Vector2(3, 3.48)
+script = ExtResource("9_xpxfm")
 
 [node name="Label" type="Label" parent="PlayerUI/Consumable_3"]
 layout_mode = 2
 text = "C
 "
 
-[node name="ConsumableSlot1" parent="PlayerUI/Consumable_3" instance=ExtResource("6_qx2dl")]
+[node name="TextureRect" parent="PlayerUI/Consumable_3" instance=ExtResource("6_qx2dl")]
 layout_mode = 2
 
 [node name="SpawnTimer" type="Timer" parent="."]
+
+[node name="Emitter" type="Node" parent="."]
+script = ExtResource("7_0snu2")
