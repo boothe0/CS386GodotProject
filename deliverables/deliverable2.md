@@ -136,25 +136,25 @@ Grading criteria (5 points): Follow correctly the UML specification. The actors 
 Present one complete use case description (textual) for each member of the group. Therefore, if the group has 4 members, 4 use case descriptions are necessary. As the grading will not be individual, the group is responsible for keeping the quality and consistency of the whole document – avoid just splitting the work. Choose the most important use cases to describe. Follow the template provided in the slides.
 
 1. Main menu - Camelia
-- Use Case: Engaging with main menu
+- Use Case: Engage with main menu
 - Actor: Player
 - Trigger: Player decides to open game.
-- Pre-condition: Player has not opened game.
+- Pre-condition: N/A
 - Post-condition: Player has achieved desired result after engaging with menu.
 - Success Scenario: 
-- 1. Player opens game.
-- 2. Menu screen appears with three buttons: Start, Options, and Quit.
-- 3. Player clicks on desired button.
+- 1. User opens game.
+- 2. System displays menu screen with three buttons: Start, Options, and Quit.
+- 3. User clicks on desired button.
 - If the button is Start: 
-- 4. Title screen is replaced by gameplay screen.
-- 5. The game starts.
+- 4. System replaces title screen with gameplay screen.
+- 5. System starts game.
 - If the button is Options:
-- 4. Title screen is replaced by options screen.
+- 4. System replaces title screen with options screen.
 - If the button is Quit:
-- 4. Game closes.
+- 4. System closes game.
 - Alternate Scenario:
-- 1. Player does not click on any buttons.
-- 2. Game closes after sufficiently long period of inactivity.
+- 1. User does not click on any buttons.
+- 2. System closes game after sufficiently long period of inactivity.
 
 Corresponding User Interface:
 
