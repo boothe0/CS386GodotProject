@@ -136,32 +136,45 @@ Grading criteria (5 points): Follow correctly the UML specification. The actors 
 Present one complete use case description (textual) for each member of the group. Therefore, if the group has 4 members, 4 use case descriptions are necessary. As the grading will not be individual, the group is responsible for keeping the quality and consistency of the whole document – avoid just splitting the work. Choose the most important use cases to describe. Follow the template provided in the slides.
 
 1. Main menu - Camelia
-- Use Case: Engaging with main menu
+- Use Case: Engage with main menu
 - Actor: Player
 - Trigger: Player decides to open game.
-- Pre-condition: Player has not opened game.
+- Pre-condition: N/A
 - Post-condition: Player has achieved desired result after engaging with menu.
 - Success Scenario: 
-- 1. Player opens game.
-- 2. Menu screen appears with three buttons: Start, Options, and Quit.
-- 3. Player clicks on desired button.
+- 1. User opens game.
+- 2. System displays menu screen with three buttons: Start, Options, and Quit.
+- 3. User clicks on desired button.
 - If the button is Start: 
-- 4. Title screen is replaced by gameplay screen.
-- 5. The game starts.
+- 4. System replaces title screen with gameplay screen.
+- 5. System starts game.
 - If the button is Options:
-- 4. Title screen is replaced by options screen.
+- 4. System replaces title screen with options screen.
 - If the button is Quit:
-- 4. Game closes.
+- 4. System closes game.
 - Alternate Scenario:
-- 1. Player does not click on any buttons.
-- 2. Game closes after sufficiently long period of inactivity.
+- 1. User does not click on any buttons.
+- 2. System closes game after sufficiently long period of inactivity.
 
 Corresponding User Interface:
 
 ![Main Menu Use Case](https://i.imgur.com/zjJUJfM.png)
 
 2. Ranged Combat - Asher
-   - Players should be able to attack enemies at a range. Players should also be able to purchase upgrades for these attacks so they become stronger
+   - **Use Case:** Player attacks enemy with ranged attack
+   - **Actor:** Player
+   - **Trigger:** Player inputs button associated with ranged attack
+   - **Pre-conditions:** Player is in combat phase
+   - **Post-condition:** Player's attack damages enemy
+   - **Success Scenario:**
+     1. Projectile spawns next to the player
+     2. Projectile moves in the direction of where player aimed
+     3. Projectile hits enemy
+     4. Enemy loses health
+   - **Alternate Scenario #1:**
+     1. Projectile misses enemy
+     2. Projectile collides with playable area walls
+     3. Projectile dissapears
    - ![Projectile Story](https://i.imgur.com/FvVaygD.png)
 
 3. Melee Combat - Chandler
@@ -185,9 +198,26 @@ Corresponding User Interface:
 ![Melee Story](https://i.imgur.com/DZ1zfc0.png)
 
 5. Consumables
+
 6. Shop interface - Elizabeth
-   - Elizabeth- At the end of each round, a pop-up menu will display showing each item's affects, price, short description and visual icon that the user can click on to purchase with coins they have accumulated from the previous round.
-   - ![Shop Story](https://i.imgur.com/MnKEXl0.png)
+- **Use Case:** At the end of the round a pop-up menu displays item's affects, price, short description and visual icon.
+- **Actor:** Shop
+- **Trigger:** End of the round
+- **Pre-conditions:** Player completed the previous round
+- **Post-conditions:** A menu is displayed with the items shown
+- **Success Scenario:**
+1. Player reaches the end of the round
+2. A short pause signaling its completion
+3. A pop-up menu showing items for sale
+4. Player can see the prices of items and a visual icon for each
+- **Alternate Scenario #1:**
+1. Player does not reach the end of the round
+2. A short pause showing player has lost
+3. A restart option is shown
+
+- **Corresponding User Interface:**
+
+![Shop Story](https://i.imgur.com/MnKEXl0.png)
 
 After each use case description, add a sketch of the corresponding user interface. This will be a good opportunity to start thinking about usability. 
 
@@ -199,7 +229,11 @@ Write two user stories for each member of the group. They can be related to the 
 - As a player I want to attack enemies at range to have additional combat depth.
 - As a player I want to buy upgrades for my ranged attacks to slay more enemies and feel stronger.
 - As a player I want to look at the gear I have obtained over the course of the game to get a sense of progression.
+     - Priority Level: 1
+     - Estimated Time: 4 hours
 - As a player I want to know how many coins is needed to buy a certain item so I know whether to save or buy that round.
+     - Priority Level: 2
+     - Estimated Time: 1 hour
 - As a player, I want to access the main menu so I can start the game, exit the game, or adjust game options.
      - Priority Level: 1
      - Estimated Time: 1 hour
@@ -220,6 +254,10 @@ Grading criteria (6 points): Use the provided format. The user stories should be
 ## 8. Issue Tracker
 
 The user stories should be registered in your GitHub issue tracker. Include here the link for your issue tracker and a screenshot of what you did. 
+
+Link to issue tracker: [https://github.com/boothe0/CS386GodotProject/issues](https://github.com/boothe0/CS386GodotProject/issues)
+
+![Issue Tracker](https://i.imgur.com/Yk8x1Az.png)
 
 Grading criteria (1 point): Provide the URL and screenshot of the issue tracker. The user stories should be registered there.
 
