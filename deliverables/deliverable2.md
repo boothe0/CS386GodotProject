@@ -5,7 +5,7 @@ In this deliverable, you will report the results for the requirements engineerin
 ## 1. Positioning
 ### Problem statement
 
-For busy roguelite fans who have limited time to enjoy roguelites, the Tiny Roguelite is a roguelite that presents a short form version of a rougelite game. Unlike other games such as The Binding of Isaac, Gungeon, or Slay the Spire which take up to an hour or more to complete a single run, our product takes much less time to play through for those who do not have the time to commit to a run of those longer-form games. 
+The problem of no short form roguelite being available affects busy fans of the genre who don't have the time to play long runs, the impact of which is players being unable to enjoy their favorite genre.
 
 ### Product Position Statement
 
