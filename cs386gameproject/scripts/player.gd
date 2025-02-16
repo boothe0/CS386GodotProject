@@ -2,12 +2,16 @@ extends CharacterBody2D
 
 enum WeaponType {SWORD, PROJECTILE}
 
+@export var MAX_HEALTH = 5
+
 @onready var animated_sprite = $AnimatedSprite2D
 
 @onready var spacebar_text = $"../PlayerUI/StaminaBar/SpaceBarIndicator"
 @onready var stamina_bar = $"../PlayerUI/StaminaBar"
 
-@export var health = 5
+@onready var emitter = $"../Emitter"
+
+@export var health = MAX_HEALTH
 @export var stamina = 10
 # from the stamina_bar script
 @export var dodge_cost = 3
@@ -85,6 +89,16 @@ func _physics_process(_delta):
 		# move and collide not move and slide for this
 		move_and_collide(velocity)
 	
+	if Input.is_action_just_pressed("use_potion_1"):
+		Emitter.emit_signal("consumable_1")
+		
+	if Input.is_action_just_pressed("use_potion_2"):
+		Emitter.emit_signal("consumable_2")
+		
+	if Input.is_action_just_pressed("use_potion_3"):
+		Emitter.emit_signal("consumable_3")
+		
+	
 func update_movement_animation():
 	# If the sword is attacking OR using a potion, don't change facing direction
 	if sword.attacking:
@@ -115,7 +129,6 @@ func swing_sword():
 	update_attack_direction()
 	var attack_animation = get_idle_animation(last_attack_direction)
 	animated_sprite.play(attack_animation)  # Force player to face attack direction
-	print("Swinging sword in direction:", last_attack_direction)  # Debugging
 	
 	# Start sword attack and wait until it's fully done
 	sword.show()
@@ -123,7 +136,6 @@ func swing_sword():
 	await sword.attack()  # Wait until attack is complete
 
 	# After the attack, return to movement-based facing
-	print("Attack finished, returning to movement animation")  # Debug
 	update_movement_animation()
 		
 	
@@ -165,17 +177,17 @@ func die():
 	queue_free()
 
 func heal(amount):
-	if health >= 5:
+	if health >= MAX_HEALTH:
 		print("Health is already full!")  # Debug
 		return  # Prevent overhealing
 
-	health = min(health + amount, 5)  # Prevent health from exceeding 5
+	health = min(health + amount, MAX_HEALTH)  # Prevent health from exceeding 5
 	health_update.emit()
 	print("Player healed: ", health)
 
 func use_heal_potion():
 	# If already at max health, don't use the potion
-	if health >= 5:
+	if health >= MAX_HEALTH:
 		print("Health is full! Can't use potion.")
 		return
 
