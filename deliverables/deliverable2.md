@@ -1,34 +1,22 @@
 # Deliverable 2: Requirements
 
-In this deliverable, you will report the results for the requirements engineering for your product. Structure your deliverable using the following sections. When preparing your deliverable, don't add the explanation text from this document. 
-
 ## 1. Positioning
 ### Problem statement
-
-Provide a statement to summarize the problem solved by your project according to the following structure (which is based on the OpenUP Vision Template):
 
 The problem of no short form roguelite being available affects busy fans of the genre who don't have the time to play long runs, the impact of which is players being unable to have time to play games they enjoy. 
 
 ### Product Position Statement
-
-A product position statement communicates the intent of the application and the importance of the project to all concerned personnel. The product should mitigate the aforementioned problem. Provide a statement according to the following structure:
 
 For busy roguelite game fans who have limited time to enjoy roguelites, the Tiny Roguelite is a roguelite that presents a short form version of a rougelite game.
 Unlike other games such as  The Binding of Isaac, Gungeon, or Slay the Spire which take up to an hour or more to complete a single run, our product takes much less time to play through for those who do not have the time to commit to a run of those longer-form games.
 
 ### Value proposition and customer segment
 
-Report the value propositions and customer segments of your product. Make sure that your value proposition is coherent with the product position statement and contains the following elements: i) what your product is; ii) the target customer; iii) the value your product provides; and iv) why your product is unique.
-
 Value proposition: Tiny Roguelite is a roguelite game that allows busy fans of the genre to play their favorite genre without requiring a large time commitment, providing a short-form game with all the features of traditional games in the same genre.
 
 Consumer segment: Busy roguelite fans with little time. 
 
-Grading criteria (3 points, 1 for each section): The content of the subsections should contain all the required elements, follow the provided template, and be consistent with each other. The text should not contain typos or grammar issues.
-
 ## 2. Stakeholders
-
-Make a list of all stakeholders of the project with a brief description of each one of them, emphasizing any responsibilities with the project. Examples of stakeholders include users, clients, competitors, detractors, developers, etc.
 
 - Players
    - play the game to enjoy a shorter experience they can fit into their schedule.
@@ -40,11 +28,7 @@ Make a list of all stakeholders of the project with a brief description of each 
 - Content creators that cover roguelikes
    - Content creators play and review our game to generate traction.
 
-Grading criteria (1 point): The stakeholders can’t be too generic or specific. The list should reflect what was described in Section 1.
-
 ## 3. Functional requirements (features)
-
-Make a numbered list of requirements for your software. Just self-explanatory titles are enough at this point. Remember that requirements should deliver the value proposition and they must be consistent with the interviews you performed for the previous deliverable. You can talk again to your clients to help define the requirements. While writing the requirements, focus on the capabilities needed and not on how they should be implemented.
 
 1. Takes less than 20 minutes to play through a run.
 2. Upgrades that are purchasable and increase player strength.
@@ -64,12 +48,7 @@ Make a numbered list of requirements for your software. Just self-explanatory ti
 11. Brief lore describing the game's setting, main characters, and the objective.
 12. Tutorial provided on the players first run which describes how to attack enemies, use consumables, and purchase items.
 
-
-Grading criteria (2 points): The list should be comprehensive (remember that you are not expected to implement all the requirements by the end of the course but you should list them). Follow the same pattern to describe all the requirements. The list of requirements should be coherent with the previous sections.
-
 ## 4. Non-functional requirements
-Make a numbered list of non-functional requirements that are important for your software. Explain their importance. Follow the terminology of ISO/IEC 25010:2011. For each non-functional requirement, give an objective goal/measurement in order to provide verifiability for the requirement. You can find more details at the following URL:
-https://ieeexplore.ieee.org/document/8559686
 
 1. Code Standards
    - code is properly commented to explain snippet functionality
@@ -90,11 +69,7 @@ https://ieeexplore.ieee.org/document/8559686
 6. Maintainability
    - 1 new feature should be added every week per person indicating low technical debt
 
-Grading criteria (2 points): Follow the ISO-IEC terminology, explain why they are important, provide verifiability criteria for each requirement.
-
 ## 5. Minimum Viable Product
-
-What will be your MVP? Which features are you going to validate? How?
 
 1. Combat
    - Unit test ranged attacks shoot projectiles
