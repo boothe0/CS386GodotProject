@@ -125,7 +125,7 @@ Grading criteria (2 points): Describe what would be considered the Minimal Viabl
 
 ## 6. Use cases
 
-![UML Use Case Diagram](https://imgur.com/a/k36Upuo)
+![UML Use Case Diagram](https://i.imgur.com/xotehwv.png)
 
 
 - Use Case: Engage with main menu
