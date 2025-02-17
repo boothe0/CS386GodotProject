@@ -45,7 +45,7 @@ direction.
 
 Elizabeth
 
-Asher
+Asher - Start adding modular upgrades, purchasable in shop. Add round timer.
 
 Camelia
 
