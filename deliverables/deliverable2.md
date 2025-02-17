@@ -71,27 +71,9 @@ Consumer segment: Busy roguelite fans with little time.
 
 ## 5. Minimum Viable Product
 
-1. Combat
-   - Unit test ranged attacks shoot projectiles
-   - Unit test melee attacks hit in a cone in front of player
-   - Unit test ensures hit collision
-   - Unit test ensuring stamina and mana used without bugs allowing reduced or no cost
-   - Central objective
-2. Consumables
-   - health potion, mana potion, speed potion, attack speed potion
-   - Unit test check each consumable provides the specified effect with the specified potentcy
-3. Enemies
-   - Unit test should attack player
-   - Unit test should attack core objective
-   - Unit test pathfinding toward core objective
-   - Unit test pathfinding toward player when provoked
-   - Unit test continues pathfinding toward core after player leaves aggro
-4. Shop
-   - Unit test random items available for purchase
-   - unit test items give run bonuses when purchased
-   - unit test gold is taken from player
-   - unit test player cannot spend more than they own
-   - unit test item shows in player inventory
+For the combat we will unit test ranged attacks to ensure they shoot projectiles. In addition, unit test melee attacks hit in a cone in front of the player. We will also unit test to ensure hit collision is valid. Finally unit test ensuring stamina and mana used without bugs allowing reduced or no cost. Central objective needs to be the focus here. Consumables will include, health potion, mana potion, speed potion, attack speed potion. We will unit test check each consumable provides the specified effect with the specified potentcy. For the enemies they should attack the player, the core objective and have successful pathfinding. Pathfinding towards the objective and towards theplayer is the most important. Enemies should contiue going to the core after disengaging from the player.
+
+The shop will have random items, gold as a currency, player cannot spend more than what they own and the item needs to show up in the player's inventory. These features will also all be unit tested to unsure no bugs arise such asoverspending of gold, not enough randomization of items and to ensure gold is used.
 
 ## 6. Use cases
 
