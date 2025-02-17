@@ -1,5 +1,5 @@
 # Report for Week #4
-Tiny RougeLite
+Tiny RogueLite
 
 Group: 6
 
@@ -21,6 +21,8 @@ was not as static. Created placeholders on the right UI screen for consumables t
 
 Asher - Added modular consumable items, added global signaling for scripts to interact with each other. Added UI elements
 for consumables with UI hints for consumable use. Fixed #33, added back enemy health bars. Reviewed and tested 3 pull requests.
+
+Camelia - Finalized player character design and worked on design for enemies.
 
 ### 2. Retrospective
 ****
@@ -47,7 +49,7 @@ Elizabeth
 
 Asher - Start adding modular upgrades, purchasable in shop. Add round timer.
 
-Camelia
+Camelia - Create basic animations for characters and start integrating artwork into game.
 
 Ethan
 
