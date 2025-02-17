@@ -7,13 +7,13 @@ In this deliverable, you will report the results for the requirements engineerin
 
 Provide a statement to summarize the problem solved by your project according to the following structure (which is based on the OpenUP Vision Template):
 
-The problem of no short form roguelite being available affects busy fans of the genre who don't have the time to play long runs, the impact of which is players being unable to enjoy their favorite genre. 
+The problem of no short form roguelite being available affects busy fans of the genre who don't have the time to play long runs, the impact of which is players being unable to have time to play games they enjoy. 
 
 ### Product Position Statement
 
 A product position statement communicates the intent of the application and the importance of the project to all concerned personnel. The product should mitigate the aforementioned problem. Provide a statement according to the following structure:
 
-For busy roguelite fans who have limited time to enjoy roguelites, the Tiny Roguelite is a roguelite that presents a short form version of a rougelite game.
+For busy roguelite game fans who have limited time to enjoy roguelites, the Tiny Roguelite is a roguelite that presents a short form version of a rougelite game.
 Unlike other games such as  The Binding of Isaac, Gungeon, or Slay the Spire which take up to an hour or more to complete a single run, our product takes much less time to play through for those who do not have the time to commit to a run of those longer-form games.
 
 ### Value proposition and customer segment
@@ -30,11 +30,9 @@ Grading criteria (3 points, 1 for each section): The content of the subsections 
 
 Make a list of all stakeholders of the project with a brief description of each one of them, emphasizing any responsibilities with the project. Examples of stakeholders include users, clients, competitors, detractors, developers, etc.
 
-- Casual fans of the roguelike genre
-   - Casual fans play the game to enjoy a shorter experience they can fit into their schedule.
+- Players
+   - play the game to enjoy a shorter experience they can fit into their schedule.
 
-- Busy die hard fans of the roguelite genre
-   - Die hard fans play the game to try something unique while interacting with the game's community.
 
 - The Game Developers (us)
    - We add features and content according to the wants and needs of the player.
@@ -49,7 +47,7 @@ Grading criteria (1 point): The stakeholders can’t be too generic or specific.
 Make a numbered list of requirements for your software. Just self-explanatory titles are enough at this point. Remember that requirements should deliver the value proposition and they must be consistent with the interviews you performed for the previous deliverable. You can talk again to your clients to help define the requirements. While writing the requirements, focus on the capabilities needed and not on how they should be implemented.
 
 1. Takes less than 20 minutes to play through a run
-2. Upgrades
+2. Upgrades that are purchasable and increase player strength
 3. Combat system
    - Health
    - Melee Attacks
@@ -80,21 +78,19 @@ https://ieeexplore.ieee.org/document/8559686
    - all onready variables grouped together
    - scripts should not exceed 600 lines of code
 2. Accessability
-   - Simple to understand UI that new players can click through
+   - 9 out of 10 players surveyed report no difficulty navigating the UI
    - clear indications on how to play
 3. Performance
-    - no lagspikes
+    - 9 in 10 players surveyed say they experienced no performance issues
     - no loading time over 5 seconds that user cannot cancel
 4. Compatability
    - playable Windows
    - playable Linux
    - playable MacOS
 5. Scalability
-   - modular design
-   - easy to add new upgrades/consumables
+   - modular design makes implementing different units in the same feature set take less than an hour
 6. Maintainability
-   - easy to add new code or features without introducing bugs
-   - ability to maintian pace of code production
+   - 1 new feature should be added every week per person indicating low technical debt
 
 Grading criteria (2 points): Follow the ISO-IEC terminology, explain why they are important, provide verifiability criteria for each requirement.
 
