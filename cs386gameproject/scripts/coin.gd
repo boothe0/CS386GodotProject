@@ -22,14 +22,29 @@ func _on_body_entered(body: Node2D) -> void:
 	if coin_type == 0:
 		print("bronze coin")
 		player.bronze_coins += 1
+		if player.bronze_coins == 15:
+			player.bronze_coins -= 15
+			player.silver_coins += 1
+			if player.silver_coins == 15:
+				player.silver_coins -= 15
+				player.gold_coins += 1
+				gold_label.text = "Gold Coins: " + str(player.gold_coins)
+			silver_label.text = "Silver Coins: " + str(player.silver_coins)
 		bronze_label.text = "Bronze Coins: " + str(player.bronze_coins)
+		print("Bronze Coins: " + str(player.bronze_coins)) # debug
 	elif coin_type == 1:
 		print("silver coin")
 		player.silver_coins += 1
+		if player.silver_coins == 15:
+			player.silver_coins -= 15
+			player.gold_coins += 1
+			gold_label.text = "Gold Coins: " + str(player.gold_coins)
 		silver_label.text = "Silver Coins: " + str(player.silver_coins)
+		print("Silver Coins: " + str(player.silver_coins)) # debug
 	elif coin_type == 2:
 		print("gold coin")
 		player.gold_coins += 1
 		gold_label.text = "Gold Coins: " + str(player.gold_coins)
+		print("Gold Coins: " + str(player.gold_coins)) # debug
 
 	queue_free()
