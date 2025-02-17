@@ -16,21 +16,27 @@ Project repo: https://github.com/boothe0/CS386GodotProject
 ### 1. Activity Summary
 ****
 
+Elizabeth- Added theme to title UI screen. Made a material and shader to move the title of the game so the screen
+was not as static. Created placeholders on the right UI screen for consumables to be placed. 
+
 
 ### 2. Retrospective
 ****
 
-Appreciations: highlights of contributions from team members
-Successes: what went well
-Failures: what did not go well
-Barriers: things that are blocking the maximum performance of the team
-What we should try next time. 
+Appreciations: We appreciate the overal code design so far of the game I feel like it is really easy to read and add to. We
+also like the few art pieces and sketches that were made at this point.
 
-Appreciations: Dominik was the MVP this week with significant bug fixes that make the product usable.
-Successes: The demo we did went off without a hitch.  The documentation is much more usable.
-Failures: The UML for the new design is still not complete.
-Barriers: With one of our team members sick it was difficult to make the progress we had hoped for.
-What we should try next time: We really need Margo's help and hope she is feeling better next week.
+Successes: We made some more progress on basic systems of the game such as UI and consumables. More planning was also
+done this week on the overall vision of the game, art direction and what our MVP should be as a goal post.
+
+Failures: We were unable to get everyone to  meet on the day the report and deliverable was due.
+
+Barriers: Still having to work with premade assets is hindering some progress of the game to fully implement some features
+such as UI, gear and consumables.
+
+What we should try next time: Have better communication and update the group on what you are working on and ask for help 
+if you need any. Utilizing the code resource discord channel to post helpful tutorials might be a good step in the right
+direction.
 
 ### 3. Next steps
 ****
