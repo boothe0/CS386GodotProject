@@ -45,7 +45,7 @@ direction.
 ### 3. Next steps
 ****
 
-Elizabeth
+Elizabeth - Shop UI including buy menu for items and upgrades.
 
 Asher - Start adding modular upgrades, purchasable in shop. Add round timer.
 
