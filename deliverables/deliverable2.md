@@ -46,25 +46,23 @@ Grading criteria (1 point): The stakeholders can’t be too generic or specific.
 
 Make a numbered list of requirements for your software. Just self-explanatory titles are enough at this point. Remember that requirements should deliver the value proposition and they must be consistent with the interviews you performed for the previous deliverable. You can talk again to your clients to help define the requirements. While writing the requirements, focus on the capabilities needed and not on how they should be implemented.
 
-1. Takes less than 20 minutes to play through a run
-2. Upgrades that are purchasable and increase player strength
-3. Combat system
+1. Takes less than 20 minutes to play through a run.
+2. Upgrades that are purchasable and increase player strength.
+3. Combat system (main gameplay loop)
    - Health
    - Melee Attacks
    - Ranged Attacks
    - Stamina Management
    - Mana Management
-4. Defense Objective
-5. Enemies
-6. Consumables
-7. Intuitive UI
-8. Currency (gold/credits)
-9. Item Drops
-   - Consumables
-   - Gold
-10. A shop
-11. Lore
-12. Tutorial
+4. Defense Objective i.e. center core that player has to protect from enemies destroying.
+5. Enemies that move to attack central objective and damage player if they get in the way.
+6. Consumables that can be purchased in between rounds and used during combat to give player stat bonuses and special effects.
+7. Intuitive UI that allows players to easy start and exit the game, hints to players what each of their buttons do, and allows players to purchase items in the shop.
+8. Currency (Gold) that may be used to purchase shop items, dropped by enemies.
+9. Item Drops (Gold/Consumables) that may be dropped by enemies when defeated.
+10. A shop that allows players to buy consumables and upgrades using gold.
+11. Brief lore describing the game's setting, main characters, and the objective.
+12. Tutorial provided on the players first run which describes how to attack enemies, use consumables, and purchase items.
 
 
 Grading criteria (2 points): The list should be comprehensive (remember that you are not expected to implement all the requirements by the end of the course but you should list them). Follow the same pattern to describe all the requirements. The list of requirements should be coherent with the previous sections.
