@@ -120,15 +120,12 @@ What will be your MVP? Which features are you going to validate? How?
    - unit test player cannot spend more than they own
    - unit test item shows in player inventory
 
-
-Grading criteria (2 points): Describe what would be considered the Minimal Viable Product and how it will be tested (e.g., via implementation, prototyping, Wizard of Woz, etc.). Make clear what you are going to validate. The MVP should be coherent with the previous sections.
-
 ## 6. Use cases
 
 ![UML Use Case Diagram](https://i.imgur.com/xotehwv.png)
 
 1. Main menu
-- **Use Case:** Engages with main menu
+- **Use Case:** Use main menu
 - **Actor:** Player
 - **Trigger:** Player decides to open game.
 - **Pre-conditions:** N/A
@@ -144,7 +141,7 @@ If the button is Options:
 4. System replaces title screen with options screen.
 If the button is Quit:
 4. System closes game.
-**Alternate Scenario #1:**
+- **Alternate Scenario #1:**
 1. User does not click on any buttons.
 2. System closes game after sufficiently long period of inactivity.
 
@@ -153,7 +150,7 @@ If the button is Quit:
 ![Main Menu Use Case](https://i.imgur.com/zjJUJfM.png)
 
 2. Ranged Combat
-- **Use Case:** Attacks enemy with ranged attack
+- **Use Case:** Attack enemy with ranged attack
 - **Actor:** Player
 - **Trigger:** Player inputs button associated with ranged attack
 - **Pre-conditions:** Player is in combat phase
@@ -174,7 +171,7 @@ If the button is Quit:
 ![Projectile Story](https://i.imgur.com/FvVaygD.png)
 
 3. Melee Combat
-- **Use Case:** Attacks enemy with a melee attack
+- **Use Case:** Attack enemy with a melee attack
 - **Actor:** Player
 - **Trigger:** Player presses the corresponding button
 - **Pre-conditions:** Player is in the gameplay stage
@@ -194,7 +191,7 @@ If the button is Quit:
 ![Melee Story](https://i.imgur.com/DZ1zfc0.png)
 
 4. Shop interface
-- **Use Case:** Uses shop
+- **Use Case:** Use shop
 - **Actor:** Player
 - **Trigger:** Player has reached the end of the round
 - **Pre-conditions:** Player completed the previous round
@@ -216,7 +213,6 @@ If the button is Quit:
 ![Shop Story](https://i.imgur.com/MnKEXl0.png)
 
 ## 7. User stories
-
 
 - As a player I want to attack enemies at range to have additional combat depth.
      - Priority Level: 1
@@ -242,8 +238,6 @@ If the button is Quit:
 - As a player, I want to see how much damage my attacks are doing so that I can plan how to attack enemies
      - Priority Level: 3
      - Estimated Time: 2 hours
-
-
 
 ## 8. Issue Tracker
 
