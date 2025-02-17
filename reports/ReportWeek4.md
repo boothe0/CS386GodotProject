@@ -26,6 +26,8 @@ Camelia - Finalized player character design and worked on design for enemies.
 
 Ethan - Worked on created an item drop system upon enemy deaths, including coins and consumables
 
+Chandler - Worked on adding collisions to map tiles.
+
 ### 2. Retrospective
 ****
 
@@ -55,5 +57,5 @@ Camelia - Create basic animations for characters and start integrating artwork i
 
 Ethan - Finish working on enemy drops and currency system for player.
 
-Chandler
+Chandler - Finish teleporter system and aid in creation and implementation of art assets.
 
