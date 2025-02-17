@@ -26,6 +26,9 @@ var projectile_scene = preload("res://scenes/projectile.tscn")
 var current_weapon = WeaponType.SWORD
 var dash_direction = Vector2()
 var weapon_animation_done = true
+var bronze_coins = 0
+var silver_coins = 0
+var gold_coins = 0
 @onready var heal_potion: Node2D = $HealPotion
 # Constants
 const SPEED = 150
@@ -37,7 +40,7 @@ signal dodge_used
 func _ready():
 	health_update.emit()
 	sword.hide()  # Start hidden
-  
+
 func _physics_process(_delta):
 	var direction = Vector2.ZERO
 
