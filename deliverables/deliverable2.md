@@ -216,7 +216,11 @@ Corresponding User Interface:
 
 
 - As a player I want to attack enemies at range to have additional combat depth.
+     - Priority Level: 1
+     - Estimated Time: 2 hours
 - As a player I want to buy upgrades for my ranged attacks to slay more enemies and feel stronger.
+     - Priority Level: 1
+     - Estimated Time: 8 hours
 - As a player I want to look at the gear I have obtained over the course of the game to get a sense of progression.
      - Priority Level: 1
      - Estimated Time: 4 hours
