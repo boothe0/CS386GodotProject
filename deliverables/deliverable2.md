@@ -1,40 +1,26 @@
 # Deliverable 2: Requirements
 
-In this deliverable, you will report the results for the requirements engineering for your product. Structure your deliverable using the following sections. When preparing your deliverable, don't add the explanation text from this document. 
-
 ## 1. Positioning
 ### Problem statement
 
-Provide a statement to summarize the problem solved by your project according to the following structure (which is based on the OpenUP Vision Template):
-
-The problem of no short form roguelite being available affects busy fans of the genre who don't have the time to play long runs, the impact of which is players being unable to enjoy their favorite genre. 
+The problem of no short form roguelite being available affects busy fans of the genre who don't have the time to play long runs, the impact of which is players being unable to have time to play games they enjoy. 
 
 ### Product Position Statement
 
-A product position statement communicates the intent of the application and the importance of the project to all concerned personnel. The product should mitigate the aforementioned problem. Provide a statement according to the following structure:
-
-For busy roguelite fans who have limited time to enjoy roguelites, the Tiny Roguelite is a roguelite that presents a short form version of a rougelite game.
+For busy roguelite game fans who have limited time to enjoy roguelites, the Tiny Roguelite is a roguelite that presents a short form version of a rougelite game.
 Unlike other games such as  The Binding of Isaac, Gungeon, or Slay the Spire which take up to an hour or more to complete a single run, our product takes much less time to play through for those who do not have the time to commit to a run of those longer-form games.
 
 ### Value proposition and customer segment
-
-Report the value propositions and customer segments of your product. Make sure that your value proposition is coherent with the product position statement and contains the following elements: i) what your product is; ii) the target customer; iii) the value your product provides; and iv) why your product is unique.
 
 Value proposition: Tiny Roguelite is a roguelite game that allows busy fans of the genre to play their favorite genre without requiring a large time commitment, providing a short-form game with all the features of traditional games in the same genre.
 
 Consumer segment: Busy roguelite fans with little time. 
 
-Grading criteria (3 points, 1 for each section): The content of the subsections should contain all the required elements, follow the provided template, and be consistent with each other. The text should not contain typos or grammar issues.
-
 ## 2. Stakeholders
 
-Make a list of all stakeholders of the project with a brief description of each one of them, emphasizing any responsibilities with the project. Examples of stakeholders include users, clients, competitors, detractors, developers, etc.
+- Players
+   - play the game to enjoy a shorter experience they can fit into their schedule.
 
-- Casual fans of the roguelike genre
-   - Casual fans play the game to enjoy a shorter experience they can fit into their schedule.
-
-- Busy die hard fans of the roguelite genre
-   - Die hard fans play the game to try something unique while interacting with the game's community.
 
 - The Game Developers (us)
    - We add features and content according to the wants and needs of the player.
@@ -42,173 +28,153 @@ Make a list of all stakeholders of the project with a brief description of each 
 - Content creators that cover roguelikes
    - Content creators play and review our game to generate traction.
 
-Grading criteria (1 point): The stakeholders can’t be too generic or specific. The list should reflect what was described in Section 1.
-
 ## 3. Functional requirements (features)
 
-Make a numbered list of requirements for your software. Just self-explanatory titles are enough at this point. Remember that requirements should deliver the value proposition and they must be consistent with the interviews you performed for the previous deliverable. You can talk again to your clients to help define the requirements. While writing the requirements, focus on the capabilities needed and not on how they should be implemented.
-
-1. Takes less than 20 minutes to play through a run
-2. Upgrades
-3. Combat system
+1. Takes less than 20 minutes to play through a run.
+2. Upgrades that are purchasable and increase player strength.
+3. Combat system (main gameplay loop)
    - Health
    - Melee Attacks
    - Ranged Attacks
    - Stamina Management
    - Mana Management
-4. Defense Objective
-5. Enemies
-6. Consumables
-7. Intuitive UI
-8. Currency (gold/credits)
-9. Item Drops
-   - Consumables
-   - Gold
-10. A shop
-11. Lore
-12. Tutorial
-
-
-Grading criteria (2 points): The list should be comprehensive (remember that you are not expected to implement all the requirements by the end of the course but you should list them). Follow the same pattern to describe all the requirements. The list of requirements should be coherent with the previous sections.
+4. Defense Objective i.e. center core that player has to protect from enemies destroying.
+5. Enemies that move to attack central objective and damage player if they get in the way.
+6. Consumables that can be purchased in between rounds and used during combat to give player stat bonuses and special effects.
+7. Intuitive UI that allows players to easy start and exit the game, hints to players what each of their buttons do, and allows players to purchase items in the shop.
+8. Currency (Gold) that may be used to purchase shop items, dropped by enemies.
+9. Item Drops (Gold/Consumables) that may be dropped by enemies when defeated.
+10. A shop that allows players to buy consumables and upgrades using gold.
+11. Brief lore describing the game's setting, main characters, and the objective.
+12. Tutorial provided on the players first run which describes how to attack enemies, use consumables, and purchase items.
 
 ## 4. Non-functional requirements
-Make a numbered list of non-functional requirements that are important for your software. Explain their importance. Follow the terminology of ISO/IEC 25010:2011. For each non-functional requirement, give an objective goal/measurement in order to provide verifiability for the requirement. You can find more details at the following URL:
-https://ieeexplore.ieee.org/document/8559686
 
 1. Code Standards
    - code is properly commented to explain snippet functionality
    - all onready variables grouped together
    - scripts should not exceed 600 lines of code
 2. Accessability
-   - Simple to understand UI that new players can click through
+   - 9 out of 10 players surveyed report no difficulty navigating the UI
    - clear indications on how to play
 3. Performance
-    - no lagspikes
+    - 9 in 10 players surveyed say they experienced no performance issues
     - no loading time over 5 seconds that user cannot cancel
 4. Compatability
    - playable Windows
    - playable Linux
    - playable MacOS
 5. Scalability
-   - modular design
-   - easy to add new upgrades/consumables
+   - modular design makes implementing different units in the same feature set take less than an hour
 6. Maintainability
-   - easy to add new code or features without introducing bugs
-   - ability to maintian pace of code production
-
-Grading criteria (2 points): Follow the ISO-IEC terminology, explain why they are important, provide verifiability criteria for each requirement.
+   - 1 new feature should be added every week per person indicating low technical debt
 
 ## 5. Minimum Viable Product
-
-What will be your MVP? Which features are you going to validate? How?
 
 For the combat we will unit test ranged attacks to ensure they shoot projectiles. In addition, unit test melee attacks hit in a cone in front of the player. We will also unit test to ensure hit collision is valid. Finally unit test ensuring stamina and mana used without bugs allowing reduced or no cost. Central objective needs to be the focus here. Consumables will include, health potion, mana potion, speed potion, attack speed potion. We will unit test check each consumable provides the specified effect with the specified potentcy. For the enemies they should attack the player, the core objective and have successful pathfinding. Pathfinding towards the objective and towards theplayer is the most important. Enemies should contiue going to the core after disengaging from the player.
 
 The shop will have random items, gold as a currency, player cannot spend more than what they own and the item needs to show up in the player's inventory. These features will also all be unit tested to unsure no bugs arise such asoverspending of gold, not enough randomization of items and to ensure gold is used.
 
-Grading criteria (2 points): Describe what would be considered the Minimal Viable Product and how it will be tested (e.g., via implementation, prototyping, Wizard of Woz, etc.). Make clear what you are going to validate. The MVP should be coherent with the previous sections.
-
 ## 6. Use cases
 
-Include a UML use case diagram for your project. There are many drawing tools that you can use.  I recommend the one we used in class, draw.io.
-![UML Use Case Diagram](https://i.imgur.com/kv2C0d6.png)
-Grading criteria (5 points): Follow correctly the UML specification. The actors should be coherent with what was listed in sections 1 and 2. The use case diagram should be coherent with the list of requirements (section 3). The level of granularity of each use case should be adequate. The use cases should be adequately named.
+![UML Use Case Diagram](https://i.imgur.com/xotehwv.png)
 
-Present one complete use case description (textual) for each member of the group. Therefore, if the group has 4 members, 4 use case descriptions are necessary. As the grading will not be individual, the group is responsible for keeping the quality and consistency of the whole document – avoid just splitting the work. Choose the most important use cases to describe. Follow the template provided in the slides.
+1. Main menu
+- **Use Case:** Use main menu
+- **Actor:** Player
+- **Trigger:** Player decides to open game.
+- **Pre-conditions:** N/A
+- **Post-condition:** Player has achieved desired result after engaging with menu.
+- **Success Scenario:** 
+1. User opens game.
+2. System displays menu screen with three buttons: Start, Options, and Quit.
+3. User clicks on desired button.
+If the button is Start: 
+4. System replaces title screen with gameplay screen.
+5. System starts game.
+If the button is Options:
+4. System replaces title screen with options screen.
+If the button is Quit:
+4. System closes game.
+- **Alternate Scenario #1:**
+1. User does not click on any buttons.
+2. System closes game after sufficiently long period of inactivity.
 
-1. Main menu - Camelia
-- Use Case: Engage with main menu
-- Actor: Player
-- Trigger: Player decides to open game.
-- Pre-condition: N/A
-- Post-condition: Player has achieved desired result after engaging with menu.
-- Success Scenario: 
-- 1. User opens game.
-- 2. System displays menu screen with three buttons: Start, Options, and Quit.
-- 3. User clicks on desired button.
-- If the button is Start: 
-- 4. System replaces title screen with gameplay screen.
-- 5. System starts game.
-- If the button is Options:
-- 4. System replaces title screen with options screen.
-- If the button is Quit:
-- 4. System closes game.
-- Alternate Scenario:
-- 1. User does not click on any buttons.
-- 2. System closes game after sufficiently long period of inactivity.
-
-Corresponding User Interface:
+**Corresponding User Interface:**
 
 ![Main Menu Use Case](https://i.imgur.com/zjJUJfM.png)
 
-2. Ranged Combat - Asher
-   - **Use Case:** Player attacks enemy with ranged attack
-   - **Actor:** Player
-   - **Trigger:** Player inputs button associated with ranged attack
-   - **Pre-conditions:** Player is in combat phase
-   - **Post-condition:** Player's attack damages enemy
-   - **Success Scenario:**
-     1. Projectile spawns next to the player
-     2. Projectile moves in the direction of where player aimed
-     3. Projectile hits enemy
-     4. Enemy loses health
-   - **Alternate Scenario #1:**
-     1. Projectile misses enemy
-     2. Projectile collides with playable area walls
-     3. Projectile dissapears
-   - ![Projectile Story](https://i.imgur.com/FvVaygD.png)
+2. Ranged Combat
+- **Use Case:** Attack enemy with ranged attack
+- **Actor:** Player
+- **Trigger:** Player inputs button associated with ranged attack
+- **Pre-conditions:** Player is in combat phase
+- **Post-condition:** Player's attack damages enemy
+- **Success Scenario:**
+1. System spawns projectile next to the user's character
+2. System moves projectile in the direction of where the user aimed
+3. System displays projectile hitting the enemy
+4. System causes enemy to lose health
+- **Alternate Scenario #1:**
+1. User does not aim towards enemy
+2. System displays projectile missing the enemy
+3. System displays projectile colliding with playable area walls
+4. System displays projectile dissappearing
+        
+**Corresponding User Interface**
 
-3. Melee Combat - Chandler
-- **Use Case:** Player attacks enemy with a melee attack
+![Projectile Story](https://i.imgur.com/FvVaygD.png)
+
+3. Melee Combat
+- **Use Case:** Attack enemy with a melee attack
 - **Actor:** Player
 - **Trigger:** Player presses the corresponding button
 - **Pre-conditions:** Player is in the gameplay stage
 - **Post-condition:** Player's attack damages enemy
 - **Success Scenario:**
-1. Player is within melee range of the enemy
-2. Player presses the button for a melee attack
-3. Melee attack hits enemy
-4. Enemy loses life according to the attack's power
+1. User is within melee range of the enemy
+2. User presses the button for a melee attack
+3. System displays melee attack hitting enemy
+4. System causes enemy to lose life according to the attack's power
 - **Alternate Scenario #1:**
-1. Player is not in melee attack range
-2. Player presses the button for a melee attack
-3. Melee attack misses
+1. User is not in melee attack range
+2. User presses the button for a melee attack
+3. System displays melee attack missing the enemy
 
 - **Corresponding User Interface:**
 
 ![Melee Story](https://i.imgur.com/DZ1zfc0.png)
 
-5. Consumables
-
-6. Shop interface - Elizabeth
-- **Use Case:** At the end of the round a pop-up menu displays item's affects, price, short description and visual icon.
-- **Actor:** Shop
-- **Trigger:** End of the round
+4. Shop interface
+- **Use Case:** Use shop
+- **Actor:** Player
+- **Trigger:** Player has reached the end of the round
 - **Pre-conditions:** Player completed the previous round
-- **Post-conditions:** A menu is displayed with the items shown
+- **Post-conditions:** System displays a menu with items for purchase
 - **Success Scenario:**
-1. Player reaches the end of the round
-2. A short pause signaling its completion
-3. A pop-up menu showing items for sale
-4. Player can see the prices of items and a visual icon for each
+1. User reaches the end of the round
+2. System pauses game briefly
+3. System displays message signalling the round's completion
+4. System displays a pop-up menu showing items for sale
+5. User can see the prices of items and a visual icon for each
 - **Alternate Scenario #1:**
-1. Player does not reach the end of the round
-2. A short pause showing player has lost
-3. A restart option is shown
+1. User does not reach the end of the round
+2. System pauses game briefly
+3. System displays message showing the player has lost
+4. System displays restart option
 
 - **Corresponding User Interface:**
 
 ![Shop Story](https://i.imgur.com/MnKEXl0.png)
 
-After each use case description, add a sketch of the corresponding user interface. This will be a good opportunity to start thinking about usability. 
-
-Grading criteria (8 points): Follow the template to describe the use cases. Present an interface sketch for each use case. Describe the use case as a dialog between the user and the system. Do not use UI language in the description of the use case.
-
 ## 7. User stories
 
-Write two user stories for each member of the group. They can be related to the same features described in the use cases or to different ones. Adopt the following format: "As a <ROLE>, I want <SOMETHING> so that <GOAL>." 
 - As a player I want to attack enemies at range to have additional combat depth.
+     - Priority Level: 1
+     - Estimated Time: 2 hours
 - As a player I want to buy upgrades for my ranged attacks to slay more enemies and feel stronger.
+     - Priority Level: 1
+     - Estimated Time: 8 hours
 - As a player I want to look at the gear I have obtained over the course of the game to get a sense of progression.
      - Priority Level: 1
      - Estimated Time: 4 hours
@@ -228,23 +194,12 @@ Write two user stories for each member of the group. They can be related to the 
      - Priority Level: 3
      - Estimated Time: 2 hours
 
-Establish a priority level for each user story and estimate how many hours each one will demand using the planning poker approach.
-
-Grading criteria (6 points): Use the provided format. The user stories should be in an adequate level of granularity (not too broad nor too specific). Provide the priority and estimation for each user story.
-
 ## 8. Issue Tracker
-
-The user stories should be registered in your GitHub issue tracker. Include here the link for your issue tracker and a screenshot of what you did. 
 
 Link to issue tracker: [https://github.com/boothe0/CS386GodotProject/issues](https://github.com/boothe0/CS386GodotProject/issues)
 
 ![Issue Tracker](https://i.imgur.com/Yk8x1Az.png)
 
-Grading criteria (1 point): Provide the URL and screenshot of the issue tracker. The user stories should be registered there.
-
-## Format
-
-Your document should be composed in Markdown and hosted on GitHub but you should also turn in a PDF copy to be graded.  See also Converting GitHub Markdown to PDF.  Sections should use appropriate markdown and figures should be included if needed or appropriate.
 
 ## Teamwork
 

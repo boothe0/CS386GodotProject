@@ -1,5 +1,5 @@
 # Report for Week #4
-Tiny RougeLite
+Tiny RogueLite
 
 Group: 6
 
@@ -7,18 +7,24 @@ Date: Feburary 16th 2025
 
 Location: NAU
 
-Present participants: Asher R (Manager), Camelia M (Presenter), Elizabeth B (Reporter), Chandler S (Quality Assurance) 
+Present participants: Asher R (Manager), Camelia M (Presenter), Elizabeth B (Reporter)
 
-Missing participants: Ethan M (Presenter)
+Missing participants: Ethan M (Presenter), Chandler S (Quality Assurance) 
 
 Project repo: https://github.com/boothe0/CS386GodotProject
 
 ### 1. Activity Summary
 ****
 
-Elizabeth- Added theme to title UI screen. Made a material and shader to move the title of the game so the screen
+Elizabeth - Added theme to title UI screen. Made a material and shader to move the title of the game so the screen
 was not as static. Created placeholders on the right UI screen for consumables to be placed. 
 
+Asher - Added modular consumable items, added global signaling for scripts to interact with each other. Added UI elements
+for consumables with UI hints for consumable use. Fixed #33, added back enemy health bars. Reviewed and tested 3 pull requests.
+
+Camelia - Finalized player character design and worked on design for enemies.
+
+Ethan - Worked on created an item drop system upon enemy deaths, including coins and consumables
 
 ### 2. Retrospective
 ****
@@ -41,13 +47,13 @@ direction.
 ### 3. Next steps
 ****
 
-Elizabeth
+Elizabeth - Shop UI including buy menu for items and upgrades.
 
-Asher
+Asher - Start adding modular upgrades, purchasable in shop. Add round timer.
 
-Camelia
+Camelia - Create basic animations for characters and start integrating artwork into game.
 
-Ethan
+Ethan - Finish working on enemy drops and currency system for player.
 
 Chandler
 
