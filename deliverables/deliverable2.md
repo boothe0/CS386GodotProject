@@ -127,90 +127,93 @@ Grading criteria (2 points): Describe what would be considered the Minimal Viabl
 
 ![UML Use Case Diagram](https://i.imgur.com/xotehwv.png)
 
+1. Main menu
+- **Use Case:** Engages with main menu
+- **Actor:** Player
+- **Trigger:** Player decides to open game.
+- **Pre-conditions:** N/A
+- **Post-condition:** Player has achieved desired result after engaging with menu.
+- **Success Scenario:** 
+1. User opens game.
+2. System displays menu screen with three buttons: Start, Options, and Quit.
+3. User clicks on desired button.
+If the button is Start: 
+4. System replaces title screen with gameplay screen.
+5. System starts game.
+If the button is Options:
+4. System replaces title screen with options screen.
+If the button is Quit:
+4. System closes game.
+**Alternate Scenario #1:**
+1. User does not click on any buttons.
+2. System closes game after sufficiently long period of inactivity.
 
-- Use Case: Engage with main menu
-- Actor: Player
-- Trigger: Player decides to open game.
-- Pre-condition: N/A
-- Post-condition: Player has achieved desired result after engaging with menu.
-- Success Scenario: 
-- 1. User opens game.
-- 2. System displays menu screen with three buttons: Start, Options, and Quit.
-- 3. User clicks on desired button.
-- If the button is Start: 
-- 4. System replaces title screen with gameplay screen.
-- 5. System starts game.
-- If the button is Options:
-- 4. System replaces title screen with options screen.
-- If the button is Quit:
-- 4. System closes game.
-- Alternate Scenario:
-- 1. User does not click on any buttons.
-- 2. System closes game after sufficiently long period of inactivity.
-
-Corresponding User Interface:
+**Corresponding User Interface:**
 
 ![Main Menu Use Case](https://i.imgur.com/zjJUJfM.png)
 
-2. Ranged Combat 
-   - **Use Case:** Player attacks enemy with ranged attack
-   - **Actor:** Player
-   - **Trigger:** Player inputs button associated with ranged attack
-   - **Pre-conditions:** Player is in combat phase
-   - **Post-condition:** Player's attack damages enemy
-   - **Success Scenario:**
-     1. Projectile spawns next to the player
-     2. Projectile moves in the direction of where player aimed
-     3. Projectile hits enemy
-     4. Enemy loses health
-   - **Alternate Scenario #1:**
-     1. Projectile misses enemy
-     2. Projectile collides with playable area walls
-     3. Projectile dissapears
-   - ![Projectile Story](https://i.imgur.com/FvVaygD.png)
+2. Ranged Combat
+- **Use Case:** Attacks enemy with ranged attack
+- **Actor:** Player
+- **Trigger:** Player inputs button associated with ranged attack
+- **Pre-conditions:** Player is in combat phase
+- **Post-condition:** Player's attack damages enemy
+- **Success Scenario:**
+1. System spawns projectile next to the user's character
+2. System moves projectile in the direction of where the user aimed
+3. System displays projectile hitting the enemy
+4. System causes enemy to lose health
+- **Alternate Scenario #1:**
+1. User does not aim towards enemy
+2. System displays projectile missing the enemy
+3. System displays projectile colliding with playable area walls
+4. System displays projectile dissappearing
+        
+**Corresponding User Interface**
 
-3. Melee Combat 
-- **Use Case:** Player attacks enemy with a melee attack
+![Projectile Story](https://i.imgur.com/FvVaygD.png)
+
+3. Melee Combat
+- **Use Case:** Attacks enemy with a melee attack
 - **Actor:** Player
 - **Trigger:** Player presses the corresponding button
 - **Pre-conditions:** Player is in the gameplay stage
 - **Post-condition:** Player's attack damages enemy
 - **Success Scenario:**
-1. Player is within melee range of the enemy
-2. Player presses the button for a melee attack
-3. Melee attack hits enemy
-4. Enemy loses life according to the attack's power
+1. User is within melee range of the enemy
+2. User presses the button for a melee attack
+3. System displays melee attack hitting enemy
+4. System causes enemy to lose life according to the attack's power
 - **Alternate Scenario #1:**
-1. Player is not in melee attack range
-2. Player presses the button for a melee attack
-3. Melee attack misses
+1. User is not in melee attack range
+2. User presses the button for a melee attack
+3. System displays melee attack missing the enemy
 
 - **Corresponding User Interface:**
 
 ![Melee Story](https://i.imgur.com/DZ1zfc0.png)
 
-5. Consumables
-
-6. Shop interface
-- **Use Case:** At the end of the round a pop-up menu displays item's affects, price, short description and visual icon.
-- **Actor:** Shop
-- **Trigger:** End of the round
+4. Shop interface
+- **Use Case:** Uses shop
+- **Actor:** Player
+- **Trigger:** Player has reached the end of the round
 - **Pre-conditions:** Player completed the previous round
-- **Post-conditions:** A menu is displayed with the items shown
+- **Post-conditions:** System displays a menu with items for purchase
 - **Success Scenario:**
-1. Player reaches the end of the round
-2. A short pause signaling its completion
-3. A pop-up menu showing items for sale
-4. Player can see the prices of items and a visual icon for each
+1. User reaches the end of the round
+2. System pauses game briefly
+3. System displays message signalling the round's completion
+4. System displays a pop-up menu showing items for sale
+5. User can see the prices of items and a visual icon for each
 - **Alternate Scenario #1:**
-1. Player does not reach the end of the round
-2. A short pause showing player has lost
-3. A restart option is shown
+1. User does not reach the end of the round
+2. System pauses game briefly
+3. System displays message showing the player has lost
+4. System displays restart option
 
 - **Corresponding User Interface:**
 
 ![Shop Story](https://i.imgur.com/MnKEXl0.png)
-
 
 ## 7. User stories
 
