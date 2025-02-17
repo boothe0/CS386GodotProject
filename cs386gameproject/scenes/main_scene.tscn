@@ -232,6 +232,24 @@ grow_horizontal = 0
 texture = ExtResource("6_a6u3b")
 expand_mode = 1
 
+[node name="Coins" type="VBoxContainer" parent="PlayerUI"]
+offset_right = 117.0
+offset_bottom = 77.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="bronze_coin" type="Label" parent="PlayerUI/Coins"]
+layout_mode = 2
+text = "Bronze Coins: 0"
+
+[node name="silver_coin" type="Label" parent="PlayerUI/Coins"]
+layout_mode = 2
+text = "Silver Coins: 0"
+
+[node name="gold_coin" type="Label" parent="PlayerUI/Coins"]
+layout_mode = 2
+text = "Gold Coins: 0"
+
 [node name="SpawnTimer" type="Timer" parent="."]
 
 [node name="Emitter" type="Node" parent="."]

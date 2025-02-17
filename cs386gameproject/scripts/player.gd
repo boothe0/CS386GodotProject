@@ -11,6 +11,10 @@ enum WeaponType {SWORD, PROJECTILE}
 
 @onready var emitter = $"../Emitter"
 
+@onready var bronze_label = get_node("/root/MainScene/PlayerUI/Coins/bronze_coin")
+@onready var silver_label = get_node("/root/MainScene/PlayerUI/Coins/silver_coin")
+@onready var gold_label = get_node("/root/MainScene/PlayerUI/Coins/gold_coin")
+
 @export var health = MAX_HEALTH
 @export var stamina = 10
 # from the stamina_bar script
@@ -26,6 +30,9 @@ var projectile_scene = preload("res://scenes/projectile.tscn")
 var current_weapon = WeaponType.SWORD
 var dash_direction = Vector2()
 var weapon_animation_done = true
+var bronze_coins = 14
+var silver_coins = 14
+var gold_coins = 10
 @onready var heal_potion: Node2D = $HealPotion
 # Constants
 const SPEED = 150
@@ -37,7 +44,11 @@ signal dodge_used
 func _ready():
 	health_update.emit()
 	sword.hide()  # Start hidden
-  
+	
+	bronze_label.text = "Bronze Coins: " + str(bronze_coins)
+	silver_label.text = "Silver Coins: " + str(silver_coins)
+	gold_label.text = "Gold Coins: " + str(gold_coins)
+
 func _physics_process(_delta):
 	var direction = Vector2.ZERO
 

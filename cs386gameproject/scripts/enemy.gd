@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 # onready and export variables at the beginning
 @onready var animated_sprite = $AnimatedSprite2D  
+var coin_scene := preload("res://scenes/coin.tscn")
+
+@onready var main = get_node("/root/MainScene")
 
 const SPEED = 80
 const ATTACK_COOLDOWN = 1.5
@@ -14,6 +17,10 @@ var in_attack_range = false  # New variable to track attack range
 @export var health = 3
 signal health_update
 
+var coin_type : int = -1
+const BRONZE_CHANCE : float = 0.75
+const SILVER_CHANCE : float = 0.15
+const GOLD_CHANCE : float = 0.05
 
 # Move enemy and play animations
 func _physics_process(_delta: float) -> void:
@@ -50,7 +57,39 @@ func take_damage(amount):
 		
 # Enemy dies if health reaches 0
 func die():
+	var coin_drop = randf()
+	var coin_amount = randi() % 3 + 1
+	
+	if coin_drop <= GOLD_CHANCE:
+		drop_coin(2, coin_amount)
+	elif coin_drop <= SILVER_CHANCE:
+		drop_coin(1, coin_amount)
+	elif coin_drop <= BRONZE_CHANCE:
+		drop_coin(0, coin_amount)
+	else:
+		pass
+		
 	queue_free()
+	
+func drop_coin(coin_type, coin_amount):
+	var offsets = []
+	
+	if coin_amount == 1:
+		offsets.append(Vector2(0,0))
+	elif coin_amount == 2:
+		offsets.append(Vector2(-10,0))
+		offsets.append(Vector2(10,0))
+	elif coin_amount == 3:
+		offsets.append(Vector2(0,-10))
+		offsets.append(Vector2(-10,0))
+		offsets.append(Vector2(10,0))
+		
+	for offset in offsets:
+		var coin = coin_scene.instantiate()
+		coin.position = position + offset
+		coin.coin_type = coin_type
+		main.call_deferred("add_child", coin)
+		coin.add_to_group("coins")
 
 # Start following player if they enter detection zone
 func _on_detection_area_body_entered(body: Node2D) -> void:
