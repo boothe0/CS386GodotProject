@@ -125,13 +125,9 @@ Grading criteria (2 points): Describe what would be considered the Minimal Viabl
 
 ## 6. Use cases
 
-Include a UML use case diagram for your project. There are many drawing tools that you can use.  I recommend the one we used in class, draw.io.
-![UML Use Case Diagram]((https://imgur.com/a/k36Upuo))
-Grading criteria (5 points): Follow correctly the UML specification. The actors should be coherent with what was listed in sections 1 and 2. The use case diagram should be coherent with the list of requirements (section 3). The level of granularity of each use case should be adequate. The use cases should be adequately named.
+![UML Use Case Diagram](https://imgur.com/a/k36Upuo)
 
-Present one complete use case description (textual) for each member of the group. Therefore, if the group has 4 members, 4 use case descriptions are necessary. As the grading will not be individual, the group is responsible for keeping the quality and consistency of the whole document – avoid just splitting the work. Choose the most important use cases to describe. Follow the template provided in the slides.
 
-1. Main menu - Camelia
 - Use Case: Engage with main menu
 - Actor: Player
 - Trigger: Player decides to open game.
@@ -156,7 +152,7 @@ Corresponding User Interface:
 
 ![Main Menu Use Case](https://i.imgur.com/zjJUJfM.png)
 
-2. Ranged Combat - Asher
+2. Ranged Combat 
    - **Use Case:** Player attacks enemy with ranged attack
    - **Actor:** Player
    - **Trigger:** Player inputs button associated with ranged attack
@@ -173,7 +169,7 @@ Corresponding User Interface:
      3. Projectile dissapears
    - ![Projectile Story](https://i.imgur.com/FvVaygD.png)
 
-3. Melee Combat - Chandler
+3. Melee Combat 
 - **Use Case:** Player attacks enemy with a melee attack
 - **Actor:** Player
 - **Trigger:** Player presses the corresponding button
@@ -195,7 +191,7 @@ Corresponding User Interface:
 
 5. Consumables
 
-6. Shop interface - Elizabeth
+6. Shop interface
 - **Use Case:** At the end of the round a pop-up menu displays item's affects, price, short description and visual icon.
 - **Actor:** Shop
 - **Trigger:** End of the round
@@ -215,13 +211,10 @@ Corresponding User Interface:
 
 ![Shop Story](https://i.imgur.com/MnKEXl0.png)
 
-After each use case description, add a sketch of the corresponding user interface. This will be a good opportunity to start thinking about usability. 
-
-Grading criteria (8 points): Follow the template to describe the use cases. Present an interface sketch for each use case. Describe the use case as a dialog between the user and the system. Do not use UI language in the description of the use case.
 
 ## 7. User stories
 
-Write two user stories for each member of the group. They can be related to the same features described in the use cases or to different ones. Adopt the following format: "As a <ROLE>, I want <SOMETHING> so that <GOAL>." 
+
 - As a player I want to attack enemies at range to have additional combat depth.
 - As a player I want to buy upgrades for my ranged attacks to slay more enemies and feel stronger.
 - As a player I want to look at the gear I have obtained over the course of the game to get a sense of progression.
@@ -243,23 +236,14 @@ Write two user stories for each member of the group. They can be related to the 
      - Priority Level: 3
      - Estimated Time: 2 hours
 
-Establish a priority level for each user story and estimate how many hours each one will demand using the planning poker approach.
 
-Grading criteria (6 points): Use the provided format. The user stories should be in an adequate level of granularity (not too broad nor too specific). Provide the priority and estimation for each user story.
 
 ## 8. Issue Tracker
-
-The user stories should be registered in your GitHub issue tracker. Include here the link for your issue tracker and a screenshot of what you did. 
 
 Link to issue tracker: [https://github.com/boothe0/CS386GodotProject/issues](https://github.com/boothe0/CS386GodotProject/issues)
 
 ![Issue Tracker](https://i.imgur.com/Yk8x1Az.png)
 
-Grading criteria (1 point): Provide the URL and screenshot of the issue tracker. The user stories should be registered there.
-
-## Format
-
-Your document should be composed in Markdown and hosted on GitHub but you should also turn in a PDF copy to be graded.  See also Converting GitHub Markdown to PDF.  Sections should use appropriate markdown and figures should be included if needed or appropriate.
 
 ## Teamwork
 
