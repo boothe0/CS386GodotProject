@@ -16,9 +16,11 @@ Project repo: https://github.com/boothe0/CS386GodotProject
 ### 1. Activity Summary
 ****
 
-Elizabeth- Added theme to title UI screen. Made a material and shader to move the title of the game so the screen
+Elizabeth - Added theme to title UI screen. Made a material and shader to move the title of the game so the screen
 was not as static. Created placeholders on the right UI screen for consumables to be placed. 
 
+Asher - Added modular consumable items, added global signaling for scripts to interact with each other. Added UI elements
+for consumables with UI hints for consumable use. Fixed #33, added back enemy health bars. Reviewed and tested 3 pull requests.
 
 ### 2. Retrospective
 ****
