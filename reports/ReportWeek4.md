@@ -24,6 +24,8 @@ for consumables with UI hints for consumable use. Fixed #33, added back enemy he
 
 Camelia - Finalized player character design and worked on design for enemies.
 
+Ethan - Worked on created an item drop system upon enemy deaths, including coins and consumables
+
 ### 2. Retrospective
 ****
 
@@ -51,7 +53,7 @@ Asher - Start adding modular upgrades, purchasable in shop. Add round timer.
 
 Camelia - Create basic animations for characters and start integrating artwork into game.
 
-Ethan
+Ethan - Finish working on enemy drops and currency system for player.
 
 Chandler
 
