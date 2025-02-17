@@ -1,10 +1,16 @@
 # Report for Week #4
 Tiny RougeLite
+
 Group: 6
+
 Date: Feburary 16th 2025
+
 Location: NAU
+
 Present participants: Asher R (Manager), Camelia M (Presenter), Elizabeth B (Reporter), Chandler S (Quality Assurance) 
+
 Missing participants: Ethan M (Presenter)
+
 Project repo: https://github.com/boothe0/CS386GodotProject
 
 ### 1. Activity Summary
