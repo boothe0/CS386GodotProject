@@ -172,7 +172,6 @@ z_index = 5
 sprite_frames = SubResource("SpriteFrames_n6mil")
 animation = &"idle_down"
 autoplay = "idle_down"
-frame_progress = 0.884531
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_nrny4")
