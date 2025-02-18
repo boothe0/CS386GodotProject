@@ -26,7 +26,7 @@ enum WeaponType {SWORD, PROJECTILE}
 var last_direction = Vector2.DOWN 
 var last_movement_direction = Vector2.DOWN
 var last_attack_direction = Vector2.DOWN 
-var projectile_scene = preload("res://scenes/projectile.tscn")
+var projectile_scene = preload("res://scenes/player/projectile.tscn")
 var current_weapon = WeaponType.SWORD
 var dash_direction = Vector2()
 var weapon_animation_done = true

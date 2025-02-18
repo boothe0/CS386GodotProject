@@ -1,5 +1,5 @@
 extends Node2D
-var Enemy = preload ("res://scenes/enemy.tscn")
+var Enemy = preload ("res://scenes/enemies/enemy.tscn")
 @onready var GroundLayer = $GroundLayer
 @onready var SpawnTimer = $SpawnTimer
 var spawn_interval = 3.0

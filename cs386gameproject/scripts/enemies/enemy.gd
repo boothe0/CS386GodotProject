@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 # onready and export variables at the beginning
 @onready var animated_sprite = $AnimatedSprite2D  
-var coin_scene := preload("res://scenes/coin.tscn")
+var coin_scene := preload("res://scenes/player/coin.tscn")
 
 @onready var main = get_node("/root/MainScene")
 

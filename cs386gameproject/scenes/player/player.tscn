@@ -1,9 +1,9 @@
 [gd_scene load_steps=23 format=3 uid="uid://cmxv3umec3ewx"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_ucs4q"]
+[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_ucs4q"]
 [ext_resource type="Texture2D" uid="uid://db6a0gcvmsdqe" path="res://assets/16x16 Magical Forest Asset Pack/Characters/KnightCharacter-Idle.png" id="2_80bxb"]
-[ext_resource type="PackedScene" uid="uid://cbkptu6ifigqp" path="res://scenes/sword.tscn" id="3_iswpw"]
-[ext_resource type="PackedScene" uid="uid://djw3k8gpkkily" path="res://scenes/heal_potion.tscn" id="4_va32y"]
+[ext_resource type="PackedScene" uid="uid://cbkptu6ifigqp" path="res://scenes/player/sword.tscn" id="3_iswpw"]
+[ext_resource type="PackedScene" uid="uid://djw3k8gpkkily" path="res://scenes/player/heal_potion.tscn" id="4_va32y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h468s"]
 atlas = ExtResource("2_80bxb")

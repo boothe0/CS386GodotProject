@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbkptu6ifigqp"]
 
-[ext_resource type="Script" path="res://scripts/sword.gd" id="1_kp4im"]
+[ext_resource type="Script" path="res://scripts/player/sword.gd" id="1_kp4im"]
 [ext_resource type="Texture2D" uid="uid://bq5svy4eevgis" path="res://assets/16x16 Magical Forest Asset Pack/Weapons/Weapons.png" id="1_ks1js"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5t2in"]

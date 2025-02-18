@@ -1,75 +1,75 @@
 [gd_scene load_steps=26 format=3 uid="uid://d1he61wxuea23"]
 
-[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_hfuff"]
-[ext_resource type="Texture2D" uid="uid://sjiaenrl1wqh" path="res://assets/16x16 Magical Forest Asset Pack/Characters/GoblinCharacter-Idle.png" id="2_wqalq"]
-[ext_resource type="Script" path="res://scripts/EnemyHealthBar.gd" id="3_hi8vk"]
+[ext_resource type="Script" path="res://scripts/enemies/enemy.gd" id="1_xnmih"]
+[ext_resource type="Texture2D" uid="uid://sjiaenrl1wqh" path="res://assets/16x16 Magical Forest Asset Pack/Characters/GoblinCharacter-Idle.png" id="2_25gec"]
+[ext_resource type="Script" path="res://scripts/enemies/enemy_health_bar.gd" id="3_v2jg3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bstlm"]
 radius = 7.0
 height = 18.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u3asi"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ts1cq"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbfhb"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(96, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ihe8x"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(112, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b1cw4"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jwart"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ju1b6"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8tpiu"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hlxyr"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ug88h"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mjl6y"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(96, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x8s0l"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(112, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wg8ar"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tkecl"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfndy"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a8fl0"]
-atlas = ExtResource("2_wqalq")
+atlas = ExtResource("2_25gec")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ftuvv"]
@@ -167,6 +167,7 @@ animations = [{
 radius = 70.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yg8bk"]
+radius = 11.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7vkb"]
 bg_color = Color(0.114897, 0.114897, 0.114897, 1)
@@ -177,7 +178,7 @@ bg_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
 [node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_hfuff")
+script = ExtResource("1_xnmih")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -210,7 +211,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_2gjpx")
 max_value = 3.0
 value = 3.0
 show_percentage = false
-script = ExtResource("3_hi8vk")
+script = ExtResource("3_v2jg3")
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

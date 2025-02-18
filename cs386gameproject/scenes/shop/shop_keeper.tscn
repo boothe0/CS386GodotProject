@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bd5hpw8tky5b4"]
 
-[ext_resource type="Script" path="res://scenes/shop_keeper.gd" id="1_0qv5c"]
+[ext_resource type="Script" path="res://scenes/shop/shop_keeper.gd" id="1_0qv5c"]
 [ext_resource type="Texture2D" uid="uid://b52jwvyul4bvv" path="res://assets/16x16 Magical Forest Asset Pack/Characters/Blue DefaultCharacter-Idle.png" id="1_ddbw7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5fws6"]
