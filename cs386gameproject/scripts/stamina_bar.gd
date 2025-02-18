@@ -5,9 +5,20 @@ extends ProgressBar
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	max_value = player.stamina
-	# calculations for future powerups involving max stam can go here
 	value = max_value
-	player.dodge_used.connect(func(): value -= player.dodge_cost)
-	regen_timer.timeout.connect(func(): value += 1)
+	
+	player.stamina_update.connect(update)
+	player.dodge_used.connect(dodge_used)
+	regen_timer.timeout.connect(regen_stamina)
 	regen_timer.start()
 	
+func dodge_used():
+	player.stamina -= player.dodge_cost
+	update()
+	
+func regen_stamina():
+	player.stamina += 1
+	update()
+
+func update():
+	self.value = player.stamina

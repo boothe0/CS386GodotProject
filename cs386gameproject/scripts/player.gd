@@ -39,6 +39,7 @@ const SPEED = 150
 
 # Signals
 signal health_update
+signal stamina_update
 signal dodge_used
 # Initialization
 func _ready():
@@ -76,14 +77,9 @@ func _physics_process(_delta):
 
 	# Handle attack input
 	if Input.is_action_just_pressed("attack"):
-		if current_weapon == WeaponType.PROJECTILE:
-			print("shooting projectile") # Debug
-			shoot() 
-
-		elif current_weapon == WeaponType.SWORD:
-			print("swinging sword") # Debug
-			swing_sword()
-			weapon_animation_done = true
+		swing_sword()
+		weapon_animation_done = true
+		
 	# Handle ranged attack
 	if Input.is_action_just_pressed("ranged_attack") and weapon_animation_done != false:
 		shoot()
@@ -135,6 +131,12 @@ func shoot():
 
 # Handle sword attack
 func swing_sword():
+	const stamina_cost = 2
+	if stamina < stamina_cost:
+		return
+	
+	stamina -= stamina_cost
+	stamina_update.emit()
 	weapon_animation_done = false
 	# Update facing direction to match attack direction and lock it
 	update_attack_direction()

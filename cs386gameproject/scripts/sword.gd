@@ -1,5 +1,8 @@
 extends Node2D
 
+const BASE_DAMAGE = 2
+@export var damage_modifier: float = 1.0
+
 var attacking = false  # Prevents multiple attacks at once
 var attack_angle = 45  # How much the sword swings
 var attack_speed = 0.2  # Speed of the swing
@@ -34,15 +37,12 @@ func set_sword_direction(direction: Vector2):
 		rotation_degrees = -150       # Face down
 		z_index = 6
 
-	print("Sword direction set to:", current_direction)  # Debugging
-
 func attack():
 	if attacking:
 		return  # Prevent multiple swings at once
 	
 	attacking = true
 	hit_enemies.clear()
-	print("Sword attack started")  # Debug
 	
 	hitbox.monitorable = true
 	hitbox.monitoring = true
@@ -78,11 +78,8 @@ func attack():
 	
 	hitbox.monitorable = false
 	hitbox.monitoring = false
-	
-	print("Sword attack finished")  # Debug
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemies") and body not in hit_enemies:
-		print("Hit an enemy!")
 		hit_enemies.append(body)
-		body.take_damage(1)  # Deal 1 damage
+		body.take_damage(BASE_DAMAGE * damage_modifier)
