@@ -30,9 +30,9 @@ var projectile_scene = preload("res://scenes/player/projectile.tscn")
 var current_weapon = WeaponType.SWORD
 var dash_direction = Vector2()
 var weapon_animation_done = true
-var bronze_coins = 14
-var silver_coins = 14
-var gold_coins = 10
+var bronze_coins = 0
+var silver_coins = 0
+var gold_coins = 0
 @onready var heal_potion: Node2D = $HealPotion
 # Constants
 const SPEED = 150
