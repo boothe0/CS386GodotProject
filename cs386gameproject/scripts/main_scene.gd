@@ -44,6 +44,7 @@ func get_random_position() -> Vector2:
 
 func _on_SpawnTimer_timeout():
 	var e = Enemy.instantiate()
+	@warning_ignore("shadowed_variable_base_class")
 	var position = get_random_position()
 	e.position = position
 	add_child(e)
