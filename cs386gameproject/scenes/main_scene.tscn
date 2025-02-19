@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=22 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
@@ -9,13 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://c63dsnmtidj3h" path="res://scenes/consumables/heal_potion.tscn" id="6_qx2dl"]
 [ext_resource type="Script" path="res://scripts/ui_elements/consumable_1.gd" id="6_rmjn2"]
 [ext_resource type="Script" path="res://scripts/emitter.gd" id="7_0snu2"]
-[ext_resource type="Script" path="res://scripts/ui_elements/consumable_2.gd" id="8_irr0b"]
-[ext_resource type="Script" path="res://scripts/ui_elements/consumable_3.gd" id="9_xpxfm"]
-[ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop/shop_keeper.tscn" id="12_4kvno"]
 [ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png" id="8_17kcr"]
-[ext_resource type="Script" path="res://scripts/consumable_2.gd" id="8_irr0b"]
-[ext_resource type="Script" path="res://scripts/consumable_3.gd" id="9_xpxfm"]
-[ext_resource type="PackedScene" path="res://scenes/shop_keeper.tscn" id="12_4kvno"]
+[ext_resource type="Script" path="res://scripts/ui_elements/consumable_2.gd" id="9_bg7j5"]
+[ext_resource type="Script" path="res://scripts/ui_elements/consumable_3.gd" id="10_n5lfo"]
 [ext_resource type="Script" path="res://scripts/round_timer.gd" id="11_7gw5x"]
 [ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop_keeper.tscn" id="12_4kvno"]
 
@@ -171,7 +167,7 @@ grow_horizontal = 0
 scale = Vector2(3, 3.48)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("8_irr0b")
+script = ExtResource("9_bg7j5")
 
 [node name="Label" type="Label" parent="PlayerUI/Consumable_2"]
 layout_mode = 2
@@ -192,7 +188,7 @@ offset_right = -102.0
 offset_bottom = 320.0
 grow_horizontal = 0
 scale = Vector2(3, 3.48)
-script = ExtResource("9_xpxfm")
+script = ExtResource("10_n5lfo")
 
 [node name="Label" type="Label" parent="PlayerUI/Consumable_3"]
 layout_mode = 2
