@@ -11,7 +11,6 @@
 [ext_resource type="Script" path="res://scripts/emitter.gd" id="7_0snu2"]
 [ext_resource type="Script" path="res://scripts/consumable_2.gd" id="8_irr0b"]
 [ext_resource type="Script" path="res://scripts/consumable_3.gd" id="9_xpxfm"]
-
 [ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop_keeper.tscn" id="12_4kvno"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
