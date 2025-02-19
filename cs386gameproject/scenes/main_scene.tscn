@@ -12,14 +12,12 @@
 [ext_resource type="Script" path="res://scripts/ui_elements/consumable_2.gd" id="8_irr0b"]
 [ext_resource type="Script" path="res://scripts/ui_elements/consumable_3.gd" id="9_xpxfm"]
 [ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop/shop_keeper.tscn" id="12_4kvno"]
+[ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png" id="8_17kcr"]
 [ext_resource type="Script" path="res://scripts/consumable_2.gd" id="8_irr0b"]
 [ext_resource type="Script" path="res://scripts/consumable_3.gd" id="9_xpxfm"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" path="res://scenes/shop_keeper.tscn" id="12_4kvno"]
-=======
 [ext_resource type="Script" path="res://scripts/round_timer.gd" id="11_7gw5x"]
 [ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop_keeper.tscn" id="12_4kvno"]
->>>>>>> 1917121 (Round timer + small bug fix to stamina (#65))
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -159,6 +157,7 @@ text = "Z"
 
 [node name="TextureRect" parent="PlayerUI/Consumable_1" instance=ExtResource("6_qx2dl")]
 layout_mode = 2
+texture = ExtResource("8_17kcr")
 
 [node name="Consumable_2" type="HBoxContainer" parent="PlayerUI"]
 anchors_preset = 1
@@ -181,6 +180,7 @@ text = "X
 
 [node name="TextureRect" parent="PlayerUI/Consumable_2" instance=ExtResource("6_qx2dl")]
 layout_mode = 2
+texture = ExtResource("8_17kcr")
 
 [node name="Consumable_3" type="HBoxContainer" parent="PlayerUI"]
 anchors_preset = 1
@@ -201,6 +201,7 @@ text = "C
 
 [node name="TextureRect" parent="PlayerUI/Consumable_3" instance=ExtResource("6_qx2dl")]
 layout_mode = 2
+texture = ExtResource("8_17kcr")
 
 [node name="Ability1" type="TextureRect" parent="PlayerUI"]
 z_index = -1
