@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=21 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c63dsnmtidj3h" path="res://scenes/consumables/heal_potion.tscn" id="6_qx2dl"]
 [ext_resource type="Script" path="res://scripts/consumable_1.gd" id="6_rmjn2"]
 [ext_resource type="Script" path="res://scripts/emitter.gd" id="7_0snu2"]
+[ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png" id="8_17kcr"]
 [ext_resource type="Script" path="res://scripts/consumable_2.gd" id="8_irr0b"]
 [ext_resource type="Script" path="res://scripts/consumable_3.gd" id="9_xpxfm"]
 [ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop_keeper.tscn" id="12_4kvno"]
@@ -151,6 +152,7 @@ text = "Z"
 
 [node name="TextureRect" parent="PlayerUI/Consumable_1" instance=ExtResource("6_qx2dl")]
 layout_mode = 2
+texture = ExtResource("8_17kcr")
 
 [node name="Consumable_2" type="HBoxContainer" parent="PlayerUI"]
 anchors_preset = 1
@@ -173,6 +175,7 @@ text = "X
 
 [node name="TextureRect" parent="PlayerUI/Consumable_2" instance=ExtResource("6_qx2dl")]
 layout_mode = 2
+texture = ExtResource("8_17kcr")
 
 [node name="Consumable_3" type="HBoxContainer" parent="PlayerUI"]
 anchors_preset = 1
@@ -193,6 +196,7 @@ text = "C
 
 [node name="TextureRect" parent="PlayerUI/Consumable_3" instance=ExtResource("6_qx2dl")]
 layout_mode = 2
+texture = ExtResource("8_17kcr")
 
 [node name="Ability1" type="TextureRect" parent="PlayerUI"]
 z_index = -1

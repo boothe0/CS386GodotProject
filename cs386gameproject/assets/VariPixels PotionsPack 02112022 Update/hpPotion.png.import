@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7jhpnn52trau"
-path="res://.godot/imported/PotionsPack1.png-fb159eb68e46c39d1e29bd5e6d724c57.ctex"
+uid="uid://b1mrlmd7s1w8u"
+path="res://.godot/imported/hpPotion.png-7c6166890fe7935879566ae483bd5341.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/VariPixels PotionsPack 02112022 Update/PotionsPack1.png"
-dest_files=["res://.godot/imported/PotionsPack1.png-fb159eb68e46c39d1e29bd5e6d724c57.ctex"]
+source_file="res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png"
+dest_files=["res://.godot/imported/hpPotion.png-7c6166890fe7935879566ae483bd5341.ctex"]
 
 [params]
 
