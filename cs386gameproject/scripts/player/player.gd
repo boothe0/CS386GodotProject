@@ -3,6 +3,7 @@ extends CharacterBody2D
 enum WeaponType {SWORD, PROJECTILE}
 
 @export var MAX_HEALTH = 5
+@export var MAX_STAMINA = 10
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -16,7 +17,7 @@ enum WeaponType {SWORD, PROJECTILE}
 @onready var gold_label = get_node("/root/MainScene/PlayerUI/Coins/gold_coin")
 
 @export var health = MAX_HEALTH
-@export var stamina = 10
+@export var stamina = MAX_STAMINA
 # from the stamina_bar script
 @export var dodge_cost = 3
 # changing the dash_speed will change how far the dash is

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=21 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
@@ -14,7 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop/shop_keeper.tscn" id="12_4kvno"]
 [ext_resource type="Script" path="res://scripts/consumable_2.gd" id="8_irr0b"]
 [ext_resource type="Script" path="res://scripts/consumable_3.gd" id="9_xpxfm"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" path="res://scenes/shop_keeper.tscn" id="12_4kvno"]
+=======
+[ext_resource type="Script" path="res://scripts/round_timer.gd" id="11_7gw5x"]
+[ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop_keeper.tscn" id="12_4kvno"]
+>>>>>>> 1917121 (Round timer + small bug fix to stamina (#65))
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -254,12 +259,22 @@ text = "Silver Coins: 0"
 layout_mode = 2
 text = "Gold Coins: 0"
 
+[node name="RoundTimerLabel" type="Label" parent="PlayerUI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+script = ExtResource("11_7gw5x")
+
 [node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 0.5
 
 [node name="Emitter" type="Node" parent="."]
 script = ExtResource("7_0snu2")
-
-[node name="SpawnTimer2" type="Timer" parent="."]
 
 [node name="ArenaBoundary" type="StaticBody2D" parent="." groups=["boundary"]]
 collision_layer = 7
@@ -285,3 +300,7 @@ shape = SubResource("WorldBoundaryShape2D_l3c56")
 
 [node name="ShopKeeper" parent="." instance=ExtResource("12_4kvno")]
 position = Vector2(236, 39)
+
+[node name="RoundTimer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
