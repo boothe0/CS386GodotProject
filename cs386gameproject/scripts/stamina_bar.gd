@@ -17,7 +17,8 @@ func dodge_used():
 	update()
 	
 func regen_stamina():
-	player.stamina += 1
+	if player.stamina < player.MAX_STAMINA:
+		player.stamina += 1
 	update()
 
 func update():
