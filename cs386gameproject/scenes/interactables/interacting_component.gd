@@ -4,6 +4,7 @@ extends Node2D
 # holds list of all available interactions
 var current_interactions := []
 var can_interact := true
+<<<<<<< HEAD
 var scene_instantiate: PackedScene
 var instantiated_scene: Node = null
 var is_scene_instantiated = false
@@ -25,6 +26,17 @@ func _input(event: InputEvent) -> void:
 			can_interact = false
 			interact_label.hide()
 			await current_interactions[0].interact.call()
+=======
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("interact") and can_interact:
+		if current_interactions:
+			can_interact = false
+			interact_label.hide()
+			
+			await current_interactions[0].interact.call()
+
+>>>>>>> 4395d52 (Added collision detection for shopkeeper and prompt for user)
 			can_interact = true
 
 func _process(_delta: float) -> void:
@@ -32,10 +44,15 @@ func _process(_delta: float) -> void:
 		if current_interactions[0].is_interactable:
 			interact_label.text = current_interactions[0].interact_name
 			interact_label.show()
+<<<<<<< HEAD
 			label_showing = true
 	else:
 		interact_label.hide()
 		label_showing = false
+=======
+	else:
+		interact_label.hide()
+>>>>>>> 4395d52 (Added collision detection for shopkeeper and prompt for user)
 		
 func _on_interacting_range_area_entered(area: Area2D) -> void:
 	current_interactions.push_back(area)
