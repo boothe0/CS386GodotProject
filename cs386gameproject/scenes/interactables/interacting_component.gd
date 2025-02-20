@@ -25,6 +25,7 @@ func _input(event: InputEvent) -> void:
 			can_interact = false
 			interact_label.hide()
 			await current_interactions[0].interact.call()
+
 			can_interact = true
 
 func _process(_delta: float) -> void:
@@ -33,9 +34,11 @@ func _process(_delta: float) -> void:
 			interact_label.text = current_interactions[0].interact_name
 			interact_label.show()
 			label_showing = true
+		else:
+			interact_label.hide()
+			label_showing = false
 	else:
 		interact_label.hide()
-		label_showing = false
 		
 func _on_interacting_range_area_entered(area: Area2D) -> void:
 	current_interactions.push_back(area)
