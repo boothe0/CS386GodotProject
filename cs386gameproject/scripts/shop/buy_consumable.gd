@@ -6,6 +6,8 @@ extends VBoxContainer
 @onready var item_type_box = $VBoxContainer/Type
 @onready var description_box = $VBoxContainer/Description
 
+# TODO: generate random item ID to get random item data JSON
+
 # TODO: store item data as JSON
 #		parse JSON data into these fields
 const TEXTURE = "res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png"
