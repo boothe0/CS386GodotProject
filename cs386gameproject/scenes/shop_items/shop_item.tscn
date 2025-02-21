@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://clhtowjahugm2"]
+
+[ext_resource type="Script" path="res://scripts/shop/buy_consumable.gd" id="1_vmylc"]
+
+[node name="ShopItem" type="VBoxContainer"]
+offset_left = 83.0
+offset_right = 294.0
+offset_bottom = 246.0
+script = ExtResource("1_vmylc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ItemName" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+
+[node name="Price" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 11
+text = "Buy"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Type" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Description" type="Label" parent="VBoxContainer"]
+layout_mode = 2
