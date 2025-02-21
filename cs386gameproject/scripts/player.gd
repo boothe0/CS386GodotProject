@@ -4,6 +4,7 @@ enum WeaponType {SWORD, PROJECTILE}
 
 @export var MAX_HEALTH = 5
 @export var MAX_STAMINA = 10
+@export var MAX_MANA = 10
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -18,6 +19,7 @@ enum WeaponType {SWORD, PROJECTILE}
 
 @export var health = MAX_HEALTH
 @export var stamina = MAX_STAMINA
+@export var mana = MAX_MANA
 # from the stamina_bar script
 @export var dodge_cost = 3
 # changing the dash_speed will change how far the dash is
@@ -41,15 +43,21 @@ const SPEED = 150
 # Signals
 signal health_update
 signal stamina_update
+signal mana_update
 signal dodge_used
 # Initialization
 func _ready():
 	health_update.emit()
-	sword.hide()  # Start hidden
-	
-	bronze_label.text = "Bronze Coins: " + str(bronze_coins)
-	silver_label.text = "Silver Coins: " + str(silver_coins)
-	gold_label.text = "Gold Coins: " + str(gold_coins)
+	sword.hide()  # Start hidden a
+	# checks to see if the string is null to allow scene change
+	if bronze_label != null:
+		bronze_label.text = "Bronze Coins: " + str(bronze_coins)
+
+	if silver_label != null:
+		silver_label.text = "Silver Coins: " + str(silver_coins)
+
+	if gold_label != null:
+		gold_label.text = "Gold Coins: " + str(gold_coins)
 
 func _physics_process(_delta):
 	var direction = Vector2.ZERO
@@ -125,6 +133,12 @@ func update_movement_animation():
 
 # Handle shooting projectiles
 func shoot():
+	const mana_cost = 2
+	if mana_cost > mana:
+		return
+		
+	mana -= mana_cost
+	mana_update.emit()
 	var projectile = projectile_scene.instantiate()
 	get_parent().add_child(projectile)
 	projectile.global_position = global_position

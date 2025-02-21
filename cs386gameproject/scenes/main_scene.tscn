@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=25 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
@@ -54,18 +54,49 @@ texture = ExtResource("2_psmqu")
 [sub_resource type="TileSet" id="TileSet_7fs3h"]
 sources/0 = SubResource("TileSetAtlasSource_df4cm")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pomkq"]
+bg_color = Color(0.358417, 0, 0.01308, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omlwu"]
+bg_color = Color(0.898275, 2.59906e-06, 1.2514e-06, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qm72p"]
-bg_color = Color(0.144162, 0.636075, 0.929463, 1)
-draw_center = false
+bg_color = Color(0, 0.294954, 1.92523e-07, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwgug"]
 bg_color = Color(0, 0.701961, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pomkq"]
-bg_color = Color(0.169245, 0.169245, 0.169245, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igy2v"]
+bg_color = Color(3.85046e-07, 0.322043, 0.478793, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omlwu"]
-bg_color = Color(0.898275, 2.59906e-06, 1.2514e-06, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mcnff"]
+bg_color = Color(0, 0.6672, 0.951553, 1)
+
+[sub_resource type="GDScript" id="GDScript_3ab0m"]
+script/source = "extends ProgressBar
+
+@onready var player = $\"../../Player\"
+@onready var regen_timer = $RegenTimer
+@onready var label = $ValueIndicator
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	max_value = player.mana
+	value = max_value
+	label.text = \"%d / %d\" % [value, max_value]
+	
+	player.mana_update.connect(update)
+	regen_timer.timeout.connect(regen_mana)
+	regen_timer.start()
+	
+func regen_mana():
+	if player.mana < player.MAX_MANA:
+		player.mana += 1
+		update()
+
+func update():
+	self.value = player.mana
+	label.text = \"%d / %d\" % [value, max_value]
+"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l3c56"]
 
@@ -75,6 +106,7 @@ script = ExtResource("1_l6k43")
 
 [node name="Player" parent="." instance=ExtResource("1_6hm0t")]
 position = Vector2(308, 65)
+scale = Vector2(1.17705, 1.17705)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
@@ -88,6 +120,23 @@ tile_map_data = PackedByteArray("AAD7//7/AAABAAEAAAD7////AAABAAEAAAD7/wAAAAABAAE
 tile_set = SubResource("TileSet_7fs3h")
 
 [node name="PlayerUI" type="CanvasLayer" parent="."]
+
+[node name="HealthBar" type="ProgressBar" parent="PlayerUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -452.0
+offset_top = 10.0
+offset_right = -202.0
+offset_bottom = 30.0
+grow_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_pomkq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_omlwu")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+script = ExtResource("4_d7btm")
+metadata/_edit_use_anchors_ = true
 
 [node name="StaminaBar" type="ProgressBar" parent="PlayerUI"]
 anchors_preset = 1
@@ -119,22 +168,34 @@ horizontal_alignment = 1
 
 [node name="RegenTimer" type="Timer" parent="PlayerUI/StaminaBar"]
 
-[node name="HealthBar" type="ProgressBar" parent="PlayerUI"]
+[node name="ManaBar" type="ProgressBar" parent="PlayerUI"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -452.0
-offset_top = 10.0
+offset_top = 70.0
 offset_right = -202.0
-offset_bottom = 30.0
+offset_bottom = 90.0
 grow_horizontal = 0
-theme_override_styles/background = SubResource("StyleBoxFlat_pomkq")
-theme_override_styles/fill = SubResource("StyleBoxFlat_omlwu")
+theme_override_styles/background = SubResource("StyleBoxFlat_igy2v")
+theme_override_styles/fill = SubResource("StyleBoxFlat_mcnff")
 max_value = 10.0
 value = 10.0
 show_percentage = false
-script = ExtResource("4_d7btm")
-metadata/_edit_use_anchors_ = true
+script = SubResource("GDScript_3ab0m")
+
+[node name="ValueIndicator" type="Label" parent="PlayerUI/ManaBar"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1
+
+[node name="RegenTimer" type="Timer" parent="PlayerUI/ManaBar"]
 
 [node name="Consumable_1" type="HBoxContainer" parent="PlayerUI"]
 anchors_preset = 1
@@ -299,5 +360,8 @@ shape = SubResource("WorldBoundaryShape2D_l3c56")
 position = Vector2(236, 39)
 
 [node name="RoundTimer" type="Timer" parent="."]
-wait_time = 60.0
+wait_time = 5.0
 autostart = true
+
+[connection signal="round_end" from="Emitter" to="." method="_on_emitter_round_end"]
+[connection signal="timeout" from="RoundTimer" to="." method="_on_round_timer_timeout"]

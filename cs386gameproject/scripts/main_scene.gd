@@ -48,3 +48,8 @@ func _on_SpawnTimer_timeout():
 	var position = get_random_position()
 	e.position = position
 	add_child(e)
+
+
+func _on_round_timer_timeout() -> void:
+	print("Something")
+	get_tree().change_scene_to_file("res://scenes/shop_scene.tscn")
