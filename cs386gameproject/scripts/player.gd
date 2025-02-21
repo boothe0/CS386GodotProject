@@ -135,8 +135,8 @@ func update_movement_animation():
 func shoot():
 	const mana_cost = 2
 	if mana_cost > mana:
->>>>>>> a72fa29 (fixed missing dependancies)
 		return
+		
 	mana -= mana_cost
 	mana_update.emit()
 	var projectile = projectile_scene.instantiate()
