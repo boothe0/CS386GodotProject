@@ -75,6 +75,7 @@ script = ExtResource("1_l6k43")
 
 [node name="Player" parent="." instance=ExtResource("1_6hm0t")]
 position = Vector2(308, 65)
+scale = Vector2(1.17705, 1.17705)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
@@ -299,5 +300,8 @@ shape = SubResource("WorldBoundaryShape2D_l3c56")
 position = Vector2(236, 39)
 
 [node name="RoundTimer" type="Timer" parent="."]
-wait_time = 60.0
+wait_time = 5.0
 autostart = true
+
+[connection signal="round_end" from="Emitter" to="." method="_on_emitter_round_end"]
+[connection signal="timeout" from="RoundTimer" to="." method="_on_round_timer_timeout"]

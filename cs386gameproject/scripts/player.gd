@@ -45,11 +45,16 @@ signal dodge_used
 # Initialization
 func _ready():
 	health_update.emit()
-	sword.hide()  # Start hidden
-	
-	bronze_label.text = "Bronze Coins: " + str(bronze_coins)
-	silver_label.text = "Silver Coins: " + str(silver_coins)
-	gold_label.text = "Gold Coins: " + str(gold_coins)
+	sword.hide()  # Start hidden a
+	# checks to see if the string is null to allow scene change
+	if bronze_label != null:
+		bronze_label.text = "Bronze Coins: " + str(bronze_coins)
+
+	if silver_label != null:
+		silver_label.text = "Silver Coins: " + str(silver_coins)
+
+	if gold_label != null:
+		gold_label.text = "Gold Coins: " + str(gold_coins)
 
 func _physics_process(_delta):
 	var direction = Vector2.ZERO
