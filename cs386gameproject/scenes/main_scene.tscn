@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=27 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
@@ -97,6 +97,12 @@ func update():
 	self.value = player.mana
 	label.text = \"%d / %d\" % [value, max_value]
 "
+
+[sub_resource type="LabelSettings" id="LabelSettings_a6r1j"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_dj4e2"]
+font_size = 19
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l3c56"]
 
@@ -300,22 +306,30 @@ texture = ExtResource("6_a6u3b")
 expand_mode = 1
 
 [node name="Coins" type="VBoxContainer" parent="PlayerUI"]
-offset_right = 117.0
+offset_left = 13.0
+offset_top = 18.0
+offset_right = 186.0
 offset_bottom = 77.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="bronze_coin" type="Label" parent="PlayerUI/Coins"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerUI/Coins"]
 layout_mode = 2
-text = "Bronze Coins: 0"
 
-[node name="silver_coin" type="Label" parent="PlayerUI/Coins"]
+[node name="TotalCoins" type="Label" parent="PlayerUI/Coins/HBoxContainer"]
 layout_mode = 2
-text = "Silver Coins: 0"
+text = "Total Coins: 0"
+label_settings = SubResource("LabelSettings_a6r1j")
 
-[node name="gold_coin" type="Label" parent="PlayerUI/Coins"]
+[node name="LastCoin" type="TextureRect" parent="PlayerUI/Coins/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
-text = "Gold Coins: 0"
+stretch_mode = 5
+
+[node name="CoinsAdded" type="Label" parent="PlayerUI/Coins"]
+layout_mode = 2
+text = "+"
+label_settings = SubResource("LabelSettings_dj4e2")
 
 [node name="RoundTimerLabel" type="Label" parent="PlayerUI"]
 anchors_preset = 5
