@@ -16,7 +16,9 @@ Elizabeth:
 
 Ethan:
 
-Asher: 
+Asher: Added mana resource tied to range attacks #76. Added floating damage numbers for both player and enemies #75. Created modular 
+UI container for shop items #68. Added Round timer #65. Fixed stamina resource being tied to stamina bar instead of player, as well as
+stamina regen goin past the set max #63. Fixed coins to begin at 0 #62.
 
 Chandler: 
 
