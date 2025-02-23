@@ -13,9 +13,14 @@ enum WeaponType {SWORD, PROJECTILE}
 
 @onready var emitter = $"../Emitter"
 
-@onready var bronze_label = get_node("/root/MainScene/PlayerUI/Coins/bronze_coin")
-@onready var silver_label = get_node("/root/MainScene/PlayerUI/Coins/silver_coin")
-@onready var gold_label = get_node("/root/MainScene/PlayerUI/Coins/gold_coin")
+@onready var total_coins: Label = $"../PlayerUI/Coins/HBoxContainer/TotalCoins"
+@onready var coins_added: Label = $"../PlayerUI/Coins/CoinsAdded"
+@onready var coin_timer: Timer = $CoinTimer
+@onready var last_coin: TextureRect = $"../PlayerUI/Coins/HBoxContainer/LastCoin"
+
+const bronze_texture = preload("res://assets/bronze-coin.png")
+const gold_texture = preload("res://assets/gold-coin.png")
+const silver_texture = preload("res://assets/silver-coin.png")
 
 @export var health = MAX_HEALTH
 @export var stamina = MAX_STAMINA
@@ -33,9 +38,8 @@ var projectile_scene = preload("res://scenes/projectile.tscn")
 var current_weapon = WeaponType.SWORD
 var dash_direction = Vector2()
 var weapon_animation_done = true
-var bronze_coins = 0
-var silver_coins = 0
-var gold_coins = 0
+var cumulative_coin_total: int = 0
+var coin_popup_accumulator: int = 0
 @onready var heal_potion: Node2D = $HealPotion
 # Constants
 const SPEED = 150
@@ -48,16 +52,8 @@ signal dodge_used
 # Initialization
 func _ready():
 	health_update.emit()
-	sword.hide()  # Start hidden a
-	# checks to see if the string is null to allow scene change
-	if bronze_label != null:
-		bronze_label.text = "Bronze Coins: " + str(bronze_coins)
-
-	if silver_label != null:
-		silver_label.text = "Silver Coins: " + str(silver_coins)
-
-	if gold_label != null:
-		gold_label.text = "Gold Coins: " + str(gold_coins)
+	sword.hide()
+	coins_added.visible = false
 
 func _physics_process(_delta):
 	var direction = Vector2.ZERO
@@ -242,3 +238,30 @@ func use_heal_potion():
 
 func emit_used_dodge_signal():
 	dodge_used.emit()
+
+func add_coins(amount: int, coin_type: int) -> void:
+	cumulative_coin_total += amount
+	coin_popup_accumulator += amount
+	update_total_coin_label()
+	
+	# Update and show the temporary coins_added popup.
+	coins_added.text = "+" + str(coin_popup_accumulator)
+	coins_added.visible = true
+	
+	# Restart the timer so the popup stays visible as long as coins keep being collected.
+	coin_timer.start()
+	
+	match coin_type:
+		0:
+			last_coin.texture = bronze_texture
+		1:
+			last_coin.texture = silver_texture
+		2:
+			last_coin.texture = gold_texture
+
+func update_total_coin_label() -> void:
+	total_coins.text = "Total Coins: " + str(cumulative_coin_total)
+
+func _on_coin_timer_timeout() -> void:
+	coin_popup_accumulator = 0
+	coins_added.visible = false

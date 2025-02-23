@@ -167,6 +167,7 @@ height = 14.0
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(1.45228, 1.45228)
+collision_layer = 17
 script = ExtResource("1_ucs4q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -188,3 +189,7 @@ visible = false
 position = Vector2(5, 3)
 
 [node name="InteractingComponent" parent="." instance=ExtResource("5_8dvjf")]
+
+[node name="CoinTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="CoinTimer" to="." method="_on_coin_timer_timeout"]
