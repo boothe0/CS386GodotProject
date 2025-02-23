@@ -45,7 +45,7 @@ animation = &"idleAnimation"
 frame_progress = 0.53373
 
 [node name="Interactable" parent="." instance=ExtResource("3_x8wkn")]
-interact_name = "Press E to buy items"
+interact_name = "Go up to a post to  view item"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 shape = SubResource("CircleShape2D_n7i5s")

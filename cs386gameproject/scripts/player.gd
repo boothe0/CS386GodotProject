@@ -38,7 +38,7 @@ var projectile_scene = preload("res://scenes/projectile.tscn")
 var current_weapon = WeaponType.SWORD
 var dash_direction = Vector2()
 var weapon_animation_done = true
-var cumulative_coin_total: int = 0
+@export var cumulative_coin_total: int = 0
 var coin_popup_accumulator: int = 0
 @onready var heal_potion: Node2D = $HealPotion
 # Constants
@@ -53,7 +53,9 @@ signal dodge_used
 func _ready():
 	health_update.emit()
 	sword.hide()
-	coins_added.visible = false
+	# to check for scene change
+	if coins_added != null:
+		coins_added.visible = false
 
 func _physics_process(_delta):
 	var direction = Vector2.ZERO
@@ -91,7 +93,10 @@ func _physics_process(_delta):
 	
 	# Handle dodge
 	if Input.is_action_just_pressed("dodge"):
-		if stamina_bar.value < dodge_cost:
+		if stamina_bar == null:
+			print("cannot dash here")
+			return  
+		elif stamina_bar.value < dodge_cost:
 			return
 		emit_used_dodge_signal()
 		dash_direction = direction.normalized()
@@ -199,6 +204,7 @@ func take_damage(amount):
 func die():
 	print("Player died")
 	queue_free()
+	get_tree().change_scene_to_file("res://scenes/death.tscn")
 
 func heal(amount):
 	if health >= MAX_HEALTH:

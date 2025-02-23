@@ -1,5 +1,4 @@
 extends CharacterBody2D
-
 # onready and export variables at the beginning
 @onready var animated_sprite = $AnimatedSprite2D  
 var coin_scene := preload("res://scenes/coin.tscn")
@@ -45,8 +44,10 @@ func attack():
 		print("Enemy attacks!")  # Debugging
 		player.take_damage(ATTACK_DAMAGE)
 		can_attack = false
-		await get_tree().create_timer(ATTACK_COOLDOWN).timeout  # Attack cooldown
-		can_attack = true 
+		# to check if the tree is gone from dying
+		if get_tree() != null:
+			await get_tree().create_timer(ATTACK_COOLDOWN).timeout  # Attack cooldown
+			can_attack = true 
 
 # Take damage from player
 func take_damage(amount):

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://d4mp3tw5cl66l"]
+[gd_scene load_steps=10 format=4 uid="uid://d4mp3tw5cl66l"]
 
 [ext_resource type="Texture2D" uid="uid://cjip70074evdm" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/wooden_interior.png" id="1_8k3ky"]
 [ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop_keeper.tscn" id="2_krnjd"]
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="3_3bvrm"]
+[ext_resource type="PackedScene" uid="uid://qsiw8h80mvef" path="res://scenes/interactables/interactable.tscn" id="4_6gfk0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2l0sb"]
 texture = ExtResource("1_8k3ky")
@@ -716,6 +717,8 @@ texture = ExtResource("1_8k3ky")
 [sub_resource type="TileSet" id="TileSet_esyf1"]
 sources/0 = SubResource("TileSetAtlasSource_b535g")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_thhnt"]
+
 [node name="Shop" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -731,8 +734,78 @@ position = Vector2(562, 147)
 scale = Vector2(1.68, 1.68)
 
 [node name="Player" parent="." instance=ExtResource("3_3bvrm")]
-position = Vector2(569, 270)
+position = Vector2(564, 219)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
 process_callback = 0
+
+[node name="Item 1" parent="." instance=ExtResource("4_6gfk0")]
+interact_name = "Item 1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item 1"]
+position = Vector2(40, 152)
+shape = SubResource("CircleShape2D_thhnt")
+
+[node name="Item 2" parent="." instance=ExtResource("4_6gfk0")]
+interact_name = "Item 2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item 2"]
+position = Vector2(120, 151)
+shape = SubResource("CircleShape2D_thhnt")
+
+[node name="Item 3" parent="." instance=ExtResource("4_6gfk0")]
+interact_name = "Item 3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item 3"]
+position = Vector2(184, 152)
+shape = SubResource("CircleShape2D_thhnt")
+
+[node name="Item 4" parent="." instance=ExtResource("4_6gfk0")]
+interact_name = "Item 4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item 4"]
+position = Vector2(264, 151)
+shape = SubResource("CircleShape2D_thhnt")
+
+[node name="Item 5" parent="." instance=ExtResource("4_6gfk0")]
+interact_name = "Item 5"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item 5"]
+position = Vector2(344, 151)
+shape = SubResource("CircleShape2D_thhnt")
+
+[node name="Item 6" parent="." instance=ExtResource("4_6gfk0")]
+interact_name = "Item 6"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item 6"]
+position = Vector2(712, 152)
+shape = SubResource("CircleShape2D_thhnt")
+
+[node name="Item 7" parent="." instance=ExtResource("4_6gfk0")]
+interact_name = "Item 7"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item 7"]
+position = Vector2(776, 152)
+shape = SubResource("CircleShape2D_thhnt")
+
+[node name="Item 8" parent="." instance=ExtResource("4_6gfk0")]
+interact_name = "Item 8"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item 8"]
+position = Vector2(840, 151)
+shape = SubResource("CircleShape2D_thhnt")
+
+[node name="Item 9" parent="." instance=ExtResource("4_6gfk0")]
+interact_name = "Item 9"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item 9"]
+position = Vector2(904, 151)
+shape = SubResource("CircleShape2D_thhnt")
+
+[node name="Item 10" parent="." instance=ExtResource("4_6gfk0")]
+interact_name = "Item 10"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item 10"]
+position = Vector2(968, 152)
+shape = SubResource("CircleShape2D_thhnt")
