@@ -14,7 +14,7 @@ Camelia:
 
 Elizabeth:
 
-Ethan:
+Ethan: Created and updated coin functionality. Made so that it can be used along with the shop later in the project.
 
 Asher: Added mana resource tied to range attacks #76. Added floating damage numbers for both player and enemies #75. Created modular 
 UI container for shop items #68. Added Round timer #65. Fixed stamina resource being tied to stamina bar instead of player, as well as
