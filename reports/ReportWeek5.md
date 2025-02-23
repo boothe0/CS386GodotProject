@@ -12,7 +12,7 @@ Project repo: https://github.com/boothe0/CS386GodotProject
    
 Camelia:
 
-Elizabeth:
+Elizabeth: Added UI shop scene, death scene and ensures it transitions smoothly between each one. Attended both meetings and reviewed pull requests to merge into main. 
 
 Ethan:
 
