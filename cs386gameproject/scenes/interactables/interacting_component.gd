@@ -29,11 +29,13 @@ func _input(event: InputEvent) -> void:
 			can_interact = true
 
 func _process(_delta: float) -> void:
+	var i = 0
 	if current_interactions and can_interact:
-		if current_interactions[0].is_interactable:
+		if current_interactions[i].is_interactable:
 			interact_label.text = current_interactions[0].interact_name
 			interact_label.show()
 			label_showing = true
+			i += 1 
 		else:
 			interact_label.hide()
 			label_showing = false

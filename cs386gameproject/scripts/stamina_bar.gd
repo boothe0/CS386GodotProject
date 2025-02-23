@@ -14,7 +14,7 @@ func _ready() -> void:
 	
 func dodge_used():
 	player.stamina -= player.dodge_cost
-	update()
+	update()  
 	
 func regen_stamina():
 	if player.stamina < player.MAX_STAMINA:
