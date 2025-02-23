@@ -23,13 +23,17 @@ Chandler:
 2. Retrospective
 
     Appreciations: We were good about working together and showing up to both meetings as a whole team and working together to solve common close issues.
+   
     Successes: Everyone got their assigned goals completed.
+   
     Failures: We all did our jobs this weeek  and got a lot done without a hitch.
+   
     Barriers: Some parts of the code are very closely coupled to one another making it hard to add new features into existing scripts.
+   
     What we should try next time.
     Code review to fix some of the older scripts getting rid of unused functions or repeated functions.
    
-3. Next steps
+4. Next steps
 
 Elizabeth: UI prompt for shop, Buying Consumables.
 
