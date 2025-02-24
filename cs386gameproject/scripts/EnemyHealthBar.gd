@@ -1,7 +1,8 @@
 extends ProgressBar
 
-@onready var enemy = $".."
 static var DamageDisplay = preload("res://scenes/display_damage.tscn")
+@onready var enemy = $".."
+
 
 func _ready() -> void:
 	max_value = enemy.health
