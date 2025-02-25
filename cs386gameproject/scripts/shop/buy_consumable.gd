@@ -1,10 +1,4 @@
 extends VBoxContainer
-@onready var texture_rect = $TextureRect
-@onready var item_name_box = $HBoxContainer2/ItemName
-@onready var price_box = $HBoxContainer2/Price
-@onready var buy_button = $HBoxContainer/Button
-@onready var item_type_box = $VBoxContainer/Type
-@onready var description_box = $VBoxContainer/Description
 
 # TODO: generate random item ID to get random item data JSON
 
@@ -17,8 +11,17 @@ const SHOP_SPOT = 0
 const CONSUMABLE = true
 const DESCRIPTION = "Heals 2HP"
 
-# Called when the node enters the scene tree for the first time.
+@onready var texture_rect = $TextureRect
+@onready var item_name_box = $HBoxContainer2/ItemName
+@onready var price_box = $HBoxContainer2/Price
+@onready var buy_button = $HBoxContainer/Button
+@onready var item_type_box = $VBoxContainer/Type
+@onready var description_box = $VBoxContainer/Description
+
+
 func _ready() -> void:
+	# called when the node enters the scene tree for the first time.
+	# set purchasable item description
 	texture_rect.texture = load(TEXTURE)
 	item_name_box.text = NAME
 	price_box.text = "%d G" % PRICE
@@ -27,6 +30,6 @@ func _ready() -> void:
 	
 	buy_button.pressed.connect(buy_item_pressed)
 
-
 func buy_item_pressed():
+	# buy the item that was selected
 	Emitter.buy_item_pressed.emit(NAME, PRICE, SHOP_SPOT, CONSUMABLE)
