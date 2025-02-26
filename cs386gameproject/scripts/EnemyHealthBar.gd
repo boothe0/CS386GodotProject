@@ -9,6 +9,7 @@ func _ready() -> void:
 	enemy.health_update.connect(update)
 
 func update() -> void:
+	# update enemy health bar based on current health
 	var display = DamageDisplay.instantiate()
 	display.set_data(value - enemy.health, enemy.global_position, get_tree().root)
 	display.display()
