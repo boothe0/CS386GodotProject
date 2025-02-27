@@ -10,15 +10,17 @@ Project repo: https://github.com/boothe0/CS386GodotProject
 
 1. Activity Summary
    
-Camelia:
+Camelia: Designed sprite for main character.
 
 Elizabeth: Added UI shop scene, death scene and ensures it transitions smoothly between each one. Attended both meetings and reviewed pull requests to merge into main. 
 
-Ethan:
+Ethan: Created and updated coin functionality. Made so that it can be used along with the shop later in the project.
 
-Asher: 
+Asher: Added mana resource tied to range attacks #76. Added floating damage numbers for both player and enemies #75. Created modular 
+UI container for shop items #68. Added Round timer #65. Fixed stamina resource being tied to stamina bar instead of player, as well as
+stamina regen goin past the set max #63. Fixed coins to begin at 0 #62.
 
-Chandler: 
+Chandler: Added collision objects to MapTiles. Fleshed out consmable names and descriptions.
 
 2. Retrospective
 

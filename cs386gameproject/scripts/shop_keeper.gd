@@ -5,5 +5,3 @@ extends CharacterBody2D
 
 func _ready():
 	animationShop.play("idleAnimation")
-
-	
