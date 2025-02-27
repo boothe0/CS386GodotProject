@@ -87,6 +87,3 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemies") and body not in hit_enemies:
 		hit_enemies.append(body)
 		body.take_damage(BASE_DAMAGE * damage_modifier)
-
-func update_size(new_scale: int):
-	scale = Vector2(new_scale, new_scale)

@@ -115,6 +115,9 @@ func _physics_process(_delta):
 		velocity = dash_direction * dash_speed
 		velocity += Vector2(1.0 - (friction * _delta), 1.0 - (friction * _delta))
 		move_and_collide(velocity)
+		
+	if Input.is_action_just_pressed("debug"):
+		Emitter.debug()
 
 # movement, idle and dodge functions
 func get_idle_animation(direction: Vector2) -> String:
