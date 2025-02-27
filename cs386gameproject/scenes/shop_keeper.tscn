@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bd5hpw8tky5b4"]
+[gd_scene load_steps=8 format=3 uid="uid://bd5hpw8tky5b4"]
 
 [ext_resource type="Script" path="res://scripts/shop_keeper.gd" id="1_0qv5c"]
 [ext_resource type="Texture2D" uid="uid://b52jwvyul4bvv" path="res://assets/16x16 Magical Forest Asset Pack/Characters/Blue DefaultCharacter-Idle.png" id="1_ddbw7"]
-[ext_resource type="PackedScene" uid="uid://qsiw8h80mvef" path="res://scenes/interactables/interactable.tscn" id="3_x8wkn"]
+[ext_resource type="Theme" uid="uid://15y45ulhxojt" path="res://assets/UI_Elements/shop_screen_theme.tres" id="3_tq8mp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5fws6"]
 radius = 7.0
@@ -30,9 +30,6 @@ animations = [{
 "speed": 2.5
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_n7i5s"]
-radius = 21.095
-
 [node name="ShopKeeper" type="CharacterBody2D"]
 script = ExtResource("1_0qv5c")
 
@@ -44,8 +41,11 @@ sprite_frames = SubResource("SpriteFrames_iv8lg")
 animation = &"idleAnimation"
 frame_progress = 0.53373
 
-[node name="Interactable" parent="." instance=ExtResource("3_x8wkn")]
-interact_name = "Go up to a post to  view item"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
-shape = SubResource("CircleShape2D_n7i5s")
+[node name="Label" type="Label" parent="."]
+offset_left = -85.0
+offset_top = -33.0
+offset_right = 97.0
+offset_bottom = -10.0
+theme = ExtResource("3_tq8mp")
+text = "Buy items here
+"
