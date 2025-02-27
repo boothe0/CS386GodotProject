@@ -17,16 +17,16 @@ func _input(event: InputEvent) -> void:
 			instantiated_scene = scene_instantiate.instantiate()
 			get_parent().add_child(instantiated_scene)
 			is_scene_instantiated = true
-	if is_scene_instantiated:  
-		if Input.is_action_just_pressed("escape"):
+			can_interact = false
+			await current_interactions[0].interact.call()
+			
+	if Input.is_action_just_pressed("escape"):
+		if is_scene_instantiated:  
 			instantiated_scene.queue_free()
 			is_scene_instantiated = false
+			can_interact = true 
 		if current_interactions:
-			can_interact = false
 			interact_label.hide()
-			await current_interactions[0].interact.call()
-
-			can_interact = true
 
 func _process(_delta: float) -> void:
 	var i = 0
