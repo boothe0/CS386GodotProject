@@ -14,9 +14,10 @@ func _ready():
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and can_interact:
 		if current_interactions: 
-			instantiated_scene = scene_instantiate.instantiate()
-			get_parent().add_child(instantiated_scene)
-			is_scene_instantiated = true
+			if is_scene_instantiated == false:
+				instantiated_scene = scene_instantiate.instantiate()
+				get_parent().add_child(instantiated_scene)
+				is_scene_instantiated = true
 			can_interact = false
 			interact_label.hide()
 			await current_interactions[0].interact.call()
