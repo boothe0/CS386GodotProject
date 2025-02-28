@@ -5,19 +5,15 @@ class_name DamageLabel
 var damage_dealt: int
 var enemy_global_position: Vector2
 
-
-func _ready() -> void:
-	# called when the node enters the scene tree for the first time.
-	pass
-
 func display() -> void:
 	# get position for damage label to appear
 	var damage_label = Label.new()
-	damage_label.text = "%d" % damage_dealt
+	damage_label.text = "%d" % abs(damage_dealt)
 	damage_label.global_position = enemy_global_position + Vector2(0, -20)
 	
 	# set font colors and sizes
-	damage_label.add_theme_color_override("font_color", Color(1.0, 0.0, 0.0, 1.0))
+	var color = Color(1.0, 0.0, 0.0, 1.0) if damage_dealt >= 0 else Color(0.0, 1.0, 0.0, 1.0)
+	damage_label.add_theme_color_override("font_color", color)
 	damage_label.add_theme_font_size_override("font_size", 12)
 	
 	# add into the main scene
