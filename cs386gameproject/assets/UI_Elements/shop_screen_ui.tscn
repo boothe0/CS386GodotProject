@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://rseqw84ucyei"]
+
+[ext_resource type="Theme" uid="uid://15y45ulhxojt" path="res://assets/UI_Elements/shop_screen_theme.tres" id="1_irhd1"]
+[ext_resource type="PackedScene" uid="uid://clhtowjahugm2" path="res://scenes/shop_items/shop_item.tscn" id="2_tbj4b"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lh5s4"]
+
+[node name="ShopScreenUI" type="CanvasLayer"]
+
+[node name="ThemeAdder" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_irhd1")
+
+[node name="Panel" type="Panel" parent="ThemeAdder"]
+material = SubResource("CanvasItemMaterial_lh5s4")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UsrPrompt" type="Label" parent="ThemeAdder"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press escape to exit!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShopItem" parent="ThemeAdder" instance=ExtResource("2_tbj4b")]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 211.0

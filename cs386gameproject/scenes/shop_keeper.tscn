@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://bd5hpw8tky5b4"]
+
+[ext_resource type="Script" path="res://scripts/shop_keeper.gd" id="1_0qv5c"]
+[ext_resource type="Texture2D" uid="uid://b52jwvyul4bvv" path="res://assets/16x16 Magical Forest Asset Pack/Characters/Blue DefaultCharacter-Idle.png" id="1_ddbw7"]
+[ext_resource type="PackedScene" uid="uid://qsiw8h80mvef" path="res://scenes/interactables/interactable.tscn" id="3_x8wkn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5fws6"]
+radius = 7.0
+height = 14.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klubw"]
+atlas = ExtResource("1_ddbw7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57eju"]
+atlas = ExtResource("1_ddbw7")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iv8lg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klubw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57eju")
+}],
+"loop": true,
+"name": &"idleAnimation",
+"speed": 2.5
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n7i5s"]
+radius = 21.095
+
+[node name="ShopKeeper" type="CharacterBody2D"]
+script = ExtResource("1_0qv5c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5fws6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_iv8lg")
+animation = &"idleAnimation"
+frame_progress = 0.53373
+
+[node name="Interactable" parent="." instance=ExtResource("3_x8wkn")]
+interact_name = "Go up to a post to  view item"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_n7i5s")

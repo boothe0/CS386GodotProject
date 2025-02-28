@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c63dsnmtidj3h"]
+
+[ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png" id="1_mk4gw"]
+[ext_resource type="Script" path="res://scripts/consumables/heal_potion.gd" id="2_6vhh2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq3k8"]
+atlas = ExtResource("1_mk4gw")
+region = Rect2(0, 0, 30, 30)
+
+[node name="ConsumableSlot1" type="TextureRect"]
+clip_contents = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3.48)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("AtlasTexture_jq3k8")
+script = ExtResource("2_6vhh2")
+metadata/_edit_use_anchors_ = true
