@@ -23,5 +23,7 @@ Use UML adequately. Do not use graphical elements that are not part of the langu
 - If you feel the need to justify your decisions, you can write your rationale in this section or as UML comments in the diagram.
 - The model must have at least 8 classes. You can add requirements in the system description if you need more classes.
 
+![UML of Tiny Roguelike](https://i.imgur.com/RuDEzNZ.png)
+
 Grading criteria (25 points): You should correctly use the UML specification. Your model should have the minimum number of classes. Your domain should be adequately modeled. The model should avoid unnecessary complexity, repetition, lack of cohesion, and coupling. The classes should be at an adequate abstraction level.
 
