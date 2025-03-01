@@ -7,6 +7,6 @@ const BASE_HEAL = 2
 
 func use():
 	# called when the node enters the scene tree for the first time.
-	if Player and  Player.health < Player.MAX_HEALTH:
+	if Player and  Player.health < Player.max_health:
 		Player.heal(BASE_HEAL * potency)
 		self.queue_free()
