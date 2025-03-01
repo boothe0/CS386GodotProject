@@ -2,6 +2,7 @@ extends VBoxContainer
 
 # TODO: generate random item ID to get random item data JSON
 
+
 # TODO: store item data as JSON
 #		parse JSON data into these fields
 const TEXTURE = "res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png"
@@ -20,8 +21,35 @@ const DESCRIPTION = "Heals 2HP"
 
 
 func _ready() -> void:
-	# called when the node enters the scene tree for the first time.
-	# set purchasable item description
+	var dir_name := "res://scenes/shop_items/consumables/common/"
+	var dir = DirAccess.open(dir_name)
+	
+	# Defensive programming, not even once
+	if dir:
+		var file_names = dir.get_files()
+		
+		if file_names.is_empty():
+			print("No files found in directory!")
+		else:
+			var random_file = file_names[randi_range(0, file_names.size() - 1)]
+			var full_file_path = dir_name + random_file
+			
+			if FileAccess.file_exists(full_file_path):
+				var json_as_text = FileAccess.get_file_as_string(full_file_path)
+				
+				if json_as_text.is_empty():
+					print("Error: JSON file is empty")
+				else:
+					var json_as_dict = JSON.parse_string(json_as_text)
+					if json_as_dict:
+						print(json_as_dict)
+					else:
+						print("Error parsing JSON")
+			else:
+				print("File does not exist: ", full_file_path)
+	else:
+		print("Failed to open directory: ", dir_name)
+
 	texture_rect.texture = load(TEXTURE)
 	item_name_box.text = NAME
 	price_box.text = "%d G" % PRICE

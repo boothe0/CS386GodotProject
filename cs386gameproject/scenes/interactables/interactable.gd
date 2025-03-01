@@ -10,13 +10,9 @@ const HP_TEXTURE = "res://assets/VariPixels PotionsPack 02112022 Update/hpPotion
 
 # triggering this from the interaction component
 var interact: Callable = func():
-<<<<<<< HEAD
-	print("interacted")
-=======
 	print("interaction triggered")
 
 		
 func _ready() -> void:
 	# loading texture
 	texture_rect.texture = load(HP_TEXTURE)
->>>>>>> main
