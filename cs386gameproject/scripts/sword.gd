@@ -8,6 +8,7 @@ var attack_speed = 0.2
 var current_direction = Vector2.DOWN
 var hit_enemies = []
 
+@export var BASE_SIZE = scale
 @onready var sprite = $Sprite2D
 @onready var hitbox = $Area2D 
 @export var damage_modifier: float = 1.0
