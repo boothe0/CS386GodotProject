@@ -35,6 +35,8 @@ var reached_center = false
 @export var health = 3
 signal health_update
 
+# current target to attack
+var current_target = "center_objective"
 
 func _ready() -> void:
 	# Ensure navigation agent is initialized
@@ -50,6 +52,7 @@ func _ready() -> void:
 	# Only set target if center objective and navigation agent exist
 	if center_objective and navigation_agent:
 		set_target(center_objective.global_position)
+		current_target = "center_objective"
 
 func _physics_process(delta: float) -> void:
 	# If center objective has been reached, stop moving permanently
@@ -69,6 +72,7 @@ func _physics_process(delta: float) -> void:
 	if center_objective and global_position.distance_to(center_objective.global_position) < STOP_DISTANCE:
 		reached_center = true
 		velocity = Vector2.ZERO
+		current_target = "center_objective"
 		move_and_slide()
 
 	# Play movement animations based on direction
@@ -89,9 +93,12 @@ func get_closest_target() -> Node2D:
 		var dist_to_objective = global_position.distance_to(center_objective.global_position)
 
 		if dist_to_player < dist_to_objective:
+			current_target = "player"
 			return player  # Player is closer, chase them
 		else:
+			current_target = "center_objective"
 			return center_objective  # Objective is closer, move to it
+	current_target = "center_objective"
 	return center_objective  # No player detected, move to the objective
 
 func set_target(target: Vector2):
@@ -116,7 +123,6 @@ func move_towards_target(delta):
 func attack():
 	# Continually attack while player in range
 	while in_attack_range and player and can_attack:
-		print("Enemy attacks!")  # Debugging
 		player.take_damage(ATTACK_DAMAGE)
 		can_attack = false
 
