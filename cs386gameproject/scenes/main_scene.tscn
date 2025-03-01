@@ -375,7 +375,6 @@ shape = SubResource("WorldBoundaryShape2D_l3c56")
 position = Vector2(236, 39)
 
 [node name="RoundTimer" type="Timer" parent="."]
-wait_time = 30.0
 autostart = true
 
 [node name="PlayerVariables" type="Node" parent="."]
