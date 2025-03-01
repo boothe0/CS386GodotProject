@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cal4bdklkutn6"]
+
+[ext_resource type="Script" path="res://scripts/center_objective.gd" id="1_bjelu"]
+[ext_resource type="Texture2D" uid="uid://dvouhp4mkk1by" path="res://assets/Cats Download/orange_0.png" id="1_ni23r"]
+
+[node name="CenterObjective" type="Node2D" groups=["center_objective"]]
+script = ExtResource("1_bjelu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ni23r")
+region_enabled = true
+region_rect = Rect2(10, 33, 11, 25)

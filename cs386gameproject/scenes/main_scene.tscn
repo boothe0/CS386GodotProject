@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=29 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://scripts/consumable_3.gd" id="9_xpxfm"]
 [ext_resource type="Script" path="res://scripts/round_timer.gd" id="11_7gw5x"]
 [ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop_keeper.tscn" id="12_4kvno"]
+[ext_resource type="PackedScene" uid="uid://cal4bdklkutn6" path="res://scenes/center_objective.tscn" id="15_uf7ea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -105,6 +106,11 @@ font_size = 30
 font_size = 19
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l3c56"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_qtt6f"]
+vertices = PackedVector2Array(508.969, 5.8125, 508.031, 315.008, -2.92969, 315.977, -1.0625, 1, 247.82, 1)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(248, -9, -11, -9, -13, 326, 518, 325, 519, -4)])
 
 [node name="MainScene" type="Node2D"]
 position = Vector2(-509, -312)
@@ -376,6 +382,12 @@ position = Vector2(236, 39)
 [node name="RoundTimer" type="Timer" parent="."]
 wait_time = 30.0
 autostart = true
+
+[node name="CenterObjective" parent="." instance=ExtResource("15_uf7ea")]
+position = Vector2(253, 152)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_qtt6f")
 
 [connection signal="round_end" from="Emitter" to="." method="_on_emitter_round_end"]
 [connection signal="timeout" from="RoundTimer" to="." method="_on_round_timer_timeout"]
