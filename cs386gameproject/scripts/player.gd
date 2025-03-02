@@ -4,10 +4,12 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 
 # health, stamina, mana
-@export var MAX_HEALTH = 5
+const BASE_SPEED = 150
+const BASE_HEALTH = 5
+@export var max_health = BASE_HEALTH
 @export var MAX_STAMINA = 10
 @export var MAX_MANA = 10
-@export var health = MAX_HEALTH
+@export var health = max_health
 @export var stamina = MAX_STAMINA
 @export var mana = MAX_MANA
 @onready var spacebar_text = $"../PlayerUI/StaminaBar/SpaceBarIndicator"
@@ -33,7 +35,6 @@ var coin_popup_accumulator: int = 0
 @export var cumulative_coin_total: int = 0
 
 # movement, dash and dodge
-const SPEED = 150
 var last_direction = Vector2.DOWN 
 var last_movement_direction = Vector2.DOWN
 var dash_direction = Vector2()
@@ -42,7 +43,7 @@ var dash_direction = Vector2()
 @export var friction = .5
 
 # misc (for now)
-@onready var emitter = $"../Emitter"
+@onready var player_variables = $"../PlayerVariables"
 @onready var heal_potion: Node2D = $HealPotion
 
 # Signals
@@ -56,8 +57,12 @@ func _ready():
 	health_update.emit()
 	sword.hide()
 
+	Emitter.player_variables_updated.connect(load_upgrades)
+
 	if coins_added != null:
 		coins_added.visible = false
+		
+	load_upgrades()
 
 func _physics_process(_delta):
 	# handle player movement
@@ -75,7 +80,7 @@ func _physics_process(_delta):
 
 	if direction.length() > 0:
 		last_movement_direction = direction.normalized()
-		velocity = direction.normalized() * SPEED
+		velocity = direction.normalized() * BASE_SPEED
 		move_and_slide()
 
 	update_movement_animation()
@@ -115,6 +120,15 @@ func _physics_process(_delta):
 		velocity = dash_direction * dash_speed
 		velocity += Vector2(1.0 - (friction * _delta), 1.0 - (friction * _delta))
 		move_and_collide(velocity)
+		
+	if Input.is_action_just_pressed("debug"): ## TEST UPGRADE
+		PlayerVariables.sword_scale *= 2
+		PlayerVariables.health_scale += 0.5
+		Emitter.emit_signal("player_variables_updated")
+
+func load_upgrades() -> void:
+	health = BASE_HEALTH * PlayerVariables.health_scale
+	sword.scale = sword.BASE_SIZE * PlayerVariables.sword_scale
 
 # movement, idle and dodge functions
 func get_idle_animation(direction: Vector2) -> String:
@@ -217,18 +231,17 @@ func die():
 # healing functions
 func heal(amount):
 	# handle healing
-	if health >= MAX_HEALTH:
+	if health >= max_health:
 		print("Health is already full!") # debugging
 		return
 
 	# prevents from being healed over max health
-	health = min(health + amount, MAX_HEALTH)
+	health = min(health + amount, max_health)
 	health_update.emit()
-	print("Player healed: ", health) # debugging
 
 func use_heal_potion():
 	# If already at max health, don't use the potion
-	if health >= MAX_HEALTH:
+	if health >= max_health:
 		print("Health is full! Can't use potion.") # debugging
 		return
 
