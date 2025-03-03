@@ -1,0 +1,8 @@
+{
+  "texture": "res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png",
+  "name": "Health Potion",
+  "price": 25,
+  "consumable": true,
+  "description": "Heals 2 HP",
+  "scene": "res://scenes/consumables/heal_potion.tscn"
+}

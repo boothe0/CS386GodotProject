@@ -21,7 +21,7 @@ func _input(event: InputEvent) -> void:
 		if current_interactions: 
 			# and if the scene is not yet instantiated for the menu
 			if is_scene_instantiated == false:
-				# instantiate the scene
+				# instantiate the scenae
 				instantiated_scene = scene_instantiate.instantiate()
 				# add as child 
 				get_parent().add_child(instantiated_scene)
