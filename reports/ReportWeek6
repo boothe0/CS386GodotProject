@@ -1,61 +1,36 @@
-Report for Week #X
+Report for Week #6
 PROJECT TITLE
-Group: GROUP NUMBER
-Date: TODAY'S DATE
-Location: LOCATION
-Present participants: MEMBERS PRESENT (LIST ROLE IN PARENTHESIS)
-Missing participants: MEMBERS MISSING
+Group: 6
+Date: 3/2/25
+Location: NAU
+Present participants: Ethan, Camelia, Asher, Chandler, Elizabeth
+Missing participants: 
 Project repo: GITHUB REPO URL
 
 1. Activity Summary
-Describe what each individual has contributed to the project in the last week.  Provide some supporting documentation (e.g., an issue number, commit id, corresponding meeting date, etc.).  If someone didn't do anything, please be honest and explain why. Activity that advances your project toward completion is expected every week and should be reflected in your Git repository!
+Elizabeth: fiex collisions in shop, added script to table to spawn in with item sprite, interactions to buy items
+Asher: I added randomized items with JSON, Added persistant gold and stats to accomadate
+Chandler: Met with Camelia to talk upgrades and consumables, designing items and item icons
+Ethan: Added center objective, cleaned up combat code combat, added enemy pathing
+Camelia: Sprites for player and enemies added to the game
 
-Gina:
-
-Added setting page for velocity (issue #234, commit b345005)
-Added documentation for importing the physics module (commit 6c7b005)
-Contributed to discussion of new design using UML class diagrams (7/21)
-GitHub Summary: 1 resolved issue and 2 commits.
-Margo:
-
-Out sick this week.
-GitHub Summary: No activity.
-Dominik:
-
-Integrated new shopping cart (commit b345005)
-Lead discussion of new design using UML class diagrams (7/21)
-Fixed several typos and UI issues (issue #300, #400, 430)
-GitHub Summary: 3 resolved issues and 7 commits.
 2. Retrospective
-In your weekly meeting, you should spend a few minutes discussing how the group is functioning. What aspects of the group dynamics contribute to the success of the project? In addition, raise any issues—best done directly but with humor and kindness—that you believe are interfering with the effectiveness of the group and your ability to complete the project on time.
 
-The project retrospective is an opportunity for the group and each individual to reflect on their experience with the project and improve the way the group works together. Make five lists:
+Appreciations: Ethan cleaning old code, making it easier to understand, Camelia uploading splites into the game itself
+Successes: Did good job on deliverable to complete it quickly and on time for review
+Failures: Coding team waited too long to get started, (started work at the end of the week)
+Barriers: Work should start getting done at the start of the week even if by the end the same amount total gets completed
+What we should try next time?:
+Members should all plan their week, adding times to work on the game throughtout.
 
-Appreciations: highlights of contributions from team members
-Successes: what went well
-Failures: what did not go well
-Barriers: things that are blocking the maximum performance of the team
-What we should try next time. 
-The retrospective should be an open and safe space for the team to reflect on and discuss what works well (and what doesn't!) so you can improve. Don't make it personal, and don't take it personally. Be open to criticism and offer constructive and polite critiques. Focus on how to improve the quality of your team and the product you are developing.
-
-Appreciations: Dominik was the MVP this week with significant bug fixes that make the product usable.
-Successes: The demo we did went off without a hitch.  The documentation is much more usable.
-Failures: The UML for the new design is still not complete.
-Barriers: With one of our team members sick it was difficult to make the progress we had hoped for.
-What we should try next time: We really need Margo's help and hope she is feeling better next week.
 3. Next steps
-Think about what needs to be done and assign tasks. Update your activity management system with new tasks, actual hours spent in the activities, and corresponding GitHub issues.  Summarize these tasks here.
 
-Gina:
+Elizabeth: Add a couple items, make items buyable from shop
 
-Finish acceleration settings.
-Work on Deliverable 2 during Monday meeting.
-Margo:
+Chandler: Add assets for levels
 
-Review and edit UML diagrams for the new core module.
-Work on Deliverable 2 during Monday meeting.
-Dominik:
+Ethan: Adding more enemy types (ranged attacks), fixing errors related to center objective
 
-Integrate new recommender system.
-Fix user settings bugs.
-Work on Deliverable 2 during Monday meeting.
+Camelia: Game intro, tutorial level
+
+Asher: add functionality to end screen, 2 upgrades, 2 consumables
