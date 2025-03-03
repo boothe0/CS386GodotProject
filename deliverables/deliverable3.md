@@ -14,5 +14,4 @@ Both the **player** and the **enemies** in the game are **entities** that ***hav
 ## Model
 
 
-![UML of Tiny Roguelike](https://i.imgur.com/RuDEzNZ.png)
-
+![UML of Tiny Roguelike](https://i.imgur.com/ED8rbQK.png)
