@@ -15,3 +15,11 @@ Both the **player** and the **enemies** in the game are **entities** that ***hav
 
 
 ![UML of Tiny Roguelike](https://i.imgur.com/ED8rbQK.png)
+
+## Teamwork
+
+- Asher Romanenghi (20%) - worked on UML class diagram
+- Elizabeth Booth (20%) - worked on system description
+- Ethan Meyer (20%) - worked on UML class diagram
+- Chandler Silk (20%) - worked on UML class diagram
+- Camelia Mosor (20%) - worked on system description
