@@ -33,3 +33,7 @@ func _on_body_entered(body: Node2D) -> void:
 	# detect if world boundary is hit
 	if body.is_in_group("boundary"):
 		queue_free()
+		
+	# detect if world boundary is hit
+	if body.is_in_group("boundary"):
+		queue_free()

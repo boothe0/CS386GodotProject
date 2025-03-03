@@ -177,7 +177,7 @@ bg_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
 
 [node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
-collision_mask = 2
+collision_mask = 34
 script = ExtResource("1_hfuff")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
