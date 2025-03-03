@@ -22,7 +22,6 @@ func set_direction(target_pos, origin_pos):
 	rotation = direction.angle()
 	
 func _on_body_entered(body: Node2D) -> void:
-	print("Projectile hit: ", body.name, " | Groups: ", body.get_groups(), " | Type: ", body.get_class()) # debugging
 
 	# detect if enemy is hit
 	if body.is_in_group("enemies"):
