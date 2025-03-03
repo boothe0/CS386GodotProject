@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlhra0wjxnlvj"]
+
+[ext_resource type="Script" path="res://scripts/center_objective.gd" id="1_bjelu"]
+[ext_resource type="Texture2D" uid="uid://dvouhp4mkk1by" path="res://assets/Cats Download/orange_0.png" id="1_ni23r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn2pe"]
+size = Vector2(12, 26)
+
+[node name="CenterObjective" type="Node2D" groups=["center_objective"]]
+script = ExtResource("1_bjelu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ni23r")
+region_enabled = true
+region_rect = Rect2(10, 33, 11, 25)
+
+[node name="ObjectiveHitbox" type="Area2D" parent="."]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveHitbox"]
+shape = SubResource("RectangleShape2D_fn2pe")
+
+[node name="DamageTimer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="ObjectiveHitbox" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="ObjectiveHitbox" to="." method="_on_area_2d_body_exited"]

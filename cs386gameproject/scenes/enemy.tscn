@@ -181,7 +181,6 @@ collision_mask = 34
 script = ExtResource("1_hfuff")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("CapsuleShape2D_bstlm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -212,6 +211,8 @@ max_value = 3.0
 value = 3.0
 show_percentage = false
 script = ExtResource("3_hi8vk")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
