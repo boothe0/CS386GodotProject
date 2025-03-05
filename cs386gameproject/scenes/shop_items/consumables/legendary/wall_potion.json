@@ -1,0 +1,8 @@
+{
+  "texture": "res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png",
+  "name": "Wall Potion",
+  "price": 100,
+  "consumable": true,
+  "description": "Creates a wall of soliders to protect you",
+  "scene": "res://scenes/consumables/heal_potion.tscn"
+}

@@ -19,11 +19,17 @@ const DESCRIPTION = "Heals 2HP"
 @onready var item_type_box = $VBoxContainer/Type
 @onready var description_box = $VBoxContainer/Description
 
+var pathDictionaries = {
+	"Common Items" : "res://scenes/shop_items/consumables/common/",
+	"Legendary Items" : "res://scenes/shop_items/consumables/legendary/"
+}
+var paths = pathDictionaries.values()
 
 func _ready() -> void:
-	var dir_name := "res://scenes/shop_items/consumables/common/"
-	var dir = DirAccess.open(dir_name)
 	
+	var random_index = randi_range(0, pathDictionaries.size() - 1)
+	var dir_name = paths[random_index]
+	var dir = DirAccess.open(dir_name)
 	# Defensive programming, not even once
 	if dir:
 		var file_names = dir.get_files()
