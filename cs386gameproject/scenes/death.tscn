@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnch2uxy4a75m"]
+[gd_scene load_steps=3 format=3 uid="uid://cnch2uxy4a75m"]
 
 [ext_resource type="Theme" uid="uid://25ahwyno7ae0" path="res://assets/UI_Elements/death_theme.tres" id="1_pvcn6"]
+[ext_resource type="Script" path="res://scripts/death_scene.gd" id="2_yd11g"]
 
 [node name="Death" type="CanvasLayer"]
 
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_pvcn6")
+script = ExtResource("2_yd11g")
 
 [node name="Panel" type="Panel" parent="Control"]
 layout_mode = 1

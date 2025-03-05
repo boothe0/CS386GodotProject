@@ -12,4 +12,5 @@ func _process(delta: float) -> void:
 	# end round when time is up
 	if time == 0 and round_over == false:
 		round_over = true
+		PlayerVariables.rounds += 1
 		Emitter.emit_signal("round_end")
