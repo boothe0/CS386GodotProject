@@ -271,6 +271,7 @@ func use_heal_potion():
 # coin handling functions
 func add_coins(amount: int, coin_type: int) -> void:
 	# handle coin logic
+	PlayerVariables.coins += amount
 	cumulative_coin_total += amount
 	coin_popup_accumulator += amount
 	update_total_coin_label()
