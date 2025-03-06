@@ -187,15 +187,14 @@ shape = SubResource("CapsuleShape2D_bstlm")
 sprite_frames = SubResource("SpriteFrames_ftuvv")
 animation = &"walk_down"
 autoplay = "idle_down"
-frame_progress = 0.988216
 
 [node name="DetectionArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource("CircleShape2D_jof74")
 
 [node name="AttackArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 shape = SubResource("CircleShape2D_yg8bk")
