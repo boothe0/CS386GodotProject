@@ -392,7 +392,7 @@ shape = SubResource("WorldBoundaryShape2D_l3c56")
 position = Vector2(236, 39)
 
 [node name="RoundTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 5.0
 autostart = true
 
 [node name="CenterObjective" parent="." instance=ExtResource("15_uf7ea")]

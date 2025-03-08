@@ -65,7 +65,11 @@ func load_random_item() -> void:
 				print("File does not exist: ", full_file_path)
 	else:
 		print("Failed to open directory: ", dir_name)
-
+		
 func buy_item_pressed():
 	# Buy the item that was selected
+	PlayerVariables.coins -= price
+	print(PlayerVariables.coins)  # Print the updated coins
+
+	# Now emit the signal after updating coins
 	Emitter.buy_item_pressed.emit(nameConsumable, price, SHOP_SPOT, consumable)

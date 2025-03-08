@@ -4,3 +4,4 @@ extends Node2D
 
 func _ready() -> void:
 	coins_to_buy.text = "Total Coins: " + str(PlayerVariables.coins)
+	
