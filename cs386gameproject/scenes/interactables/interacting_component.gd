@@ -11,6 +11,7 @@ var instantiated_scene: Node = null
 var is_scene_instantiated = false
 # to hide the label when the player isnt close
 var label_showing = false
+
 func _ready():
 	scene_instantiate = load("res://assets/UI_Elements/shop_screen_ui.tscn")
 
