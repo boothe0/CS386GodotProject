@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6jcadqr57vvm"]
+
+[ext_resource type="Theme" uid="uid://bkiujxnjn0a0q" path="res://assets/UI_Elements/TitleScreenTheme.tres" id="1_5krm1"]
+[ext_resource type="FontFile" uid="uid://b5eg8lvj4spdv" path="res://assets/UI_Elements/04B_30__.TTF" id="1_67xas"]
+
+[sub_resource type="GDScript" id="GDScript_utdfa"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	$Intro/Control/ContinueButton.grab_focus()
+
+func _on_continue_button_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/main_scene.tscn\")
+"
+
+[node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_utdfa")
+
+[node name="Intro" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="Intro"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Intro/Control"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 652.0
+theme = ExtResource("1_5krm1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro/Control"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 134.0
+offset_right = 1138.0
+offset_bottom = 481.0
+theme_override_fonts/normal_font = ExtResource("1_67xas")
+theme_override_font_sizes/normal_font_size = 25
+text = "You are Hesperos, a demigod son of Ares, the Greek god of war. A revered warrior, you fight on behalf of the gods, winning great fame and acclaim throughout the lands of Ancient Greece. But when you fall in love and marry, you decide to leave war behind for a life of peace, incensing your father, who kills you and your wife out of jealousy. Now that your wife has been sent to Elysium, a paradise in the afterlife, while you have been sent to the fires of Tartarus, you must find your way to her while fighting off the monsters of the Underworld.
+"
+
+[node name="ContinueButton" type="Button" parent="Intro/Control"]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 472.0
+offset_right = 663.0
+offset_bottom = 511.0
+theme_override_fonts/font = ExtResource("1_67xas")
+theme_override_font_sizes/font_size = 30
+text = "Continue"
+
+[connection signal="pressed" from="Intro/Control/ContinueButton" to="." method="_on_continue_button_pressed"]
