@@ -1,9 +1,6 @@
 extends Node2D
+@onready var coins_to_buy: Label = $Player/coins_to_buy
 
-@export var interactable_array : Array[Node2D]
-
-@onready var node_2d: Control = $Node2D
 
 func _ready() -> void:
-	for item in node_2d.get_children():
-		interactable_array.append(item)
+	coins_to_buy.text = "Total Coins: " + str(PlayerVariables.coins)

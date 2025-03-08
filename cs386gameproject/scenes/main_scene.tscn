@@ -129,7 +129,7 @@ position = Vector2(-509, -312)
 script = ExtResource("1_l6k43")
 
 [node name="Player" parent="." instance=ExtResource("1_6hm0t")]
-position = Vector2(308, 65)
+position = Vector2(308, 64)
 scale = Vector2(1.17705, 1.17705)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -392,6 +392,7 @@ shape = SubResource("WorldBoundaryShape2D_l3c56")
 position = Vector2(236, 39)
 
 [node name="RoundTimer" type="Timer" parent="."]
+wait_time = 10.0
 autostart = true
 
 [node name="CenterObjective" parent="." instance=ExtResource("15_uf7ea")]

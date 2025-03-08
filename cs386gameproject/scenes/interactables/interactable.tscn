@@ -369,6 +369,7 @@ sources/0 = SubResource("TileSetAtlasSource_caetm")
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_57ux4")
+interact_name = "Item"
 
 [node name="TableCollision" type="CollisionShape2D" parent="."]
 z_index = 10
