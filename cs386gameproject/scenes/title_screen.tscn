@@ -69,10 +69,15 @@ focus_neighbor_top = NodePath("../QuitButton")
 text = "Start
 "
 
+[node name="TutorialButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Tutorial"
+
 [node name="QuitButton" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../StartButton")
 text = "Quit"
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/TutorialButton" to="." method="_on_tutorial_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
