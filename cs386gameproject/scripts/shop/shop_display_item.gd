@@ -68,7 +68,7 @@ func load_random_item() -> void:
 		
 func buy_item_pressed():
 	# Buy the item that was selected
-	if PlayerVariables.coins > 0:
+	if PlayerVariables.coins - price >= 0:
 		PlayerVariables.coins -= price
 		print(PlayerVariables.coins)  # Print the updated coins
 	# Now emit the signal after updating coins
