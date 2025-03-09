@@ -17,7 +17,7 @@ Chandler:
 
 Ethan:
 
-Camelia:
+Camelia: Added introductory page summarizing background lore and brief tutorial on game controls.
 
 
 ## 2. Retrospective
@@ -35,6 +35,6 @@ Chandler:
 
 Ethan:
 
-Camelia:
+Camelia: Design sprites for ranged enemies and shopkeeper. Add backgrounds to title scene, intro scene, and death scene.
 
 Asher:
