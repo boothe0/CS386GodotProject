@@ -6,6 +6,7 @@
 offset_left = 83.0
 offset_right = 294.0
 offset_bottom = 246.0
+scale = Vector2(0.178802, 0.175258)
 script = ExtResource("1_vmylc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -19,10 +20,14 @@ stretch_mode = 5
 layout_mode = 2
 
 [node name="ItemName" type="Label" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
+autowrap_mode = 2
 
 [node name="Price" type="Label" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
+autowrap_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -39,4 +44,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Description" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+autowrap_mode = 2

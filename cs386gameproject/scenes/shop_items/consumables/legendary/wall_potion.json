@@ -1,5 +1,5 @@
 {
-  "texture": "res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png",
+  "texture": "res://assets/VariPixels PotionsPack 02112022 Update/WallPotion.png",
   "name": "Wall Potion",
   "price": 100,
   "consumable": true,

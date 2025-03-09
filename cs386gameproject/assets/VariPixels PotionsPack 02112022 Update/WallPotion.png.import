@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qjcg2fdbgpw8"
-path="res://.godot/imported/item243.png-1809e7f91e7a6cec643155741087a29e.ctex"
+uid="uid://cgf2uj684p73o"
+path="res://.godot/imported/WallPotion.png-8eb5ef3d680bf8ad4271592c4a943ef9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items_pack_x16/item243.png"
-dest_files=["res://.godot/imported/item243.png-1809e7f91e7a6cec643155741087a29e.ctex"]
+source_file="res://assets/VariPixels PotionsPack 02112022 Update/WallPotion.png"
+dest_files=["res://.godot/imported/WallPotion.png-8eb5ef3d680bf8ad4271592c4a943ef9.ctex"]
 
 [params]
 
