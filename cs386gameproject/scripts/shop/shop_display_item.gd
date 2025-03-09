@@ -2,12 +2,25 @@ extends VBoxContainer
 
 signal item_interacted(texture, name, price, consumable, description)
 
+# TODO: generate random item ID to get random item data JSON
+
+
+# TODO: store item data as JSON
+#		parse JSON data into these fields
+
+
 @onready var texture_rect = $TextureRect
 @onready var item_name_box = $HBoxContainer2/ItemName
 @onready var price_box = $HBoxContainer2/Price
 @onready var buy_button = $HBoxContainer/Button
 @onready var item_type_box = $VBoxContainer/Type
 @onready var description_box = $VBoxContainer/Description
+var texture
+var nameConsumable
+var price
+var consumable
+var description
+const SHOP_SPOT = 0
 
 var texture
 var nameConsumable
@@ -15,6 +28,7 @@ var price
 var consumable
 var description
 const SHOP_SPOT = 0
+
 
 var pathDictionaries = {
 	"Common Items" : "res://scenes/shop_items/consumables/common/",
@@ -40,6 +54,7 @@ func load_random_item() -> void:
 	var random_index = randi_range(0, pathDictionaries.size() - 1)
 	var dir_name = paths[random_index]
 	var dir = DirAccess.open(dir_name)
+
 	if dir:
 		var file_names = dir.get_files()
 		if file_names.is_empty():
@@ -55,6 +70,7 @@ func load_random_item() -> void:
 					var json_as_dict = JSON.parse_string(json_as_text)
 					if json_as_dict:
 						texture = json_as_dict.get("texture", texture)  # Fallback to default texture
+
 						nameConsumable = json_as_dict.get("name", nameConsumable)
 						price = json_as_dict.get("price", price)
 						consumable = json_as_dict.get("consumable", consumable)
@@ -76,3 +92,4 @@ func buy_item_pressed():
 		
 	else:
 		print("cannot buy")
+

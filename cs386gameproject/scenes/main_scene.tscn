@@ -13,9 +13,9 @@
 [ext_resource type="Script" path="res://scripts/consumable_2.gd" id="8_irr0b"]
 [ext_resource type="Script" path="res://scripts/consumable_3.gd" id="9_xpxfm"]
 [ext_resource type="Script" path="res://scripts/round_timer.gd" id="11_7gw5x"]
-[ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop_keeper.tscn" id="12_4kvno"]
 [ext_resource type="Script" path="res://scripts/upgrades/player_variables.gd" id="15_t4j86"]
 [ext_resource type="PackedScene" uid="uid://dlhra0wjxnlvj" path="res://scenes/center_objective.tscn" id="15_uf7ea"]
+[ext_resource type="PackedScene" uid="uid://6t63tf6kalgv" path="res://scenes/ranged_enemy.tscn" id="16_pi8jo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
 texture = ExtResource("2_psmqu")
@@ -388,11 +388,9 @@ position = Vector2(507, 155)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_l3c56")
 
-[node name="ShopKeeper" parent="." instance=ExtResource("12_4kvno")]
-position = Vector2(236, 39)
-
 [node name="RoundTimer" type="Timer" parent="."]
-wait_time = 5.0
+
+wait_time = 10.0
 autostart = true
 
 [node name="CenterObjective" parent="." instance=ExtResource("15_uf7ea")]
@@ -403,6 +401,9 @@ navigation_polygon = SubResource("NavigationPolygon_qtt6f")
 
 [node name="PlayerVariables" type="Node" parent="."]
 script = ExtResource("15_t4j86")
+
+[node name="RangedEnemy" parent="." instance=ExtResource("16_pi8jo")]
+position = Vector2(460, 85)
 
 [connection signal="round_end" from="Emitter" to="." method="_on_emitter_round_end"]
 [connection signal="timeout" from="RoundTimer" to="." method="_on_round_timer_timeout"]

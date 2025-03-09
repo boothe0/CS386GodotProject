@@ -7,6 +7,9 @@ extends Area2D
 @export var is_interactable: bool = true
 @export var has_been_interacted: bool = false
 
+# add more consumables to spawn here
+const HP_TEXTURE = "res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png"
+
 var texture
 var nameConsumable
 var price
@@ -19,6 +22,7 @@ var interact: Callable = func():
 	has_been_interacted = true
 	print(has_been_interacted)
 
+		
 func _ready() -> void:
 	if Input.is_action_just_pressed("interact"):
 		toggle_buy()

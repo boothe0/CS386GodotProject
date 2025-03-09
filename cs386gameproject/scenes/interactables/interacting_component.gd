@@ -64,8 +64,10 @@ func _sort_by_nearest(area1, area2):
 
 func _on_interacting_range_area_entered(area: Area2D) -> void:
 	current_interactions.push_back(area)
+	print("player in range")
 
 func _on_interacting_range_area_exited(area: Area2D) -> void:
 	# deregistering an interactable area
 	# keeps the array short for optimization reasons
 	current_interactions.erase(area)
+	print("player out of range")
