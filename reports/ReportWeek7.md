@@ -15,7 +15,7 @@ Asher:
 
 Chandler:
 
-Ethan:
+Ethan: Started the implementation of a ranged enemy
 
 Camelia:
 
@@ -33,7 +33,7 @@ Elizabeth: Continue working on getting purchased items in the inventory slots on
 
 Chandler:
 
-Ethan:
+Ethan: Finish implementing a ranged enemy, add better randomization to coin drops based on enemy type
 
 Camelia:
 
