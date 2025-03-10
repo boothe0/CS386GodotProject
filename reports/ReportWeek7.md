@@ -17,7 +17,7 @@ Chandler:
 
 Ethan: Started the implementation of a ranged enemy
 
-Camelia:
+Camelia: Added introductory page summarizing background lore and brief tutorial on game controls.
 
 
 ## 2. Retrospective
@@ -35,6 +35,6 @@ Chandler:
 
 Ethan: Finish implementing a ranged enemy, add better randomization to coin drops based on enemy type
 
-Camelia:
+Camelia: Design sprites for ranged enemies and shopkeeper. Add backgrounds to title scene, intro scene, and death scene.
 
 Asher:
