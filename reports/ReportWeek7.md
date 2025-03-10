@@ -13,7 +13,7 @@ Elizabeth: Added ability to subtract coins from player's coin total when buying 
 
 Asher:
 
-Chandler:
+Chandler: Began implementing level design by adding new objects for terrain and obstacles centered around the central objective.
 
 Ethan: Started the implementation of a ranged enemy
 
@@ -31,7 +31,7 @@ Camelia: Added introductory page summarizing background lore and brief tutorial 
 
 Elizabeth: Continue working on getting purchased items in the inventory slots on the right side. More satisfying purchase feedback.
 
-Chandler:
+Chandler: Continue working on primary level design
 
 Ethan: Finish implementing a ranged enemy, add better randomization to coin drops based on enemy type
 
