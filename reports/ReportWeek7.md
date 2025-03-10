@@ -11,7 +11,7 @@ Project repo: https://github.com/boothe0/CS386GodotProject
 
 Elizabeth: Added ability to subtract coins from player's coin total when buying an item. Parsed json files for consumables and added all information for each consumable on the tables directly.
 
-Asher:
+Asher: added minor bug fix to coins carrying over between rounds, reviewed and merged pull requests
 
 Chandler: Began implementing level design by adding new objects for terrain and obstacles centered around the central objective.
 
@@ -37,4 +37,4 @@ Ethan: Finish implementing a ranged enemy, add better randomization to coin drop
 
 Camelia: Design sprites for ranged enemies and shopkeeper. Add backgrounds to title scene, intro scene, and death scene.
 
-Asher:
+Asher: Add 1 new consumable and 1 new item.
