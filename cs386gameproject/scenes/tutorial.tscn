@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://o1o362y2npw4"]
+
+[ext_resource type="Script" path="res://scripts/tutorial.gd" id="1_qfmq3"]
+[ext_resource type="Theme" uid="uid://bkiujxnjn0a0q" path="res://assets/UI_Elements/TitleScreenTheme.tres" id="2_nijuy"]
+[ext_resource type="FontFile" uid="uid://b5eg8lvj4spdv" path="res://assets/UI_Elements/04B_30__.TTF" id="2_skepc"]
+[ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="4_urxcp"]
+[ext_resource type="Script" path="res://scripts/tutorial_player.gd" id="5_b80lm"]
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_qfmq3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_right = 0.997
+anchor_bottom = 1.008
+offset_right = 0.455933
+offset_bottom = -0.184021
+theme = ExtResource("2_nijuy")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.003
+anchor_bottom = 1.0
+offset_right = -0.447021
+
+[node name="ReturnButton" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.91
+anchor_right = 0.5
+anchor_bottom = 0.91
+offset_left = -182.5
+offset_top = -19.23
+offset_right = 183.5
+offset_bottom = 19.77
+theme_override_fonts/font = ExtResource("2_skepc")
+theme_override_font_sizes/font_size = 30
+text = "Return To Menu"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.003
+anchor_bottom = 0.282
+offset_left = 246.0
+offset_top = 87.0
+offset_right = -235.447
+offset_bottom = 22.854
+text = "Use arrow keys to move"
+
+[node name="Player" parent="CanvasLayer/Control" instance=ExtResource("4_urxcp")]
+position = Vector2(586, 345)
+scale = Vector2(8.93227, 9.37228)
+script = ExtResource("5_b80lm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="pressed" from="CanvasLayer/Control/ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
