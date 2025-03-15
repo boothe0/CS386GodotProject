@@ -57,12 +57,12 @@ func _ready():
 	health_update.emit()
 	sword.hide()
 
-	Emitter.player_variables_updated.connect(load_upgrades)
+	Emitter.player_variables_updated.connect(load_user_variables)
 
 	if coins_added != null:
 		coins_added.visible = false
 		
-	load_upgrades()
+	load_user_variables()
 
 func _physics_process(_delta):
 	# handle player movement
@@ -126,9 +126,12 @@ func _physics_process(_delta):
 		PlayerVariables.health_scale += 0.5
 		Emitter.emit_signal("player_variables_updated")
 
-func load_upgrades() -> void:
+func load_user_variables() -> void:
 	health = BASE_HEALTH * PlayerVariables.health_scale
 	sword.scale = sword.BASE_SIZE * PlayerVariables.sword_scale
+	cumulative_coin_total = PlayerVariables.coins
+	update_total_coin_label()
+	
 
 # movement, idle and dodge functions
 func get_idle_animation(direction: Vector2) -> String:
@@ -292,7 +295,8 @@ func add_coins(amount: int, coin_type: int) -> void:
 			last_coin.texture = gold_texture
 
 func update_total_coin_label() -> void:
-	total_coins.text = "Total Coins: " + str(cumulative_coin_total)
+	if total_coins:
+		total_coins.text = "Total Coins: " + str(cumulative_coin_total)
 
 func _on_coin_timer_timeout() -> void:
 	# make coins_added label disappear after not collecting coins
