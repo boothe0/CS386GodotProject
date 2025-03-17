@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6jcadqr57vvm"]
+
+[ext_resource type="Theme" uid="uid://bkiujxnjn0a0q" path="res://assets/UI_Elements/TitleScreenTheme.tres" id="1_5krm1"]
+[ext_resource type="FontFile" uid="uid://b5eg8lvj4spdv" path="res://assets/UI_Elements/04B_30__.TTF" id="1_67xas"]
+[ext_resource type="Script" path="res://scripts/intro_scene.gd" id="1_xoymr"]
+
+[node name="Intro" type="CanvasLayer"]
+script = ExtResource("1_xoymr")
+
+[node name="CanvasLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+theme = ExtResource("1_5krm1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512
+anchor_top = 0.472
+anchor_right = 0.512
+anchor_bottom = 0.472
+offset_left = -548.336
+offset_top = -173.272
+offset_right = 547.664
+offset_bottom = 173.728
+theme_override_fonts/normal_font = ExtResource("1_67xas")
+theme_override_font_sizes/normal_font_size = 25
+text = "You are Hesperos, a demigod son of Ares, the Greek god of war. A revered warrior, you fight on behalf of the gods, winning great fame and acclaim throughout the lands of Ancient Greece. But when you fall in love and marry, you decide to leave war behind for a life of peace, incensing your father, who kills you and your wife out of jealousy. Now that your wife has been sent to Elysium, a paradise in the afterlife, while you have been sent to the fires of Tartarus, you must find your way to her while fighting off the monsters of the Underworld.
+"
+
+[node name="ContinueButton" type="Button" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.489
+anchor_top = 0.755
+anchor_right = 0.489
+anchor_bottom = 0.755
+offset_left = -99.817
+offset_top = -19.505
+offset_right = 99.183
+offset_bottom = 19.495
+theme_override_fonts/font = ExtResource("1_67xas")
+theme_override_font_sizes/font_size = 30
+text = "Continue"
+
+[connection signal="pressed" from="CanvasLayer/ContinueButton" to="." method="_on_continue_button_pressed"]

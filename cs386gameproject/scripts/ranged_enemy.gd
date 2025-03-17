@@ -126,6 +126,7 @@ func move_towards_target(delta):
 func attack():
 	# Continually attack while player in range
 	while in_attack_range and player and can_attack:
+
 		# Instantiate the projectile and fire it toward the player's current position.
 		var projectile = enemy_projectile.instantiate()
 		print("Projectile instantiated: ", projectile) # debug
@@ -135,6 +136,11 @@ func attack():
 		
 		can_attack = false
 		# Wait for the attack cooldown before firing the next projectile.
+
+		player.take_damage(ATTACK_DAMAGE)
+		can_attack = false
+
+
 		if get_tree() != null:
 			await get_tree().create_timer(ATTACK_COOLDOWN).timeout
 			can_attack = true 
