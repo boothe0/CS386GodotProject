@@ -129,7 +129,7 @@ func attack():
 
 		# Instantiate the projectile and fire it toward the player's current position.
 		var projectile = enemy_projectile.instantiate()
-		print("Projectile instantiated: ", projectile) # debug
+		get_parent().add_child(projectile)
 		projectile.global_position = global_position
 		main.call_deferred("add_child", projectile)
 		projectile.fire(player.global_position)

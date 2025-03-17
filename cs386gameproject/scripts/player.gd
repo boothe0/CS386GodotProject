@@ -166,7 +166,7 @@ func shoot():
 	# handle mana logic
 	const mana_cost = 2
 	if mana_cost > mana:
-		return
+		return false
 
 	mana -= mana_cost
 	mana_update.emit()
@@ -176,6 +176,7 @@ func shoot():
 	get_parent().add_child(projectile)
 	projectile.global_position = global_position
 	projectile.set_direction(get_global_mouse_position(), global_position)
+	return true
 
 func swing_sword():
 	# handle stamina logic
