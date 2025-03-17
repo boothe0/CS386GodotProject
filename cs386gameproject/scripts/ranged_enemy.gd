@@ -19,6 +19,9 @@ const SILVER_CHANCE : float = 0.15
 const GOLD_CHANCE : float = 0.05
 var coin_scene := preload("res://scenes/coin.tscn")
 
+# Preload the enemy projectile scene for ranged attacks
+const enemy_projectile = preload("res://scenes/enemy_projectile.tscn")
+
 # player detection and handling
 var player = null
 var chasing_player = false
@@ -123,8 +126,19 @@ func move_towards_target(delta):
 func attack():
 	# Continually attack while player in range
 	while in_attack_range and player and can_attack:
-		player.take_damage(ATTACK_DAMAGE)
+
+		# Instantiate the projectile and fire it toward the player's current position.
+		var projectile = enemy_projectile.instantiate()
+		get_parent().add_child(projectile)
+		projectile.global_position = global_position
+		main.call_deferred("add_child", projectile)
+		projectile.fire(player.global_position)
+		
 		can_attack = false
+		# Wait for the attack cooldown before firing the next projectile.
+
+		can_attack = false
+
 
 		if get_tree() != null:
 			await get_tree().create_timer(ATTACK_COOLDOWN).timeout

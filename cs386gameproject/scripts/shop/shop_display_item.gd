@@ -22,12 +22,6 @@ var consumable
 var description
 const SHOP_SPOT = 0
 
-var texture
-var nameConsumable
-var price
-var consumable
-var description
-const SHOP_SPOT = 0
 
 
 var pathDictionaries = {
@@ -92,4 +86,3 @@ func buy_item_pressed():
 		
 	else:
 		print("cannot buy")
-
