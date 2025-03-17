@@ -25,6 +25,5 @@ func fire(target_position: Vector2):
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		print("inside player")
 		body.take_damage(DAMAGE)  
 	queue_free()  # Destroy projectile upon impact
