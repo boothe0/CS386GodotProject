@@ -137,7 +137,6 @@ func attack():
 		can_attack = false
 		# Wait for the attack cooldown before firing the next projectile.
 
-		player.take_damage(ATTACK_DAMAGE)
 		can_attack = false
 
 
