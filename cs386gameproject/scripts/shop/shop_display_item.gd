@@ -2,17 +2,12 @@ extends VBoxContainer
 
 signal item_interacted(texture, name, price, consumable, description)
 
-# TODO: generate random item ID to get random item data JSON
-
-
-# TODO: store item data as JSON
-#		parse JSON data into these fields
-
-
 @onready var texture_rect = $TextureRect
+@onready var hbox = $HBoxContainer2
+@onready var vbox = $VBoxContainer
 @onready var item_name_box = $HBoxContainer2/ItemName
 @onready var price_box = $HBoxContainer2/Price
-@onready var buy_button = $HBoxContainer/Button
+@onready var buy_hint = $BuyHint
 @onready var item_type_box = $VBoxContainer/Type
 @onready var description_box = $VBoxContainer/Description
 var texture
@@ -21,8 +16,6 @@ var price
 var consumable
 var description
 const SHOP_SPOT = 0
-
-
 
 var pathDictionaries = {
 	"Common Items" : "res://scenes/shop_items/consumables/common/",
@@ -33,16 +26,13 @@ var paths = pathDictionaries.values()
 func _ready() -> void:
 	# Load items only once at the start
 	load_random_item()
-
+	display_out_of_range()
 	# Set initial UI values from loaded item
 	texture_rect.texture = load(texture)
 	item_name_box.text = nameConsumable
 	price_box.text = "%d G" % price
 	item_type_box.text = "Consumable" if consumable else "Upgrade"
 	description_box.text = description
-	
-	# Connect buy button to function
-	buy_button.pressed.connect(buy_item_pressed)
 
 func load_random_item() -> void:
 	var random_index = randi_range(0, pathDictionaries.size() - 1)
@@ -75,14 +65,24 @@ func load_random_item() -> void:
 				print("File does not exist: ", full_file_path)
 	else:
 		print("Failed to open directory: ", dir_name)
-		
+
+func display_in_range():
+	vbox.visible = true
+	hbox.visible = true
+	buy_hint.visible = true
+	
+func display_out_of_range():
+	vbox.visible = false
+	hbox.visible = false
+	buy_hint.visible = false
+
 func buy_item_pressed():
-	# Buy the item that was selected
 	if PlayerVariables.coins - price >= 0:
 		PlayerVariables.coins -= price
-		print(PlayerVariables.coins)  # Print the updated coins
+		print(PlayerVariables.coins)  # Print the updated coinsa
 	# Now emit the signal after updating coins
 		Emitter.buy_item_pressed.emit(nameConsumable, price, SHOP_SPOT, consumable)
-		
+		self.queue_free()
+		return true
 	else:
 		print("cannot buy")

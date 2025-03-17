@@ -129,6 +129,7 @@ func _physics_process(_delta):
 func load_user_variables() -> void:
 	health = BASE_HEALTH * PlayerVariables.health_scale
 	sword.scale = sword.BASE_SIZE * PlayerVariables.sword_scale
+	sword.damage_modifier = PlayerVariables.sword_damage_modifier
 	cumulative_coin_total = PlayerVariables.coins
 	update_total_coin_label()
 	
