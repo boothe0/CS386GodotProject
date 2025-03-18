@@ -755,43 +755,32 @@ theme = ExtResource("5_pa5gp")
 theme_override_font_sizes/font_size = 10
 metadata/_edit_use_anchors_ = true
 
-[node name="Item 1" parent="." instance=ExtResource("4_6gfk0")]
+[node name="Display1" parent="." instance=ExtResource("4_6gfk0")]
 position = Vector2(40, 152)
-collision_mask = 1
-interact_name = "Item1"
 
-[node name="Node2D#Item 2" parent="." instance=ExtResource("4_6gfk0")]
+[node name="Display2" parent="." instance=ExtResource("4_6gfk0")]
 position = Vector2(120, 152)
-interact_name = "Item 2"
 
-[node name="Node2D#Item 3" parent="." instance=ExtResource("4_6gfk0")]
+[node name="Display3" parent="." instance=ExtResource("4_6gfk0")]
 position = Vector2(184, 152)
-interact_name = "Item 3"
 
-[node name="Node2D#Item 4" parent="." instance=ExtResource("4_6gfk0")]
+[node name="Display4" parent="." instance=ExtResource("4_6gfk0")]
 position = Vector2(264, 152)
-interact_name = "Item 4"
 
-[node name="Node2D#Item 5" parent="." instance=ExtResource("4_6gfk0")]
+[node name="Display5" parent="." instance=ExtResource("4_6gfk0")]
 position = Vector2(344, 152)
-interact_name = "Item 5"
 
-[node name="Node2D#Item 6" parent="." instance=ExtResource("4_6gfk0")]
+[node name="Display6" parent="." instance=ExtResource("4_6gfk0")]
 position = Vector2(712, 152)
-interact_name = "Item 6"
 
-[node name="Node2D#Item 7" parent="." instance=ExtResource("4_6gfk0")]
+[node name="Display7" parent="." instance=ExtResource("4_6gfk0")]
 position = Vector2(776, 152)
-interact_name = "Item 7"
 
-[node name="Node2D#Item 8" parent="." instance=ExtResource("4_6gfk0")]
+[node name="Display8" parent="." instance=ExtResource("4_6gfk0")]
 position = Vector2(840, 152)
-interact_name = "Item 8"
 
-[node name="Node2D#Item 9" parent="." instance=ExtResource("4_6gfk0")]
+[node name="Display9" parent="." instance=ExtResource("4_6gfk0")]
 position = Vector2(904, 152)
-interact_name = "Item 9"
 
-[node name="Node2D#Item 10" parent="." instance=ExtResource("4_6gfk0")]
+[node name="Display10" parent="." instance=ExtResource("4_6gfk0")]
 position = Vector2(968, 152)
-interact_name = "Item 10"

@@ -1,10 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://cmxv3umec3ewx"]
+[gd_scene load_steps=23 format=3 uid="uid://cmxv3umec3ewx"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ucs4q"]
 [ext_resource type="Texture2D" uid="uid://db6a0gcvmsdqe" path="res://assets/16x16 Magical Forest Asset Pack/Characters/KnightCharacter-Idle.png" id="2_80bxb"]
 [ext_resource type="PackedScene" uid="uid://cbkptu6ifigqp" path="res://scenes/sword.tscn" id="3_iswpw"]
 [ext_resource type="PackedScene" uid="uid://djw3k8gpkkily" path="res://scenes/heal_potion.tscn" id="4_va32y"]
-[ext_resource type="PackedScene" uid="uid://hdwx72igpejf" path="res://scenes/interactables/interacting_component.tscn" id="5_8dvjf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h468s"]
 atlas = ExtResource("2_80bxb")
@@ -188,8 +187,6 @@ rotation = -2.61799
 [node name="HealPotion" parent="." instance=ExtResource("4_va32y")]
 visible = false
 position = Vector2(5, 3)
-
-[node name="InteractingComponent" parent="." instance=ExtResource("5_8dvjf")]
 
 [node name="CoinTimer" type="Timer" parent="."]
 
