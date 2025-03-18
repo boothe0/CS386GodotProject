@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=4 uid="uid://cw3171g67jax1"]
+[gd_scene load_steps=10 format=4 uid="uid://cw3171g67jax1"]
 
 [ext_resource type="Script" path="res://scenes/shop_scene.gd" id="1_3djh5"]
 [ext_resource type="Texture2D" uid="uid://cjip70074evdm" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/wooden_interior.png" id="1_8k3ky"]
 [ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop_keeper.tscn" id="2_krnjd"]
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="3_3bvrm"]
 [ext_resource type="PackedScene" uid="uid://qsiw8h80mvef" path="res://scenes/interactables/interactable.tscn" id="4_6gfk0"]
-[ext_resource type="Theme" uid="uid://15y45ulhxojt" path="res://assets/UI_Elements/shop_screen_theme.tres" id="5_pa5gp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2l0sb"]
 texture = ExtResource("1_8k3ky")
@@ -741,19 +740,6 @@ position = Vector2(564, 219)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
 process_callback = 0
-
-[node name="coins_to_buy" type="Label" parent="Player"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -19.28
-offset_top = 19.9686
-offset_right = 20.72
-offset_bottom = 42.9686
-grow_horizontal = 2
-theme = ExtResource("5_pa5gp")
-theme_override_font_sizes/font_size = 10
-metadata/_edit_use_anchors_ = true
 
 [node name="Item 1" parent="." instance=ExtResource("4_6gfk0")]
 position = Vector2(40, 152)

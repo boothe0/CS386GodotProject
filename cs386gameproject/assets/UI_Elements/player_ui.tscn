@@ -1,0 +1,292 @@
+[gd_scene load_steps=20 format=3 uid="uid://bevmnvvpkf3d4"]
+
+[ext_resource type="Script" path="res://assets/UI_Elements/player_ui.gd" id="1_574p1"]
+[ext_resource type="Script" path="res://scripts/health_bar.gd" id="1_p7kkl"]
+[ext_resource type="Script" path="res://scripts/stamina_bar.gd" id="2_d8hac"]
+[ext_resource type="Texture2D" uid="uid://cv0m3vwjkbcon" path="res://assets/UI_Elements/abilities_placeholder.png" id="3_ycrj0"]
+[ext_resource type="Script" path="res://scripts/consumable_1.gd" id="4_s2shh"]
+[ext_resource type="PackedScene" uid="uid://c63dsnmtidj3h" path="res://scenes/consumables/heal_potion.tscn" id="5_owjul"]
+[ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png" id="6_m8esr"]
+[ext_resource type="Script" path="res://scripts/consumable_2.gd" id="7_m3j3u"]
+[ext_resource type="Script" path="res://scripts/consumable_3.gd" id="8_scu11"]
+[ext_resource type="Script" path="res://scripts/round_timer.gd" id="9_stq4h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pomkq"]
+bg_color = Color(0.358417, 0, 0.01308, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omlwu"]
+bg_color = Color(0.898275, 2.59906e-06, 1.2514e-06, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qm72p"]
+bg_color = Color(0, 0.294954, 1.92523e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwgug"]
+bg_color = Color(0, 0.701961, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igy2v"]
+bg_color = Color(3.85046e-07, 0.322043, 0.478793, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mcnff"]
+bg_color = Color(0, 0.6672, 0.951553, 1)
+
+[sub_resource type="GDScript" id="GDScript_3ab0m"]
+script/source = "extends ProgressBar
+
+@onready var player = $\"../../Player\"
+@onready var regen_timer = $RegenTimer
+@onready var label = $ValueIndicator
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	max_value = player.mana
+	value = max_value
+	label.text = \"%d / %d\" % [value, max_value]
+	
+	player.mana_update.connect(update)
+	regen_timer.timeout.connect(regen_mana)
+	regen_timer.start()
+	
+func regen_mana():
+	if player.mana < player.MAX_MANA:
+		player.mana += 1
+		update()
+
+func update():
+	self.value = player.mana
+	label.text = \"%d / %d\" % [value, max_value]
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_a6r1j"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_dj4e2"]
+font_size = 19
+
+[node name="PlayerUI" type="CanvasLayer"]
+script = ExtResource("1_574p1")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -452.0
+offset_top = 10.0
+offset_right = -202.0
+offset_bottom = 30.0
+grow_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_pomkq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_omlwu")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+script = ExtResource("1_p7kkl")
+metadata/_edit_use_anchors_ = true
+
+[node name="StaminaBar" type="ProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -452.0
+offset_top = 40.0
+offset_right = -202.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_qm72p")
+theme_override_styles/fill = SubResource("StyleBoxFlat_dwgug")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+script = ExtResource("2_d8hac")
+
+[node name="SpaceBarIndicator" type="Label" parent="StaminaBar"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Space"
+horizontal_alignment = 1
+
+[node name="RegenTimer" type="Timer" parent="StaminaBar"]
+
+[node name="ManaBar" type="ProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -452.0
+offset_top = 70.0
+offset_right = -202.0
+offset_bottom = 90.0
+grow_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_igy2v")
+theme_override_styles/fill = SubResource("StyleBoxFlat_mcnff")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+script = SubResource("GDScript_3ab0m")
+
+[node name="ValueIndicator" type="Label" parent="ManaBar"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1
+
+[node name="RegenTimer" type="Timer" parent="ManaBar"]
+
+[node name="Ability1" type="TextureRect" parent="."]
+z_index = -1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_top = 20.0
+offset_right = -2.0
+offset_bottom = 160.0
+grow_horizontal = 0
+texture = ExtResource("3_ycrj0")
+expand_mode = 1
+
+[node name="Ability2" type="TextureRect" parent="."]
+z_index = -1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_top = 160.0
+offset_right = -2.0
+offset_bottom = 300.0
+grow_horizontal = 0
+texture = ExtResource("3_ycrj0")
+expand_mode = 1
+
+[node name="Ability3" type="TextureRect" parent="."]
+z_index = -1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_top = 300.0
+offset_right = -2.0
+offset_bottom = 440.0
+grow_horizontal = 0
+texture = ExtResource("3_ycrj0")
+expand_mode = 1
+
+[node name="Consumables" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1050.0
+offset_top = 20.0
+offset_right = 1090.0
+offset_bottom = 60.0
+
+[node name="Consumable_1" type="HBoxContainer" parent="Consumables"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = -20.0
+offset_right = -40.0
+offset_bottom = 20.0
+grow_horizontal = 0
+scale = Vector2(3, 3.48)
+script = ExtResource("4_s2shh")
+
+[node name="Label" type="Label" parent="Consumables/Consumable_1"]
+layout_mode = 2
+text = "Z"
+
+[node name="TextureRect" parent="Consumables/Consumable_1" instance=ExtResource("5_owjul")]
+layout_mode = 2
+texture = ExtResource("6_m8esr")
+
+[node name="Consumable_2" type="HBoxContainer" parent="Consumables"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 120.0
+offset_right = -40.0
+offset_bottom = 160.0
+grow_horizontal = 0
+scale = Vector2(3, 3.48)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("7_m3j3u")
+
+[node name="Label" type="Label" parent="Consumables/Consumable_2"]
+layout_mode = 2
+text = "X
+"
+
+[node name="TextureRect" parent="Consumables/Consumable_2" instance=ExtResource("5_owjul")]
+layout_mode = 2
+texture = ExtResource("6_m8esr")
+
+[node name="Consumable_3" type="HBoxContainer" parent="Consumables"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 260.0
+offset_right = -40.0
+offset_bottom = 300.0
+grow_horizontal = 0
+scale = Vector2(3, 3.48)
+script = ExtResource("8_scu11")
+
+[node name="Label" type="Label" parent="Consumables/Consumable_3"]
+layout_mode = 2
+text = "C
+"
+
+[node name="TextureRect" parent="Consumables/Consumable_3" instance=ExtResource("5_owjul")]
+layout_mode = 2
+texture = ExtResource("6_m8esr")
+
+[node name="Coins" type="VBoxContainer" parent="."]
+offset_left = 13.0
+offset_top = 18.0
+offset_right = 186.0
+offset_bottom = 77.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Coins"]
+layout_mode = 2
+
+[node name="TotalCoins" type="Label" parent="Coins/HBoxContainer"]
+layout_mode = 2
+text = "Total Coins: 0"
+label_settings = SubResource("LabelSettings_a6r1j")
+
+[node name="LastCoin" type="TextureRect" parent="Coins/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+stretch_mode = 5
+
+[node name="CoinsAdded" type="Label" parent="Coins"]
+layout_mode = 2
+text = "+"
+label_settings = SubResource("LabelSettings_dj4e2")
+
+[node name="RoundTimerLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+script = ExtResource("9_stq4h")
