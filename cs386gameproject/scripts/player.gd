@@ -14,6 +14,7 @@ const BASE_HEALTH = 5
 @export var mana = MAX_MANA
 @onready var spacebar_text = $"../PlayerUI/StaminaBar/SpaceBarIndicator"
 @onready var stamina_bar = $"../PlayerUI/StaminaBar"
+@onready var consumables: Control = $"../PlayerUI/Consumables"
 
 # weapons and weapon logic
 enum WeaponType {SWORD, PROJECTILE}
@@ -234,14 +235,16 @@ func die():
 
 # healing functions
 func heal(amount):
+	
 	# handle healing
 	if health >= max_health:
 		print("Health is already full!") # debugging
 		return
-
 	# prevents from being healed over max health
 	health = min(health + amount, max_health)
 	health_update.emit()
+	var next_in_queue = consumables.get_child(0)
+	next_in_queue.queue_free()
 
 func use_heal_potion():
 	# If already at max health, don't use the potion
