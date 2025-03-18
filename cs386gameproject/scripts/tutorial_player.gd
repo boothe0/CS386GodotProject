@@ -130,6 +130,8 @@ func shoot():
 	get_parent().add_child(projectile)
 	projectile.global_position = global_position
 	projectile.set_direction(get_global_mouse_position(), global_position)
+	projectile.scale.x *= 3
+	projectile.scale.y *= 3
 
 func swing_sword():
 	# handle sword attack logic
