@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://qsiw8h80mvef"]
 
-[ext_resource type="Script" path="res://scenes/interactables/interactable.gd" id="1_57ux4"]
+[ext_resource type="Script" path="res://scripts/shop/shop_interact.gd" id="1_x7uff"]
 [ext_resource type="Texture2D" uid="uid://cjip70074evdm" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/wooden_interior.png" id="2_675sf"]
 [ext_resource type="PackedScene" uid="uid://clhtowjahugm2" path="res://scenes/shop_items/shop_item.tscn" id="3_ot6qs"]
 
@@ -367,9 +367,7 @@ sources/0 = SubResource("TileSetAtlasSource_caetm")
 
 [node name="Interactable" type="Area2D"]
 collision_layer = 8
-collision_mask = 0
-script = ExtResource("1_57ux4")
-interact_name = "Item"
+script = ExtResource("1_x7uff")
 
 [node name="TableCollision" type="CollisionShape2D" parent="."]
 z_index = 10
@@ -410,3 +408,6 @@ tile_set = SubResource("TileSet_tisja")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_swtek")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

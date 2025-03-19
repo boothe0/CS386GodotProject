@@ -1,39 +1,15 @@
 extends CharacterBody2D
 
-#player animations
 @onready var animated_sprite = $AnimatedSprite2D
 
-# health, stamina, mana
 const BASE_SPEED = 150
-const BASE_HEALTH = 5
-@export var max_health = BASE_HEALTH
-@export var MAX_STAMINA = 10
-@export var MAX_MANA = 10
-@export var health = max_health
-@export var stamina = MAX_STAMINA
-@export var mana = MAX_MANA
-@onready var spacebar_text = $"../PlayerUI/StaminaBar/SpaceBarIndicator"
-@onready var stamina_bar = $"../PlayerUI/StaminaBar"
-@onready var consumables: Control = $"../PlayerUI/Consumables"
 
-# weapons and weapon logic
 enum WeaponType {SWORD, PROJECTILE}
 var current_weapon = WeaponType.SWORD
 var last_attack_direction = Vector2.DOWN 
 var weapon_animation_done = true
 var projectile_scene = preload("res://scenes/projectile.tscn")
 @onready var sword: Node2D = $Sword
-
-# coins and coin logic
-const bronze_texture = preload("res://assets/bronze-coin.png")
-const gold_texture = preload("res://assets/gold-coin.png")
-const silver_texture = preload("res://assets/silver-coin.png")
-var coin_popup_accumulator: int = 0
-@onready var total_coins: Label = $"../PlayerUI/Coins/HBoxContainer/TotalCoins"
-@onready var coins_added: Label = $"../PlayerUI/Coins/CoinsAdded"
-@onready var coin_timer: Timer = $CoinTimer
-@onready var last_coin: TextureRect = $"../PlayerUI/Coins/HBoxContainer/LastCoin"
-@export var cumulative_coin_total: int = 0
 
 # movement, dash and dodge
 var last_direction = Vector2.DOWN 
@@ -43,27 +19,18 @@ var dash_direction = Vector2()
 @export var dash_speed = 20
 @export var friction = .5
 
-# misc (for now)
-@onready var player_variables = $"../PlayerVariables"
 @onready var heal_potion: Node2D = $HealPotion
 
 # Signals
-signal health_update
-signal stamina_update
-signal mana_update
 signal dodge_used
 
 
 func _ready():
-	health_update.emit()
 	sword.hide()
 
-	Emitter.player_variables_updated.connect(load_user_variables)
+	Emitter.player_variables_updated.connect(load_upgrades)
 
-	if coins_added != null:
-		coins_added.visible = false
-		
-	load_user_variables()
+	load_upgrades()
 
 func _physics_process(_delta):
 	# handle player movement
@@ -109,12 +76,6 @@ func _physics_process(_delta):
 
 	# handle dodging
 	if Input.is_action_just_pressed("dodge"):
-		if stamina_bar == null:
-			print("cannot dash here") # debugging
-			return  
-		elif stamina_bar.value < dodge_cost:
-			return
-
 		emit_used_dodge_signal()
 
 		dash_direction = direction.normalized()
@@ -127,13 +88,8 @@ func _physics_process(_delta):
 		PlayerVariables.health_scale += 0.5
 		Emitter.emit_signal("player_variables_updated")
 
-func load_user_variables() -> void:
-	health = BASE_HEALTH * PlayerVariables.health_scale
+func load_upgrades() -> void:
 	sword.scale = sword.BASE_SIZE * PlayerVariables.sword_scale
-	sword.damage_modifier = PlayerVariables.sword_damage_modifier
-	cumulative_coin_total = PlayerVariables.coins
-	update_total_coin_label()
-	
 
 # movement, idle and dodge functions
 func get_idle_animation(direction: Vector2) -> String:
@@ -168,30 +124,16 @@ func emit_used_dodge_signal():
 
 # attack functions
 func shoot():
-	# handle mana logic
-	const mana_cost = 2
-	if mana_cost > mana:
-		return false
-
-	mana -= mana_cost
-	mana_update.emit()
 
 	# handle projectile logic
 	var projectile = projectile_scene.instantiate()
 	get_parent().add_child(projectile)
 	projectile.global_position = global_position
 	projectile.set_direction(get_global_mouse_position(), global_position)
-	return true
+	projectile.scale.x *= 3
+	projectile.scale.y *= 3
 
 func swing_sword():
-	# handle stamina logic
-	const stamina_cost = 2
-	if stamina < stamina_cost:
-		return
-
-	stamina -= stamina_cost
-	stamina_update.emit()
-
 	# handle sword attack logic
 	weapon_animation_done = false
 
@@ -219,40 +161,8 @@ func update_attack_direction():
 	else:
 		last_attack_direction = Vector2.DOWN
 
-# damage taken, death functions
-func take_damage(amount):
-	# handle damage taken
-	health -= amount
-	health_update.emit()
-	print("Player health: ", health) # debugging
-	if health <= 0:
-		die()
-
-func die():
-	# handle death
-	print("Player died") # debugging
-	queue_free()
-	get_tree().change_scene_to_file("res://scenes/death.tscn")
-
-# healing functions
-func heal(amount):
-	
-	# handle healing
-	if health >= max_health:
-		print("Health is already full!") # debugging
-		return
-	# prevents from being healed over max health
-	health = min(health + amount, max_health)
-	health_update.emit()
-	var next_in_queue = consumables.get_child(0)
-	next_in_queue.queue_free()
 
 func use_heal_potion():
-	# If already at max health, don't use the potion
-	if health >= max_health:
-		print("Health is full! Can't use potion.") # debugging
-		return
-
 	# Make the player face the potion direction and lock it
 	update_attack_direction()
 	var heal_animation = get_idle_animation(last_attack_direction)
@@ -275,35 +185,3 @@ func use_heal_potion():
 	# After using the potion, return to movement-based facing
 	print("Potion use finished, returning to movement animation")  # debugging
 	update_movement_animation()
-
-# coin handling functions
-func add_coins(amount: int, coin_type: int) -> void:
-	# handle coin logic
-	PlayerVariables.coins += amount
-	cumulative_coin_total += amount
-	coin_popup_accumulator += amount
-	update_total_coin_label()
-	
-	# Update and show the temporary coins_added popup.
-	coins_added.text = "+" + str(coin_popup_accumulator)
-	coins_added.visible = true
-	
-	# Restart the timer so the popup stays visible as long as coins keep being collected.
-	coin_timer.start()
-	
-	match coin_type:
-		0:
-			last_coin.texture = bronze_texture
-		1:
-			last_coin.texture = silver_texture
-		2:
-			last_coin.texture = gold_texture
-
-func update_total_coin_label() -> void:
-	if total_coins:
-		total_coins.text = "Total Coins: " + str(cumulative_coin_total)
-
-func _on_coin_timer_timeout() -> void:
-	# make coins_added label disappear after not collecting coins
-	coin_popup_accumulator = 0
-	coins_added.visible = false
