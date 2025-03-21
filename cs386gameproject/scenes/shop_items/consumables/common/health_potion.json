@@ -4,5 +4,5 @@
   "price": 25,
   "consumable": true,
   "description": "Heals 2 HP",
-  "scene": "res://scenes/consumables/heal_potion.tscn"
+  "script": "res://scripts/consumables/heal_potion.gd"
 }

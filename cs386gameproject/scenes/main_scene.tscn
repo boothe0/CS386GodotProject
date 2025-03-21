@@ -1,19 +1,19 @@
 [gd_scene load_steps=29 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
-[ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
+[ext_resource type="Script" uid="uid://b2rbrimtr7he0" path="res://scripts/main_scene.gd" id="1_l6k43"]
 [ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="2_psmqu"]
-[ext_resource type="Script" path="res://scripts/stamina_bar.gd" id="4_2cfse"]
-[ext_resource type="Script" path="res://scripts/health_bar.gd" id="4_d7btm"]
+[ext_resource type="Script" uid="uid://bp8xtdxbt2yvu" path="res://scripts/stamina_bar.gd" id="4_2cfse"]
+[ext_resource type="Script" uid="uid://rwq5gc1xd8b8" path="res://scripts/health_bar.gd" id="4_d7btm"]
 [ext_resource type="Texture2D" uid="uid://cv0m3vwjkbcon" path="res://assets/UI_Elements/abilities_placeholder.png" id="6_a6u3b"]
 [ext_resource type="PackedScene" uid="uid://c63dsnmtidj3h" path="res://scenes/consumables/heal_potion.tscn" id="6_qx2dl"]
-[ext_resource type="Script" path="res://scripts/consumable_1.gd" id="6_rmjn2"]
-[ext_resource type="Script" path="res://scripts/emitter.gd" id="7_0snu2"]
+[ext_resource type="Script" uid="uid://bbq01saqa8i4w" path="res://scripts/consumable_1.gd" id="6_rmjn2"]
+[ext_resource type="Script" uid="uid://bps2xfea8unav" path="res://scripts/emitter.gd" id="7_0snu2"]
 [ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png" id="8_17kcr"]
-[ext_resource type="Script" path="res://scripts/consumable_2.gd" id="8_irr0b"]
-[ext_resource type="Script" path="res://scripts/consumable_3.gd" id="9_xpxfm"]
-[ext_resource type="Script" path="res://scripts/round_timer.gd" id="11_7gw5x"]
-[ext_resource type="Script" path="res://scripts/upgrades/player_variables.gd" id="15_t4j86"]
+[ext_resource type="Script" uid="uid://uakqwt0dcbsg" path="res://scripts/consumable_2.gd" id="8_irr0b"]
+[ext_resource type="Script" uid="uid://dlvsbq2wkdofs" path="res://scripts/consumable_3.gd" id="9_xpxfm"]
+[ext_resource type="Script" uid="uid://cs2ynv6gdjcfy" path="res://scripts/round_timer.gd" id="11_7gw5x"]
+[ext_resource type="Script" uid="uid://qs4pia2qetrl" path="res://scripts/upgrades/player_variables.gd" id="15_t4j86"]
 [ext_resource type="PackedScene" uid="uid://dlhra0wjxnlvj" path="res://scenes/center_objective.tscn" id="15_uf7ea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
@@ -388,6 +388,7 @@ rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_l3c56")
 
 [node name="RoundTimer" type="Timer" parent="."]
+wait_time = 10.0
 autostart = true
 
 [node name="CenterObjective" parent="." instance=ExtResource("15_uf7ea")]
