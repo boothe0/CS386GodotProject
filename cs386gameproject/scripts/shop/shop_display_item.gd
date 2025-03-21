@@ -39,6 +39,7 @@ func _ready() -> void:
 	price_box.text = "%d G" % price
 	item_type_box.text = "Consumable" if consumable else "Upgrade"
 	description_box.text = description
+	
 
 func load_random_item() -> void:
 	item_path += _select_item_type() + "/"
@@ -60,12 +61,12 @@ func load_random_item() -> void:
 					var json_as_dict = JSON.parse_string(json_as_text)
 					if json_as_dict:
 						texture = json_as_dict.get("texture", texture)  # Fallback to default texture
-
 						nameConsumable = json_as_dict.get("name", nameConsumable)
 						price = json_as_dict.get("price", price)
 						consumable = json_as_dict.get("consumable", consumable)
 						description = json_as_dict.get("description", description)
 						item_script = json_as_dict.get("script", item_script)
+						item_script = load(item_script)
 					else:
 						print("Error parsing JSON")
 			else:
@@ -84,19 +85,22 @@ func display_out_of_range():
 	buy_hint.visible = false
 
 func buy_item_pressed():
-	if PlayerVariables.coins - price >= 0:
-		PlayerVariables.coins -= price
-		print(PlayerVariables.coins)  # Print the updated coinsa
-	# Now emit the signal after updating coins
-		Emitter.buy_item_pressed.emit(nameConsumable, price, SHOP_SPOT, consumable)
-		self.queue_free()
-		return true
-	else:
+	if PlayerVariables.coins - price < 0:	
 		print("cannot buy")
+		return false
+		
+	if not consumable:  # upgrade
+		item_script = item_script.new()  # instantiate the script
+		item_script.apply()
+		
+	PlayerVariables.coins -= price
+	print(PlayerVariables.coins)  # Print the updated coins
+	# Now emit the signal after updating coins
+	Emitter.buy_item_pressed.emit(nameConsumable, price, SHOP_SPOT, consumable)
+	self.queue_free()
+	return true
 
 func _select_item_type():
-	return "consumables"  # TODO: delete this once upgrade folders populated
-	
 	var choices = {
 		0: "consumables",
 		1: "upgrades",
