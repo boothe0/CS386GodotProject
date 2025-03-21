@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bp43gmbaeokfh"]
+[gd_scene load_steps=5 format=3 uid="uid://k4g0cu0hfssm"]
 
-[ext_resource type="Script" uid="uid://b4qnwk2e6j0uo" path="res://scripts/shopkeep.gd" id="1_fe31u"]
+[ext_resource type="Script" uid="uid://cichnq08fmsvy" path="res://scripts/shopkeep.gd" id="1_fe31u"]
+
 [ext_resource type="FontFile" uid="uid://b5eg8lvj4spdv" path="res://assets/UI_Elements/04B_30__.TTF" id="2_goyb7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f02wj"]
@@ -40,5 +41,5 @@ label_settings = SubResource("LabelSettings_4xl4w")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="area_entered" from="InteractingRange" to="." method="_on_interacting_range_area_entered"]
-[connection signal="area_exited" from="InteractingRange" to="." method="_on_interacting_range_area_exited"]
+[connection signal="body_entered" from="InteractingRange" to="." method="_on_interacting_range_body_entered"]
+[connection signal="body_exited" from="InteractingRange" to="." method="_on_interacting_range_body_exited"]
