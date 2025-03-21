@@ -22,6 +22,7 @@ var nameConsumable
 var price
 var consumable
 var description
+var item_script
 const SHOP_SPOT = 0
 
 var rand := RandomNumberGenerator.new()
@@ -64,6 +65,7 @@ func load_random_item() -> void:
 						price = json_as_dict.get("price", price)
 						consumable = json_as_dict.get("consumable", consumable)
 						description = json_as_dict.get("description", description)
+						item_script = json_as_dict.get("script", item_script)
 					else:
 						print("Error parsing JSON")
 			else:

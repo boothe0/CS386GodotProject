@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://2grokyfts1m2"]
-
-[ext_resource type="Script" uid="uid://shythbrmbu72" path="res://scripts/upgrades/breath.gd" id="1_jdd2a"]
-
-[node name="Breath" type="TextureRect"]
-script = ExtResource("1_jdd2a")
