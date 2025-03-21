@@ -1,4 +1,4 @@
 extends Node
 
 func apply():
-	PlayerVariables.sword_scale += 0.4
+	PlayerVariables.projectile_scale += 0.4
