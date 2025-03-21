@@ -1,0 +1,8 @@
+{
+  "texture": "res://assets/items/upgrades/breath.png",
+  "name": "Boreas' Breath",
+  "price": 25,
+  "consumable": false,
+  "description": "+ sword size",
+  "scene": "res://scenes/consumables/heal_potion.tscn"
+}
