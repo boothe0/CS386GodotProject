@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://k4g0cu0hfssm"]
+[gd_scene load_steps=5 format=3 uid="uid://bp43gmbaeokfh"]
 
-[ext_resource type="Script" uid="uid://cichnq08fmsvy" path="res://scripts/shopkeep.gd" id="1_fe31u"]
-
+[ext_resource type="Script" path="res://scripts/shopkeep.gd" id="1_fe31u"]
 [ext_resource type="FontFile" uid="uid://b5eg8lvj4spdv" path="res://assets/UI_Elements/04B_30__.TTF" id="2_goyb7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f02wj"]
