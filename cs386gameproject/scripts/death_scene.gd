@@ -6,3 +6,7 @@ func _ready() -> void:
 	
 	coins_label.text = "Coins you had: %d" % PlayerVariables.coins
 	rounds_label.text = "Rounds completed: %d" % PlayerVariables.rounds
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_scene.tscn")
