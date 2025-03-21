@@ -10,11 +10,11 @@ var right_bound: int
 var top_bound: int
 var bottom_bound: int
 
-var Enemy = preload ("res://scenes/enemy.tscn")
+var Enemy = preload("res://scenes/enemy.tscn")
+var RangedEnemy = preload("res://scenes/ranged_enemy.tscn")
 
 @onready var GroundLayer = $GroundLayer
 @onready var SpawnTimer = $SpawnTimer
-
 
 func _ready() -> void:
 	var ground_rect = GroundLayer.get_used_rect()
@@ -35,11 +35,12 @@ func _ready() -> void:
 	SpawnTimer.start()
 
 func _on_SpawnTimer_timeout():
+	# Randomly choose between Enemy and RangedEnemy with 50% probability
+	var enemy_scene = Enemy if rng.randi_range(0, 1) == 0 else RangedEnemy
+	
 	# spawn an enemy at random position
-	var e = Enemy.instantiate()
-	@warning_ignore("shadowed_variable_base_class")
-	var position = get_random_position()
-	e.position = position
+	var e = enemy_scene.instantiate()
+	e.position = get_random_position()
 	add_child(e)
 
 func get_random_position() -> Vector2:
