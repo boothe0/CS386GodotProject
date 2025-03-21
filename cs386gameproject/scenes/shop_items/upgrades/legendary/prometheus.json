@@ -1,0 +1,8 @@
+{
+  "texture": "res://assets/items/upgrades/prometheus.png",
+  "name": "Flame of Prometheus",
+  "price": 25,
+  "consumable": false,
+  "description": "+ projectile size",
+  "script": "res://scripts/upgrades/prometheus.gd"
+}
