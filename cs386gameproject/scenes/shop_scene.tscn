@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bfmih4khaeu4m"]
+[gd_scene load_steps=16 format=4 uid="uid://bfmih4khaeu4m"]
 
 [ext_resource type="Script" uid="uid://rdcioqbhs3m0" path="res://scenes/shop_scene.gd" id="1_3djh5"]
 [ext_resource type="Texture2D" uid="uid://cjip70074evdm" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/wooden_interior.png" id="1_8k3ky"]
@@ -720,6 +720,17 @@ texture = ExtResource("1_8k3ky")
 [sub_resource type="TileSet" id="TileSet_esyf1"]
 sources/0 = SubResource("TileSetAtlasSource_b535g")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bk5ov"]
+distance = -175.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_27noo"]
+distance = -21.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pptjr"]
+distance = 1.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cl78e"]
+
 [node name="Shop" type="Node2D"]
 script = ExtResource("1_3djh5")
 
@@ -732,12 +743,12 @@ tile_map_data = PackedByteArray("AADm/+7/AAAFAAwAAADm/+//AAAFAA0AAADn/+7/AAAGAAw
 tile_set = SubResource("TileSet_esyf1")
 
 [node name="ShopKeeper" parent="." instance=ExtResource("2_krnjd")]
-position = Vector2(-200, -207)
+position = Vector2(-210, -205)
 scale = Vector2(1.68, 1.68)
 
 [node name="Player" parent="." instance=ExtResource("3_3bvrm")]
 z_index = 15
-position = Vector2(-210, -134)
+position = Vector2(-208, -134)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
@@ -787,3 +798,24 @@ position = Vector2(-60, -80)
 position = Vector2(-60, -20)
 
 [node name="PlayerUI" parent="." instance=ExtResource("7_76n6p")]
+
+[node name="WorldBoundary" type="StaticBody2D" parent="."]
+
+[node name="TopBound" type="CollisionShape2D" parent="WorldBoundary"]
+position = Vector2(-212, -112)
+rotation = -3.14159
+shape = SubResource("WorldBoundaryShape2D_bk5ov")
+
+[node name="RightBound" type="CollisionShape2D" parent="WorldBoundary"]
+position = Vector2(-22, -130)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_27noo")
+
+[node name="BottomBound" type="CollisionShape2D" parent="WorldBoundary"]
+position = Vector2(-207, -1)
+shape = SubResource("WorldBoundaryShape2D_pptjr")
+
+[node name="LeftBound" type="CollisionShape2D" parent="WorldBoundary"]
+position = Vector2(-414, -126)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_cl78e")
