@@ -11,7 +11,7 @@ Project repo: https://github.com/boothe0/CS386GodotProject
 
 Ethan: Worked on getting ranged enemy done. Made it so that they can shoot at the player.
 
-Asher:
+Asher: Various bug fixes, small refactor to shop, added purchasable upgrades.
 
 Elizabeth:
 
