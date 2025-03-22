@@ -9,7 +9,7 @@ Missing participants: Chandler
 Project repo: https://github.com/boothe0/CS386GodotProject
 1. Activity Summary
 
-Ethan:
+Ethan: Worked on getting ranged enemy done. Made it so that they can shoot at the player.
 
 Asher:
 
