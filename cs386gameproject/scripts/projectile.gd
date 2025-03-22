@@ -2,16 +2,21 @@ extends Area2D
 
 # projectile variables
 const SPEED = 500
+const BASE_DAMAGE = 1
 var direction = Vector2.ZERO
-var damage = 1
+var damage = BASE_DAMAGE
+
 
 func _ready() -> void:
+	_apply_upgrades()
 	if not is_connected("body_entered", Callable(self, "_on_body_entered")):
 		connect("body_entered", Callable(self, "_on_body_entered"))
 
 	await get_tree().create_timer(3.0).timeout
 	queue_free()
 
+func _apply_upgrades():
+	self.scale *= PlayerVariables.projectile_scale
 	
 func _process(delta: float) -> void:
 	position += direction * SPEED * delta

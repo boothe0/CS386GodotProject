@@ -1,14 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://qsiw8h80mvef"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cn8seqvbiy8n5"]
 
-[ext_resource type="Script" uid="uid://di5aybf2iywyr" path="res://scripts/shop/shop_interact.gd" id="1_x7uff"]
-[ext_resource type="Texture2D" uid="uid://cjip70074evdm" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/wooden_interior.png" id="2_675sf"]
-[ext_resource type="PackedScene" uid="uid://clhtowjahugm2" path="res://scenes/shop_items/shop_item.tscn" id="3_ot6qs"]
+[ext_resource type="Texture2D" uid="uid://cjip70074evdm" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/wooden_interior.png" id="1_l3sgh"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_20lta"]
-size = Vector2(28, 28)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_caetm"]
-texture = ExtResource("2_675sf")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b535g"]
+texture = ExtResource("1_l3sgh")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -360,55 +355,5 @@ texture = ExtResource("2_675sf")
 8:26/0 = 0
 9:26/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_tisja"]
-sources/0 = SubResource("TileSetAtlasSource_caetm")
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_swtek"]
-
-[node name="Interactable" type="Area2D"]
-collision_layer = 8
-script = ExtResource("1_x7uff")
-
-[node name="TableCollision" type="CollisionShape2D" parent="."]
-z_index = 10
-position = Vector2(32, -17)
-shape = SubResource("RectangleShape2D_20lta")
-
-[node name="Control" type="Control" parent="TableCollision"]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ShopItem" parent="TableCollision/Control" instance=ExtResource("3_ot6qs")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 191.0
-offset_bottom = 226.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray(0, 0, 1, 0, 254, 255, 0, 0, 9, 0, 12, 0, 0, 0, 1, 0, 255, 255, 0, 0, 9, 0, 13, 0, 0, 0, 2, 0, 254, 255, 0, 0, 10, 0, 12, 0, 0, 0, 2, 0, 255, 255, 0, 0, 10, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 15, 0, 0, 0)
-tile_set = SubResource("TileSet_tisja")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_swtek")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_b535g")
