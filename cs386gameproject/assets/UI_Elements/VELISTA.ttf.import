@@ -2,19 +2,19 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b5eg8lvj4spdv"
-path="res://.godot/imported/04B_30__.TTF-a0778357b16023e8c2311b71e55f3150.fontdata"
+uid="uid://cnci2xsays6fq"
+path="res://.godot/imported/VELISTA.ttf-c8221610714666fa0518ff00abab8e75.fontdata"
 
 [deps]
 
-source_file="res://assets/UI_Elements/04B_30__.TTF"
-dest_files=["res://.godot/imported/04B_30__.TTF-a0778357b16023e8c2311b71e55f3150.fontdata"]
+source_file="res://assets/UI_Elements/VELISTA.ttf"
+dest_files=["res://.godot/imported/VELISTA.ttf-c8221610714666fa0518ff00abab8e75.fontdata"]
 
 [params]
 
 Rendering=null
-antialiasing=1
-generate_mipmaps=true
+antialiasing=0
+generate_mipmaps=false
 disable_embedded_bitmaps=true
 multichannel_signed_distance_field=true
 msdf_pixel_range=8
@@ -32,7 +32,8 @@ preload=[{
 "chars": [],
 "glyphs": [],
 "name": "New Configuration",
-"size": Vector2i(16, 0)
+"size": Vector2i(16, 0),
+"variation_embolden": 0.0
 }]
 language_support={}
 script_support={}
