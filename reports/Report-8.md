@@ -15,7 +15,7 @@ Asher: Various bug fixes, small refactor to shop, added purchasable upgrades.
 
 Elizabeth:
 
-Gordon:
+Gordon: Made front view of mc sprite
 
 Maya: 
 
