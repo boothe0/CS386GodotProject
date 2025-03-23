@@ -19,7 +19,7 @@ Gordon:
 
 Maya: 
 
-Camelia: 
+Camelia: Designed backgrounds for main menu, introduction, and death scene.
 
 Chandler:
 
