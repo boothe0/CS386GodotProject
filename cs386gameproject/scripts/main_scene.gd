@@ -12,14 +12,14 @@ var bottom_bound: int
 
 var Enemy = preload("res://scenes/enemy.tscn")
 var RangedEnemy = preload("res://scenes/ranged_enemy.tscn")
-
+@onready var consumable_set = PlayerVariables.consumable_set
 @onready var GroundLayer = $GroundLayer
 @onready var SpawnTimer = $SpawnTimer
 
 func _ready() -> void:
 	var ground_rect = GroundLayer.get_used_rect()
 	var ground_position = ground_rect.position
-
+	print(consumable_set)
 	# add offset to ensure enemies in bounds
 	var in_bounds_offset = GroundLayer.rendering_quadrant_size * 2
 

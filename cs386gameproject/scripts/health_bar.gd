@@ -1,14 +1,18 @@
 extends ProgressBar
 
 static var DamageDisplay = preload("res://scenes/display_damage.tscn")
-@onready var player: CharacterBody2D = $"../../Player"
+@onready var player = get_node("/root/MainScene/Player")
 
+var health = PlayerVariables.health
 
-func _ready() -> void:
-	# connect player health with ui
-	max_value = player.health
-	player.health_update.connect(update)
-	
+func _ready():
+
+	if player:
+		max_value = health
+		player.health_update.connect(update)
+	else:
+		print("Player instance is null!")
+
 func update():
 	# call to display damage in game
 	var display = DamageDisplay.instantiate()

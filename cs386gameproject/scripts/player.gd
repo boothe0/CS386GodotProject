@@ -4,17 +4,15 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 
 # health, stamina, mana
-const BASE_SPEED = 150
-const BASE_HEALTH = 5
-@export var max_health = BASE_HEALTH
-@export var MAX_STAMINA = 10
-@export var MAX_MANA = 10
-@export var health = max_health
-@export var stamina = MAX_STAMINA
-@export var mana = MAX_MANA
-@onready var spacebar_text = $"../PlayerUI/StaminaBar/SpaceBarIndicator"
-@onready var stamina_bar = $"../PlayerUI/StaminaBar"
-
+@export var base_speed = PlayerVariables.base_speed
+@export var base_health = PlayerVariables.base_health
+@export var max_health = PlayerVariables.max_health
+@export var mana = PlayerVariables.mana
+@export var health = PlayerVariables.health
+@export var stamina = PlayerVariables.stamina
+@onready var spacebar_text = $"PlayerUI/StaminaBar/SpaceBarIndicator"
+@onready var stamina_bar = $"PlayerUI/StaminaBar"
+@onready var player_ui = $"PlayerUI"
 # weapons and weapon logic
 enum WeaponType {SWORD, PROJECTILE}
 var current_weapon = WeaponType.SWORD
@@ -28,10 +26,10 @@ const bronze_texture = preload("res://assets/bronze-coin.png")
 const gold_texture = preload("res://assets/gold-coin.png")
 const silver_texture = preload("res://assets/silver-coin.png")
 var coin_popup_accumulator: int = 0
-@onready var total_coins: Label = $"../PlayerUI/Coins/HBoxContainer/TotalCoins"
-@onready var coins_added: Label = $"../PlayerUI/Coins/CoinsAdded"
+@onready var total_coins: Label = $"PlayerUI/Coins/HBoxContainer/TotalCoins"
+@onready var coins_added: Label = $"PlayerUI/Coins/CoinsAdded"
 @onready var coin_timer: Timer = $CoinTimer
-@onready var last_coin: TextureRect = $"../PlayerUI/Coins/HBoxContainer/LastCoin"
+@onready var last_coin: TextureRect = $"PlayerUI/Coins/HBoxContainer/LastCoin"
 @export var cumulative_coin_total: int = 0
 
 # movement, dash and dodge
@@ -63,7 +61,9 @@ func _ready():
 		coins_added.visible = false
 		
 	load_user_variables()
-
+func _process(delta):
+	PlayerVariables.health = health
+		
 func _physics_process(_delta):
 	# handle player movement
 	var direction = Vector2.ZERO
@@ -80,7 +80,7 @@ func _physics_process(_delta):
 
 	if direction.length() > 0:
 		last_movement_direction = direction.normalized()
-		velocity = direction.normalized() * BASE_SPEED
+		velocity = direction.normalized() * base_speed
 		move_and_slide()
 
 	update_movement_animation()
@@ -127,7 +127,7 @@ func _physics_process(_delta):
 		Emitter.emit_signal("player_variables_updated")
 
 func load_user_variables() -> void:
-	health = BASE_HEALTH * PlayerVariables.health_scale
+	health = base_health * PlayerVariables.health_scale
 	sword.scale = sword.BASE_SIZE * PlayerVariables.sword_scale
 	sword.damage_modifier = PlayerVariables.sword_damage_modifier
 	cumulative_coin_total = PlayerVariables.coins
