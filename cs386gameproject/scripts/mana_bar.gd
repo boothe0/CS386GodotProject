@@ -17,7 +17,6 @@ func _ready() -> void:
 	regen_timer.start()
 	
 func regen_mana():
-	# regen player mana
 	if player.mana < player.MAX_MANA:
 		player.mana += 1
 		update()
@@ -26,3 +25,5 @@ func update():
 	# update ui with current vs max mana
 	self.value = player.mana
 	label.text = "%d / %d" % [value, max_value]
+
+	

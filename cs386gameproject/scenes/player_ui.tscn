@@ -31,27 +31,33 @@ bg_color = Color(0, 0.6672, 0.951553, 1)
 [sub_resource type="GDScript" id="GDScript_3ab0m"]
 script/source = "extends ProgressBar
 
-@onready var player = $\"../../Player\"
+@onready var player = get_node(\"/root/MainScene/Player\")
 @onready var regen_timer = $RegenTimer
 @onready var label = $ValueIndicator
+var mana = PlayerVariables.mana
+var max_mana = PlayerVariables.MAX_MANA
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	max_value = player.mana
-	value = max_value
-	label.text = \"%d / %d\" % [value, max_value]
-	
-	player.mana_update.connect(update)
-	regen_timer.timeout.connect(regen_mana)
-	regen_timer.start()
-	
-func regen_mana():
-	if player.mana < player.MAX_MANA:
-		player.mana += 1
-		update()
+	max_value = mana
+	await get_tree().process_frame
+	if player:
+		value = max_value
+		label.text = \"%d / %d\" % [value, max_value]
 
-func update():
-	self.value = player.mana
-	label.text = \"%d / %d\" % [value, max_value]
+		player.mana_update.connect(update)
+		regen_timer.timeout.connect(regen_mana)
+		regen_timer.start()
+	
+func regen_mana(mana):
+	if mana < max_mana:
+		print(\"ENTER\")
+		mana += 1
+		update(mana)
+
+func update(mana):
+	
+	self.value = mana
+	label.text = \"%d / %d\" % [mana, max_value]
 "
 
 [sub_resource type="LabelSettings" id="LabelSettings_a6r1j"]

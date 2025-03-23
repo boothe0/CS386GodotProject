@@ -12,6 +12,7 @@ func _ready() -> void:
 
 func update_label():
 	total_coins.text = "Total Coins: " + str(PlayerVariables.coins)	
+	
 func _on_buy_item_pressed(item_name: String, price: int, shop_spot: int, consumable: bool):
 	# Ensure consumable_base is a valid PackedScene
 	if consumable_base:

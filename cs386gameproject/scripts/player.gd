@@ -6,14 +6,15 @@ extends CharacterBody2D
 # health, stamina, mana
 const BASE_SPEED = 150
 const BASE_HEALTH = 5
-@export var max_health = BASE_HEALTH
-@export var MAX_STAMINA = 10
-@export var MAX_MANA = 10
-@export var health = max_health
-@export var stamina = MAX_STAMINA
-@export var mana = MAX_MANA
-@onready var spacebar_text = $"../PlayerUI/StaminaBar/SpaceBarIndicator"
-@onready var stamina_bar = $"../PlayerUI/StaminaBar"
+@export var base_speed = PlayerVariables.base_speed
+@export var base_health = PlayerVariables.base_health
+@export var max_health = PlayerVariables.max_health
+@export var mana = PlayerVariables.mana
+@export var health = PlayerVariables.health
+@export var stamina = PlayerVariables.stamina
+@onready var spacebar_text = $"PlayerUI/StaminaBar/SpaceBarIndicator"
+@onready var stamina_bar = $"PlayerUI/StaminaBar"
+@onready var player_ui = $"PlayerUI"
 
 # weapons and weapon logic
 enum WeaponType {SWORD, PROJECTILE}
@@ -48,9 +49,9 @@ var dash_direction = Vector2()
 
 # Signals
 signal health_update
-signal stamina_update
-signal mana_update
-signal dodge_used
+signal stamina_update(stamina_value)
+signal mana_update(mana_value)
+signal dodge_used(stamina_value)
 
 
 func _ready():
@@ -113,8 +114,10 @@ func _physics_process(_delta):
 			return  
 		elif stamina_bar.value < dodge_cost:
 			return
-
-		emit_used_dodge_signal()
+		
+		stamina -= dodge_cost
+		print(stamina)
+		emit_used_dodge_signal(stamina)
 
 		dash_direction = direction.normalized()
 		velocity = dash_direction * dash_speed
@@ -162,8 +165,8 @@ func update_movement_animation():
 	elif last_movement_direction == Vector2.DOWN:
 		animated_sprite.play("walk_down")
 
-func emit_used_dodge_signal():
-	dodge_used.emit()
+func emit_used_dodge_signal(stamina):
+	dodge_used.emit(stamina)
 
 # attack functions
 func shoot():
@@ -171,9 +174,9 @@ func shoot():
 	const mana_cost = 2
 	if mana_cost > mana:
 		return false
-
 	mana -= mana_cost
-	mana_update.emit()
+	print(mana)
+	mana_update.emit(mana)
 
 	# handle projectile logic
 	var projectile = projectile_scene.instantiate()
@@ -189,7 +192,7 @@ func swing_sword():
 		return
 
 	stamina -= stamina_cost
-	stamina_update.emit()
+	stamina_update.emit(stamina)
 
 	# handle sword attack logic
 	weapon_animation_done = false
