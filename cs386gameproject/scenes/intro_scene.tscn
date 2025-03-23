@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6jcadqr57vvm"]
+[gd_scene load_steps=5 format=3 uid="uid://c6jcadqr57vvm"]
 
 [ext_resource type="Theme" uid="uid://bkiujxnjn0a0q" path="res://assets/UI_Elements/TitleScreenTheme.tres" id="1_5krm1"]
 [ext_resource type="FontFile" uid="uid://b5eg8lvj4spdv" path="res://assets/UI_Elements/04B_30__.TTF" id="1_67xas"]
 [ext_resource type="Script" path="res://scripts/intro_scene.gd" id="1_xoymr"]
+[ext_resource type="Texture2D" uid="uid://chyal08aw8jp5" path="res://assets/UI_Elements/Intro_Screen.png" id="4_iqai3"]
 
 [node name="Intro" type="CanvasLayer"]
 script = ExtResource("1_xoymr")
@@ -22,8 +23,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 3.0
 offset_right = -1.0
-offset_bottom = 1.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_5krm1")
@@ -58,5 +60,9 @@ offset_bottom = 19.495
 theme_override_fonts/font = ExtResource("1_67xas")
 theme_override_font_sizes/font_size = 30
 text = "Continue"
+
+[node name="IntroScreen" type="Sprite2D" parent="."]
+position = Vector2(575, 324)
+texture = ExtResource("4_iqai3")
 
 [connection signal="pressed" from="CanvasLayer/ContinueButton" to="." method="_on_continue_button_pressed"]
