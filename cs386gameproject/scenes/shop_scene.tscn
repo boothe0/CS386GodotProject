@@ -401,7 +401,8 @@ z_index = 15
 position = Vector2(-208, -134)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(3, 3)
+position = Vector2(6.88572, -1.37714)
+zoom = Vector2(5, 5)
 process_callback = 0
 
 [node name="coins_to_buy" type="Label" parent="Player"]
