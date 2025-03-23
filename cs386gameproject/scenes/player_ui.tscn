@@ -1,9 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://cv6nyao2cqvrl"]
+[gd_scene load_steps=19 format=3 uid="uid://cv6nyao2cqvrl"]
 
 [ext_resource type="Script" path="res://scripts/health_bar.gd" id="1_f16na"]
 [ext_resource type="Script" path="res://scenes/player_ui.gd" id="1_hx61h"]
 [ext_resource type="Script" path="res://scripts/stamina_bar.gd" id="2_g8l4n"]
-[ext_resource type="Script" path="res://scripts/consumable_1.gd" id="3_sj8ro"]
 [ext_resource type="PackedScene" uid="uid://c63dsnmtidj3h" path="res://scenes/consumables/heal_potion.tscn" id="4_s4a2c"]
 [ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png" id="5_mwlry"]
 [ext_resource type="Script" path="res://scripts/consumable_2.gd" id="6_2bpo0"]
@@ -140,25 +139,6 @@ horizontal_alignment = 1
 
 [node name="RegenTimer" type="Timer" parent="ManaBar"]
 
-[node name="Consumable_1" type="HBoxContainer" parent="."]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -152.0
-offset_right = -102.0
-offset_bottom = 40.0
-grow_horizontal = 0
-scale = Vector2(3, 3.48)
-script = ExtResource("3_sj8ro")
-
-[node name="Label" type="Label" parent="Consumable_1"]
-layout_mode = 2
-text = "Z"
-
-[node name="TextureRect" parent="Consumable_1" instance=ExtResource("4_s4a2c")]
-layout_mode = 2
-texture = ExtResource("5_mwlry")
-
 [node name="Consumable_2" type="HBoxContainer" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
@@ -215,6 +195,11 @@ offset_bottom = 160.0
 grow_horizontal = 0
 texture = ExtResource("8_pgmt8")
 expand_mode = 1
+
+[node name="Control" type="Control" parent="Ability1"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Ability2" type="TextureRect" parent="."]
 z_index = -1

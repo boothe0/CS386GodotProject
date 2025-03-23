@@ -3,6 +3,7 @@ extends Node2D
 # enemy spawn logic
 var spawn_interval = 3.0
 var rng = RandomNumberGenerator.new()
+@onready var consumable_set = PlayerVariables.consumable_set
 
 # world bounds
 var left_bound: int
@@ -19,7 +20,6 @@ var RangedEnemy = preload("res://scenes/ranged_enemy.tscn")
 func _ready() -> void:
 	var ground_rect = GroundLayer.get_used_rect()
 	var ground_position = ground_rect.position
-
 	# add offset to ensure enemies in bounds
 	var in_bounds_offset = GroundLayer.rendering_quadrant_size * 2
 

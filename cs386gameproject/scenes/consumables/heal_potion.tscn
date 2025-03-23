@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c63dsnmtidj3h"]
 
 [ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png" id="1_mk4gw"]
-[ext_resource type="Script" uid="uid://y068o8rplpg5" path="res://scripts/consumables/heal_potion.gd" id="2_6vhh2"]
+[ext_resource type="Script" path="res://scripts/consumables/heal_potion.gd" id="2_6vhh2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jq3k8"]
 atlas = ExtResource("1_mk4gw")
