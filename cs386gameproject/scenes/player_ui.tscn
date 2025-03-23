@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://cv6nyao2cqvrl"]
+[gd_scene load_steps=21 format=3 uid="uid://cv6nyao2cqvrl"]
 
 [ext_resource type="Script" path="res://scripts/health_bar.gd" id="1_f16na"]
 [ext_resource type="Script" path="res://scenes/player_ui.gd" id="1_hx61h"]
 [ext_resource type="Script" path="res://scripts/stamina_bar.gd" id="2_g8l4n"]
 [ext_resource type="Script" path="res://scripts/consumable_1.gd" id="3_sj8ro"]
 [ext_resource type="PackedScene" uid="uid://c63dsnmtidj3h" path="res://scenes/consumables/heal_potion.tscn" id="4_s4a2c"]
+[ext_resource type="Theme" uid="uid://cvlma4e7cahfg" path="res://assets/UI_Elements/item_info.tres" id="5_l0kq7"]
 [ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png" id="5_mwlry"]
 [ext_resource type="Script" path="res://scripts/consumable_2.gd" id="6_2bpo0"]
 [ext_resource type="Script" path="res://scripts/consumable_3.gd" id="7_gf436"]
@@ -153,6 +154,7 @@ script = ExtResource("3_sj8ro")
 
 [node name="Label" type="Label" parent="Consumable_1"]
 layout_mode = 2
+theme = ExtResource("5_l0kq7")
 text = "Z"
 
 [node name="TextureRect" parent="Consumable_1" instance=ExtResource("4_s4a2c")]
@@ -175,6 +177,7 @@ script = ExtResource("6_2bpo0")
 
 [node name="Label" type="Label" parent="Consumable_2"]
 layout_mode = 2
+theme = ExtResource("5_l0kq7")
 text = "X
 "
 
@@ -192,6 +195,7 @@ offset_right = -102.0
 offset_bottom = 320.0
 grow_horizontal = 0
 scale = Vector2(3, 3.48)
+theme = ExtResource("5_l0kq7")
 script = ExtResource("7_gf436")
 
 [node name="Label" type="Label" parent="Consumable_3"]
