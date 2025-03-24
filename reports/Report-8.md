@@ -17,7 +17,7 @@ Elizabeth:
 
 Gordon:
 
-Maya: 
+Maya: Joined team. Looked over the github and discord, and talked with other members to get familar with the project.
 
 Camelia: 
 
