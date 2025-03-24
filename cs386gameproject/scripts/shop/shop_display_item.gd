@@ -17,12 +17,12 @@ const RARITY_ODDS = {
 @onready var buy_hint = $BuyHint
 @onready var item_type_box = $VBoxContainer/Type
 @onready var description_box = $VBoxContainer/Description
-var texture
+@export var texture = ""
 var nameConsumable
 var price
 var consumable
 var description
-var item_script
+@export var item_script = ""
 const SHOP_SPOT = 0
 
 var rand := RandomNumberGenerator.new()
@@ -78,6 +78,7 @@ func display_in_range():
 	vbox.visible = true
 	hbox.visible = true
 	buy_hint.visible = true
+	return texture
 	
 func display_out_of_range():
 	vbox.visible = false

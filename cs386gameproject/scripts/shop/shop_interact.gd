@@ -1,5 +1,6 @@
 extends Area2D
 @onready var item := $TableCollision/Control/ShopItem
+@export var texture = ""
 var in_range = false
 
 func _process(delta):
@@ -10,8 +11,8 @@ func _process(delta):
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		in_range = true
-		item.display_in_range()
-
+		texture = item.display_in_range()
+		print(texture)
 func _on_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		in_range = false
