@@ -52,7 +52,6 @@ signal stamina_update
 signal mana_update
 signal dodge_used
 
-
 func _ready():
 	health_update.emit()
 	sword.hide()

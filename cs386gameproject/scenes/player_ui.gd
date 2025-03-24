@@ -8,10 +8,11 @@ var consumable_1 = preload("res://scripts/consumable_1.gd")
 func _ready() -> void:
 	Emitter.buy_item_pressed.connect(_on_buy_item_pressed)
 	update_label()
-	while PlayerVariables.number_consumables > 0:
+	var temp = PlayerVariables.number_consumables
+	while temp > 0:
 		print("There are consumables here")
 		number_consumables_left += 1
-		PlayerVariables.number_consumables -= 1
+		temp -= 1
 		load_ui_consumables()
 
 func update_label():

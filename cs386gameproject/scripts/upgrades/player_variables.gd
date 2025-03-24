@@ -11,12 +11,17 @@ extends Node
 @onready var projectile_scale: float = 1.0
 
 @onready var consumables: Array[Dictionary] = [
+	# go over this with enumerate
+	# appened to it using the texture and script from the display when buying
 	{
-		"texture" : "res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png",
-		"script" : "res://scenes/consumables/heal_potion.tscn"
+	
 	},
 	{
-		"texture" : "res://assets/VariPixels PotionsPack 02112022 Update/WallPotion.png",
+		
+	},
+	
+	{
+		
 	},
 ]
 
