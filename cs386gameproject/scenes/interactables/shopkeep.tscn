@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bp43gmbaeokfh"]
+[gd_scene load_steps=6 format=3 uid="uid://bp43gmbaeokfh"]
 
-[ext_resource type="Script" uid="uid://b4qnwk2e6j0uo" path="res://scripts/shopkeep.gd" id="1_fe31u"]
-[ext_resource type="FontFile" uid="uid://b5eg8lvj4spdv" path="res://assets/UI_Elements/04B_30__.TTF" id="2_goyb7"]
+[ext_resource type="Script" path="res://scripts/shopkeep.gd" id="1_fe31u"]
+[ext_resource type="Theme" uid="uid://bkiujxnjn0a0q" path="res://assets/UI_Elements/TitleScreenTheme.tres" id="2_o6aof"]
+[ext_resource type="FontFile" uid="uid://cow87u5au3hqo" path="res://assets/UI_Elements/Cardinal.ttf" id="3_qhrje"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f02wj"]
 radius = 9.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_4xl4w"]
-font = ExtResource("2_goyb7")
-font_size = 10
+font_size = 30
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
@@ -35,6 +35,8 @@ offset_right = 65.0
 offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_o6aof")
+theme_override_fonts/font = ExtResource("3_qhrje")
 text = "E to interact"
 label_settings = SubResource("LabelSettings_4xl4w")
 horizontal_alignment = 1

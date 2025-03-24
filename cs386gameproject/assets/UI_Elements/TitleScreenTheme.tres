@@ -1,14 +1,66 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bkiujxnjn0a0q"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bkiujxnjn0a0q"]
 
-[ext_resource type="FontFile" uid="uid://b5eg8lvj4spdv" path="res://assets/UI_Elements/04B_30__.TTF" id="1_3cbd5"]
+[ext_resource type="FontFile" uid="uid://cow87u5au3hqo" path="res://assets/UI_Elements/Cardinal.ttf" id="1_xhpmq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f43ob"]
 bg_color = Color(0.208002, 0.0218969, 0.499546, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpvs1"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_my14k"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
 [resource]
-default_font = ExtResource("1_3cbd5")
+default_font = ExtResource("1_xhpmq")
+default_font_size = 0
 Button/colors/font_pressed_color = Color(0.396078, 0.00784314, 0.803922, 1)
 Button/font_sizes/font_size = 32
 Label/font_sizes/font_size = 48
+Label/fonts/font = ExtResource("1_xhpmq")
 Panel/styles/panel = SubResource("StyleBoxFlat_f43ob")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_selected_color = Color(0, 0, 0, 0)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0)
+RichTextLabel/colors/selection_color = Color(0.1, 0.1, 1, 0.8)
+RichTextLabel/colors/table_border = Color(0, 0, 0, 0)
+RichTextLabel/colors/table_even_row_bg = Color(0, 0, 0, 0)
+RichTextLabel/colors/table_odd_row_bg = Color(0, 0, 0, 0)
+RichTextLabel/constants/line_separation = 0
+RichTextLabel/constants/outline_size = 0
+RichTextLabel/constants/shadow_offset_x = 1
+RichTextLabel/constants/shadow_offset_y = 1
+RichTextLabel/constants/shadow_outline_size = 1
+RichTextLabel/constants/table_h_separation = 3
+RichTextLabel/constants/table_v_separation = 3
+RichTextLabel/constants/text_highlight_h_padding = 3
+RichTextLabel/constants/text_highlight_v_padding = 3
+RichTextLabel/font_sizes/bold_font_size = 16
+RichTextLabel/font_sizes/bold_italics_font_size = 16
+RichTextLabel/font_sizes/italics_font_size = 16
+RichTextLabel/font_sizes/mono_font_size = 16
 RichTextLabel/font_sizes/normal_font_size = 36
+RichTextLabel/styles/focus = SubResource("StyleBoxFlat_vpvs1")
+RichTextLabel/styles/normal = SubResource("StyleBoxEmpty_my14k")

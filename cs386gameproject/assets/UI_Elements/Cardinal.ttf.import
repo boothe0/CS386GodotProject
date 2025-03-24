@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b5eg8lvj4spdv"
-path="res://.godot/imported/04B_30__.TTF-a0778357b16023e8c2311b71e55f3150.fontdata"
+uid="uid://cow87u5au3hqo"
+path="res://.godot/imported/Cardinal.ttf-3d4b8399adc8e88bfdb52ecd62ec3e8e.fontdata"
 
 [deps]
 
-source_file="res://assets/UI_Elements/04B_30__.TTF"
-dest_files=["res://.godot/imported/04B_30__.TTF-a0778357b16023e8c2311b71e55f3150.fontdata"]
+source_file="res://assets/UI_Elements/Cardinal.ttf"
+dest_files=["res://.godot/imported/Cardinal.ttf-3d4b8399adc8e88bfdb52ecd62ec3e8e.fontdata"]
 
 [params]
 

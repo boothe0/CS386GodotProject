@@ -7,7 +7,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xcxaj"]
 shader = ExtResource("3_nic8t")
-shader_parameter/height = 20.0
+shader_parameter/height = 8.0
 shader_parameter/speed = 5.0
 
 [node name="Menu" type="CanvasLayer"]
@@ -46,6 +46,7 @@ offset_right = 176.0
 offset_bottom = -91.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 60
 text = "Tiny Rougelite"
 horizontal_alignment = 1
 vertical_alignment = 1

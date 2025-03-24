@@ -35,6 +35,7 @@ func _ready() -> void:
 	display_out_of_range()
 	# Set initial UI values from loaded item
 	texture_rect.texture = load(texture)
+	
 	item_name_box.text = nameConsumable
 	price_box.text = "%d G" % price
 	item_type_box.text = "Consumable" if consumable else "Upgrade"
@@ -75,9 +76,9 @@ func load_random_item() -> void:
 		print("Failed to open directory: ", item_path)
 
 func display_in_range():
-	vbox.visible = true
-	hbox.visible = true
-	buy_hint.visible = true
+		vbox.visible = true
+		hbox.visible = true
+		buy_hint.visible = true
 	
 func display_out_of_range():
 	vbox.visible = false
