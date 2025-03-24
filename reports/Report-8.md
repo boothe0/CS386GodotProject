@@ -15,7 +15,7 @@ Asher: Various bug fixes, small refactor to shop, added purchasable upgrades.
 
 Elizabeth:
 
-Gordon:
+Gordon: Made front view of mc sprite
 
 Maya: Joined team. Looked over the github and discord, and talked with other members to get familar with the project.
 
