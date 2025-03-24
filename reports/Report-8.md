@@ -20,7 +20,7 @@ Gordon: Made front view of mc sprite
 
 Maya: Joined team. Looked over the github and discord, and talked with other members to get familar with the project.
 
-Camelia: 
+Camelia: Designed backgrounds for main menu, introduction, and death scene.
 
 Chandler: Imported new level assets and setup a basic level design with different types of obstacles (gaps allow projectiles to cross but not entities, walls prevent either from crossing)
 
