@@ -21,7 +21,7 @@ Maya: Joined team. Looked over the github and discord, and talked with other mem
 
 Camelia: 
 
-Chandler:
+Chandler: Imported new level assets and setup a basic level design with different types of obstacles (gaps allow projectiles to cross but not entities, walls prevent either from crossing)
 
 
 2. Retrospective
@@ -47,5 +47,5 @@ Maya: 3 sprites for items
 
 Camelia: Different sprite for ranged enemies
 
-Chandler:
+Chandler: Clean up level interactions and enemy pathfinding accordingly
 
