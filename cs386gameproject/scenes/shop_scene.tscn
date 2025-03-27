@@ -7,7 +7,7 @@
 [ext_resource type="TileSet" uid="uid://cn8seqvbiy8n5" path="res://assets/shop_scene.tres" id="3_27noo"]
 [ext_resource type="PackedScene" uid="uid://qsiw8h80mvef" path="res://scenes/interactables/interactable.tscn" id="4_6gfk0"]
 [ext_resource type="Theme" uid="uid://15y45ulhxojt" path="res://assets/UI_Elements/shop_screen_theme.tres" id="5_pa5gp"]
-[ext_resource type="PackedScene" path="res://scenes/player_ui.tscn" id="7_76n6p"]
+[ext_resource type="PackedScene" uid="uid://cv6nyao2cqvrl" path="res://scenes/player_ui.tscn" id="7_76n6p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2l0sb"]
 texture = ExtResource("1_8k3ky")
@@ -401,7 +401,8 @@ z_index = 15
 position = Vector2(-208, -134)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(3, 3)
+position = Vector2(6.88572, -1.37714)
+zoom = Vector2(5, 5)
 process_callback = 0
 
 [node name="coins_to_buy" type="Label" parent="Player"]

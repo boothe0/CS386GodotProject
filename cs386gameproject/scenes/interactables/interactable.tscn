@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://qsiw8h80mvef"]
+[gd_scene load_steps=9 format=3 uid="uid://qsiw8h80mvef"]
 
 [ext_resource type="Script" uid="uid://di5aybf2iywyr" path="res://scripts/shop/shop_interact.gd" id="1_x7uff"]
 [ext_resource type="Texture2D" uid="uid://cjip70074evdm" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/wooden_interior.png" id="2_675sf"]
+[ext_resource type="Theme" uid="uid://cvlma4e7cahfg" path="res://assets/UI_Elements/item_info.tres" id="3_2dwuh"]
 [ext_resource type="PackedScene" uid="uid://clhtowjahugm2" path="res://scenes/shop_items/shop_item.tscn" id="3_ot6qs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_20lta"]
@@ -395,12 +396,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 191.0
-offset_bottom = 226.0
+offset_left = -26.0
+offset_top = -27.0
+offset_right = 185.0
+offset_bottom = 219.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.248998, 0.212694)
+theme = ExtResource("3_2dwuh")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray(0, 0, 1, 0, 254, 255, 0, 0, 9, 0, 12, 0, 0, 0, 1, 0, 255, 255, 0, 0, 9, 0, 13, 0, 0, 0, 2, 0, 254, 255, 0, 0, 10, 0, 12, 0, 0, 0, 2, 0, 255, 255, 0, 0, 10, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 15, 0, 0, 0)

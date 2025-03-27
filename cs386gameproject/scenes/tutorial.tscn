@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://o1o362y2npw4"]
 
-[ext_resource type="Script" path="res://scripts/tutorial.gd" id="1_qfmq3"]
+[ext_resource type="Script" uid="uid://ddp11h4ie77dq" path="res://scripts/tutorial.gd" id="1_qfmq3"]
 [ext_resource type="Theme" uid="uid://bkiujxnjn0a0q" path="res://assets/UI_Elements/TitleScreenTheme.tres" id="2_nijuy"]
-[ext_resource type="FontFile" uid="uid://b5eg8lvj4spdv" path="res://assets/UI_Elements/04B_30__.TTF" id="2_skepc"]
+[ext_resource type="FontFile" uid="uid://cow87u5au3hqo" path="res://assets/UI_Elements/Cardinal.ttf" id="3_2ayie"]
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="4_urxcp"]
-[ext_resource type="Script" path="res://scripts/tutorial_player.gd" id="5_b80lm"]
+[ext_resource type="Script" uid="uid://c4u6gdffh6ii1" path="res://scripts/tutorial_player.gd" id="5_b80lm"]
 
 [node name="Tutorial" type="Node2D"]
 script = ExtResource("1_qfmq3")
@@ -37,7 +37,7 @@ offset_left = -182.5
 offset_top = -19.23
 offset_right = 183.5
 offset_bottom = 19.77
-theme_override_fonts/font = ExtResource("2_skepc")
+theme_override_fonts/font = ExtResource("3_2ayie")
 theme_override_font_sizes/font_size = 30
 text = "Return To Menu"
 
@@ -50,6 +50,7 @@ offset_left = 246.0
 offset_top = 87.0
 offset_right = -235.447
 offset_bottom = 22.854
+theme_override_font_sizes/normal_font_size = 50
 text = "Use arrow keys to move"
 
 [node name="Player" parent="CanvasLayer/Control" instance=ExtResource("4_urxcp")]

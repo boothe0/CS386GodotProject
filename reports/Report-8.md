@@ -1,4 +1,4 @@
-Report for Week #8
+# Report for Week #8
 
 Tiny Roguelike
 Group: Group 6
@@ -7,24 +7,25 @@ Location: NAU
 Present participants: Elizabeth, Maya, Ethan, Asher, Gordon, Camelia
 Missing participants: Chandler
 Project repo: https://github.com/boothe0/CS386GodotProject
-1. Activity Summary
+
+## 1. Activity Summary
 
 Ethan: Worked on getting ranged enemy done. Made it so that they can shoot at the player.
 
 Asher: Various bug fixes, small refactor to shop, added purchasable upgrades.
 
-Elizabeth:
+Elizabeth: Worked on getting gloabl variables set up for the player and part of transfer system set up. Managed pull requests on the code side.
 
-Gordon:
+Gordon: Made front view of mc sprite
 
-Maya: 
+Maya: Joined team. Looked over the github and discord, and talked with other members to get familar with the project.
 
-Camelia: 
+Camelia: Designed backgrounds for main menu, introduction, and death scene.
 
-Chandler:
+Chandler: Imported new level assets and setup a basic level design with different types of obstacles (gaps allow projectiles to cross but not entities, walls prevent either from crossing)
 
 
-2. Retrospective
+## 2. Retrospective
 
     Appreciations: Cleaning up unused branches, have 2 more people join for art.
     Successes: Gordon getting a sprite done even before first meeting, purchasable item system is complete
@@ -33,7 +34,7 @@ Chandler:
     What we should try next time. 
     Add multiple commits per branch being pull requested rather than 1 big pull request to make PRS easier to review.
 
-3. Next steps
+## 3. Next steps
 
 Ethan: Add knockback to enemy and player strikes
 
@@ -47,5 +48,5 @@ Maya: 3 sprites for items
 
 Camelia: Different sprite for ranged enemies
 
-Chandler:
+Chandler: Clean up level interactions and enemy pathfinding accordingly
 

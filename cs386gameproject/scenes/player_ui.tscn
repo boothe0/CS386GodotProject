@@ -1,15 +1,16 @@
-[gd_scene load_steps=20 format=3 uid="uid://cv6nyao2cqvrl"]
+[gd_scene load_steps=21 format=3 uid="uid://cv6nyao2cqvrl"]
 
-[ext_resource type="Script" path="res://scripts/health_bar.gd" id="1_f16na"]
-[ext_resource type="Script" path="res://scenes/player_ui.gd" id="1_hx61h"]
-[ext_resource type="Script" path="res://scripts/stamina_bar.gd" id="2_g8l4n"]
-[ext_resource type="Script" path="res://scripts/consumable_1.gd" id="3_sj8ro"]
+[ext_resource type="Script" uid="uid://rwq5gc1xd8b8" path="res://scripts/health_bar.gd" id="1_f16na"]
+[ext_resource type="Script" uid="uid://deqt1f7pjc0of" path="res://scenes/player_ui.gd" id="1_hx61h"]
+[ext_resource type="Script" uid="uid://bp8xtdxbt2yvu" path="res://scripts/stamina_bar.gd" id="2_g8l4n"]
+[ext_resource type="Script" uid="uid://bbq01saqa8i4w" path="res://scripts/consumable_1.gd" id="3_sj8ro"]
 [ext_resource type="PackedScene" uid="uid://c63dsnmtidj3h" path="res://scenes/consumables/heal_potion.tscn" id="4_s4a2c"]
+[ext_resource type="Theme" uid="uid://cvlma4e7cahfg" path="res://assets/UI_Elements/item_info.tres" id="5_l0kq7"]
 [ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png" id="5_mwlry"]
-[ext_resource type="Script" path="res://scripts/consumable_2.gd" id="6_2bpo0"]
-[ext_resource type="Script" path="res://scripts/consumable_3.gd" id="7_gf436"]
+[ext_resource type="Script" uid="uid://uakqwt0dcbsg" path="res://scripts/consumable_2.gd" id="6_2bpo0"]
+[ext_resource type="Script" uid="uid://dlvsbq2wkdofs" path="res://scripts/consumable_3.gd" id="7_gf436"]
 [ext_resource type="Texture2D" uid="uid://cv0m3vwjkbcon" path="res://assets/UI_Elements/abilities_placeholder.png" id="8_pgmt8"]
-[ext_resource type="Script" path="res://scripts/round_timer.gd" id="9_4q3ug"]
+[ext_resource type="Script" uid="uid://cs2ynv6gdjcfy" path="res://scripts/round_timer.gd" id="9_4q3ug"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pomkq"]
 bg_color = Color(0.358417, 0, 0.01308, 1)
@@ -103,9 +104,13 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -23.0
+offset_left = 1.0
+offset_top = -18.0
+offset_right = 1.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("5_l0kq7")
 text = "Space"
 horizontal_alignment = 1
 
@@ -136,6 +141,7 @@ anchor_bottom = 1.0
 offset_top = -23.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("5_l0kq7")
 horizontal_alignment = 1
 
 [node name="RegenTimer" type="Timer" parent="ManaBar"]
@@ -153,6 +159,7 @@ script = ExtResource("3_sj8ro")
 
 [node name="Label" type="Label" parent="Consumable_1"]
 layout_mode = 2
+theme = ExtResource("5_l0kq7")
 text = "Z"
 
 [node name="TextureRect" parent="Consumable_1" instance=ExtResource("4_s4a2c")]
@@ -175,6 +182,7 @@ script = ExtResource("6_2bpo0")
 
 [node name="Label" type="Label" parent="Consumable_2"]
 layout_mode = 2
+theme = ExtResource("5_l0kq7")
 text = "X
 "
 
@@ -192,6 +200,7 @@ offset_right = -102.0
 offset_bottom = 320.0
 grow_horizontal = 0
 scale = Vector2(3, 3.48)
+theme = ExtResource("5_l0kq7")
 script = ExtResource("7_gf436")
 
 [node name="Label" type="Label" parent="Consumable_3"]
@@ -255,6 +264,7 @@ layout_mode = 2
 
 [node name="TotalCoins" type="Label" parent="Coins/HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("5_l0kq7")
 text = "Total Coins: 0"
 label_settings = SubResource("LabelSettings_a6r1j")
 

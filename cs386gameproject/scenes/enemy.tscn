@@ -1,8 +1,8 @@
 [gd_scene load_steps=26 format=3 uid="uid://d1he61wxuea23"]
 
-[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_hfuff"]
+[ext_resource type="Script" uid="uid://bbphrsjnh0jfa" path="res://scripts/enemy.gd" id="1_hfuff"]
 [ext_resource type="Texture2D" uid="uid://sjiaenrl1wqh" path="res://assets/16x16 Magical Forest Asset Pack/Characters/GoblinCharacter-Idle.png" id="2_wqalq"]
-[ext_resource type="Script" path="res://scripts/EnemyHealthBar.gd" id="3_hi8vk"]
+[ext_resource type="Script" uid="uid://cvpulugwifdcc" path="res://scripts/EnemyHealthBar.gd" id="3_hi8vk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bstlm"]
 radius = 7.0

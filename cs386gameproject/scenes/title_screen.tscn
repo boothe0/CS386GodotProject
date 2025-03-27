@@ -1,13 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://dcjvuym8la7c7"]
 
-[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_16h5r"]
+[ext_resource type="Script" uid="uid://csbwiniipu1if" path="res://scripts/title_screen.gd" id="1_16h5r"]
 [ext_resource type="Theme" uid="uid://bkiujxnjn0a0q" path="res://assets/UI_Elements/TitleScreenTheme.tres" id="1_jy7pw"]
-[ext_resource type="Shader" path="res://assets/UI_Elements/tiny_rougelite.gdshader" id="3_nic8t"]
+[ext_resource type="Shader" uid="uid://6vsdoxx3udgv" path="res://assets/UI_Elements/tiny_rougelite.gdshader" id="3_nic8t"]
 [ext_resource type="Texture2D" uid="uid://cghfgyplmly4j" path="res://assets/UI_Elements/Title_Screen.png" id="4_txlpa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xcxaj"]
 shader = ExtResource("3_nic8t")
-shader_parameter/height = 20.0
+shader_parameter/height = 8.0
 shader_parameter/speed = 5.0
 
 [node name="Menu" type="CanvasLayer"]
@@ -46,6 +46,7 @@ offset_right = 176.0
 offset_bottom = -91.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 60
 text = "Tiny Rougelite"
 horizontal_alignment = 1
 vertical_alignment = 1
