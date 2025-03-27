@@ -18,9 +18,13 @@ Print Screen: Displays implemented feature.
 
 ## Tests
 - Test framework 
+    - GUT (Godot Unit Tests)
 - Link to Github folder for automated unit tests
+    - 
 - An example of a test case. Include github link to class being tested and the test.
+    - 
 - Screenshot showing execution of all automated tests
+
 
 ## Technology
 - List technology used example; Godot, Art software, etc
