@@ -28,6 +28,7 @@ Print Screen: Displays implemented feature.
 - Screenshot showing execution of all automated tests
 
 ![Test Result](https://i.imgur.com/MWdkiGb.png)
+
 The result shows that we have a bug with player health going above max if taking negative damage
 
 
