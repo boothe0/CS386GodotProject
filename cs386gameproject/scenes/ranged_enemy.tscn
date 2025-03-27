@@ -1,8 +1,8 @@
 [gd_scene load_steps=26 format=3 uid="uid://6t63tf6kalgv"]
 
 [ext_resource type="Texture2D" uid="uid://kcdaak08dnqj" path="res://assets/16x16 Magical Forest Asset Pack/Characters/Red DefaultCharacter-Idle.png" id="1_ckao4"]
-[ext_resource type="Script" path="res://scripts/ranged_enemy.gd" id="1_w6nvk"]
-[ext_resource type="Script" path="res://scripts/ranged_enemy_hb.gd" id="3_7ycfa"]
+[ext_resource type="Script" uid="uid://dwtupihu4aa7i" path="res://scripts/ranged_enemy.gd" id="1_w6nvk"]
+[ext_resource type="Script" uid="uid://b6eh588b640ag" path="res://scripts/ranged_enemy_hb.gd" id="3_7ycfa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8g37f"]
 radius = 7.0

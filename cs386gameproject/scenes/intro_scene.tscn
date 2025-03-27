@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6jcadqr57vvm"]
+[gd_scene load_steps=4 format=3 uid="uid://c6jcadqr57vvm"]
 
 [ext_resource type="Theme" uid="uid://bkiujxnjn0a0q" path="res://assets/UI_Elements/TitleScreenTheme.tres" id="1_5krm1"]
-[ext_resource type="Script" path="res://scripts/intro_scene.gd" id="1_xoymr"]
+[ext_resource type="Script" uid="uid://d3u1tmja4c53j" path="res://scripts/intro_scene.gd" id="1_xoymr"]
 [ext_resource type="Texture2D" uid="uid://chyal08aw8jp5" path="res://assets/UI_Elements/Intro_Screen.png" id="4_iqai3"]
 
 [node name="Intro" type="CanvasLayer"]
