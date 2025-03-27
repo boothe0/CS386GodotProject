@@ -12,7 +12,7 @@ config_version=5
 
 config/name="CS386GameProject"
 run/main_scene="res://scenes/title_screen.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -23,6 +23,10 @@ PlayerVariables="*res://scripts/upgrades/player_variables.gd"
 [dotnet]
 
 project/assembly_name="CS386GameProject"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
 [input]
 
