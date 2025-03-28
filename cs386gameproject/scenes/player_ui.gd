@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var interactable = get_node("res://scenes/interactables/interactable.tscn")
-
+# array of items to search
 @onready var display_items = [
 	$"../Display1",
 	$"../Display2",
@@ -39,7 +39,7 @@ func _on_buy_item_pressed(item_name: String, price: int, shop_spot: int, consuma
 	update_label()
 	print(PlayerVariables.number_consumables_left)
 
-func search_display_signal():
+func search_display_texture_signal():
 	for item in display_items:
 		if item and item.in_range:
 			var texture = item.texture
@@ -57,7 +57,7 @@ func buy_ui_consumables():
 	b.scale.x = PlayerVariables.consumable_scale_x
 	b.scale.y = PlayerVariables.consumable_scale_y
 	if PlayerVariables.number_consumables_left == 1:
-		texture = search_display_signal()
+		texture = search_display_texture_signal()
 		b.get_child(0).text = "Z"
 		b.position = PlayerVariables.consumable_1_pos
 		PlayerVariables.consumables[0]["position"] = b.position
@@ -66,7 +66,7 @@ func buy_ui_consumables():
 		texture_rect.texture = load(PlayerVariables.consumables[0]["texture"])
 		print(PlayerVariables.consumables[0]["position"])
 	elif PlayerVariables.number_consumables_left == 2:
-		texture = search_display_signal()
+		texture = search_display_texture_signal()
 		b.get_child(0).text = "X"
 		b.position = PlayerVariables.consumable_2_pos
 		PlayerVariables.consumables[1]["position"] = b.position
@@ -74,7 +74,7 @@ func buy_ui_consumables():
 		PlayerVariables.consumables[1]["texture"] = texture
 		texture_rect.texture = load(PlayerVariables.consumables[1]["texture"])
 	else:
-		texture = search_display_signal()
+		texture = search_display_texture_signal()
 		b.get_child(0).text = "C"
 		b.position = PlayerVariables.consumable_3_pos
 		PlayerVariables.consumables[2]["position"] = b.position
@@ -83,10 +83,24 @@ func buy_ui_consumables():
 		texture_rect.texture = load(PlayerVariables.consumables[2]["texture"])
 	control.add_child(b)
 
+func check_position_reload(b, reload_number):
+	# since the dictionary is checked backwards you need to count from 2-1-0
+	# 2 being the first so it correlates to Z
+	if reload_number == 2:
+		return "Z"
+	elif reload_number == 1:
+		return "X"
+	else:
+		return "C"
+
 func refresh_ui():
+	var items_to_reload_left = PlayerVariables.number_consumables_left
 	for item in PlayerVariables.consumables: 
 		if "position" in item and "texture" in item:
 			var b = consumable_base.instantiate()
+			var label = check_position_reload(b, items_to_reload_left)
+			b.get_child(0).text = label
+			items_to_reload_left -= 1   
 			b.size = PlayerVariables.consumable_size
 			b.scale.x = PlayerVariables.consumable_scale_x
 			b.scale.y = PlayerVariables.consumable_scale_y
@@ -94,4 +108,6 @@ func refresh_ui():
 			var texture_rect = b.get_node("TextureRect")
 			texture_rect.texture = load(item["texture"])
 			control.add_child(b)
+			
+			
 			
