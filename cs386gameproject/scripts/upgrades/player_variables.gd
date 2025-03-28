@@ -24,7 +24,7 @@ extends Node
 		
 	},
 ]
-
+@onready var number_consumables_left : int = 0
 @onready var consumable_scale_x = 3
 @onready var consumable_scale_y = 3.4
 @onready var consumable_size = Vector2(50, 40)
