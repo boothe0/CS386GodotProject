@@ -44,7 +44,35 @@ Due to our project being developed in Godot we will not have a live version.
 ## Readme File
 
 ## UX Design
-Approach to UX design with screenshots.
+We approched UX in the following ways.
+
+1. The controls needed to be quick and simple to learn for any player to be able to jump in and quickly finish the game as intended. Since the target audience are
+busy people with little time they are less likely to be willing to learn many keybinds so we kept it simple. Many of the controls are hinted at within the user interface.
+- For example the dodge button is space bar signaled in the stamina bar in the upper right. 
+
+![Space-Bar Hint](https://imgur.com/a/Ew1iv3y)
+
+2. Continuing with the User Interface it needs to be sufficient enough to let the player know what to do but not overwhelming to the point of breaking immersion. For solving this issue
+we decided to have a slot system on the right side that acts as the player inventory. Instead of the user going through multiple menus they can take a quick glance and know what they have.
+- Here is the inventory system with the colors of purple and black as the backdrop.
+
+![Inventory System](https://imgur.com/a/MVD5ovK)
+
+3. The shop scene has labels that pop-up as the player gets close to the item posts that show all nessecary information such as how much the item costs, the effect and type of item it is. There is again no extra menus
+that the user can get caught up in. This is a constant theme throughout the UX design - keeping the player engaged in the world. This concept is taken from games such as Metro Exodus where everything from the map
+to the weapons are within the world and not a dedicated menu. 
+- Here is an example of the label pop-up functionality:
+
+![Label Pop-Up](https://imgur.com/a/piMoApo)
+
+4. There also needs to be a constant theme throughout the game to distinguish it from being an "asset flip". The color scheme that was choosen is purple, white and black with hints of gold throughout. We settled 
+on a story surrounding greek mythology which is common enough that the player would be able to understand references to monsters such as Cerberus or the underworld. Having a theme provides a clear direction and goal
+for the player as the main character battles through the underworld to get to his wife. Having an established story and game design centered around this, furthers the interest of the player in the game. 
+- Screens such as the death, and title screen have references to greek culture.
+
+![Title Screen](https://imgur.com/a/b8LYpC2)
+
+![Death Screen](https://imgur.com/a/6qYQ0Pm)
 
 ## Lessons Learned
 What was learned during first release.
