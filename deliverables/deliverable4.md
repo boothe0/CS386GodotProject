@@ -18,8 +18,8 @@ Print Screen: Displays implemented feature.
 
 - Requirement: As a player I want to know how many coins is needed to buy a certain
 item so I know whether to save or buy that round.
-- Issue: #43 ![Link to issue 43](https://github.com/boothe0/CS386GodotProject/issues/43)
-- Pull Request: #122 ![Link to PR number 122](https://github.com/boothe0/CS386GodotProject/pull/122)
+- Issue: #43 [Link to issue 43](https://github.com/boothe0/CS386GodotProject/issues/43)
+- Pull Request: #122 [Link to PR number 122](https://github.com/boothe0/CS386GodotProject/pull/122)
 - Implemented by: Elizabeth Booth
 - Approved by: Asher Romanenghi
 - Print Screen: The coins label in the top left carrying over to the shop and items on the table. It has 
