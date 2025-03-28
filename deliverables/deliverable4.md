@@ -1,10 +1,9 @@
 # Deliverable 4
 
 ## Introduction
-Paragraph
-- Value proposition
-- Main feature descriptions
-- After paragraph add link to the project.
+Tiny Roguelite is a roguelite game that allows busy fans of the genre to play their favorite genre without requiring a large time commitment, providing a short-form game with all the features of traditional games in the same genre. This game allows players to play through a run in under twenty minutes while still containing an engaging story and multiple rounds of combat. The game's combat system enables players to attack enemies with ranged and melee attacks, as well as keeping track of both the player's and the enemies' health and stamina. The enemies will move to attack a defense objective in the center of the game arena which the player must defend, adding difficulty to the game. Moreover, at the end of each round, players can use the coins they obtain from defeating enemies to purchase upgrades and consumables in the game's shop so that they can use these items in future rounds to attack enemies more effectively.
+
+Project Link: [https://github.com/boothe0/CS386GodotProject](https://github.com/boothe0/CS386GodotProject)
 
 ## Requirements (The most points)
 Base template for requirements
