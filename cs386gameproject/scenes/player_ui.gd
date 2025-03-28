@@ -26,18 +26,19 @@ var round = PlayerVariables.rounds
 @onready var control: Control = $Ability1/Control
 func _ready() -> void:
 	Emitter.buy_item_pressed.connect(_on_buy_item_pressed)
+	Emitter.consumable_1.connect(decrement_num_consumables)
 	update_label()
 	if round >= 1:
 		refresh_ui()
+func decrement_num_consumables(num_consumabless):
+	number_consumables_left -= 1
 
 func update_label():
 	total_coins.text = "Total Coins: " + str(PlayerVariables.coins)
 func _on_buy_item_pressed(item_name: String, price: int, shop_spot: int, consumable: bool):
-	PlayerVariables.number_consumables += 1
 	PlayerVariables.number_consumables_left += 1
 	buy_ui_consumables()
 	update_label()
-	print(PlayerVariables.number_consumables_left)
 
 func search_display_texture_signal():
 	for item in display_items:
@@ -56,7 +57,7 @@ func buy_ui_consumables():
 	b.size = PlayerVariables.consumable_size
 	b.scale.x = PlayerVariables.consumable_scale_x
 	b.scale.y = PlayerVariables.consumable_scale_y
-	if PlayerVariables.number_consumables_left == 1:
+	if PlayerVariables.number_consumables == 0:
 		texture = search_display_texture_signal()
 		b.get_child(0).text = "Z"
 		b.position = PlayerVariables.consumable_1_pos
@@ -65,7 +66,8 @@ func buy_ui_consumables():
 		PlayerVariables.consumables[0]["texture"] = texture
 		texture_rect.texture = load(PlayerVariables.consumables[0]["texture"])
 		print(PlayerVariables.consumables[0]["position"])
-	elif PlayerVariables.number_consumables_left == 2:
+
+	elif PlayerVariables.number_consumables == 1:
 		texture = search_display_texture_signal()
 		b.get_child(0).text = "X"
 		b.position = PlayerVariables.consumable_2_pos
@@ -81,20 +83,22 @@ func buy_ui_consumables():
 		PlayerVariables.consumables[2]["script"] = script_object
 		PlayerVariables.consumables[2]["texture"] = texture
 		texture_rect.texture = load(PlayerVariables.consumables[2]["texture"])
+	PlayerVariables.number_consumables += 1
 	control.add_child(b)
 
 func check_position_reload(b, reload_number):
 	# since the dictionary is checked backwards you need to count from 2-1-0
 	# 2 being the first so it correlates to Z
-	if reload_number == 2:
+	print(reload_number)
+	if reload_number == 1:
 		return "Z"
-	elif reload_number == 1:
+	elif reload_number == 2:
 		return "X"
 	else:
 		return "C"
 
 func refresh_ui():
-	var items_to_reload_left = PlayerVariables.number_consumables_left
+	var items_to_reload_left = PlayerVariables.number_consumables
 	for item in PlayerVariables.consumables: 
 		if "position" in item and "texture" in item:
 			var b = consumable_base.instantiate()
