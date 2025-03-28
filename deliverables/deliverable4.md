@@ -26,6 +26,15 @@ been refined over time.
 
 ![Image of implementation](https://i.imgur.com/NDVecax.png) 
 
+- Requirement: As a player, I want to be able to play through a short tutorial of the game so I know how the game controls work.
+- Issue: #103 [Link to issue 103](https://github.com/boothe0/CS386GodotProject/issues/103)
+- Pull Request: #128 [Link to PR number 128](https://github.com/boothe0/CS386GodotProject/pull/128)
+- Implemented by: Camelia Mosor
+- Approved by: Elizabeth Booth
+- Print Screen: This screen displays the tutorial as it loops through various instructions. The player can practice how to use the controls by pressing on each key, which will cause the player sprite to respond accordingly.
+
+![Image of implementation](https://i.imgur.com/i41PKd4.png) 
+
 ## Tests
 - Test framework 
     - GUT (Godot Unit Tests)
