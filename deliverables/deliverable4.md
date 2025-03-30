@@ -86,7 +86,11 @@ The result shows that we have a bug with player health going above max if taking
   
 - Godot: Godot is an open-source game engine for 2D and 3D game development. We chose to use Godot for it's friendly user interface, open-source factor, and handling of merge conflicts.
   
-- Procreate: Procreate is a popular art software that can handle pixel art, and animation. It is user friendly, and intuitive. Members have used it as their main software for digital art, so they are already familar with it's interface, tools, and capabilities. 
+- Procreate: Procreate is a popular art software that can handle pixel art, and animation. It is user friendly, and intuitive. Members have used it as their main software for digital art, so they are already familar with it's interface, tools, and capabilities.
+
+- Krita: Krita is a free, open-source painting software made for digital art and 2d animation. It's affordability, and open source factor made it a good option for our artists to use.
+
+- Aseprite: Aseprite is a software that's main use is for pixel art and animation. Our game uses pixel art, so it is a great option for creating sprite for our game. 
 
 ## Deployment
 Due to our project being developed in Godot we will not have a live version.
