@@ -41,6 +41,7 @@ been refined over time.
 - Implemented by: Asher Romanenghi
 - Approved by: Elizabeth Booth
 - Print Sceen: This displays a purchasable upgrade available in the shop.
+
 ![Image of implementation](https://i.imgur.com/FWRLyCT.png)
 
 - Requirement: As a player, I want to see how much damage my attacks are doing so that I can plan how to attack enemies.
