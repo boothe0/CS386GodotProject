@@ -17,11 +17,11 @@ const RARITY_ODDS = {
 @onready var buy_hint = $BuyHint
 @onready var item_type_box = $VBoxContainer/Type
 @onready var description_box = $VBoxContainer/Description
-var texture
-var nameConsumable
-var price
+var texture = ""
+var nameConsumable = ""
+var price = 0.00
 var consumable
-var description
+var description = "as"
 var item_script
 const SHOP_SPOT = 0
 
