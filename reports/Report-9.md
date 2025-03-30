@@ -18,6 +18,8 @@ Project repo: https://github.com/boothe0/CS386GodotProject
 
 Elizabeth:
 - Added a rough inventory-buy system that connects the user's bought items to their inventory to prepare for use.
+Asher:
+- Added testing framework and tests for player health manipulation.
 
 ## 2. Retrospective
 
@@ -33,5 +35,6 @@ coding team should choose some part of the game to work on together per week to 
 Elizabeth:
 - Add a buying animation and sound. Further refine the inventory-buy system that is currently implemented.
 
-
+Asher:
+- Add 2 more upgrades.
 
