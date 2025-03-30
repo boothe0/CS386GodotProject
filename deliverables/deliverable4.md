@@ -93,7 +93,7 @@ The result shows that we have a bug with player health going above max if taking
 - Aseprite: Aseprite is a software that's main use is for pixel art and animation. Our game uses pixel art, so it is a great option for creating sprite for our game. 
 
 ## Deployment
-Due to our project being developed in Godot we will not have a live version.
+Our game is being developed on Godot and is currently being stored locally. Due to this we will not be deploying the system nor have a live version.
 
 ## Licensing
 
