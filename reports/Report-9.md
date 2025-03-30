@@ -25,9 +25,6 @@ Asher:
 Camelia:
 - Designed sprite for ranged enemies
 
-Ethan:
-- Worked on ranged enemy behavior and improving combat mechanics 
-
 ## 2. Retrospective
 
 1. Appreciations: All the work the artists have done so far in making the game assets look unique and refined.
@@ -47,6 +44,3 @@ Asher:
 
 Camelia:
 - Design sprite for player character's wife
-
-Ethan:
-- Code clean up part 2, improving upon combat mechanics (maybe adding another new enemy)
