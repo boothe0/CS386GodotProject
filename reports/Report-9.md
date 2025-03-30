@@ -25,6 +25,8 @@ Asher:
 Camelia:
 - Designed sprite for ranged enemies
 
+Gordon:
+- Designed sprite for skeleton/ghoul
 ## 2. Retrospective
 
 1. Appreciations: All the work the artists have done so far in making the game assets look unique and refined.
@@ -44,3 +46,6 @@ Asher:
 
 Camelia:
 - Design sprite for player character's wife
+
+Gordon:
+- More Enemy Sprites
