@@ -31,6 +31,9 @@ Gordon:
 Ethan:
 - Worked on ranged enemy behaviors and improvied on the combat mechanics
 
+Maya:
+- Designed sprite for consumable Nike's Laurel, and upgrades Blade of Hephaestus and Blood of Ares.
+
 ## 2. Retrospective
 
 1. Appreciations: All the work the artists have done so far in making the game assets look unique and refined.
@@ -56,3 +59,6 @@ Gordon:
 
 Ethan:
 - Continue working on improving combat (maybe implementing a new enemy)
+
+Maya:
+- Continue creating consumables and upgrades (aiming for 3)
