@@ -8,7 +8,7 @@ Date: 3/30/25
 
 Location: NAU
 
-Present participants: Ethan M (Presenter), Chandler S (Quality Assurance), Asher R (Manager), Camelia M (Presenter), Elizabeth B (Reporter)
+Present participants: Ethan M (Presenter), Chandler S (Quality Assurance), Asher R (Manager), Camelia M (Presenter), Elizabeth B (Reporter), Maya H, Gordon W
 
 Missing participants: None
 
@@ -18,12 +18,16 @@ Project repo: https://github.com/boothe0/CS386GodotProject
 
 Elizabeth:
 - Added a rough inventory-buy system that connects the user's bought items to their inventory to prepare for use.
+
 Asher:
 - Added testing framework and tests for player health manipulation.
 
+Camelia:
+- Designed sprite for ranged enemies
+
 ## 2. Retrospective
 
-1. Aprreciations: All the work the artists have done so far in making the game assets look unique and refined.
+1. Appreciations: All the work the artists have done so far in making the game assets look unique and refined.
 2. Successes: Our team work on the deliverable is good and the styling looks consistant.
 3. Failures: The code team does not have much collaboration going on.
 4. Barriers: We had a hard time meeting up due to various reasons.
@@ -38,3 +42,5 @@ Elizabeth:
 Asher:
 - Add 2 more upgrades.
 
+Camelia:
+- Design sprite for player character's wife
