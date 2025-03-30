@@ -35,6 +35,33 @@ been refined over time.
 
 ![Image of implementation](https://i.imgur.com/i41PKd4.png) 
 
+- Requirement: As a player I want to buy upgrades for my ranged attacks to slay more enemies and feel stronger.
+- Issue: #41 [Link to issue 41](https://github.com/boothe0/CS386GodotProject/issues/41)
+- Pull Request: #153 [Link to PR 153](https://github.com/boothe0/CS386GodotProject/pull/153)
+- Implemented by: Asher Romanenghi
+- Approved by: Elizabeth Booth
+- Print Sceen: This displays a purchasable upgrade available in the shop.
+![Image of implementation](https://i.imgur.com/FWRLyCT.png)
+
+- Requirement: As a player, I want to see how much damage my attacks are doing so that I can plan how to attack enemies.
+- Issue: #45 [Link to issue 45](https://github.com/boothe0/CS386GodotProject/issues/45)
+- Pull Request: #75 [Link to PR 75](https://github.com/boothe0/CS386GodotProject/pull/75)
+- Implemented by: Asher Romanenghi
+- Approved by: Elizabeth Booth
+- Print Screen: A red "1" appears above the player after being attacked by an enemy and taking 1 damage.
+
+![Image of Implementation](https://i.imgur.com/JmQTJXs.png)
+
+- Requirement: As a player, I want to see how much damage my attacks are doing so that I can plan how to attack enemies.
+- Issue: #45 [Link to issue 45](https://github.com/boothe0/CS386GodotProject/issues/45)
+- Pull Request: #75 [Link to PR 75](https://github.com/boothe0/CS386GodotProject/pull/75)
+- Pull Request: #17 [Link to PR 17](https://github.com/boothe0/CS386GodotProject/pull/17)
+- Implemented by: Asher Romanenghi
+- Approved by: Elizabeth Booth
+- Print Screen: A red "2" and diminished health bar appears above an enemy after being attacked by the player for 2 damage.
+
+![Image of Implementation](https://i.imgur.com/HyxLC09.png)
+
 ## Tests
 - Test framework 
     - GUT (Godot Unit Tests)
@@ -48,8 +75,7 @@ been refined over time.
 
 ![Test Result](https://i.imgur.com/MWdkiGb.png)
 
-The result shows that we have a bug with player health going above max if taking negative damage
-
+The result shows that we have a bug with player health going above max if taking negative damage.
 
 
 ## Technology
