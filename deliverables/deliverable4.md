@@ -62,7 +62,7 @@ The result shows that we have a bug with player health going above max if taking
 - Procreate: Procreate is a popular art software that can handle pixel art, and animation. It is user friendly, and intuitive. Members have used it as their main software for digital art, so they are already familar with it's interface, tools, and capabilities. 
 
 ## Deployment
-Due to our project being developed in Godot we will not have a live version.
+Our game is being developed on Godot and is currently being stored locally. Due to this we will not be deploying the system nor have a live version.
 
 ## Licensing
 
