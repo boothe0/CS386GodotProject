@@ -1,11 +1,17 @@
 # Report for Week # 9
 
 Tiny Rougelite
+
 Group: 6
+
 Date: 3/30/25
+
 Location: NAU
+
 Present participants: Ethan M (Presenter), Chandler S (Quality Assurance), Asher R (Manager), Camelia M (Presenter), Elizabeth B (Reporter)
+
 Missing participants: None
+
 Project repo: https://github.com/boothe0/CS386GodotProject
 
 ## 1. Activity Summary
