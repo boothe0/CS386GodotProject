@@ -27,6 +27,10 @@ Camelia:
 
 Gordon:
 - Designed sprite for skeleton/ghoul
+
+Ethan:
+- Worked on ranged enemy behaviors and improvied on the combat mechanics
+
 ## 2. Retrospective
 
 1. Appreciations: All the work the artists have done so far in making the game assets look unique and refined.
@@ -49,3 +53,6 @@ Camelia:
 
 Gordon:
 - More Enemy Sprites
+
+Ethan:
+- Continue working on improving combat (maybe implementing a new enemy)
