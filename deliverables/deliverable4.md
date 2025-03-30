@@ -53,7 +53,13 @@ The result shows that we have a bug with player health going above max if taking
 
 
 ## Technology
-- List technology used example; Godot, Art software, etc
+- Github: Github is a Web platform for Git. It is a version control system that that handles storing, sharing, and managing code between a team. Github is used widely among programmers and software engineers, both in the educational and professional setting.
+
+- GUT: GUT, or Godot Unit Tests, is a test framework that is specifically for GDScript code.  
+  
+- Godot: Godot is an open-source game engine for 2D and 3D game development. We chose to use Godot for it's friendly user interface, open-source factor, and handling of merge conflicts.
+  
+- Procreate: Procreate is a popular art software that can handle pixel art, and animation. It is user friendly, and intuitive. Members have used it as their main software for digital art, so they are already familar with it's interface, tools, and capabilities. 
 
 ## Deployment
 Due to our project being developed in Godot we will not have a live version.
