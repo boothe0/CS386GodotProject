@@ -25,6 +25,9 @@ Asher:
 Camelia:
 - Designed sprite for ranged enemies
 
+Gordon:
+- Designed sprite for skeleton/ghoul
+
 Ethan:
 - Worked on ranged enemy behaviors and improvied on the combat mechanics
 
@@ -47,6 +50,9 @@ Asher:
 
 Camelia:
 - Design sprite for player character's wife
+
+Gordon:
+- More Enemy Sprites
 
 Ethan:
 - Continue working on improving combat (maybe implementing a new enemy)
