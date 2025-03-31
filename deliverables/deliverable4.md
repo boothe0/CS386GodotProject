@@ -132,8 +132,10 @@ The result shows that we have a bug with player health going above max if taking
 Our game is being developed on Godot and is currently being stored locally. Due to this we will not be deploying the system nor have a live version.
 
 ## Licensing
+We are using the MIT License, our license can be found [here](https://github.com/boothe0/CS386GodotProject/blob/main/LICENSING.md).
 
 ## Readme File
+Here is the [README file](https://github.com/boothe0/CS386GodotProject/blob/main/README.md).
 
 ## UX Design
 We approched UX in the following ways.
@@ -198,6 +200,5 @@ Ethan(14%): Contributed a lot to code base and good communication.
 
 Maya(14%): Despite being a new member already got started on artwork and completed a few sprites.
 
-Chandler(14%): Despite not contributing much the communication was good as to why. His computer was not working for a long time but he still 
-attended meetings and contributed ideas.
+Chandler(14%): Wrote out README.md and the accompanying documents.
 
