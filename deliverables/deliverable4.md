@@ -63,15 +63,12 @@ been refined over time.
 
 ![Image of Implementation](https://i.imgur.com/HyxLC09.png)
 
-- Requirement: As a player I want to know how many coins is needed to buy a certain
-item so I know whether to save or buy that round.
+- Requirement: As an artist, I want the game to have a set of artistically pleasing items and consumables that feel relevant to the story, so that I feel immersed in the world of the game.
 - Issue: #175 [Link to issue 175](https://github.com/boothe0/CS386GodotProject/issues/175)
 - Pull Request: #184 [Link to PR number 184](https://github.com/boothe0/CS386GodotProject/pull/184)
 - Implemented by: Maya Harvey
 - Approved by: Elizabeth Booth
-- Print Screen: Upgrades and Consumables have not yet been implemented in the game, but can be found in the assets folder.
-
-  ![Folder for upgrades and Consumables](https://github.com/boothe0/CS386GodotProject/tree/main/cs386gameproject/assets/items/upgrades)
+- Print Screen: Upgrades and Consumables have not yet been implemented in the game, but can be found in the [folder for Items and Upgrades](https://github.com/boothe0/CS386GodotProject/tree/main/cs386gameproject/assets/items/upgrades)
 
 ## Tests
 - Test framework 
