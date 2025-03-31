@@ -155,3 +155,20 @@ fit within our theme rather than using premade stock assets from online.
 ## Demo
 Link to video demo showing the game so far.
 https://nau.zoom.us/rec/share/zzYQ3APR8nMq0ZLnbTuNnzDdidOWRSCkEEloxrLKCF-t9UYrffZK8-rMCDOECfxP.gAe4_qElW5yxF1iS
+
+## Teamwork
+Asher(14%): Facilitated meetings and refactored/added to existing code base.
+
+Elizabeth(14%): Added to code base and looked over pull requests.
+
+Camelia(14%): Completed screen UI artwork.
+
+Gordon(14%): Also a new member and contributed to main character design.
+
+Ethan(14%): Contributed a lot to code base and good communication.
+
+Maya(14%): Despite being a new member already got started on artwork and completed a few sprites.
+
+Chandler(14%): Despite not contributing much the communication was good as to why. His computer was not working for a long time but he still 
+attended meetings and contributed ideas.
+
