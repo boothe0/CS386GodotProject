@@ -70,6 +70,34 @@ been refined over time.
 - Approved by: Elizabeth Booth
 - Print Screen: Upgrades and Consumables have not yet been implemented in the game, but can be found in the [folder for Items and Upgrades](https://github.com/boothe0/CS386GodotProject/tree/main/cs386gameproject/assets/items/upgrades)
 
+- Requirements: As a player, I want to have coins to collect to give a sense of accomplishment after slaying an enemy.
+- Issue: #70 [Link to issue 70](https://github.com/boothe0/CS386GodotProject/issues/70)
+- Pull Request: #58 [Link to PR number 58](https://github.com/boothe0/CS386GodotProject/pull/58)
+- Implemented by: Ethan Meyer
+- Approved by: Elizabeth Booth
+- Print Screen: Coins that had dropped upon killing an enemy
+
+![Image of Implementation](https://imgur.com/a/R7ixemI)
+
+- Requirements: As a player, I want to have a sword to slay enemies with to get close to the action.
+- Issue: #19 [Link to issue 19](https://github.com/boothe0/CS386GodotProject/issues/19)
+- Pull Request: #18 [Link to PR number 18](https://github.com/boothe0/CS386GodotProject/pull/18)
+- Implemented by: Ethan Meyer
+- Approved by: Elizabeth Booth
+- Print Screen: Coins that had dropped upon killing an enemy
+
+![Image of Implementation](https://imgur.com/vSMFwMc)
+
+- Requirements: As a player, I want to have engaging combat with knockback, projectiles and freeze frames, giving more impact and meaning for every hit.
+- Issue: #19 [Link to issue 186](https://github.com/boothe0/CS386GodotProject/issues/186)
+- Pull Request: #18 [Link to PR number 181](https://github.com/boothe0/CS386GodotProject/pull/181)
+- Implemented by: Ethan Meyer
+- Approved by: Elizabeth Booth
+- Print Screen: Knockback is applied to the enemy when hit, causing seperation between the enemy and player
+
+![Image of Implementation](https://imgur.com/eCr1xHD)
+
+
 ## Tests
 - Test framework 
     - GUT (Godot Unit Tests)
