@@ -77,7 +77,7 @@ been refined over time.
 - Approved by: Elizabeth Booth
 - Print Screen: Coins that had dropped upon killing an enemy
 
-![Image of Implementation](https://i.imgur.com/a/R7ixemI.png)
+![Image of Implementation](https://i.imgur.com/R7ixemI.png)
 
 - Requirements: As a player, I want to have a sword to slay enemies with to get close to the action.
 - Issue: #19 [Link to issue 19](https://github.com/boothe0/CS386GodotProject/issues/19)
