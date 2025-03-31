@@ -77,7 +77,7 @@ been refined over time.
 - Approved by: Elizabeth Booth
 - Print Screen: Coins that had dropped upon killing an enemy
 
-![Image of Implementation](https://imgur.com/a/R7ixemI)
+![Image of Implementation](https://i.imgur.com/a/R7ixemI.png)
 
 - Requirements: As a player, I want to have a sword to slay enemies with to get close to the action.
 - Issue: #19 [Link to issue 19](https://github.com/boothe0/CS386GodotProject/issues/19)
@@ -86,7 +86,7 @@ been refined over time.
 - Approved by: Elizabeth Booth
 - Print Screen: Coins that had dropped upon killing an enemy
 
-![Image of Implementation](https://imgur.com/vSMFwMc)
+![Image of Implementation](https://i.imgur.com/vSMFwMc.png)
 
 - Requirements: As a player, I want to have engaging combat with knockback, projectiles and freeze frames, giving more impact and meaning for every hit.
 - Issue: #19 [Link to issue 186](https://github.com/boothe0/CS386GodotProject/issues/186)
@@ -95,7 +95,7 @@ been refined over time.
 - Approved by: Elizabeth Booth
 - Print Screen: Knockback is applied to the enemy when hit, causing seperation between the enemy and player
 
-![Image of Implementation](https://imgur.com/eCr1xHD)
+![Image of Implementation](https://i.imgur.com/eCr1xHD.png)
 
 
 ## Tests
