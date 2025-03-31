@@ -38,6 +38,11 @@ signal health_update
 # current target to attack
 var current_target = "center_objective"
 
+# --- Knockback Variables ---
+var is_knocked_back = false
+var knockback_duration = 0.2  # Duration in seconds
+var knockback_timer = 0.0
+
 func _ready() -> void:
 	# Ensure navigation agent is initialized
 	navigation_agent = $NavigationAgent2D if $NavigationAgent2D else null
@@ -55,27 +60,32 @@ func _ready() -> void:
 		current_target = "center_objective"
 
 func _physics_process(delta: float) -> void:
-	# If center objective has been reached, stop moving permanently
+	# If in knockback state, update timer and use current knockback velocity.
+	if is_knocked_back:
+		knockback_timer -= delta
+		if knockback_timer <= 0:
+			is_knocked_back = false
+		move_and_slide()  # Continue moving with current velocity
+		return
+
+	# --- Normal Movement ---
 	if reached_center:
 		velocity = Vector2.ZERO
 		move_and_slide()
 		return
 
-	# Determine the closest target (player or objective)
 	var target = get_closest_target()
 	if target:
 		set_target(target.global_position)
 
 	move_towards_target(delta)
 
-	# If the enemy reaches the center objective, lock them there
 	if center_objective and global_position.distance_to(center_objective.global_position) < STOP_DISTANCE:
 		reached_center = true
 		velocity = Vector2.ZERO
 		current_target = "center_objective"
 		move_and_slide()
 
-	# Play movement animations based on direction
 	if animated_sprite:
 		if direction.x > 0:
 			animated_sprite.play("walk_right")
@@ -91,15 +101,14 @@ func get_closest_target() -> Node2D:
 	if player:
 		var dist_to_player = global_position.distance_to(player.global_position)
 		var dist_to_objective = global_position.distance_to(center_objective.global_position)
-
 		if dist_to_player < dist_to_objective:
 			current_target = "player"
 			return player  # Player is closer, chase them
 		else:
 			current_target = "center_objective"
-			return center_objective  # Objective is closer, move to it
+			return center_objective  # Objective is closer
 	current_target = "center_objective"
-	return center_objective  # No player detected, move to the objective
+	return center_objective  # Default if no player is set
 
 func set_target(target: Vector2):
 	if navigation_agent:
@@ -121,51 +130,44 @@ func move_towards_target(delta):
 	move_and_slide()
 
 func attack():
-	# Continually attack while player in range
+	# Continually attack while player is in range
 	while in_attack_range and player and can_attack:
 		player.take_damage(ATTACK_DAMAGE)
 		can_attack = false
-
 		if get_tree() != null:
 			await get_tree().create_timer(ATTACK_COOLDOWN).timeout
 			can_attack = true 
 
-func take_damage(amount):
-	# Taken damage
+func take_damage(amount, damage_source):
+	if damage_source == "sword":
+		FreezeManager.frameFreeze(0.1, 0.3)
 	health -= amount
 	health_update.emit()
 	if health <= 0:
 		die()
 
 func die():
-	# Handle coin randomization on death
 	var coin_drop = randf()
 	var coin_amount = randi() % 3 + 1
-
-	# Drop coin based on randomization
 	if coin_drop <= GOLD_CHANCE:
 		drop_coin(2, coin_amount)
 	elif coin_drop <= SILVER_CHANCE:
 		drop_coin(1, coin_amount)
 	elif coin_drop <= BRONZE_CHANCE:
 		drop_coin(0, coin_amount)
-
 	queue_free()
 
 func drop_coin(coin_type, coin_amount):
 	var offsets = []
-
-	# Choose coin position based on amount dropped
 	if coin_amount == 1:
-		offsets.append(Vector2(0,0))
+		offsets.append(Vector2(0, 0))
 	elif coin_amount == 2:
-		offsets.append(Vector2(-10,0))
-		offsets.append(Vector2(10,0))
+		offsets.append(Vector2(-10, 0))
+		offsets.append(Vector2(10, 0))
 	elif coin_amount == 3:
-		offsets.append(Vector2(0,-10))
-		offsets.append(Vector2(-10,0))
-		offsets.append(Vector2(10,0))
-
+		offsets.append(Vector2(0, -10))
+		offsets.append(Vector2(-10, 0))
+		offsets.append(Vector2(10, 0))
 	for offset in offsets:
 		var coin = coin_scene.instantiate()
 		coin.position = position + offset
@@ -177,11 +179,11 @@ func drop_coin(coin_type, coin_amount):
 func _on_detection_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		player = body
-		chasing_player = true  # Enemy will now consider the player as a possible target
+		chasing_player = true
 
 func _on_detection_area_body_exited(body: Node2D) -> void:
 	if body == player:
-		player = null  # Remove player reference so it stops being a potential target
+		player = null
 
 func _on_attack_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
@@ -191,3 +193,15 @@ func _on_attack_area_body_entered(body: Node2D) -> void:
 func _on_attack_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		in_attack_range = false
+
+# --- NEW: Knockback Implementation ---
+func apply_knockback(knockback_value: float) -> void:
+	# Calculate knockback direction away from the player, or upward by default.
+	var knockback_direction: Vector2 = Vector2.ZERO
+	if player:
+		knockback_direction = (global_position - player.global_position).normalized()
+	else:
+		knockback_direction = Vector2(0, -1)
+	velocity = knockback_direction * knockback_value
+	is_knocked_back = true
+	knockback_timer = knockback_duration

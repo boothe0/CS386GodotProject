@@ -46,6 +46,11 @@ signal health_update
 # current target to attack ("player" or "center_objective")
 var current_target = "center_objective"
 
+# --- Knockback Variables ---
+var is_knocked_back = false
+var knockback_duration = 0.2  # Duration in seconds
+var knockback_timer = 0.0
+
 func _ready() -> void:
 	# Ensure navigation agent is initialized
 	navigation_agent = $NavigationAgent2D if $NavigationAgent2D else null
@@ -63,7 +68,15 @@ func _ready() -> void:
 		current_target = "center_objective"
 
 func _physics_process(delta: float) -> void:
-	# If center objective has been reached, attack it while remaining stationary
+	# If in knockback state, update timer and use knockback velocity.
+	if is_knocked_back:
+		knockback_timer -= delta
+		if knockback_timer <= 0:
+			is_knocked_back = false
+		move_and_slide()
+		return
+
+	# If center objective has been reached, attack it while remaining stationary.
 	if reached_center:
 		velocity = Vector2.ZERO
 		move_and_slide()
@@ -76,23 +89,23 @@ func _physics_process(delta: float) -> void:
 	if target:
 		if current_target == "player" and in_attack_range and player:
 			var current_distance = global_position.distance_to(player.global_position)
-			# If we're outside the tolerance zone, update the target position
+			# If we're outside the tolerance zone, update the target position.
 			if abs(current_distance - DESIRED_DISTANCE) > DESIRED_TOLERANCE:
 				var desired_pos = player.global_position + (global_position - player.global_position).normalized() * DESIRED_DISTANCE
-				# Update only if the new desired position differs significantly from the current target
+				# Update only if the new desired position differs significantly from the current target.
 				if navigation_agent.target_position.distance_to(desired_pos) > DESIRED_TOLERANCE:
 					set_target(desired_pos)
 			else:
-				# Within tolerance: lock the enemy's position by setting target to its current position.
+				# Within tolerance: lock the enemy's position.
 				set_target(global_position)
 				velocity = Vector2.ZERO
 		else:
-			# For center objective or when player is not in attack range, use normal navigation
+			# For center objective or when player is not in attack range, use normal navigation.
 			set_target(target.global_position)
 
 	move_towards_target(delta)
 
-	# Play movement animations based on direction
+	# Play movement animations based on direction.
 	if animated_sprite:
 		if direction.x > 0:
 			animated_sprite.play("walk_right")
@@ -103,7 +116,7 @@ func _physics_process(delta: float) -> void:
 		elif direction.y < 0:
 			animated_sprite.play("walk_down")
 	
-	# Continuously attack the player if they're the current target and in range
+	# Continuously attack the player if they're the current target and in range.
 	if player and current_target == "player" and in_attack_range and can_attack:
 		attack_target(player)
 
@@ -114,12 +127,12 @@ func get_closest_target() -> Node2D:
 		var dist_to_objective = global_position.distance_to(center_objective.global_position)
 		if dist_to_player < dist_to_objective:
 			current_target = "player"
-			return player  # Player is closer, chase them
+			return player  # Player is closer, chase them.
 		else:
 			current_target = "center_objective"
-			return center_objective  # Objective is closer, move to it
+			return center_objective  # Objective is closer.
 	current_target = "center_objective"
-	return center_objective  # No player detected, move to the objective
+	return center_objective  # No player detected; default to objective.
 
 func set_target(target: Vector2):
 	if navigation_agent:
@@ -141,7 +154,7 @@ func move_towards_target(delta):
 	move_and_slide()
 
 func attack_target(target: Node2D) -> void:
-	# Attack the given target if cooldown allows
+	# Attack the given target if cooldown allows.
 	if not target or not can_attack:
 		return
 	var projectile = enemy_projectile.instantiate()
@@ -152,7 +165,9 @@ func attack_target(target: Node2D) -> void:
 	await get_tree().create_timer(ATTACK_COOLDOWN).timeout
 	can_attack = true
 
-func take_damage(amount):
+func take_damage(amount, damage_source):
+	if damage_source == "sword":
+		FreezeManager.frameFreeze(0.1, 0.3)
 	health -= amount
 	health_update.emit()
 	if health <= 0:
@@ -205,3 +220,15 @@ func _on_attack_area_body_entered(body: Node2D) -> void:
 func _on_attack_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		in_attack_range = false
+
+# --- NEW: Knockback Implementation ---
+func apply_knockback(knockback_value: float) -> void:
+	# Calculate the knockback direction away from the player, or default upward.
+	var knockback_direction: Vector2 = Vector2.ZERO
+	if player:
+		knockback_direction = (global_position - player.global_position).normalized()
+	else:
+		knockback_direction = Vector2(0, -1)
+	velocity = knockback_direction * knockback_value
+	is_knocked_back = true
+	knockback_timer = knockback_duration
