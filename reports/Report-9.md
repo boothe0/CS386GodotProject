@@ -34,6 +34,9 @@ Ethan:
 Maya:
 - Designed sprite for consumable Nike's Laurel, and upgrades Blade of Hephaestus and Blood of Ares.
 
+Chandler: 
+- Wrote and designed the README and associated documents
+
 ## 2. Retrospective
 
 1. Appreciations: All the work the artists have done so far in making the game assets look unique and refined.
@@ -62,3 +65,6 @@ Ethan:
 
 Maya:
 - Continue creating consumables and upgrades (aiming for 3)
+
+Chandler:
+- Work on attack effects to make them more visible
