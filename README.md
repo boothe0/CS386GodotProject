@@ -86,4 +86,4 @@ See the list of [contributors](https://github.com/boothe0/CS386GodotProject/grap
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSING.md]([LICENSE.md](https://github.com/boothe0/CS386GodotProject/blob/main/LICENSING.md)) file for details
+This project is licensed under the MIT License - see the [LICENSING.md](https://github.com/boothe0/CS386GodotProject/blob/main/LICENSING.md) file for details
