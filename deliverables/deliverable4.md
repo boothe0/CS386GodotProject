@@ -5,7 +5,7 @@ Tiny Roguelite is a roguelite game that allows busy fans of the genre to play th
 
 Project Link: [https://github.com/boothe0/CS386GodotProject](https://github.com/boothe0/CS386GodotProject)
 
-## Requirements (The most points)
+## Requirements
 Base template for requirements
 
 Requirement: User story
@@ -138,7 +138,19 @@ for the player as the main character battles through the underworld to get to hi
 ![Death Screen](https://i.imgur.com/WZThyJs.png)
 
 ## Lessons Learned
-What was learned during first release.
+During first release there were several unforseen issues that both the coding team and art team faced. However, despite this we have a working
+product where all features that are implemented work well with little bugs or issues.
+1. Towards the beginning of development there was a lack of teamwork and communication. This issue was solved by having a consistant
+meeting time and pace per week of work on the game. We split into two groups; the art and code team rather than have a meeting with 
+everyone together we found it to be more productive to have separate meetings. One meeting per week will be the art and code teams meeting separately
+to discuss any issues or clarification around work for that week. The other will bring us all back to talk about what we achieved and write the report.
+2. For some of the members in the group this was the first large project we have contributed to espeically using github. This took some time to get 
+used to in learning git commands and ensuring branches were merged correctly. As the project grew in size it became more important to adopt good style
+and ensure the code was easy to read. To help with this we commented on lines that are the most important or harder to decipher what is going on. There
+is consistant naming conventions between scripts as well so we can tell what variables, functions and other structures are used for.
+3. The art was coming along well, however it takes a long time to do quality artwork and so it took a while to get going with a unique main character as well
+as patterns for the title and death screens. The addition of two members to our team helps this effort greatly as we are now able to add more assets that 
+fit within our theme rather than using premade stock assets from online. 
 
 ## Demo
 Link to video demo showing the game so far.
