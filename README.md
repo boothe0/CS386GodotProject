@@ -74,7 +74,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Contributing
 
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/boothe0/CS386GodotProject/blob/README/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -86,4 +86,4 @@ See the list of [contributors](https://github.com/boothe0/CS386GodotProject/grap
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSING.md]([LICENSE.md](https://github.com/boothe0/CS386GodotProject/blob/main/LICENSING.md)) file for details
