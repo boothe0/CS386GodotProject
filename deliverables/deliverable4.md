@@ -133,11 +133,11 @@ Our game is being developed on Godot and is currently being stored locally. Due 
 
 ## Licensing
 We are using the MIT License, here is the link:
-- https://github.com/boothe0/CS386GodotProject/blob/main/LICENSING.md).
+- https://github.com/boothe0/CS386GodotProject/blob/main/LICENSING.md.
 
 ## Readme File
 Link to the README:
-- https://github.com/boothe0/CS386GodotProject/blob/main/README.md).
+- https://github.com/boothe0/CS386GodotProject/blob/main/README.md.
 
 ## UX Design
 We approched UX in the following ways.
