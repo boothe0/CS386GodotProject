@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Emitter="*res://scripts/emitter.gd"
 PlayerVariables="*res://scripts/upgrades/player_variables.gd"
+FreezeManager="*res://scripts/freeze_manager.gd"
 
 [dotnet]
 

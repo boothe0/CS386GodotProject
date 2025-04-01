@@ -7,12 +7,12 @@ var attack_angle = 45
 var attack_speed = 0.2
 var current_direction = Vector2.DOWN
 var hit_enemies = []
+var damage_source = "sword"
 
 @export var BASE_SIZE = scale
 @onready var sprite = $Sprite2D
 @onready var hitbox = $Area2D 
 @export var damage_modifier: float = 1.0
-
 
 func _ready() -> void:
 	hitbox.monitorable = false
@@ -20,7 +20,6 @@ func _ready() -> void:
 
 func set_sword_direction(direction: Vector2):
 	current_direction = direction
-
 	if direction == Vector2.RIGHT:
 		position = Vector2(1, 5)
 		rotation_degrees = -90
@@ -39,14 +38,12 @@ func set_sword_direction(direction: Vector2):
 		z_index = 6
 
 func attack():
-	# prevents swining more than once at once
+	# Prevent swinging if already attacking.
 	if attacking:
 		return
 
-	# start detection for enemies within sword collisionbox
 	attacking = true
 	hit_enemies.clear()
-
 	hitbox.monitorable = true
 	hitbox.monitoring = true
 
@@ -54,10 +51,9 @@ func attack():
 	tween.set_trans(Tween.TRANS_LINEAR)
 	tween.set_ease(Tween.EASE_IN_OUT)
 
-	# Determine the correct swing angles
+	# Determine the correct swing angles.
 	var start_angle = rotation_degrees
 	var end_angle = 0
-
 	if current_direction == Vector2.RIGHT:
 		end_angle = 60
 	elif current_direction == Vector2.LEFT:
@@ -67,27 +63,29 @@ func attack():
 	elif current_direction == Vector2.UP:
 		end_angle = -90
 
-	# Swing forward until finished
+	# Swing forward.
 	tween.tween_property(self, "rotation_degrees", end_angle, attack_speed)
 	await tween.finished
 
-	# Swing back until finished
+	# Swing back.
 	tween = create_tween()
 	tween.tween_property(self, "rotation_degrees", start_angle, attack_speed)
 	await tween.finished
 
-	# hide sword when no longer attacking
+	# Reset state.
 	attacking = false
 	hide()
-
 	hitbox.monitorable = false
 	hitbox.monitoring = false
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	# allow sword to hit enemies
+	# If the collided body is an enemy and hasn't been hit yet.
 	if body.is_in_group("enemies") and body not in hit_enemies:
 		hit_enemies.append(body)
-		body.take_damage(BASE_DAMAGE * damage_modifier)
+		body.take_damage(BASE_DAMAGE * damage_modifier, damage_source)
+		# Call the enemy's knockback function if available.
+		if body.has_method("apply_knockback"):
+			body.apply_knockback(150)  # Adjust the value as needed.
 
 func update_size(new_scale: int):
 	scale = Vector2(new_scale, new_scale)
