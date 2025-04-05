@@ -1,6 +1,9 @@
 # Deliverable 5: Design
 
 ## Description
+Our game is a 2D, top-down roguelike inspired by ancient Greek themes, where the player takes on the role of a protector tasked with defending a central objective. The core gameplay is round-based combat, featuring both ranged and melee enemies who seek to destroy the center or eliminate the player. The player must manage three key resources—health, mana, and stamina—while utilizing dodge mechanics, melee attacks, and projectiles to survive. After each round, players enter a shop phase where they can spend coins earned from fallen enemies to purchase upgrades, abilities, and potions. The player also manages a limited inventory with three slots to equip and use these items during combat.
+
+The system behind the game is structured into three main architectural layers: the visual, logic, and data layers. The visual layer handles everything the player sees, including the UI and scene transitions. The logic layer governs how the game reacts to user input and manages core systems like combat mechanics, upgrades, and scene flow. This layer is further split into general logic and visual logic, which helps separate game-wide behavior (e.g., pausing, death) from object-specific visuals (e.g., sprite appearance, animations). Finally, the data layer handles persistent game data like player stats and upgrade states, which the logic layer pulls from as needed. This layered architecture supports clean separation of concerns, maintainability, and scalability as the game evolves.
 
 ## Architecture
 ![Architecture UML Diagram](https://i.imgur.com/QcrGifk.png)
