@@ -118,7 +118,7 @@ understand the difference of what is going on in this script for the potion anim
 In the on body entered function within the coin script uses a node of on body entered that references when the player enters the coins 
 collision shape. This removes the need to have another function coupled within a manually made one and just have the node directly attached to the script.
 
-[Coin on body entered](https://i.imgur.com/elH5vq6.png)
+![Coin on body entered](https://i.imgur.com/elH5vq6.png)
 
 In the health bar script there are premade method calls such as instantiate and display that are references to displaying the health bar after taking
 damage. These functions remove the need for more manual functions to be made which would make the code less readable. 
