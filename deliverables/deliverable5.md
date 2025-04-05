@@ -9,23 +9,31 @@
 ## Sequence Diagrams
 
 Use Case Description: 
-
-- Use Case: Purchase shop item
+- Use Case: Engage in ranged combat
 - Actor: Player
-- Trigger: Player selects item to purchase
-- Pre-conditions: Player completed the previous round and has entered shop scene
-- Post-conditions: System has added shop item to player's inventory
+- Trigger: Player inputs button associated with ranged attack
+- Pre-conditions: Player is in combat phase
+- Post-conditions: Player's attack damages enemy
 - Success Scenario:
-   1. User selects desired shop item
-   2. System displays details and price for the item
-   3. User clicks to purchase item
-   4. System subtracts appropriate amount of coins from player's coin total
-   5. System adds shop item to player's inventory
-   6. System closes display box for the item
+   1. System spawns projectile next to the user's character
+   2. System moves projectile in the direction of where the user aimed
+   3. System displays projectile hitting the enemy
+   4. System causes enemy to lose health
+   5. System updates player's stamina and mana bars
 - Alternate Scenario #1:
-   1. User does not have enough coins to buy the item
-   2. System displays message to alert user that they cannot purchase the item
-   3. System closes display box for the item
+   1. User does not aim towards enemy
+   2. System displays projectile missing the enemy
+   3. System displays projectile colliding with playable area walls
+   4. System displays projectile dissappearing
+- Alternate Scenario #2:
+   1. User fails to dodge attack from enemy
+   2. System displays attack impacting user's character
+   3. System causes player to lose health
+   4. System updates player's stamina and mana bars
+
+  Sequence Diagram:
+
+  ![Sequence Diagram](https://i.imgur.com/AHr18EU.png)
 
 ## Design Patterns
 1. The Composite Pattern
