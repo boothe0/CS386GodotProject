@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
-[ext_resource type="Script" uid="uid://b2rbrimtr7he0" path="res://scripts/main_scene.gd" id="1_l6k43"]
+[ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
 [ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="2_psmqu"]
-[ext_resource type="Script" uid="uid://bps2xfea8unav" path="res://scripts/emitter.gd" id="7_0snu2"]
+[ext_resource type="Script" path="res://scripts/emitter.gd" id="7_0snu2"]
 [ext_resource type="PackedScene" uid="uid://cv6nyao2cqvrl" path="res://scenes/player_ui.tscn" id="7_rj7la"]
-[ext_resource type="Script" uid="uid://qs4pia2qetrl" path="res://scripts/upgrades/player_variables.gd" id="15_t4j86"]
+[ext_resource type="Script" path="res://scripts/upgrades/player_variables.gd" id="15_t4j86"]
 [ext_resource type="PackedScene" uid="uid://dlhra0wjxnlvj" path="res://scenes/center_objective.tscn" id="15_uf7ea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
@@ -113,7 +113,6 @@ rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_l3c56")
 
 [node name="RoundTimer" type="Timer" parent="."]
-
 wait_time = 20.0
 autostart = true
 
