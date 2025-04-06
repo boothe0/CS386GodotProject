@@ -19,7 +19,7 @@ Elizabeth- Small UI fixes and did SOLID part of deliverable 5.
 
 Ethan - Worked on the Description part of deliverable 5. Working on combat mechanic improvements.
 
-
+Maya - created 3 new collectables/upgrades, still need to polish and upload them.
 ## 2. Retrospective
 
 Appreciations: We all were able to get together at least once to finish another deliverable together.
@@ -38,3 +38,5 @@ What we should try next time:
 Elizabeth- Add UI tutorial and flesh out tutorial more such as adding a shop item to interact with for the respective section.
 
 Ethan - Continue working on combat mechanics, help others with any implementations that are needed. Maybe start working on boss mechanics.
+
+Maya - Finish and upload the 3 consumables/upgrades created last week, start on 3 more.
