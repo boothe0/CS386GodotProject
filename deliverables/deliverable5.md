@@ -11,6 +11,7 @@ The system behind the game is structured into three main architectural layers: t
 Our Architecture is made up of three main layers: The visual layer, the logic layer, and the data layer. The visual layer is what the player directly sees when player our game, that being what is shown explicitly on the screen (the user interface, current scene). The visual layer relies on the logic layer, where depending on how the player interacts with the game, the logic layer will process the interaction, and display the outcome on the visual layer. So in the logic layer, is all the script required to make the game run. The visual layer is seperated into two distinct sections: Visual logic, and general logic. General logic includes script for system wide properties (death, start, pause, etc) while the visual logic includes aspects specific to how specific objects slooks (assets, visibility). Finally, the last layer is the data layer which stores all the infomation on saved game data. The logic layer pulls from this layer to fill in variables like current health, strength, and abilities. 
 
 ## Class Diagrams
+![UML Class Diagram](https://imgur.com/LtJcVIV.png)
 
 ## Sequence Diagrams
 
