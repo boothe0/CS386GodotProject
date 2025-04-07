@@ -51,16 +51,29 @@ func search_display_texture_signal():
 			return [texture, script]
 
 # removes repetative code and attaches texture and script to consumable
-func itermediate_loading(b):
+func itermediate_loading(b, number_consumables):
 		var texture_rect = b.get_node("TextureRect")
 		scripts_and_texture = search_display_texture_signal()
 		texture = scripts_and_texture[0]
 		script_object = scripts_and_texture[1]
-		b.position = PlayerVariables.consumable_1_pos
-		PlayerVariables.consumables[0]["position"] = b.position
-		PlayerVariables.consumables[0]["script"] = script_object
-		PlayerVariables.consumables[0]["texture"] = texture
-		texture_rect.texture = load(PlayerVariables.consumables[0]["texture"])
+		if number_consumables == 0:
+			b.position = PlayerVariables.consumable_1_pos
+			PlayerVariables.consumables[0]["position"] = b.position
+			PlayerVariables.consumables[0]["script"] = script_object
+			PlayerVariables.consumables[0]["texture"] = texture
+			texture_rect.texture = load(PlayerVariables.consumables[0]["texture"])
+		elif number_consumables == 1:
+			b.position = PlayerVariables.consumable_2_pos
+			PlayerVariables.consumables[1]["position"] = b.position
+			PlayerVariables.consumables[1]["script"] = script_object
+			PlayerVariables.consumables[1]["texture"] = texture
+			texture_rect.texture = load(PlayerVariables.consumables[1]["texture"])
+		else:
+			b.position = PlayerVariables.consumable_3_pos
+			PlayerVariables.consumables[2]["position"] = b.position
+			PlayerVariables.consumables[2]["script"] = script_object
+			PlayerVariables.consumables[2]["texture"] = texture
+			texture_rect.texture = load(PlayerVariables.consumables[2]["texture"])
 
 # call in the shop scene
 func buy_ui_consumables():
@@ -70,18 +83,21 @@ func buy_ui_consumables():
 	b.scale.x = PlayerVariables.consumable_scale_x
 	b.scale.y = PlayerVariables.consumable_scale_y
 	if PlayerVariables.number_consumables == 0:
-		itermediate_loading(b)
+		itermediate_loading(b, PlayerVariables.number_consumables)
 		b.get_child(0).text = "Z"
 		control.add_child(b)
-
+		PlayerVariables.number_consumables += 1
 	elif PlayerVariables.number_consumables == 1:
-		itermediate_loading(b)
+		itermediate_loading(b, PlayerVariables.number_consumables)
 		b.get_child(0).text = "X"
 		control.add_child(b)
+		PlayerVariables.number_consumables += 1
+
 	else:
-		itermediate_loading(b)
+		itermediate_loading(b, PlayerVariables.number_consumables)
 		b.get_child(0).text = "C"
 		control.add_child(b)
+		PlayerVariables.number_consumables += 1
 
 # supposed to check the position and assign appropriate label on reload
 func check_position_reload(b, reload_number):
@@ -93,13 +109,13 @@ func check_position_reload(b, reload_number):
 		return "C"
 # reloads the ui
 func refresh_ui():
-	var items_to_reload_left = PlayerVariables.number_consumables
+	var items_to_reload_left = 0
 	for item in PlayerVariables.consumables: 
 		if "position" in item and "texture" in item:
 			var b = consumable_base.instantiate()
 			var label = check_position_reload(b, items_to_reload_left)
+			items_to_reload_left += 1
 			b.get_child(0).text = label
-			items_to_reload_left -= 1   
 			b.size = PlayerVariables.consumable_size
 			b.scale.x = PlayerVariables.consumable_scale_x
 			b.scale.y = PlayerVariables.consumable_scale_y
@@ -107,6 +123,7 @@ func refresh_ui():
 			var texture_rect = b.get_node("TextureRect")
 			texture_rect.texture = load(item["texture"])
 			control.add_child(b)
+
 			
 			
 			
