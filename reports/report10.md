@@ -33,13 +33,13 @@ Camelia - Created concept art for potential bosses and started work on sprite fo
 
 Appreciations: We all were able to get together at least once to finish another deliverable together.
 
-Successes:
+Successes: We determined as a group how we were going to proceed with the next stage of developing the game.
 
-Failures:
+Failures: We had two meetings planned but were only able to go through with one.
 
-Barriers:
+Barriers: N/A
 
-What we should try next time:
+What we should try next time: Potentially getting the deliverable done earlier so we can get feedback earlier and have more time to change things
 
 
 
