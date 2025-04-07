@@ -19,10 +19,15 @@ config/icon="res://icon.svg"
 
 Emitter="*res://scripts/emitter.gd"
 PlayerVariables="*res://scripts/upgrades/player_variables.gd"
+FreezeManager="*res://scripts/freeze_manager.gd"
 
 [dotnet]
 
 project/assembly_name="CS386GameProject"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
 [input]
 

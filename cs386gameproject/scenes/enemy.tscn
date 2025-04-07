@@ -1,12 +1,11 @@
 [gd_scene load_steps=26 format=3 uid="uid://d1he61wxuea23"]
 
-[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_hfuff"]
+[ext_resource type="Script" uid="uid://bbphrsjnh0jfa" path="res://scripts/enemy.gd" id="1_hfuff"]
 [ext_resource type="Texture2D" uid="uid://sjiaenrl1wqh" path="res://assets/16x16 Magical Forest Asset Pack/Characters/GoblinCharacter-Idle.png" id="2_wqalq"]
-[ext_resource type="Script" path="res://scripts/EnemyHealthBar.gd" id="3_hi8vk"]
+[ext_resource type="Script" uid="uid://cvpulugwifdcc" path="res://scripts/EnemyHealthBar.gd" id="3_hi8vk"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bstlm"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ra3w"]
 radius = 7.0
-height = 18.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u3asi"]
 atlas = ExtResource("2_wqalq")
@@ -167,7 +166,7 @@ animations = [{
 radius = 70.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yg8bk"]
-radius = 11.0
+radius = 9.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7vkb"]
 bg_color = Color(0.114897, 0.114897, 0.114897, 1)
@@ -181,20 +180,21 @@ collision_mask = 34
 script = ExtResource("1_hfuff")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_bstlm")
+visible = false
+shape = SubResource("CircleShape2D_4ra3w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ftuvv")
-animation = &"walk_down"
+animation = &"idle_down"
 autoplay = "idle_down"
 
 [node name="DetectionArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource("CircleShape2D_jof74")
 
 [node name="AttackArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
 shape = SubResource("CircleShape2D_yg8bk")

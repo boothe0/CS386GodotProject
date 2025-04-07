@@ -5,13 +5,12 @@ const SPEED = 500
 const BASE_DAMAGE = 1
 var direction = Vector2.ZERO
 var damage = BASE_DAMAGE
-
+var damage_source = "projectile"
 
 func _ready() -> void:
 	_apply_upgrades()
 	if not is_connected("body_entered", Callable(self, "_on_body_entered")):
 		connect("body_entered", Callable(self, "_on_body_entered"))
-
 	await get_tree().create_timer(3.0).timeout
 	queue_free()
 
@@ -27,11 +26,13 @@ func set_direction(target_pos, origin_pos):
 	rotation = direction.angle()
 	
 func _on_body_entered(body: Node2D) -> void:
-
 	# detect if enemy is hit
 	if body.is_in_group("enemies"):
-		print("Enemy hit! Applying damage.") # debugging
-		body.take_damage(damage)
+		print("Enemy hit! Applying damage.")
+		body.take_damage(damage, damage_source)
+		# Apply knockback if the enemy has the function
+		if body.has_method("apply_knockback"):
+			body.apply_knockback(10)  # Adjust the knockback value as needed.
 		queue_free()
 
 	# detect if world boundary is hit
