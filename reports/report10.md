@@ -25,6 +25,8 @@ Asher - Described design principals used in deliverable 5 and started work on ne
 
 Chandler - Created the refined UML class diagram that covered implementation, created new level art assets, redesigned main scene and added new level objects.
 
+Camelia - Created concept art for potential bosses and started work on sprite for player character's wife.
+
 ## 2. Retrospective
 
 Appreciations: We all were able to get together at least once to finish another deliverable together.
@@ -49,3 +51,5 @@ Maya - Finish and upload the 3 consumables/upgrades created last week, start on 
 Asher - Finish adding new items, start working on boss
 
 Chandler - Clean up level interactions with enemies, create new art assets and level objects for a larger visual and gameplay variety.
+
+Camelia - Finish sprite for player character's wife and convert concept art to pixel art.
