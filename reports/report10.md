@@ -1,6 +1,6 @@
 # Report for Week #10
 
-Tiny Rouglite
+Tiny Roguelite
 
 Group: 6
 
@@ -20,6 +20,15 @@ Elizabeth- Small UI fixes and did SOLID part of deliverable 5.
 Ethan - Worked on the Description part of deliverable 5. Working on combat mechanic improvements.
 
 Gordon - Designing Chimera pixel art
+
+Maya - created 3 new collectables/upgrades, still need to polish and upload them.
+
+Asher - Described design principals used in deliverable 5 and started work on new items.
+
+Chandler - Created the refined UML class diagram that covered implementation, created new level art assets, redesigned main scene and added new level objects.
+
+Camelia - Created concept art for potential bosses and started work on sprite for player character's wife.
+
 ## 2. Retrospective
 
 Appreciations: We all were able to get together at least once to finish another deliverable together.
@@ -40,3 +49,11 @@ Elizabeth- Add UI tutorial and flesh out tutorial more such as adding a shop ite
 Ethan - Continue working on combat mechanics, help others with any implementations that are needed. Maybe start working on boss mechanics.
 
 Gordon - Finish pixel art of chimera
+
+Maya - Finish and upload the 3 consumables/upgrades created last week, start on 3 more.
+
+Asher - Finish adding new items, start working on boss
+
+Chandler - Clean up level interactions with enemies, create new art assets and level objects for a larger visual and gameplay variety.
+
+Camelia - Finish sprite for player character's wife and convert concept art to pixel art.
