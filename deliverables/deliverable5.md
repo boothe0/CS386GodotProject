@@ -61,7 +61,9 @@ Each script in Godot as well as each scene is considered a class and therefore t
 areas. 
 
 ### S- Single Responsibility
+
 This priciple is observed throughout our project as each script is connected to a relevant node that is only used for that specific node. 
+In addition, the single responsibility principle ensures that a class is only used for one task.
 
 For example, we have a coin script that is only used for the coin behavior and nothing else. 
 
@@ -75,6 +77,8 @@ Finally, our scripts/heal_potion.gd is used for the healthing animation to show 
 
 ### O- Open for extention and closed for modification
 
+This princples is for making sure that classes are not able to be modified but can be added to in order to fit other aspects of the project.
+
 This is also used in the coin script as it will never be modified but coin types are able to be added without changing the base script.
 
 Another script that uses this principle is the health bar script as this will never be modified as the values will stay constant. It can be 
@@ -84,6 +88,8 @@ Scripts/heal_potion.gd is also open for extention to add more animations or othe
 stay the same between extentions.
 
 ### L- Liskov Substitution
+
+This principle is for making sure that classes are interchangable between similar functionalities. This checks for modularity.
 
 In the coin script that is connected to several coin textures which are considered "classes" in Godot the script works the same for each one
 and can be interchanged for different types of these textures. This way, different values of coins such as 5 units for a coin with a gold texture
@@ -97,6 +103,8 @@ The scripts/health_potion script it is connected to the health bar script and th
 substituted in other scripts to have similar functionality and trigger other functions that can be attached to the health potion or other consumables.
 
 ### I- Interface Segregation
+
+Within the method it is important to separate out functions that can utilize the main method or main functions in order to increase performance.
 
 In the coin script there is a separation of several textures from the functions. For example the bronze, silver and gold textures are preloaded 
 not within the ready function to help with performance. If these textures were instead put inside the ready or another function that was called more often
@@ -115,6 +123,8 @@ understand the difference of what is going on in this script for the potion anim
 ![Function Vectors](https://i.imgur.com/D7UBDyW.png)
 
 ### D- Dependency Inversion
+
+It is important to make sure that there is not unessecary complexity within the created classes.
 
 In the on body entered function within the coin script uses a node of on body entered that references when the player enters the coins 
 collision shape. This removes the need to have another function coupled within a manually made one and just have the node directly attached to the script.
