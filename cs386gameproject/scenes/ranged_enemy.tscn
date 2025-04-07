@@ -1,8 +1,8 @@
 [gd_scene load_steps=26 format=3 uid="uid://6t63tf6kalgv"]
 
-[ext_resource type="Script" path="res://scripts/ranged_enemy.gd" id="1_w6nvk"]
+[ext_resource type="Script" uid="uid://dwtupihu4aa7i" path="res://scripts/ranged_enemy.gd" id="1_w6nvk"]
 [ext_resource type="Texture2D" uid="uid://c85vnd1kd2scy" path="res://assets/Characters/Ranged_Enemy.png" id="2_j26r6"]
-[ext_resource type="Script" path="res://scripts/ranged_enemy_hb.gd" id="3_7ycfa"]
+[ext_resource type="Script" uid="uid://b6eh588b640ag" path="res://scripts/ranged_enemy_hb.gd" id="3_7ycfa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_32iyl"]
 radius = 7.0

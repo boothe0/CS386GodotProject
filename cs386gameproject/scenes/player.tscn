@@ -167,7 +167,7 @@ height = 14.0
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(1.45228, 1.45228)
 collision_layer = 17
-collision_mask = 33
+collision_mask = 97
 script = ExtResource("1_ucs4q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
