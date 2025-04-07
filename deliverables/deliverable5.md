@@ -11,7 +11,9 @@ The system behind the game is structured into three main architectural layers: t
 Our Architecture is made up of three main layers: The visual layer, the logic layer, and the data layer. The visual layer is what the player directly sees when player our game, that being what is shown explicitly on the screen (the user interface, current scene). The visual layer relies on the logic layer, where depending on how the player interacts with the game, the logic layer will process the interaction, and display the outcome on the visual layer. So in the logic layer, is all the script required to make the game run. The visual layer is seperated into two distinct sections: Visual logic, and general logic. General logic includes script for system wide properties (death, start, pause, etc) while the visual logic includes aspects specific to how specific objects slooks (assets, visibility). Finally, the last layer is the data layer which stores all the infomation on saved game data. The logic layer pulls from this layer to fill in variables like current health, strength, and abilities. 
 
 ## Class Diagrams
-![UML Class Diagram](https://imgur.com/LtJcVIV.png)
+![UML Class Diagram](https://imgur.com/TibvMiB.png)
+
+**NOTE:** Godot does not contain private variables or methods, so all attributes and methods were set to public.
 
 ## Sequence Diagrams
 
@@ -142,4 +144,16 @@ In the scripts/heal potion script set potion direction and use heal potions were
 to depend on the other and have different functions that are easy to tell apart.
 
 ## Teamwork
+Elizabeth (15%)- Small UI fixes and did SOLID part of deliverable 5.
 
+Ethan (15%)- Worked on the Description part of deliverable 5. Working on combat mechanic improvements.
+
+Gordon (15%)- Designing Chimera pixel art
+
+Maya (15%)- created 3 new collectables/upgrades, still need to polish and upload them.
+
+Asher (15%)- Described design principals used in deliverable 5 and started work on new items.
+
+Chandler (15%)- Created the refined UML class diagram that covered implementation, created the design pattern UML class diagrams, cleaned up the deliverable, created new level art assets, redesigned main scene and added new level objects.
+
+Camelia (15%)- Created concept art for potential bosses and started work on sprite for player character's wife.
