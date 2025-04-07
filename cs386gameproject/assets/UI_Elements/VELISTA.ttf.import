@@ -2,6 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
+
 uid="uid://b37kv3kb112gm"
 path="res://.godot/imported/VELISTA.ttf-c8221610714666fa0518ff00abab8e75.fontdata"
 
@@ -13,6 +14,7 @@ dest_files=["res://.godot/imported/VELISTA.ttf-c8221610714666fa0518ff00abab8e75.
 [params]
 
 Rendering=null
+
 antialiasing=1
 generate_mipmaps=true
 disable_embedded_bitmaps=true
@@ -22,6 +24,7 @@ msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 hinting=1
+
 subpixel_positioning=1
 keep_rounding_remainders=true
 oversampling=0.0
@@ -33,6 +36,7 @@ preload=[{
 "chars": [],
 "glyphs": [],
 "name": "New Configuration",
+
 "size": Vector2i(16, 0)
 }]
 language_support={}

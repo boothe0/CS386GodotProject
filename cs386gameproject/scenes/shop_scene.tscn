@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://bfmih4khaeu4m"]
 
-[ext_resource type="Script" uid="uid://rdcioqbhs3m0" path="res://scenes/shop_scene.gd" id="1_3djh5"]
+[ext_resource type="Script" path="res://scenes/shop_scene.gd" id="1_3djh5"]
 [ext_resource type="Texture2D" uid="uid://cjip70074evdm" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/wooden_interior.png" id="1_8k3ky"]
 [ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop_keeper.tscn" id="2_krnjd"]
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="3_3bvrm"]
