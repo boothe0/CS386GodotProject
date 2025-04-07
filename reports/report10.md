@@ -19,6 +19,8 @@ Elizabeth- Small UI fixes and did SOLID part of deliverable 5.
 
 Ethan - Worked on the Description part of deliverable 5. Working on combat mechanic improvements.
 
+Gordon - Designing Chimera pixel art
+
 Maya - created 3 new collectables/upgrades, still need to polish and upload them.
 
 Asher - Described design principals used in deliverable 5 and started work on new items.
@@ -45,6 +47,8 @@ What we should try next time:
 Elizabeth- Add UI tutorial and flesh out tutorial more such as adding a shop item to interact with for the respective section.
 
 Ethan - Continue working on combat mechanics, help others with any implementations that are needed. Maybe start working on boss mechanics.
+
+Gordon - Finish pixel art of chimera
 
 Maya - Finish and upload the 3 consumables/upgrades created last week, start on 3 more.
 
