@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-uid="uid://bs43au0xsb7po"
-path="res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"
+uid="uid://bhcqwy52jquv4"
+path="res://.godot/imported/underworld_load-lomem-32x32.png-31b95e50cd0c1ebc7f229ba5b391721d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/laurel.PNG"
-dest_files=["res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"]
+source_file="res://assets/underworld_load/underworld_load-lomem-32x32.png"
+dest_files=["res://.godot/imported/underworld_load-lomem-32x32.png-31b95e50cd0c1ebc7f229ba5b391721d.ctex"]
 
 [params]
 

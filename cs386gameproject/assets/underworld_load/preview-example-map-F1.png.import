@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-uid="uid://bs43au0xsb7po"
-path="res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"
+uid="uid://d6nn82ywvxax"
+path="res://.godot/imported/preview-example-map-F1.png-fad02f45233d43fb402fb18fa1a90215.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/laurel.PNG"
-dest_files=["res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"]
+source_file="res://assets/underworld_load/preview-example-map-F1.png"
+dest_files=["res://.godot/imported/preview-example-map-F1.png-fad02f45233d43fb402fb18fa1a90215.ctex"]
 
 [params]
 

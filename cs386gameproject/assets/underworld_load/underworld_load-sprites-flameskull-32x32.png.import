@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-uid="uid://bs43au0xsb7po"
-path="res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"
+uid="uid://dhxef3cs0000i"
+path="res://.godot/imported/underworld_load-sprites-flameskull-32x32.png-f24ce7580c59f75dd1d0eda05dd55d82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/laurel.PNG"
-dest_files=["res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"]
+source_file="res://assets/underworld_load/underworld_load-sprites-flameskull-32x32.png"
+dest_files=["res://.godot/imported/underworld_load-sprites-flameskull-32x32.png-f24ce7580c59f75dd1d0eda05dd55d82.ctex"]
 
 [params]
 

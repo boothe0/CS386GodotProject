@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-uid="uid://bs43au0xsb7po"
-path="res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"
+uid="uid://c4prhn8xctepr"
+path="res://.godot/imported/underworld_load-outdoor-32x32.png-97dfd468f463467c84d444f0b7582e6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/laurel.PNG"
-dest_files=["res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"]
+source_file="res://assets/underworld_load/underworld_load-outdoor-32x32.png"
+dest_files=["res://.godot/imported/underworld_load-outdoor-32x32.png-97dfd468f463467c84d444f0b7582e6d.ctex"]
 
 [params]
 

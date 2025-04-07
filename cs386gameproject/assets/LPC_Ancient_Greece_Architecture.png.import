@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-uid="uid://bs43au0xsb7po"
-path="res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"
+uid="uid://bjtfnshuapvvk"
+path="res://.godot/imported/LPC_Ancient_Greece_Architecture.png-80021a45be710f89284089fb9b27b46f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/laurel.PNG"
-dest_files=["res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"]
+source_file="res://assets/LPC_Ancient_Greece_Architecture.png"
+dest_files=["res://.godot/imported/LPC_Ancient_Greece_Architecture.png-80021a45be710f89284089fb9b27b46f.ctex"]
 
 [params]
 
