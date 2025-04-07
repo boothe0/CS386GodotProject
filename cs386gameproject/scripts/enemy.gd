@@ -194,7 +194,6 @@ func _on_attack_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		in_attack_range = false
 
-# --- NEW: Knockback Implementation ---
 func apply_knockback(knockback_value: float) -> void:
 	# Calculate knockback direction away from the player, or upward by default.
 	var knockback_direction: Vector2 = Vector2.ZERO
