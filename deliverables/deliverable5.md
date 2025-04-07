@@ -6,7 +6,7 @@ Our game is a 2D, top-down roguelike inspired by ancient Greek themes, where the
 The system behind the game is structured into three main architectural layers: the visual, logic, and data layers. The visual layer handles everything the player sees, including the UI and scene transitions. The logic layer governs how the game reacts to user input and manages core systems like combat mechanics, upgrades, and scene flow. This layer is further split into general logic and visual logic, which helps separate game-wide behavior (e.g., pausing, death) from object-specific visuals (e.g., sprite appearance, animations). Finally, the data layer handles persistent game data like player stats and upgrade states, which the logic layer pulls from as needed. This layered architecture supports clean separation of concerns, maintainability, and scalability as the game evolves.
 
 ## Architecture
-![Architecture UML Diagram](https://i.imgur.com/QcrGifk.png)
+![Architecture UML Diagram](https://imgur.com/Wt4VVoH.png)
 
 Our Architecture is made up of three main layers: The visual layer, the logic layer, and the data layer. The visual layer is what the player directly sees when player our game, that being what is shown explicitly on the screen (the user interface, current scene). The visual layer relies on the logic layer, where depending on how the player interacts with the game, the logic layer will process the interaction, and display the outcome on the visual layer. So in the logic layer, is all the script required to make the game run. The visual layer is seperated into two distinct sections: Visual logic, and general logic. General logic includes script for system wide properties (death, start, pause, etc) while the visual logic includes aspects specific to how specific objects slooks (assets, visibility). Finally, the last layer is the data layer which stores all the infomation on saved game data. The logic layer pulls from this layer to fill in variables like current health, strength, and abilities. 
 
@@ -45,6 +45,8 @@ Sequence Diagram:
    - Implented directly into the Godot engine with scenes being structured as a tree
    - Each scene has a parent node which is composed of many other child nodes, each with thier own functionality
    - Follows the open/closed principle by extending scenes without modifying existing functionality
+  
+   ![Composite UML Class Diagram](https://imgur.com/PfGlfc9.png)
 
    ![Composite Design](https://i.imgur.com/iQ7nSOh.png)
 
@@ -52,6 +54,8 @@ Sequence Diagram:
    - https://github.com/boothe0/CS386GodotProject/blob/main/cs386gameproject/scripts/upgrades/player_variables.gd
    - Implemented directly into the Godot engine using the Autoload feature
    - Allows for global access of static player variables across scenes
+  
+   ![Singleton UML Class Diagram](https://imgur.com/zAR74UO.png)
 
    ![Autoloading Singleton](https://i.imgur.com/5arA4lm.png)
 
