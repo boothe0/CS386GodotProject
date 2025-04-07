@@ -2593,7 +2593,7 @@ position = Vector2(-509, -312)
 script = ExtResource("1_l6k43")
 
 [node name="Player" parent="." instance=ExtResource("1_6hm0t")]
-position = Vector2(308, 64)
+position = Vector2(253, 113)
 scale = Vector2(1.17705, 1.17705)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
