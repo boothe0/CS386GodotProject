@@ -1,10 +1,23 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://15y45ulhxojt"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://15y45ulhxojt"]
 
 [ext_resource type="FontFile" uid="uid://b5eg8lvj4spdv" path="res://assets/UI_Elements/04B_30__.TTF" id="1_orfiq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b5qd1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_230yg"]
 bg_color = Color(0.482353, 0.286275, 0.901961, 0.152941)
 
 [resource]
+default_font_size = 10
+Label/colors/font_color = Color(0.483046, 0.378952, 0.933152, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 32
 Label/fonts/font = ExtResource("1_orfiq")
+Label/styles/normal = SubResource("StyleBoxEmpty_b5qd1")
 Panel/styles/panel = SubResource("StyleBoxFlat_230yg")
