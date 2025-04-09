@@ -1,0 +1,8 @@
+{
+  "texture": "res://assets/items/upgrades/Blood.png",
+  "name": "Blood of Ares",
+  "price": 10,
+  "consumable": false,
+  "description": "+ HP",
+  "script": "res://scripts/upgrades/blood.gd"
+}
