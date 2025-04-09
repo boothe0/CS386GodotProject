@@ -1,6 +1,5 @@
 [gd_scene load_steps=6 format=3 uid="uid://bp43gmbaeokfh"]
 
-
 [ext_resource type="Script" uid="uid://b4qnwk2e6j0uo" path="res://scripts/shopkeep.gd" id="1_fe31u"]
 [ext_resource type="Theme" uid="uid://bkiujxnjn0a0q" path="res://assets/UI_Elements/TitleScreenTheme.tres" id="2_o6aof"]
 [ext_resource type="FontFile" uid="uid://cow87u5au3hqo" path="res://assets/UI_Elements/Cardinal.ttf" id="3_qhrje"]
