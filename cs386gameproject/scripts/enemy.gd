@@ -9,7 +9,8 @@ extends CharacterBody2D
 # movement
 const SPEED = 80
 const ATTACK_COOLDOWN = 1.5
-const ATTACK_DAMAGE = 1
+const BASE_ATTACK_DAMAGE = 1
+const BASE_HEALTH = 3
 const STOP_DISTANCE = 10
 var direction = Vector2.ZERO
 
@@ -32,7 +33,8 @@ var reached_center = false
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 
 # health
-@export var health = 3
+@export var health = BASE_HEALTH
+var attack_damage = BASE_ATTACK_DAMAGE
 signal health_update
 
 # current target to attack
@@ -45,6 +47,7 @@ var knockback_timer = 0.0
 
 func _ready() -> void:
 	# Ensure navigation agent is initialized
+	_apply_scaling()
 	navigation_agent = $NavigationAgent2D if $NavigationAgent2D else null
 
 	# Find the center objective safely
@@ -58,6 +61,10 @@ func _ready() -> void:
 	if center_objective and navigation_agent:
 		set_target(center_objective.global_position)
 		current_target = "center_objective"
+
+func _apply_scaling():
+	health += PlayerVariables.rounds  # +1 hp every round
+	attack_damage = int(attack_damage + 0.5 * PlayerVariables.rounds)  # +1 dmg every 2 rounds
 
 func _physics_process(delta: float) -> void:
 	# If in knockback state, update timer and use current knockback velocity.
@@ -132,7 +139,7 @@ func move_towards_target(delta):
 func attack():
 	# Continually attack while player is in range
 	while in_attack_range and player and can_attack:
-		player.take_damage(ATTACK_DAMAGE)
+		player.take_damage(attack_damage)
 		can_attack = false
 		if get_tree() != null:
 			await get_tree().create_timer(ATTACK_COOLDOWN).timeout
