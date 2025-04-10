@@ -8,8 +8,9 @@ extends CharacterBody2D
 
 # movement
 const SPEED = 50
-const ATTACK_COOLDOWN = 1.5
-const ATTACK_DAMAGE = 1
+const BASE_ATTACK_COOLDOWN = 1.5
+const BASE_ATTACK_DAMAGE = 1
+const BASE_HEALTH = 3
 const STOP_DISTANCE = 10
 var direction = Vector2.ZERO
 
@@ -40,7 +41,9 @@ var reached_center = false
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 
 # health
-@export var health = 3
+@export var health = BASE_HEALTH
+var attack_cooldown = BASE_ATTACK_COOLDOWN
+var attack_damage = BASE_ATTACK_DAMAGE
 signal health_update
 
 # current target to attack ("player" or "center_objective")
@@ -56,6 +59,7 @@ var retarget_timer = 0.0
 const RETARGET_COOLDOWN = 0.2
 
 func _ready() -> void:
+	_apply_scaling()
 	DESIRED_DISTANCE = attack_area_radius
 	navigation_agent = $NavigationAgent2D if $NavigationAgent2D else null
 	var center_objectives = get_tree().get_nodes_in_group("center_objective")
@@ -66,6 +70,10 @@ func _ready() -> void:
 	if center_objective and navigation_agent:
 		set_target(center_objective.global_position)
 		current_target = "center_objective"
+
+func _apply_scaling():
+	attack_damage += int(0.34 * PlayerVariables.rounds)
+	attack_cooldown -= 0.2 * PlayerVariables.rounds  # shoot faster
 
 func _physics_process(delta: float) -> void:
 	if is_knocked_back:
@@ -167,7 +175,7 @@ func attack_target(target: Node2D) -> void:
 	projectile.global_position = global_position
 	projectile.fire(target.global_position)
 	can_attack = false
-	await get_tree().create_timer(ATTACK_COOLDOWN).timeout
+	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
 
 func take_damage(amount, damage_source):
