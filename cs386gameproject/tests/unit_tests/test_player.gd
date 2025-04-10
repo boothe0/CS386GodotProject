@@ -5,14 +5,14 @@ extends GutTest
 
 func test_take_damage():
 	var damages = [
-		-9999993492342347592634052485,
+		-999999592634052485,
 		-90524, 
 		-2,
 		0,
 		4,
 		654,
 		1885,
-		134085720346589374685102513
+		1389374685102513
 	]
 	for damage in damages:
 		player.take_damage(damage)
