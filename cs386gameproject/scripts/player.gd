@@ -9,9 +9,11 @@ const BASE_HEALTH = 5
 @export var max_health = BASE_HEALTH
 @export var MAX_STAMINA = 10
 @export var MAX_MANA = 10
+@export var MAX_SHIELD = 3
 @export var health = max_health
 @export var stamina = MAX_STAMINA
 @export var mana = MAX_MANA
+@export var shield = MAX_SHIELD
 @onready var spacebar_text = $"../PlayerUI/StaminaBar/SpaceBarIndicator"
 @onready var stamina_bar = $"../PlayerUI/StaminaBar"
 
@@ -51,7 +53,7 @@ signal health_update
 signal stamina_update
 signal mana_update
 signal dodge_used
-
+signal shield_update
 
 func _ready():
 	health_update.emit()
@@ -132,7 +134,6 @@ func load_user_variables() -> void:
 	sword.damage_modifier = PlayerVariables.sword_damage_modifier
 	cumulative_coin_total = PlayerVariables.coins
 	update_total_coin_label()
-	
 
 # movement, idle and dodge functions
 func get_idle_animation(direction: Vector2) -> String:
@@ -220,12 +221,20 @@ func update_attack_direction():
 
 # damage taken, death functions
 func take_damage(amount):
-	# handle damage taken
-	health -= amount
-	health_update.emit()
-	print("Player health: ", health) # debugging
-	if health <= 0:
-		die()
+	if shield > 0:
+		# Absorb damage with shield first
+		var damage_to_shield = min(amount, shield)
+		shield -= damage_to_shield
+		shield_update.emit()
+		amount -= damage_to_shield
+
+	# If there's any remaining damage, apply it to health
+	if amount > 0:
+		health -= amount
+		health_update.emit()
+		print("Player health: ", health) # debugging
+		if health <= 0:
+			die()
 
 func die():
 	# handle death
