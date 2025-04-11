@@ -119,6 +119,7 @@ show_item_info={
 2d_physics/layer_4="interactions"
 2d_physics/layer_5="Layer 5"
 2d_physics/layer_6="Object Collisions"
+2d_physics/layer_7="Gap Collisions"
 
 [rendering]
 
