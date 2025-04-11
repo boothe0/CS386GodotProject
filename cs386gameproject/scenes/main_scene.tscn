@@ -135,7 +135,7 @@ position = Vector2(-509, -312)
 script = ExtResource("1_l6k43")
 
 [node name="Player" parent="." instance=ExtResource("1_6hm0t")]
-position = Vector2(308, 64)
+position = Vector2(254, 110)
 scale = Vector2(1.17705, 1.17705)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -185,6 +185,7 @@ autostart = true
 position = Vector2(253, 152)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 navigation_polygon = SubResource("NavigationPolygon_qtt6f")
 
 [node name="PlayerVariables" type="Node" parent="."]
