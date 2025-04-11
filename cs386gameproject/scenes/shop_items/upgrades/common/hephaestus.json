@@ -1,0 +1,8 @@
+{
+  "texture": "res://assets/items/upgrades/hephaestus.png",
+  "name": "Blade of Hephaestus",
+  "price": 25,
+  "consumable": false,
+  "description": "+ sword damage",
+  "script": "res://scripts/upgrades/hephaestus.gd"
+}
