@@ -6,6 +6,7 @@ extends CharacterBody2D
 # health, stamina, mana
 const BASE_SPEED = 150
 const BASE_HEALTH = 5
+var shield_broken = false  
 @export var max_health = BASE_HEALTH
 @export var MAX_STAMINA = 10
 @export var MAX_MANA = 10
@@ -65,6 +66,11 @@ func _ready():
 		coins_added.visible = false
 		
 	load_user_variables()
+
+func _process(delta):
+	# reset shield_broken flag if shield starts regenerating
+	if shield > 0:
+		shield_broken = false
 
 func _physics_process(_delta):
 	# handle player movement
@@ -222,17 +228,18 @@ func update_attack_direction():
 # damage taken, death functions
 func take_damage(amount):
 	if shield > 0:
-		# Absorb damage with shield first
 		var damage_to_shield = min(amount, shield)
 		shield -= damage_to_shield
 		shield_update.emit()
 		amount -= damage_to_shield
 
-	# If there's any remaining damage, apply it to health
-	if amount > 0:
+		if shield == 0 and not shield_broken:
+			shield_broken = true
+			play_shield_break_effect()
+	else:
+		# start damaging health
 		health -= amount
 		health_update.emit()
-		print("Player health: ", health) # debugging
 		if health <= 0:
 			die()
 
@@ -313,3 +320,21 @@ func _on_coin_timer_timeout() -> void:
 	# make coins_added label disappear after not collecting coins
 	coin_popup_accumulator = 0
 	coins_added.visible = false
+
+func play_shield_break_effect():
+	var effect_scene = preload("res://scenes/shield_break_effect.tscn")
+	var effect = effect_scene.instantiate()
+	
+	# Add it to the scene before trying to emit
+	get_tree().current_scene.add_child(effect)
+	effect.global_position = global_position  # after adding to scene
+	
+	var particles = effect.get_node("CPUParticles2D")
+	print(particles)  # Should say CPUParticles2D
+	particles.emitting = false  # force reset
+	
+	await get_tree().process_frame  # wait for scene tree sync
+	particles.restart()  # hard reset and start again
+	particles.emitting = true
+	
+	print("SHIELD BREAK EFFECT TRIGGERED")
