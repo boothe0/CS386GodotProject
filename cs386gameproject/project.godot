@@ -12,7 +12,7 @@ config_version=5
 
 config/name="CS386GameProject"
 run/main_scene="res://scenes/title_screen.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -119,6 +119,7 @@ show_item_info={
 2d_physics/layer_4="interactions"
 2d_physics/layer_5="Layer 5"
 2d_physics/layer_6="Object Collisions"
+2d_physics/layer_7="Gap Collisions"
 
 [rendering]
 
