@@ -51,6 +51,15 @@ text = "Tiny Rougelite"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_txlpa")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 layout_mode = 1
 anchors_preset = 8
@@ -79,10 +88,6 @@ text = "Tutorial"
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../StartButton")
 text = "Quit"
-
-[node name="TitleScreen" type="Sprite2D" parent="."]
-position = Vector2(577, 328)
-texture = ExtResource("4_txlpa")
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/TutorialButton" to="." method="_on_tutorial_button_pressed"]

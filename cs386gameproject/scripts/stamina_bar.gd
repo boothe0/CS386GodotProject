@@ -2,12 +2,13 @@ extends ProgressBar
 
 @onready var player = $"../../Player"
 @onready var regen_timer = $RegenTimer
+@onready var stamina_label: Label = $SpaceBarIndicator
 
 
 func _ready() -> void:
 	max_value = player.stamina
 	value = max_value
-	
+	stamina_label.text = "%d / %d" % [value, max_value]
 	player.stamina_update.connect(update)
 	player.dodge_used.connect(dodge_used)
 	regen_timer.timeout.connect(regen_stamina)
@@ -27,3 +28,4 @@ func regen_stamina():
 func update():
 	# update stamina value
 	self.value = player.stamina
+	stamina_label.text = "%d / %d" % [value, max_value]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://bkiujxnjn0a0q" path="res://assets/UI_Elements/TitleScreenTheme.tres" id="1_5krm1"]
 [ext_resource type="Script" uid="uid://d3u1tmja4c53j" path="res://scripts/intro_scene.gd" id="1_xoymr"]
-[ext_resource type="Texture2D" uid="uid://chyal08aw8jp5" path="res://assets/UI_Elements/Intro_Screen.png" id="4_iqai3"]
+[ext_resource type="Texture2D" uid="uid://cghfgyplmly4j" path="res://assets/UI_Elements/Title_Screen.png" id="3_u5rop"]
 
 [node name="Intro" type="CanvasLayer"]
 script = ExtResource("1_xoymr")
@@ -45,6 +45,15 @@ theme_override_font_sizes/normal_font_size = 32
 text = "You are Hesperos, a demigod son of Ares, the Greek god of war. A revered warrior, you fight on behalf of the gods, winning great fame and acclaim throughout the lands of Ancient Greece. But when you fall in love and marry, you decide to leave war behind for a life of peace, incensing your father, who kills you and your wife out of jealousy. Now that your wife has been sent to Elysium, a paradise in the afterlife, while you have been sent to the fires of Tartarus, you must find your way to her while fighting off the monsters of the Underworld.
 "
 
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_u5rop")
+
 [node name="ContinueButton" type="Button" parent="CanvasLayer"]
 layout_mode = 1
 anchors_preset = -1
@@ -59,9 +68,5 @@ offset_bottom = 19.495
 theme = ExtResource("1_5krm1")
 theme_override_font_sizes/font_size = 30
 text = "Continue"
-
-[node name="IntroScreen" type="Sprite2D" parent="."]
-position = Vector2(575, 324)
-texture = ExtResource("4_iqai3")
 
 [connection signal="pressed" from="CanvasLayer/ContinueButton" to="." method="_on_continue_button_pressed"]

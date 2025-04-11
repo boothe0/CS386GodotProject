@@ -39,6 +39,15 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "You Died!"
 
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_jovlv")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 0
 offset_left = 80.0
@@ -61,9 +70,5 @@ offset_top = 550.0
 offset_right = 714.0
 offset_bottom = 583.0
 text = "Try Again?"
-
-[node name="DeathScreen" type="Sprite2D" parent="."]
-position = Vector2(577, 322)
-texture = ExtResource("3_jovlv")
 
 [connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]

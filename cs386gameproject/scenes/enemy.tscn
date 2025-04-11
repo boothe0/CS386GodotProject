@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bbphrsjnh0jfa" path="res://scripts/enemy.gd" id="1_hfuff"]
 [ext_resource type="Texture2D" uid="uid://sjiaenrl1wqh" path="res://assets/16x16 Magical Forest Asset Pack/Characters/GoblinCharacter-Idle.png" id="2_wqalq"]
-[ext_resource type="Script" uid="uid://cvpulugwifdcc" path="res://scripts/EnemyHealthBar.gd" id="3_hi8vk"]
+[ext_resource type="Script" uid="uid://meax0a12iepb" path="res://scripts/EnemyHealthBar.gd" id="3_hi8vk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ra3w"]
 radius = 7.0
@@ -176,7 +176,7 @@ bg_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
 
 [node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
-collision_mask = 34
+collision_mask = 98
 script = ExtResource("1_hfuff")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
