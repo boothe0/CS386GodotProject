@@ -4,6 +4,34 @@
 
 ## Requirements
 
+- Requirement: As a player, I want to be able to play through a short tutorial of the game so I know how the game controls work.
+- Issue: #103 [Link to issue 103](https://github.com/boothe0/CS386GodotProject/issues/103)
+- Pull Request: #128 [Link to PR number 128](https://github.com/boothe0/CS386GodotProject/pull/128)
+- Implemented by: Camelia Mosor
+- Approved by: Elizabeth Booth
+- Print Screen: This screen displays the tutorial as it loops through various instructions. The player can practice how to use the controls by pressing on each key, which will cause the player sprite to respond accordingly.
+
+![Image of implementation](https://i.imgur.com/i41PKd4.png) 
+
+- Requirement: As a player, I want to be able to read a brief introduction to the game so I understand the backstory, setting, and motivation of my character.
+- Issue: #104 [Link to issue 104](https://github.com/boothe0/CS386GodotProject/issues/104)
+- Pull Request: #123 [Link to PR number 123](https://github.com/boothe0/CS386GodotProject/pull/123)
+- Implemented by: Camelia Mosor
+- Approved by: Elizabeth Booth
+- Print Screen: This screen displays the introduction to the game.
+
+![Image of implementation](https://i.imgur.com/giGyijC.png) 
+
+- Requirement: As an artist, I want want the game sprites and aesthetic designs to reflect the unique setting of the game so that I can play in a compelling and immersive environment.
+- Issue: #218 [Link to issue 218](https://github.com/boothe0/CS386GodotProject/issues/218)
+- Pull Requests: #100 [Link to PR number 100](https://github.com/boothe0/CS386GodotProject/pull/100), #162 [Link to PR number 162](https://github.com/boothe0/CS386GodotProject/pull/162), #193 [Link to PR number 193](https://github.com/boothe0/CS386GodotProject/pull/193)
+- Implemented by: Camelia Mosor
+- Approved by: Asher Romanenghi (#100), Elizabeth Booth (#162, #193)
+- Print Screen: The first screen displays the sprites I designed for the player character and non-ranged enemies, and the second displays the background art I created for the title scene based on the art on Greek vases.
+
+![Image of implementation](https://i.imgur.com/8OySbJk.png) 
+![Image of implementation](https://i.imgur.com/BvslVSl.png) 
+
 ## Tests
 
 ## Demo
