@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b7apmwwmie2g0"]
 
-[ext_resource type="Script" uid="uid://ct3vwwxhru4y0" path="res://scripts/display_damage.gd" id="1_t1jxv"]
+[ext_resource type="Script" path="res://scripts/display_damage.gd" id="1_t1jxv"]
 
 [node name="DisplayDamage" type="Control"]
 layout_mode = 3

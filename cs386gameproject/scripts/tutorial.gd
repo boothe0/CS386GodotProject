@@ -22,7 +22,7 @@ func _on_timer_timeout() -> void:
 		TutorialStage = 3
 		TutorialTimer.start()
 	elif TutorialStage == 3:
-		$CanvasLayer/Control/RichTextLabel.text = "Press 'f' to use a potion"
+		$CanvasLayer/Control/RichTextLabel.text = "Press 'z, x or c' to use a potion"
 		TutorialStage = 4
 		TutorialTimer.start()
 	elif TutorialStage == 4:
@@ -30,7 +30,7 @@ func _on_timer_timeout() -> void:
 		TutorialStage = 5
 		TutorialTimer.start()
 	elif TutorialStage == 5:
-		$CanvasLayer/Control/RichTextLabel.text = "Use arrow keys to move"
+		$CanvasLayer/Control/RichTextLabel.text = "Use arrow keys or wasd to move"
 		TutorialStage = 0
 		TutorialTimer.start()
 
