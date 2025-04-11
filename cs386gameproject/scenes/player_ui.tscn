@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://cv6nyao2cqvrl"]
+[gd_scene load_steps=24 format=3 uid="uid://cv6nyao2cqvrl"]
 
 [ext_resource type="Script" uid="uid://rwq5gc1xd8b8" path="res://scripts/health_bar.gd" id="1_f16na"]
 [ext_resource type="Script" uid="uid://deqt1f7pjc0of" path="res://scenes/player_ui.gd" id="1_hx61h"]
 [ext_resource type="Script" uid="uid://bp8xtdxbt2yvu" path="res://scripts/stamina_bar.gd" id="2_g8l4n"]
-[ext_resource type="Script" uid="uid://6t5ddv7juw66" path="res://scripts/consumable_1.gd" id="3_sj8ro"]
+[ext_resource type="Script" uid="uid://ca3g2db8etrq8" path="res://scripts/shield_bar.gd" id="3_2tylp"]
+[ext_resource type="Script" uid="uid://bbq01saqa8i4w" path="res://scripts/consumable_1.gd" id="3_sj8ro"]
 [ext_resource type="PackedScene" uid="uid://c63dsnmtidj3h" path="res://scenes/consumables/heal_potion.tscn" id="4_s4a2c"]
 [ext_resource type="Theme" uid="uid://cvlma4e7cahfg" path="res://assets/UI_Elements/item_info.tres" id="5_l0kq7"]
 [ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png" id="5_mwlry"]
@@ -18,6 +19,12 @@ bg_color = Color(0.358417, 0, 0.01308, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omlwu"]
 bg_color = Color(0.898275, 2.59906e-06, 1.2514e-06, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1c0bc"]
+bg_color = Color(0.310617, 0.310617, 0.310617, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tylp"]
+bg_color = Color(0.881937, 0.881937, 0.881937, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qm72p"]
 bg_color = Color(0, 0.294954, 1.92523e-07, 1)
@@ -69,7 +76,7 @@ grow_vertical = 0
 theme = ExtResource("5_l0kq7")
 horizontal_alignment = 1
 
-[node name="StaminaBar" type="ProgressBar" parent="."]
+[node name="ShieldBar" type="ProgressBar" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -77,6 +84,24 @@ offset_left = -452.0
 offset_top = 40.0
 offset_right = -202.0
 offset_bottom = 60.0
+grow_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_1c0bc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2tylp")
+max_value = 3.0
+value = 3.0
+show_percentage = false
+script = ExtResource("3_2tylp")
+
+[node name="RegenTimer" type="Timer" parent="ShieldBar"]
+
+[node name="StaminaBar" type="ProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -452.0
+offset_top = 70.0
+offset_right = -202.0
+offset_bottom = 90.0
 grow_horizontal = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_qm72p")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dwgug")
@@ -107,9 +132,9 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -452.0
-offset_top = 70.0
+offset_top = 100.0
 offset_right = -202.0
-offset_bottom = 90.0
+offset_bottom = 120.0
 grow_horizontal = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_igy2v")
 theme_override_styles/fill = SubResource("StyleBoxFlat_mcnff")
