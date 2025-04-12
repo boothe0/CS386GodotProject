@@ -63,6 +63,8 @@
 
 ## Demo
 
+Link showing the demo of the second release of the game. [https://www.youtube.com/watch?v=VBub0hJSCcI]
+
 ## Code Quality
 
 Our team adheres to the following policies in order to maintain high-quality, readable code: 
