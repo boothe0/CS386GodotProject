@@ -50,6 +50,15 @@
 
 ![Image of implementation](https://i.imgur.com/QGby2Wx.png)
 
+- Requirement: As a player, I want to have some form of assistance, during combat so that when the difficulty scales, I have something to help out
+- Issue: #186 [Link to issue 220](https://github.com/boothe0/CS386GodotProject/issues/220)
+- Pull Requests: #213 [Link to PR number 213](https://github.com/boothe0/CS386GodotProject/pull/213)
+- Implemented by: Chandler Silk
+- Approved by: Elizabeth Booth
+- Print Screen: The screenshot shows the player playing in the level, showing the new level art I designed, as well as the walls acting as collision objects with entities.
+
+![Image of implementation](https://imgur.com/TEQ9f5M.png)
+
 ## Tests
 
 ## Demo
@@ -64,5 +73,7 @@ Our team adheres to the following policies in order to maintain high-quality, re
 - All our variable, constant, and function names are straightforward and descriptive - some examples are the variable dist_to_player, the function use_heal_potion, and the constant MAX_STAMINA - so their purpose in our program is very clear, and it is easy to understand exactly what task a piece of code is performing.
 
 ## Lessons Learned
+
+For this release, we as a team learned and improved on operating within our roles on the team. For the first release, we were still trying to figure out who exactly would work on what parts of the game, not to mention onboarding two new team members right before the release. This led to every decision needing to be discussed so that development didn't overlap, and the distribution of work being uneven at times. As we worked on this release of the game, everyone knew what they were working on, and who would be doing what, so it was much easier to focus on our individual projects. Whether it was producing art or developing consumables and upgrades, everyone contributed in significant ways, and the overall vision of the project became much clearer as a result. In addition, we learned a big lesson on rolling back versions and the importance of version control. There was a mistake while merging a pull request which rendered the game unplayable. Thanks to our previous work in ensuring version control, rolling back the merge and redoing it was a straightforward process.
 
 ## Teamwork
