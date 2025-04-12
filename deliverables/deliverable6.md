@@ -32,6 +32,24 @@
 ![Image of implementation](https://i.imgur.com/8OySbJk.png) 
 ![Image of implementation](https://i.imgur.com/BvslVSl.png) 
 
+- Requirement: As a player, I want smooth combat mechanics, so that the game feels more engaging.
+- Issue: #186 [Link to issue 186](https://github.com/boothe0/CS386GodotProject/issues/186)
+- Pull Requests: #203 [Link to PR number 203](https://github.com/boothe0/CS386GodotProject/issues?q=is%3Apr+author%3AethanSchoolAccount)
+- Implemented by: Ethan Meyer
+- Approved by: Elizabeth Booth
+- Print Screen: The screenshot displays the player being attacked by our two different enemies, ranged and melee.
+
+![Image of implementation](https://i.imgur.com/a/AWUtvGi.png)
+
+- Requirement: As a player, I want to have some form of assistance, during combat so that when the difficulty scales, I have something to help out
+- Issue: #186 [Link to issue 219](https://github.com/boothe0/CS386GodotProject/issues/219)
+- Pull Requests: #203 [Link to PR number 217](https://github.com/boothe0/CS386GodotProject/pull/217)
+- Implemented by: Ethan Meyer
+- Approved by: Elizabeth Booth
+- Print Screen: The screenshot shows when the player's shield breaks, emitting particles, acting as a message to the player letting them know protection is now gone.
+
+![Image of implementation](https://i.imgur.com/a/AWUtvGi.png)
+
 ## Tests
 
 ## Demo
