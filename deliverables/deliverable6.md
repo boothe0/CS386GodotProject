@@ -48,7 +48,7 @@
 - Approved by: Elizabeth Booth
 - Print Screen: The screenshot shows when the player's shield breaks, emitting particles, acting as a message to the player letting them know protection is now gone.
 
-![Image of implementation](https://i.imgur.com/a/AWUtvGi.png)
+![Image of implementation](https://i.imgur.com/a/tjM0ALa.png)
 
 ## Tests
 
