@@ -180,7 +180,7 @@ rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_l3c56")
 
 [node name="RoundTimer" type="Timer" parent="."]
-wait_time = 20.0
+wait_time = 30.0
 autostart = true
 
 [node name="CenterObjective" parent="." instance=ExtResource("15_uf7ea")]
