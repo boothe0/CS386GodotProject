@@ -39,7 +39,7 @@
 - Approved by: Elizabeth Booth
 - Print Screen: The screenshot displays the player being attacked by our two different enemies, ranged and melee.
 
-![Image of implementation](https://i.imgur.com/a/AWUtvGi.png)
+![Image of implementation](https://i.imgur.com/swuTrnY.png)
 
 - Requirement: As a player, I want to have some form of assistance, during combat so that when the difficulty scales, I have something to help out
 - Issue: #186 [Link to issue 219](https://github.com/boothe0/CS386GodotProject/issues/219)
@@ -48,7 +48,7 @@
 - Approved by: Elizabeth Booth
 - Print Screen: The screenshot shows when the player's shield breaks, emitting particles, acting as a message to the player letting them know protection is now gone.
 
-![Image of implementation](https://i.imgur.com/a/tjM0ALa.png)
+![Image of implementation](https://i.imgur.com/QGby2Wx.png)
 
 ## Tests
 
