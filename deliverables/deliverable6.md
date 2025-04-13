@@ -72,6 +72,13 @@ Project Link: https://github.com/boothe0/CS386GodotProject
 
 ![Image of implementation](https://i.imgur.com/6dyIQC0.png)
 
+- Requirement: As an artist, I want the game to have a set of artistically pleasing items and consumables that feel relevant to the story, so that I feel immersed in the world of the game.
+- Issue: #175 [Link to issue 175](https://github.com/boothe0/CS386GodotProject/issues/175)
+- Pull Requests: #221 [Link to PR number 221](https://github.com/boothe0/CS386GodotProject/pull/221)
+- Implemented by: Maya Harvey
+- Approved by: Camelia Mosor
+- Print Screen: These new upgrades and consumables have not yet been implemented in the game, but can be found in the folder for [Items and Upgrades](https://github.com/boothe0/CS386GodotProject/tree/main/cs386gameproject/assets/items/upgrades)
+
 ## Tests
 
 - **Testing Framework:** GUT (Godot Unit Test)
