@@ -1,12 +1,13 @@
-[gd_scene load_steps=14 format=4 uid="uid://duvy8pdxnjdmo"]
+[gd_scene load_steps=15 format=4 uid="uid://duvy8pdxnjdmo"]
 
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="1_6hm0t"]
-[ext_resource type="Script" uid="uid://b2rbrimtr7he0" path="res://scripts/main_scene.gd" id="1_l6k43"]
+[ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_l6k43"]
 [ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="2_psmqu"]
 [ext_resource type="Texture2D" uid="uid://b5jhy0dfacvmr" path="res://assets/underworld_layers.png" id="4_18nlu"]
-[ext_resource type="Script" uid="uid://m827dmmvmhfr" path="res://scripts/emitter.gd" id="7_0snu2"]
+[ext_resource type="Script" path="res://scripts/emitter.gd" id="7_0snu2"]
 [ext_resource type="PackedScene" uid="uid://cv6nyao2cqvrl" path="res://scenes/player_ui.tscn" id="7_rj7la"]
-[ext_resource type="Script" uid="uid://qs4pia2qetrl" path="res://scripts/upgrades/player_variables.gd" id="15_t4j86"]
+[ext_resource type="AudioStream" uid="uid://dvrt73gn0snt0" path="res://assets/sound-effects/combat_theme.wav" id="9_4h4he"]
+[ext_resource type="Script" path="res://scripts/upgrades/player_variables.gd" id="15_t4j86"]
 [ext_resource type="PackedScene" uid="uid://dlhra0wjxnlvj" path="res://scenes/center_objective.tscn" id="15_uf7ea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_df4cm"]
@@ -180,7 +181,7 @@ rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_l3c56")
 
 [node name="RoundTimer" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 10.0
 autostart = true
 
 [node name="CenterObjective" parent="." instance=ExtResource("15_uf7ea")]
@@ -194,6 +195,9 @@ navigation_polygon = SubResource("NavigationPolygon_qtt6f")
 script = ExtResource("15_t4j86")
 
 [node name="PlayerUI" parent="." instance=ExtResource("7_rj7la")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_4h4he")
 
 [connection signal="round_end" from="Emitter" to="." method="_on_emitter_round_end"]
 [connection signal="timeout" from="RoundTimer" to="." method="_on_round_timer_timeout"]
