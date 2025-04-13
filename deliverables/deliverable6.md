@@ -70,6 +70,13 @@
 
 ## Tests
 
+- **Testing Framework:** GUT (Godot Unit Test)
+- **Unit Tests Folder:** ![https://github.com/boothe0/CS386GodotProject/tree/main/cs386gameproject/tests/unit_tests](https://github.com/boothe0/CS386GodotProject/tree/main/cs386gameproject/tests/unit_tests)
+- **Test Written For:** Melee Enemy ![https://github.com/boothe0/CS386GodotProject/blob/main/cs386gameproject/scripts/enemy.gd](https://github.com/boothe0/CS386GodotProject/blob/main/cs386gameproject/scripts/enemy.gd)
+- Print Screen: Test results show that the enemy has more than their max health whenever taking negative damage. This should be addressed by adding some checks to ensure the enemy is always at or below max hp
+
+![Image of Test Results](https://i.imgur.com/vK0ASse.png)
+
 ## Demo
 
 Link showing the demo of the second release of the game. https://www.youtube.com/watch?v=VBub0hJSCcI
