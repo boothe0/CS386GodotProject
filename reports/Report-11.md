@@ -17,7 +17,7 @@ Project repo: https://github.com/boothe0/CS386GodotProject
 ## 1. Activity Summary
 Elizabeth- 
 
-Ethan - 
+Ethan - Worked on parts of the delivery and created an armor system for the player to later be added onto.
 
 Gordon - 
 
@@ -31,7 +31,7 @@ Camelia -
 
 ## 2. Retrospective
 
-Appreciations: 
+Appreciations: We've all been crushing it on getting our parts of the deliveries, reports and project itself done.
 
 Successes: 
 
@@ -46,7 +46,7 @@ What we should try next time:
 ## 3. Next Steps
 Elizabeth- 
 
-Ethan - 
+Ethan - Further implement the armor system, adding an inventory for the armor and different perks for each "set"
 
 Gordon - 
 
