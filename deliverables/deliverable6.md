@@ -51,13 +51,22 @@
 ![Image of implementation](https://i.imgur.com/QGby2Wx.png)
 
 - Requirement: As a player, I want to have some form of assistance, during combat so that when the difficulty scales, I have something to help out
-- Issue: #186 [Link to issue 220](https://github.com/boothe0/CS386GodotProject/issues/220)
+- Issue: #220 [Link to issue 220](https://github.com/boothe0/CS386GodotProject/issues/220)
 - Pull Requests: #213 [Link to PR number 213](https://github.com/boothe0/CS386GodotProject/pull/213)
 - Implemented by: Chandler Silk
 - Approved by: Elizabeth Booth
 - Print Screen: The screenshot shows the player playing in the level, showing the new level art I designed, as well as the walls acting as collision objects with entities.
 
 ![Image of implementation](https://imgur.com/TEQ9f5M.png)
+
+- Requirement: As a player, I want the difficulty to scale as I get stronger
+- Issue: #159 [[Link to issue 159](https://github.com/boothe0/CS386GodotProject/issues/159)
+- Pull Requests: #213 [Link to PR number 213](https://github.com/boothe0/CS386GodotProject/pull/213)
+- Implemented by: Asher Romanenghi
+- Approved by: Ethan Meyer
+- Print Screen: The screenshot shows the player taking 4 damage in one hit after a few rounds have passed and the enemies now deal more damage.
+
+![Image of implementation](https://i.imgur.com/6dyIQC0.png)
 
 ## Tests
 
