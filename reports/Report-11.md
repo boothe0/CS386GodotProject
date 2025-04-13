@@ -27,7 +27,7 @@ Asher -
 
 Chandler - 
 
-Camelia - 
+Camelia - Created pixel art versions of potential designs for a final boss and added sprite for player character's wife to the repository.
 
 ## 2. Retrospective
 
@@ -56,4 +56,4 @@ Asher -
 
 Chandler - 
 
-Camelia - 
+Camelia - Create attack animation for melee enemies and new designs for projectile weapons.
