@@ -21,7 +21,7 @@ Ethan - Worked on parts of the delivery and created an armor system for the play
 
 Gordon - 
 
-Maya - 
+Maya - Polished and added 3 new upgrades and consumables to the github that were started last week. Designed and uploaded 3 more upgrades and consumables.
 
 Asher - 
 
@@ -50,7 +50,7 @@ Ethan - Further implement the armor system, adding an inventory for the armor an
 
 Gordon - 
 
-Maya - 
+Maya - Continue and finish the rest of the consumables.
 
 Asher - 
 
