@@ -23,7 +23,7 @@ Gordon -
 
 Maya - Polished and added 3 new upgrades and consumables to the github that were started last week. Designed and uploaded 3 more upgrades and consumables.
 
-Asher - 
+Asher - Wrote the code for 2 upgrades and difficulty scaling.
 
 Chandler - 
 
@@ -35,7 +35,7 @@ Appreciations: We've all been crushing it on getting our parts of the deliveries
 
 Successes: We are doing really well on communication and being flexible with schedules.
 
-Failures: 
+Failures: N/A, everyone this week was very productive on the project and we got the deliverable started well ahead of time.
 
 Barriers: 
 
@@ -52,7 +52,7 @@ Gordon -
 
 Maya - Continue and finish the rest of the consumables.
 
-Asher - 
+Asher - Add more upgrades, fix bugs currently in issues
 
 Chandler - 
 
