@@ -107,3 +107,19 @@ Our team adheres to the following policies in order to maintain high-quality, re
 For this release, we as a team learned and improved on operating within our roles on the team. For the first release, we were still trying to figure out who exactly would work on what parts of the game, not to mention onboarding two new team members right before the release. This led to every decision needing to be discussed so that development didn't overlap, and the distribution of work being uneven at times. As we worked on this release of the game, everyone knew what they were working on, and who would be doing what, so it was much easier to focus on our individual projects. Whether it was producing art or developing consumables and upgrades, everyone contributed in significant ways, and the overall vision of the project became much clearer as a result. In addition, we learned a big lesson on rolling back versions and the importance of version control. There was a mistake while merging a pull request which rendered the game unplayable. Thanks to our previous work in ensuring version control, rolling back the merge and redoing it was a straightforward process.
 
 ## Teamwork
+
+Chandler: 14% Completed new tile set with collisions and worked on lessons learned in deliverable 6.
+
+Asher: 14% Completed 2 upgrades and added difficulty scaling. Worked on testing for deliverable 6.
+
+Ethan: 14% Completed armor system and worked on requirement section for deliverable 6.
+
+Maya: 14% Completed artwork for 3 new consumables and uploaded three new upgrades and consumables. Did the intro in deliverable 6.
+
+Camelia: 14% Completed designs for final boss and added character's wife sprites to the game. Worked on code quality section in deliverable 6.
+
+Elizabeth: 14% Made smaller UI fixes, added music/audio cues and finished inventory buy system. Worked on demo in deliverable 6.
+
+Gordon: 14% Made artwork for boss designs and ghouls. 
+
+
