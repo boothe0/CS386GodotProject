@@ -25,7 +25,7 @@ Maya - Polished and added 3 new upgrades and consumables to the github that were
 
 Asher - Wrote the code for 2 upgrades and difficulty scaling.
 
-Chandler - 
+Chandler - Touched up level art assets and worked on fixing spawn issues.
 
 Camelia - Created pixel art versions of potential designs for a final boss and added sprite for player character's wife to the repository.
 
@@ -37,9 +37,9 @@ Successes: We are doing really well on communication and being flexible with sch
 
 Failures: N/A, everyone this week was very productive on the project and we got the deliverable started well ahead of time.
 
-Barriers: 
+Barriers: None for this week, everything went smoothly.
 
-What we should try next time: 
+What we should try next time: Continue the pace and efficiency of work that we had this week.
 
 
 
@@ -54,6 +54,6 @@ Maya - Continue and finish the rest of the consumables.
 
 Asher - Add more upgrades, fix bugs currently in issues
 
-Chandler - 
+Chandler - Finish spawning fixes, refine level visuals and design
 
 Camelia - Create attack animation for melee enemies and new designs for projectile weapons.
