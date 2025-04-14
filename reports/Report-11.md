@@ -19,7 +19,7 @@ Elizabeth- Worked on some UI changes, sound effects/music and finished off buy-i
 
 Ethan - Worked on parts of the delivery and created an armor system for the player to later be added onto.
 
-Gordon - 
+Gordon - Worked on Chimera and Ghoul art
 
 Maya - Polished and added 3 new upgrades and consumables to the github that were started last week. Designed and uploaded 3 more upgrades and consumables.
 
@@ -48,7 +48,7 @@ Elizabeth- Further work on bug fixes with the buy-inventory system and add more 
 
 Ethan - Further implement the armor system, adding an inventory for the armor and different perks for each "set"
 
-Gordon - 
+Gordon - Design small quick mob for game
 
 Maya - Continue and finish the rest of the consumables.
 
