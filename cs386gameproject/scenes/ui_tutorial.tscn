@@ -1,0 +1,175 @@
+[gd_scene load_steps=8 format=3 uid="uid://in7wrml8t5na"]
+
+[ext_resource type="Texture2D" uid="uid://cv0m3vwjkbcon" path="res://assets/UI_Elements/abilities_placeholder.png" id="1_x3nmf"]
+[ext_resource type="Script" path="res://scripts/consumable_1.gd" id="2_lydxt"]
+[ext_resource type="Theme" uid="uid://cvlma4e7cahfg" path="res://assets/UI_Elements/item_info.tres" id="3_kbcdg"]
+[ext_resource type="PackedScene" uid="uid://c63dsnmtidj3h" path="res://scenes/consumables/heal_potion.tscn" id="4_lugxq"]
+[ext_resource type="Texture2D" uid="uid://b1mrlmd7s1w8u" path="res://assets/VariPixels PotionsPack 02112022 Update/hpPotion.png" id="5_wr56i"]
+[ext_resource type="Script" path="res://scripts/consumable_2.gd" id="6_wm2qm"]
+[ext_resource type="Script" path="res://scripts/consumable_3.gd" id="7_2acvh"]
+
+[node name="UiTutorial" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -452.0
+offset_right = -252.0
+offset_bottom = 40.0
+grow_horizontal = 0
+color = Color(1, 0.06, 0.06, 1)
+
+[node name="Shield" type="ColorRect" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -452.0
+offset_top = 50.0
+offset_right = -252.0
+offset_bottom = 90.0
+grow_horizontal = 0
+
+[node name="Stamina" type="ColorRect" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -452.0
+offset_top = 100.0
+offset_right = -252.0
+offset_bottom = 140.0
+grow_horizontal = 0
+color = Color(2.93598e-06, 0.816165, 0.225751, 1)
+
+[node name="Mana" type="ColorRect" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -452.0
+offset_top = 150.0
+offset_right = -252.0
+offset_bottom = 190.0
+grow_horizontal = 0
+color = Color(0.027451, 0.501961, 1, 1)
+
+[node name="Ability1" type="TextureRect" parent="."]
+z_index = -1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_top = 20.0
+offset_right = -2.0
+offset_bottom = 160.0
+grow_horizontal = 0
+texture = ExtResource("1_x3nmf")
+expand_mode = 1
+
+[node name="Consumable_1" type="HBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -152.0
+offset_right = -102.0
+offset_bottom = 40.0
+grow_horizontal = 0
+scale = Vector2(3, 3.48)
+script = ExtResource("2_lydxt")
+
+[node name="Label" type="Label" parent="Consumable_1"]
+layout_mode = 2
+theme = ExtResource("3_kbcdg")
+text = "Z"
+
+[node name="TextureRect" parent="Consumable_1" instance=ExtResource("4_lugxq")]
+layout_mode = 2
+texture = ExtResource("5_wr56i")
+
+[node name="Consumable_2" type="HBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -152.0
+offset_top = 140.0
+offset_right = -102.0
+offset_bottom = 180.0
+grow_horizontal = 0
+scale = Vector2(3, 3.48)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("6_wm2qm")
+
+[node name="Label" type="Label" parent="Consumable_2"]
+layout_mode = 2
+theme = ExtResource("3_kbcdg")
+text = "X
+"
+
+[node name="TextureRect" parent="Consumable_2" instance=ExtResource("4_lugxq")]
+layout_mode = 2
+texture = ExtResource("5_wr56i")
+
+[node name="Consumable_3" type="HBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -152.0
+offset_top = 280.0
+offset_right = -102.0
+offset_bottom = 320.0
+grow_horizontal = 0
+scale = Vector2(3, 3.48)
+theme = ExtResource("3_kbcdg")
+script = ExtResource("7_2acvh")
+
+[node name="Label" type="Label" parent="Consumable_3"]
+layout_mode = 2
+text = "C
+"
+
+[node name="TextureRect" parent="Consumable_3" instance=ExtResource("4_lugxq")]
+layout_mode = 2
+texture = ExtResource("5_wr56i")
+
+[node name="Ability2" type="TextureRect" parent="."]
+z_index = -1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_top = 160.0
+offset_right = -2.0
+offset_bottom = 300.0
+grow_horizontal = 0
+texture = ExtResource("1_x3nmf")
+expand_mode = 1
+
+[node name="Ability3" type="TextureRect" parent="."]
+z_index = -1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -102.0
+offset_top = 300.0
+offset_right = -2.0
+offset_bottom = 440.0
+grow_horizontal = 0
+texture = ExtResource("1_x3nmf")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Round timer"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 117.0
+offset_bottom = 43.0
+text = "Coin Counter"
