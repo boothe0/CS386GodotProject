@@ -1,4 +1,4 @@
-# Report for Week #10
+# Report for Week #12
 
 Tiny Roguelite
 
@@ -27,7 +27,7 @@ Asher:
 
 Chandler:
 
-Camelia:
+Camelia: Created attack animation for melee enemies and new sprites for projectiles
 
 ## 2. Retrospective
 
@@ -54,4 +54,4 @@ Asher:
 
 Chandler:
 
-Camelia:
+Camelia: Create new sprite for shopkeeper, work on ideas for central objective
