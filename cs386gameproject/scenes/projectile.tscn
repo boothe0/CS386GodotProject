@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dr4k1grc0ehi2"]
 
-[ext_resource type="Script" uid="uid://dbhv5r2uc246r" path="res://scripts/projectile.gd" id="1_0g5wb"]
+[ext_resource type="Script" path="res://scripts/projectile.gd" id="1_0g5wb"]
 [ext_resource type="Texture2D" uid="uid://cv0wcmqpubop2" path="res://assets/Projectiles/Projectiles/bolt1_strip.png" id="1_k6ip4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_efjcx"]
