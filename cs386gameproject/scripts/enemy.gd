@@ -139,6 +139,15 @@ func move_towards_target(delta):
 func attack():
 	# Continually attack while player is in range
 	while in_attack_range and player and can_attack:
+		if animated_sprite:
+			if direction.x > 0:
+				animated_sprite.play("attack_right")
+			elif direction.x < 0:
+				animated_sprite.play("attack_left")
+			elif direction.y > 0:
+				animated_sprite.play("attack_up")
+			elif direction.y < 0:
+				animated_sprite.play("attack_down")
 		player.take_damage(attack_damage)
 		can_attack = false
 		if get_tree() != null:
@@ -200,6 +209,15 @@ func _on_attack_area_body_entered(body: Node2D) -> void:
 func _on_attack_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		in_attack_range = false
+		if animated_sprite:
+			if direction.x > 0:
+				animated_sprite.play("walk_right")
+			elif direction.x < 0:
+				animated_sprite.play("walk_left")
+			elif direction.y > 0:
+				animated_sprite.play("walk_up")
+			elif direction.y < 0:
+				animated_sprite.play("walk_down")
 
 func apply_knockback(knockback_value: float) -> void:
 	# Calculate knockback direction away from the player, or upward by default.
