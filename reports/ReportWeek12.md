@@ -17,7 +17,7 @@ Project repo: https://github.com/boothe0/CS386GodotProject
 ## 1. Activity Summary
 Elizabeth:
 
-Ethan:
+Ethan: Created the start of a fast enemy
 
 Gordon:
 
@@ -33,9 +33,9 @@ Camelia:
 
 Appreciations:
 
-Successes:
+Successes: 
 
-Failures:
+Failures: Not a lot of communication this week, as well as commits into the repository
 
 Barriers:
 
@@ -44,7 +44,7 @@ What we should try next time:
 ## 3. Next Steps
 Elizabeth:
 
-Ethan:
+Ethan: Will continue to work on this fast enemy (maybe make it steal coins), and continue with player shield
 
 Gordon:
 
