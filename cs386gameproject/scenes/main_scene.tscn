@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b2rbrimtr7he0" path="res://scripts/main_scene.gd" id="1_l6k43"]
 [ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="2_psmqu"]
 [ext_resource type="Texture2D" uid="uid://b5jhy0dfacvmr" path="res://assets/underworld_layers.png" id="4_18nlu"]
-[ext_resource type="Script" uid="uid://m827dmmvmhfr" path="res://scripts/emitter.gd" id="7_0snu2"]
+[ext_resource type="Script" uid="uid://bps2xfea8unav" path="res://scripts/emitter.gd" id="7_0snu2"]
 [ext_resource type="PackedScene" uid="uid://cv6nyao2cqvrl" path="res://scenes/player_ui.tscn" id="7_rj7la"]
 [ext_resource type="Script" uid="uid://qs4pia2qetrl" path="res://scripts/upgrades/player_variables.gd" id="15_t4j86"]
 [ext_resource type="PackedScene" uid="uid://dlhra0wjxnlvj" path="res://scenes/center_objective.tscn" id="15_uf7ea"]
@@ -152,7 +152,7 @@ tile_map_data = PackedByteArray("AAD//wAAAQADAAIAAAD/////AQADAAIAAAAAAP//AQADAAI
 tile_set = SubResource("TileSet_7fs3h")
 
 [node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.2
 
 [node name="Emitter" type="Node" parent="."]
 script = ExtResource("7_0snu2")

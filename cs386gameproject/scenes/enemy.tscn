@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bbphrsjnh0jfa" path="res://scripts/enemy.gd" id="1_hfuff"]
 [ext_resource type="Texture2D" uid="uid://sjiaenrl1wqh" path="res://assets/16x16 Magical Forest Asset Pack/Characters/GoblinCharacter-Idle.png" id="2_wqalq"]
-[ext_resource type="Script" uid="uid://meax0a12iepb" path="res://scripts/EnemyHealthBar.gd" id="3_hi8vk"]
+[ext_resource type="Script" uid="uid://cvpulugwifdcc" path="res://scripts/EnemyHealthBar.gd" id="3_hi8vk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ra3w"]
 radius = 7.0
@@ -185,8 +185,10 @@ shape = SubResource("CircleShape2D_4ra3w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ftuvv")
-animation = &"idle_down"
+animation = &"walk_down"
 autoplay = "idle_down"
+frame = 1
+frame_progress = 0.839191
 
 [node name="DetectionArea" type="Area2D" parent="."]
 visible = false
@@ -197,6 +199,7 @@ shape = SubResource("CircleShape2D_jof74")
 [node name="AttackArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_yg8bk")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]

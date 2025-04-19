@@ -29,6 +29,11 @@ project/assembly_name="CS386GameProject"
 
 enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
+[global_group]
+
+enemies=""
+player=""
+
 [input]
 
 move_up={
