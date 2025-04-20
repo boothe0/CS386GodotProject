@@ -23,7 +23,7 @@ Gordon:
 
 Maya:
 
-Asher:
+Asher: Small refactors for readability, reviewed and tested pull requests
 
 Chandler:
 
@@ -50,7 +50,7 @@ Gordon:
 
 Maya:
 
-Asher:
+Asher: Fix some issues labeled as bugs
 
 Chandler:
 
