@@ -15,7 +15,7 @@ Missing participants: N/A
 Project repo: https://github.com/boothe0/CS386GodotProject
 
 ## 1. Activity Summary
-Elizabeth:
+Elizabeth: Added more sound effects.
 
 Ethan: Created the start of a fast enemy
 
@@ -31,18 +31,18 @@ Camelia: Created attack animation for melee enemies and new sprites for projecti
 
 ## 2. Retrospective
 
-Appreciations:
+Appreciations: The report was created and everyone was notified to fill it out.
 
 Successes: 
 
 Failures: Not a lot of communication this week, as well as commits into the repository
 
-Barriers:
+Barriers: Scheduling issues and high workloads around this time led to little work being done on the project.
 
-What we should try next time:
+What we should try next time: Start at the beginning of the week and pace out smaller commits over time.
 
 ## 3. Next Steps
-Elizabeth:
+Elizabeth: Creating the wall potion script.
 
 Ethan: Will continue to work on this fast enemy (maybe make it steal coins), and continue with player shield
 
