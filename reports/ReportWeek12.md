@@ -19,7 +19,7 @@ Elizabeth: Added more sound effects.
 
 Ethan: Created the start of a fast enemy
 
-Gordon:
+Gordon: Creating sprite for harpy
 
 Maya:
 
@@ -46,7 +46,7 @@ Elizabeth: Creating the wall potion script.
 
 Ethan: Will continue to work on this fast enemy (maybe make it steal coins), and continue with player shield
 
-Gordon:
+Gordon: More sprite creation
 
 Maya:
 
