@@ -25,7 +25,7 @@ Maya: Finished and updated assets for consumables and upgrades
 
 Asher: Small refactors for readability, reviewed and tested pull requests
 
-Chandler:
+Chandler: Started working on alternate spawn solutions
 
 Camelia: Created attack animation for melee enemies and new sprites for projectiles
 
@@ -33,7 +33,7 @@ Camelia: Created attack animation for melee enemies and new sprites for projecti
 
 Appreciations: The report was created and everyone was notified to fill it out.
 
-Successes: 
+Successes: We've started to work on the polishing parts of the development process that will give us a better end product.
 
 Failures: Not a lot of communication this week, as well as commits into the repository
 
@@ -52,6 +52,6 @@ Maya: Start implementing the Upgrades and Consumables; Most likely starting with
 
 Asher: Fix some issues labeled as bugs
 
-Chandler:
+Chandler: Continue working on spawn solutions, like a placeable spawner
 
 Camelia: Create new sprite for shopkeeper, work on ideas for central objective
