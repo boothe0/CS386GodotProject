@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dudhk35vao17"
-path="res://.godot/imported/blood.PNG-b00d690bae7c1657a751c7a90206628d.ctex"
+uid="uid://buu1n7avjq43u"
+path="res://.godot/imported/thermopylae.PNG-e4acba03320d0113f86009ca71856579.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/blood.PNG"
-dest_files=["res://.godot/imported/blood.PNG-b00d690bae7c1657a751c7a90206628d.ctex"]
+source_file="res://assets/items/upgrades/thermopylae.PNG"
+dest_files=["res://.godot/imported/thermopylae.PNG-e4acba03320d0113f86009ca71856579.ctex"]
 
 [params]
 
