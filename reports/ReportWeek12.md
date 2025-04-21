@@ -48,7 +48,7 @@ Ethan: Will continue to work on this fast enemy (maybe make it steal coins), and
 
 Gordon: More sprite creation
 
-Maya: 
+Maya: Start implementing the Upgrades and Consumables; Most likely starting with "Increase Dash Length: Marathon Sandals"
 
 Asher: Fix some issues labeled as bugs
 
