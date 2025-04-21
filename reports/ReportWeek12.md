@@ -21,7 +21,7 @@ Ethan: Created the start of a fast enemy
 
 Gordon: Creating sprite for harpy
 
-Maya:
+Maya: Finished and updated assets for consumables and upgrades
 
 Asher: Small refactors for readability, reviewed and tested pull requests
 
@@ -48,7 +48,7 @@ Ethan: Will continue to work on this fast enemy (maybe make it steal coins), and
 
 Gordon: More sprite creation
 
-Maya:
+Maya: 
 
 Asher: Fix some issues labeled as bugs
 
