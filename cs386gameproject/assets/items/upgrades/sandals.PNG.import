@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dudhk35vao17"
-path="res://.godot/imported/blood.PNG-b00d690bae7c1657a751c7a90206628d.ctex"
+uid="uid://d2ofqxwbuc71a"
+path="res://.godot/imported/sandals.PNG-47c3329cc94dc26a9dcc900ea3512867.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/blood.PNG"
-dest_files=["res://.godot/imported/blood.PNG-b00d690bae7c1657a751c7a90206628d.ctex"]
+source_file="res://assets/items/upgrades/sandals.PNG"
+dest_files=["res://.godot/imported/sandals.PNG-47c3329cc94dc26a9dcc900ea3512867.ctex"]
 
 [params]
 
