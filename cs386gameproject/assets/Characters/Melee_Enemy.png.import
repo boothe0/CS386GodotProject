@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-uid="uid://dpcllv7qrjqa2"
-path="res://.godot/imported/arcane.PNG-7597d4d19161f81dd61459b7998a7d68.ctex"
+uid="uid://b3cjjyjge2488"
+path="res://.godot/imported/Melee_Enemy.png-49b4ff061c65fafdaede8b7f7d9290ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/arcane.PNG"
-dest_files=["res://.godot/imported/arcane.PNG-7597d4d19161f81dd61459b7998a7d68.ctex"]
+source_file="res://assets/Characters/Melee_Enemy.png"
+dest_files=["res://.godot/imported/Melee_Enemy.png-49b4ff061c65fafdaede8b7f7d9290ef.ctex"]
 
 [params]
 

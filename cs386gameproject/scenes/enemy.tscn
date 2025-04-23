@@ -1,11 +1,44 @@
-[gd_scene load_steps=26 format=3 uid="uid://d1he61wxuea23"]
+[gd_scene load_steps=35 format=3 uid="uid://d1he61wxuea23"]
 
-[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_hfuff"]
+
+[ext_resource type="Texture2D" uid="uid://b3cjjyjge2488" path="res://assets/Characters/Melee_Enemy.png" id="2_2wsnx"]
 [ext_resource type="Texture2D" uid="uid://sjiaenrl1wqh" path="res://assets/16x16 Magical Forest Asset Pack/Characters/GoblinCharacter-Idle.png" id="2_wqalq"]
 [ext_resource type="Script" path="res://scripts/EnemyHealthBar.gd" id="3_hi8vk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ra3w"]
 radius = 7.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_likwh"]
+atlas = ExtResource("2_2wsnx")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0g857"]
+atlas = ExtResource("2_2wsnx")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4aka"]
+atlas = ExtResource("2_2wsnx")
+region = Rect2(208, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2xkg"]
+atlas = ExtResource("2_2wsnx")
+region = Rect2(240, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1vxb"]
+atlas = ExtResource("2_2wsnx")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vq1m7"]
+atlas = ExtResource("2_2wsnx")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4x5uf"]
+atlas = ExtResource("2_2wsnx")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgn6r"]
+atlas = ExtResource("2_2wsnx")
+region = Rect2(176, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u3asi"]
 atlas = ExtResource("2_wqalq")
@@ -73,6 +106,50 @@ region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ftuvv"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_likwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0g857")
+}],
+"loop": true,
+"name": &"attack_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4aka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2xkg")
+}],
+"loop": true,
+"name": &"attack_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1vxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vq1m7")
+}],
+"loop": true,
+"name": &"attack_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4x5uf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgn6r")
+}],
+"loop": true,
+"name": &"attack_up",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_u3asi")
@@ -185,7 +262,7 @@ shape = SubResource("CircleShape2D_4ra3w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ftuvv")
-animation = &"idle_down"
+animation = &"attack_right"
 autoplay = "idle_down"
 
 [node name="DetectionArea" type="Area2D" parent="."]
