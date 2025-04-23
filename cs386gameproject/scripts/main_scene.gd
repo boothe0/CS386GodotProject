@@ -15,12 +15,8 @@ var RangedEnemy = preload("res://scenes/ranged_enemy.tscn")
 
 @onready var GroundLayer = $GroundLayer
 @onready var SpawnTimer = $SpawnTimer
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _ready() -> void:
-	audio_stream_player_2d.play()
-	audio_stream_player_2d.finished.connect(_on_audio_finished)
-
 	var ground_rect = GroundLayer.get_used_rect()
 	var ground_position = ground_rect.position
 
@@ -70,5 +66,3 @@ func _on_round_timer_timeout() -> void:
 	# send player to shop after end of round
 	print("Something") # debugging
 	get_tree().change_scene_to_file("res://scenes/shop_scene.tscn")
-func _on_audio_finished():
-	audio_stream_player_2d.play()  # Restart the sound when finished
