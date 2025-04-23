@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=3 uid="uid://d1he61wxuea23"]
 
-
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_hfuff"]
 [ext_resource type="Texture2D" uid="uid://b3cjjyjge2488" path="res://assets/Characters/Melee_Enemy.png" id="2_2wsnx"]
 [ext_resource type="Texture2D" uid="uid://sjiaenrl1wqh" path="res://assets/16x16 Magical Forest Asset Pack/Characters/GoblinCharacter-Idle.png" id="2_wqalq"]
 [ext_resource type="Script" path="res://scripts/EnemyHealthBar.gd" id="3_hi8vk"]

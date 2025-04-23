@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6jcadqr57vvm"]
 
 [ext_resource type="Theme" uid="uid://bkiujxnjn0a0q" path="res://assets/UI_Elements/TitleScreenTheme.tres" id="1_5krm1"]
-[ext_resource type="Script" path="res://scripts/intro_scene.gd" id="1_xoymr"]
+[ext_resource type="Script" uid="uid://d3u1tmja4c53j" path="res://scripts/intro_scene.gd" id="1_xoymr"]
 [ext_resource type="Texture2D" uid="uid://cghfgyplmly4j" path="res://assets/UI_Elements/Title_Screen.png" id="3_u5rop"]
 
 [node name="Intro" type="CanvasLayer"]
@@ -68,7 +68,5 @@ offset_bottom = 19.495
 theme = ExtResource("1_5krm1")
 theme_override_font_sizes/font_size = 30
 text = "Continue"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="pressed" from="CanvasLayer/ContinueButton" to="." method="_on_continue_button_pressed"]
