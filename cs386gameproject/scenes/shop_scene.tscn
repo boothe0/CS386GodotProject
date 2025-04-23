@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=4 uid="uid://bfmih4khaeu4m"]
+[gd_scene load_steps=16 format=4 uid="uid://bfmih4khaeu4m"]
 
-[ext_resource type="Script" uid="uid://rdcioqbhs3m0" path="res://scenes/shop_scene.gd" id="1_3djh5"]
+[ext_resource type="Script" path="res://scenes/shop_scene.gd" id="1_3djh5"]
 [ext_resource type="Texture2D" uid="uid://cjip70074evdm" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/wooden_interior.png" id="1_8k3ky"]
 [ext_resource type="PackedScene" uid="uid://bd5hpw8tky5b4" path="res://scenes/shop_keeper.tscn" id="2_krnjd"]
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="3_3bvrm"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://qsiw8h80mvef" path="res://scenes/interactables/interactable.tscn" id="4_6gfk0"]
 [ext_resource type="Theme" uid="uid://15y45ulhxojt" path="res://assets/UI_Elements/shop_screen_theme.tres" id="5_pa5gp"]
 [ext_resource type="PackedScene" uid="uid://cv6nyao2cqvrl" path="res://scenes/player_ui.tscn" id="7_76n6p"]
+[ext_resource type="AudioStream" uid="uid://ddjycuiltg4uo" path="res://assets/sound-effects/shop_theme.wav" id="9_w2xr6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2l0sb"]
 texture = ExtResource("1_8k3ky")
@@ -470,3 +471,6 @@ shape = SubResource("WorldBoundaryShape2D_pptjr")
 position = Vector2(-414, -126)
 rotation = 1.5708
 shape = SubResource("WorldBoundaryShape2D_cl78e")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_w2xr6")

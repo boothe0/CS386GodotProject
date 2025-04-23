@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://qsiw8h80mvef"]
+[gd_scene load_steps=10 format=3 uid="uid://qsiw8h80mvef"]
 
-[ext_resource type="Script" uid="uid://di5aybf2iywyr" path="res://scripts/shop/shop_interact.gd" id="1_x7uff"]
+[ext_resource type="Script" path="res://scripts/shop/shop_interact.gd" id="1_x7uff"]
 [ext_resource type="Texture2D" uid="uid://cjip70074evdm" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/wooden_interior.png" id="2_675sf"]
 [ext_resource type="Theme" uid="uid://cvlma4e7cahfg" path="res://assets/UI_Elements/item_info.tres" id="3_2dwuh"]
 [ext_resource type="PackedScene" uid="uid://clhtowjahugm2" path="res://scenes/shop_items/shop_item.tscn" id="3_ot6qs"]
+[ext_resource type="AudioStream" uid="uid://clkhprsew1x5j" path="res://assets/sound-effects/purchase.wav" id="5_vq4e3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_20lta"]
 size = Vector2(28, 28)
@@ -412,6 +413,9 @@ tile_set = SubResource("TileSet_tisja")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 8)
 shape = SubResource("CircleShape2D_swtek")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_vq4e3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
