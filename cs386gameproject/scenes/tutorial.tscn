@@ -1,32 +1,32 @@
 [gd_scene load_steps=6 format=3 uid="uid://o1o362y2npw4"]
 
-[ext_resource type="Script" uid="uid://ddp11h4ie77dq" path="res://scripts/tutorial.gd" id="1_qfmq3"]
+[ext_resource type="Script" path="res://scripts/tutorial.gd" id="1_qfmq3"]
 [ext_resource type="Theme" uid="uid://bkiujxnjn0a0q" path="res://assets/UI_Elements/TitleScreenTheme.tres" id="2_nijuy"]
 [ext_resource type="FontFile" uid="uid://cow87u5au3hqo" path="res://assets/UI_Elements/Cardinal.ttf" id="3_2ayie"]
 [ext_resource type="PackedScene" uid="uid://cmxv3umec3ewx" path="res://scenes/player.tscn" id="4_urxcp"]
-[ext_resource type="Script" uid="uid://c4u6gdffh6ii1" path="res://scripts/tutorial_player.gd" id="5_b80lm"]
+[ext_resource type="Script" path="res://scripts/tutorial_player.gd" id="5_b80lm"]
 
-[node name="Tutorial" type="Node2D"]
+[node name="Tutorial" type="CanvasLayer"]
 script = ExtResource("1_qfmq3")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchor_right = 0.997
-anchor_bottom = 1.008
-offset_right = 0.455933
-offset_bottom = -0.184021
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
 theme = ExtResource("2_nijuy")
 
-[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
+[node name="Panel" type="Panel" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.003
 anchor_bottom = 1.0
 offset_right = -0.447021
 
-[node name="ReturnButton" type="Button" parent="CanvasLayer/Control"]
+[node name="ReturnButton" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -41,25 +41,28 @@ theme_override_fonts/font = ExtResource("3_2ayie")
 theme_override_font_sizes/font_size = 30
 text = "Return To Menu"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.003
-anchor_bottom = 0.282
-offset_left = 246.0
-offset_top = 87.0
-offset_right = -235.447
-offset_bottom = 22.854
-theme_override_font_sizes/normal_font_size = 50
-text = "Use arrow keys to move"
-
-[node name="Player" parent="CanvasLayer/Control" instance=ExtResource("4_urxcp")]
+[node name="Player" parent="Control" instance=ExtResource("4_urxcp")]
 position = Vector2(585, 365)
 scale = Vector2(3.53227, 3.85228)
 script = ExtResource("5_b80lm")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 150.0
+offset_top = 100.0
+offset_right = 800.0
+offset_bottom = 250.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Use arrow keys to move"
 
-[connection signal="pressed" from="CanvasLayer/Control/ReturnButton" to="." method="_on_return_button_pressed"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="NextButton" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 200.0
+offset_top = 175.0
+offset_bottom = 175.0
+text = "Next"
+
+[connection signal="pressed" from="Control/ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="Control/NextButton" to="." method="_on_next_button_pressed"]
