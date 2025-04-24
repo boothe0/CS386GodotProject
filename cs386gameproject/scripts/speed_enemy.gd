@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var main = get_node("/root/MainScene")
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 
-const SPEED = 100
+const SPEED = 120
 const ATTACK_COOLDOWN = 1.5
 const BASE_ATTACK_DAMAGE = 1
 const BASE_HEALTH = 3
@@ -123,12 +123,12 @@ func drop_coin(coin_type, coin_amount):
 		coin.add_to_group("coins")
 
 func _on_attack_area_body_entered(body: Node2D) -> void:
-	if body.name == "player":
+	if body.name == "Player":
 		in_attack_range = true
 		attack()
 
 func _on_attack_area_body_exited(body: Node2D) -> void:
-	if body.name == "player":
+	if body.name == "Player":
 		in_attack_range = false
 
 func apply_knockback(knockback_value: float) -> void:
