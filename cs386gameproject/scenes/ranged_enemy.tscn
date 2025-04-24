@@ -208,8 +208,8 @@ offset_right = 19.0
 offset_bottom = -11.0
 theme_override_styles/background = SubResource("StyleBoxFlat_ggspu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dkwwy")
-max_value = 3.0
-value = 3.0
+max_value = 4.0
+value = 4.0
 show_percentage = false
 script = ExtResource("3_7ycfa")
 
