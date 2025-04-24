@@ -1,0 +1,25 @@
+extends TileMapLayer
+
+@onready var tilemap: TileMapLayer = $'.'
+var wall_potion_used = false
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	Emitter.wall_potion_used.connect(handle_placement)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+func handle_placement():
+	wall_potion_used = true
+	return wall_potion_used
+func _input(event):
+	if Input.is_action_just_pressed("click") and wall_potion_used == true:
+		var mouse_pos = get_global_mouse_position()
+		var local_pos = tilemap.to_local(mouse_pos)
+		var tile_mouse_pos = tilemap.local_to_map(local_pos)
+			
+		var source_id = 1
+		var atlas_cord = Vector2i(1, 2)
+			
+		tilemap.set_cell(tile_mouse_pos, source_id, atlas_cord)
+		wall_potion_used = false

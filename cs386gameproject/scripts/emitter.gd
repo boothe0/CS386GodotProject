@@ -5,6 +5,7 @@ signal consumable_2
 signal consumable_3
 signal round_end
 signal player_variables_updated
+signal wall_potion_used
 
 signal buy_item_pressed(
 	item_name: String, price: int, shop_spot: int, consumable: bool

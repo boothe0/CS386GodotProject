@@ -4,5 +4,5 @@
   "price": 100,
   "consumable": true,
   "description": "Creates a wall of soliders to protect you",
-  "script": "res://scripts/consumables/heal_potion.gd"
+  "script": "res://scripts/consumables/wall_potion_use.gd"
 }

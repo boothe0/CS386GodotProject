@@ -1,38 +1,30 @@
-extends Node2D
+extends CanvasLayer
 
-var TutorialStage = 0
+var TutorialStage = 1
 
-@onready var TutorialTimer = $Timer
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	TutorialTimer.start()
 
-func _on_timer_timeout() -> void:
-	if TutorialStage == 0:
-		$CanvasLayer/Control/RichTextLabel.text = "Press 'e' to make a melee attack"
-		TutorialStage = 1
-		TutorialTimer.start()
-	elif TutorialStage == 1:
-		$CanvasLayer/Control/RichTextLabel.text = "Right click to make a ranged attack"
-		TutorialStage = 2
-		TutorialTimer.start()
-	elif TutorialStage == 2:
-		$CanvasLayer/Control/RichTextLabel.text = "Press the space bar to dodge"
-		TutorialStage = 3
-		TutorialTimer.start()
-	elif TutorialStage == 3:
-		$CanvasLayer/Control/RichTextLabel.text = "Press 'z, x or c' to use a potion"
-		TutorialStage = 4
-		TutorialTimer.start()
-	elif TutorialStage == 4:
-		$CanvasLayer/Control/RichTextLabel.text = "Press 'e' to interact with shop items"
-		TutorialStage = 5
-		TutorialTimer.start()
-	elif TutorialStage == 5:
-		$CanvasLayer/Control/RichTextLabel.text = "Use arrow keys or wasd to move"
-		TutorialStage = 0
-		TutorialTimer.start()
+@onready var rich_text_label: RichTextLabel = $Control/RichTextLabel
+@onready var ui_prompt = $ShopKeeper/InteractingComponent/InteractLabel 
+
+
+func _on_next_button_pressed() -> void:
+	match TutorialStage:
+		1:
+			rich_text_label.text = "Press 'e' to make a melee attack"
+			TutorialStage = 2
+		2:
+			rich_text_label.text = "Right click to make a ranged attack"
+			TutorialStage = 3
+		3:
+			rich_text_label.text = "Press the space bar to dodge"
+			TutorialStage = 4
+		4:
+			rich_text_label.text = "Press 'z, x or c' to use a consumable"
+			TutorialStage = 5
+		5:
+			rich_text_label.text = "Use arrow keys or wasd to move"
+			TutorialStage = 1
 
 func _on_return_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
