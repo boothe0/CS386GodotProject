@@ -40,8 +40,8 @@ var center_objective: Node2D = null
 var reached_center = false
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 
-# health
-@export var health = BASE_HEALTH
+var max_health = BASE_HEALTH
+@export var health = max_health
 var attack_cooldown = BASE_ATTACK_COOLDOWN
 var attack_damage = BASE_ATTACK_DAMAGE
 signal health_update
@@ -181,7 +181,7 @@ func attack_target(target: Node2D) -> void:
 func take_damage(amount, damage_source):
 	if damage_source == "sword":
 		FreezeManager.frameFreeze(0.1, 0.3)
-	health -= amount
+	health = min(health - amount, max_health)
 	health_update.emit()
 	if health <= 0:
 		die()
