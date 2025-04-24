@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=4 uid="uid://b41of83uqk7lg"]
+[gd_scene load_steps=8 format=4 uid="uid://b41of83uqk7lg"]
 
-[ext_resource type="Texture2D" uid="uid://cgf2uj684p73o" path="res://assets/VariPixels PotionsPack 02112022 Update/WallPotion.png" id="1_23l5q"]
-[ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="3_we457"]
-[ext_resource type="Texture2D" uid="uid://b5jhy0dfacvmr" path="res://assets/underworld_layers.png" id="4_wfqk3"]
+[ext_resource type="Texture2D" uid="uid://cgf2uj684p73o" path="res://assets/VariPixels PotionsPack 02112022 Update/WallPotion.png" id="1_5dqdx"]
+[ext_resource type="Script" path="res://scripts/consumables/wall_potion_use.gd" id="2_2khh5"]
+[ext_resource type="Texture2D" uid="uid://b1blnn5c1g4b6" path="res://assets/16x16 Magical Forest Asset Pack/Tiles/Forest Tile.png" id="3_h6g0g"]
+[ext_resource type="Texture2D" uid="uid://b5jhy0dfacvmr" path="res://assets/underworld_layers.png" id="4_0ou2s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cstrp"]
-texture = ExtResource("3_we457")
+texture = ExtResource("3_h6g0g")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -50,7 +51,7 @@ texture = ExtResource("3_we457")
 10:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 2.75, -2.875, -2.125, 0, -3, 5.875, -8, 6, -8, -8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gc57c"]
-texture = ExtResource("4_wfqk3")
+texture = ExtResource("4_0ou2s")
 0:0/0 = 0
 1:0/0 = 0
 1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -121,7 +122,8 @@ sources/0 = SubResource("TileSetAtlasSource_cstrp")
 sources/1 = SubResource("TileSetAtlasSource_gc57c")
 
 [node name="WallPotion" type="TextureRect"]
-texture = ExtResource("1_23l5q")
+texture = ExtResource("1_5dqdx")
+script = ExtResource("2_2khh5")
 
 [node name="GroundLayer" type="TileMapLayer" parent="." groups=["boundary"]]
 z_index = 30

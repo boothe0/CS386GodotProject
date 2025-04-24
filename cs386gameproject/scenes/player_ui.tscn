@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://scripts/consumable_3.gd" id="7_gf436"]
 [ext_resource type="Texture2D" uid="uid://cv0m3vwjkbcon" path="res://assets/UI_Elements/abilities_placeholder.png" id="8_pgmt8"]
 [ext_resource type="Script" path="res://scripts/round_timer.gd" id="9_4q3ug"]
-[ext_resource type="PackedScene" uid="uid://b41of83uqk7lg" path="res://scenes/consumables/wall_potion_temp.tscn" id="12_vrjyx"]
+[ext_resource type="PackedScene" uid="uid://b41of83uqk7lg" path="res://scripts/consumables/wall_potion_temp.tscn" id="12_vrjyx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pomkq"]
 bg_color = Color(0.358417, 0, 0.01308, 1)
