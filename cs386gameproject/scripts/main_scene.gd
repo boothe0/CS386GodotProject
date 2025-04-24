@@ -5,29 +5,26 @@ var spawn_interval = 3.0
 var rng = RandomNumberGenerator.new()
 
 # world bounds
-var left_bound: int
-var right_bound: int
-var top_bound: int
-var bottom_bound: int
+var left_bound_position: int
+var right_bound_position: int
+var top_bound_position: int
+var bottom_bound_position: int
 
 var Enemy = preload("res://scenes/enemy.tscn")
 var RangedEnemy = preload("res://scenes/ranged_enemy.tscn")
 
-@onready var GroundLayer = $GroundLayer
+@onready var top_bound = $ArenaBoundary/CollisionShape2D
+@onready var left_bound = $ArenaBoundary/CollisionShape2D2
+@onready var bottom_bound = $ArenaBoundary/CollisionShape2D3
+@onready var right_bound = $ArenaBoundary/CollisionShape2D4
 @onready var SpawnTimer = $SpawnTimer
 
 func _ready() -> void:
-	var ground_rect = GroundLayer.get_used_rect()
-	var ground_position = ground_rect.position
-
-	# add offset to ensure enemies in bounds
-	var in_bounds_offset = GroundLayer.rendering_quadrant_size * 2
-
 	# get arena bounds
-	left_bound = ground_position.x + in_bounds_offset
-	right_bound = ground_position.x + ground_rect.size.x * GroundLayer.rendering_quadrant_size
-	top_bound = ground_position.y + in_bounds_offset
-	bottom_bound = ground_position.y + ground_rect.size.y * GroundLayer.rendering_quadrant_size
+	left_bound_position = left_bound.position.x
+	right_bound_position = right_bound.position.x
+	top_bound_position = top_bound.position.y
+	bottom_bound_position = bottom_bound.position.y
 
 	# start spawn interval timer
 	SpawnTimer.wait_time = spawn_interval
@@ -48,17 +45,17 @@ func get_random_position() -> Vector2:
 	var result: Vector2
 	var side = rng.randi_range(0, 3)
 	if side == 0:  # top of screen
-		var x_cord = rng.randi_range(left_bound, right_bound)
-		result = Vector2(x_cord, top_bound)
+		var x_cord = rng.randi_range(left_bound_position, right_bound_position)
+		result = Vector2(x_cord, top_bound_position)
 	elif side == 1:  # right of screen
-		var y_cord = rng.randi_range(top_bound, bottom_bound)
-		result = Vector2(right_bound, y_cord)
+		var y_cord = rng.randi_range(top_bound_position, bottom_bound_position)
+		result = Vector2(right_bound_position, y_cord)
 	elif side == 2:  # bottom of screen
-		var x_cord = rng.randi_range(left_bound, right_bound)
-		result = Vector2(x_cord, bottom_bound)
+		var x_cord = rng.randi_range(left_bound_position, right_bound_position)
+		result = Vector2(x_cord, bottom_bound_position)
 	else:  # left of screen
-		var y_cord = rng.randi_range(top_bound, bottom_bound)
-		result = Vector2(left_bound, y_cord)
+		var y_cord = rng.randi_range(top_bound_position, bottom_bound_position)
+		result = Vector2(left_bound_position, y_cord)
 
 	return result
 
