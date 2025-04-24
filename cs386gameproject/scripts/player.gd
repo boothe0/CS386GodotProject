@@ -238,7 +238,7 @@ func take_damage(amount):
 			play_shield_break_effect()
 	else:
 		# start damaging health
-		health -= amount
+		health = min(health - amount, max_health)
 		health_update.emit()
 		if health <= 0:
 			die()
