@@ -9,8 +9,8 @@ extends CharacterBody2D
 # movement
 const SPEED = 80
 const ATTACK_COOLDOWN = 1.5
-const BASE_ATTACK_DAMAGE = 1
-const BASE_HEALTH = 3
+const BASE_ATTACK_DAMAGE = 2
+const BASE_HEALTH = 5
 const STOP_DISTANCE = 10
 var direction = Vector2.ZERO
 

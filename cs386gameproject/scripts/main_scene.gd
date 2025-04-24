@@ -18,6 +18,8 @@ var SpeedEnemy = preload("res://scenes/speed_enemy.tscn")
 @onready var SpawnTimer = $SpawnTimer
 
 func _ready() -> void:
+	randomize()
+
 	var ground_rect = GroundLayer.get_used_rect()
 	var ground_position = ground_rect.position
 
@@ -36,11 +38,11 @@ func _ready() -> void:
 	SpawnTimer.start()
 
 func _on_SpawnTimer_timeout():
-	# 1 in 3 chance to spawn any of the 3 enemies
+	# Randomly choose one of the three enemy types
 	var enemy_scenes = [Enemy, RangedEnemy, SpeedEnemy]
-	var enemy_scene = SpeedEnemy
+	var enemy_scene = enemy_scenes[randi() % enemy_scenes.size()]
 	
-	# spawn an enemy at a random position
+	# Spawn an enemy at a random position
 	var e = enemy_scene.instantiate()
 	e.position = get_random_position()
 	add_child(e)

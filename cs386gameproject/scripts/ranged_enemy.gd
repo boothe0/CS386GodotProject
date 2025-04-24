@@ -10,7 +10,7 @@ extends CharacterBody2D
 const SPEED = 50
 const BASE_ATTACK_COOLDOWN = 1.5
 const BASE_ATTACK_DAMAGE = 1
-const BASE_HEALTH = 3
+const BASE_HEALTH = 4
 const STOP_DISTANCE = 10
 var direction = Vector2.ZERO
 
