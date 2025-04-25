@@ -41,6 +41,7 @@
 - What feature or aspect of this game did you like the most?
 - What feature or aspect of this game did you like the least?
 - Were there any features or aspects of this game that made it unique in comparison to other games you've played, and if so, what were they?
+- Are there any features you wish this game had that it didn't, and if so, what are they?
 - How likely would you be to play this game again?
 - (If they say unlikely or seem on the fence) Is there anything we could change about this game that would make you more likely to play it again?
 
