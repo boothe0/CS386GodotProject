@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drhjevowv7rx2"
-path="res://.godot/imported/hermes.PNG-53c045bd8d38fd09fbbcee537eb1e87f.ctex"
+uid="uid://c0u784bv2e41m"
+path="res://.godot/imported/hephaestus.png-6eb6a613cd06b9913b5e05052ae6f18e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/hermes.PNG"
-dest_files=["res://.godot/imported/hermes.PNG-53c045bd8d38fd09fbbcee537eb1e87f.ctex"]
+source_file="res://assets/items/upgrades/hephaestus.png"
+dest_files=["res://.godot/imported/hephaestus.png-6eb6a613cd06b9913b5e05052ae6f18e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqed7hivf8m71"
-path="res://.godot/imported/kratos.PNG-98f6e9928b1a19854a246661fc955c08.ctex"
+uid="uid://buu1n7avjq43u"
+path="res://.godot/imported/thermopylae.png-d2d91396449936d4aad3e3faed941a89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/kratos.PNG"
-dest_files=["res://.godot/imported/kratos.PNG-98f6e9928b1a19854a246661fc955c08.ctex"]
+source_file="res://assets/items/upgrades/thermopylae.png"
+dest_files=["res://.godot/imported/thermopylae.png-d2d91396449936d4aad3e3faed941a89.ctex"]
 
 [params]
 
