@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drhjevowv7rx2"
-path="res://.godot/imported/hermes.PNG-53c045bd8d38fd09fbbcee537eb1e87f.ctex"
+uid="uid://bqed7hivf8m71"
+path="res://.godot/imported/kratos.png-db1ef0246c9a1f2ffe7b86897b1ad861.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/hermes.PNG"
-dest_files=["res://.godot/imported/hermes.PNG-53c045bd8d38fd09fbbcee537eb1e87f.ctex"]
+source_file="res://assets/items/upgrades/kratos.png"
+dest_files=["res://.godot/imported/kratos.png-db1ef0246c9a1f2ffe7b86897b1ad861.ctex"]
 
 [params]
 

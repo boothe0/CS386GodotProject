@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx01i6ia4xxjy"
-path="res://.godot/imported/persephone.PNG-35b94e5fb5905d4c759eb94a53279772.ctex"
+uid="uid://d2ofqxwbuc71a"
+path="res://.godot/imported/sandals.png-00004de611e924b9242faf79ecad235f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/persephone.PNG"
-dest_files=["res://.godot/imported/persephone.PNG-35b94e5fb5905d4c759eb94a53279772.ctex"]
+source_file="res://assets/items/upgrades/sandals.png"
+dest_files=["res://.godot/imported/sandals.png-00004de611e924b9242faf79ecad235f.ctex"]
 
 [params]
 

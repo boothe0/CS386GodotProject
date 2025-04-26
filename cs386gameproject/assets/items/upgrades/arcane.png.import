@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr5ysq4sytrud"
-path="res://.godot/imported/pleione.PNG-2a57f6ee0b17acc81d8f9d9692e226a5.ctex"
+uid="uid://dpcllv7qrjqa2"
+path="res://.godot/imported/arcane.png-14279b0520d32755b9f9b1623c5b8616.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/pleione.PNG"
-dest_files=["res://.godot/imported/pleione.PNG-2a57f6ee0b17acc81d8f9d9692e226a5.ctex"]
+source_file="res://assets/items/upgrades/arcane.png"
+dest_files=["res://.godot/imported/arcane.png-14279b0520d32755b9f9b1623c5b8616.ctex"]
 
 [params]
 
