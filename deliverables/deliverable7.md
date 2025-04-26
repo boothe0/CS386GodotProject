@@ -4,6 +4,22 @@
 
 ## Verification
 
+- Test framework: GUT (Godot Unit Test)
+- ![Autmated unit tests](https://github.com/boothe0/CS386GodotProject/tree/main/cs386gameproject/tests/unit_tests)
+- An example of a test case that makes use of mock objects:
+    - ![Mock objects used for testing](https://github.com/boothe0/CS386GodotProject/tree/main/cs386gameproject/tests/mock_objects)
+    - ![Test using the mock player as a target](https://github.com/boothe0/CS386GodotProject/blob/main/cs386gameproject/tests/mock_objects/player.gd)
+    - This automated unit test checks that
+      1. The player is taking the appropriate amount of damage
+      2. The player dies when they are at or below 0hp
+      3. The player heals the appropriate amount of damage
+      4. The player recieves the correct amount of coins
+      5. Coin counts are stored equally across all individual scripts
+      6. Inside of the mock player, a mock coin count label is used to simulate the real in game label, which must also be equal to the other coin totals
+- A print screen showing the result of the unit tests execution. 
+
+
+
 ## Acceptance Test
 
 ## Validation
