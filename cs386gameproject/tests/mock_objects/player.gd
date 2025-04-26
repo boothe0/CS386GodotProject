@@ -15,6 +15,14 @@ const BASE_HEALTH = 5
 @export var dash_speed = 20
 @export var friction = .5
 
+const bronze_texture = "bronze"
+const gold_texture = "gold"
+const silver_texture = "silver"
+
+var mock_coin_label = {
+	"texture": null,
+	"amount": PlayerVariables.coins
+}
 
 # damage taken, death functions
 func take_damage(amount):
@@ -34,3 +42,19 @@ func heal(amount):
 		return
 	
 	health = min(health + amount, max_health)
+	
+func add_coins(amount: int, coin_type) -> void:
+	# handle coin logic
+	PlayerVariables.coins += amount
+	cumulative_coin_total += amount
+	update_total_coin_label()
+	match coin_type:
+		0:
+			mock_coin_label["texture"] = bronze_texture
+		1:
+			mock_coin_label["texture"] = silver_texture
+		2:
+			mock_coin_label["texture"] = gold_texture
+
+func update_total_coin_label():
+	mock_coin_label["amount"] = cumulative_coin_total
