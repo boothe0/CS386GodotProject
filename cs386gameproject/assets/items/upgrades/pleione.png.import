@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dr5ysq4sytrud"
-path="res://.godot/imported/pleione.PNG-2a57f6ee0b17acc81d8f9d9692e226a5.ctex"
+path="res://.godot/imported/pleione.png-0a19460458851ddd10871b17fa60c4cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/pleione.PNG"
-dest_files=["res://.godot/imported/pleione.PNG-2a57f6ee0b17acc81d8f9d9692e226a5.ctex"]
+source_file="res://assets/items/upgrades/pleione.png"
+dest_files=["res://.godot/imported/pleione.png-0a19460458851ddd10871b17fa60c4cc.ctex"]
 
 [params]
 
