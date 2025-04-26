@@ -1,5 +1,5 @@
 extends GutTest
-@onready var enemy_script = load("res://tests/test_scripts/enemy.gd")
+@onready var enemy_script = load("res://tests/mock_objects/enemy.gd")
 @onready var enemy = enemy_script.new()
 
 func test_take_damage():
