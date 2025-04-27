@@ -16,7 +16,9 @@
       4. The player recieves the correct amount of coins
       5. Coin counts are stored equally across all individual scripts
       6. Inside of the mock player, a mock coin count label is used to simulate the real in game label, which must also be equal to the other coin totals
-- A print screen showing the result of the unit tests execution. 
+- A print screen showing the result of the unit tests execution.
+
+![testpass](https://github.com/user-attachments/assets/e44ba598-d374-441f-b386-c8e3a9895a60)
 
 
 
