@@ -87,7 +87,7 @@
 - Overall, not the best first impression from the user. Got fairly frusturated with the difficulty and accessibility of it. 
 
 ### Reflection
-1. Willam Merrit
+1. Willam Merrit:
 - It doesnt tell you that you can left click to hit things only E. It does not give you an objective that you are supposed to defend the middle.
 - Killing the middle objective does not end the game
 - Very easy to control
@@ -108,6 +108,26 @@ as a color of the upgrade you bought. It shows progression more.
 - Adding in the upgrades showing up in the shop as a sense of progression.
 - Very likely to play again and excited to see where it goes.
 - Said they would buy it if fully fleshed out for 5-10 bucks. Nerf the ranged guys. Maybe add hearts for the hp bar (legend of zelda fan).
+
+2. Brienne Harvey:
+- The tutorial was difficult to understand and the instructions flashed by too quickly to both be able to read and test out the action. The words were difficult to read.
+- Rates the controls a 3. The potion action didn’t seem to do anything in the tutorial, so it was not helpful to know.
+- Had no idea which bars corresponded with what. They were not helpful until the third try.
+- Rates the shop a 4. The words describing the purchasable options were hard to read. It was also much too zoomed in. Could not read the big white letters that appeared when you walk near the shopkeeper. Items already purchased still appeared available after they were purchased. Was not sure if they had to buy objects again after dying or after each round. Did not understand how or when the shop would appear either.
+- The white barriers around the center were hard to see. The floor is the same color and similar texture. There were multiple times they would try to shoot or walk through the walls. It wasn’t clear that there was a cool down after each sword swing. The opening story is blocked by the frame and it is typed in a font that is difficult to read. They did not understand that every object on the level floor was an obstacle right away.
+- They couldn’t read it well, so they didn’t understand the narrative at all. The border design framing the story explanation was the same color as the story text, so it was hard to focus on the words that were written next to it. Also, they do not think “incensing” is the appropriate word to use, it looks like it was meant to say “incentivizing” but that is still clunky wording.
+- Everything but the main character fits together. The main character doesn’t match the aesthetic of the rest of the game. The color palette of everything was disharmonious and looked boring. The “try again” screen was nice, everything should match that screen.
+- They were mostly confused about the mechanics and goal of the game, so they were not engaged in the game itself as they were trying to figure out how to play.
+- It was difficult because it wasn’t clear how to pass a level. The cool down made it difficult to fight foes.
+- They have not played a roguelite game before.
+- It was alright.
+- They liked the greek myth references.
+- They liked the gameplay of the game the least.
+- To them, it didn’t seem very unique.
+- A harmonious color palette and an accessible font. they would also like to see a menu that describes the controls available in game, outside of the tutorial. Possibly a button you can press that would bring up a pop-up.
+- Not very likely.
+- "If it looked nicer and the readability was better, I would consider playing it again."  
+
 
 
 
