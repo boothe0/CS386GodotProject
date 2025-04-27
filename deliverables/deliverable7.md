@@ -86,7 +86,7 @@
 - Control of the character (moving, melle, and ranged attacks) was pretty good/smooth.
 - Overall, not the best first impression from the user. Got fairly frusturated with the difficulty and accessibility of it. 
 
-2. Jason Alvarez:
+2. Melanie Nagel:
 - The user moved through the tutorial relatively quickly, but needed to double-check the control instructions after missing a couple of mechanics (especially dodge and ranged attack).
 - During the first full round, the user did well moving and attacking but took a lot of damage because they forgot to monitor stamina and mana usage.
 - They made it to the shop after the second round, explored the items easily, and purchased a healing item, but forgot to actually use it in the next round.
@@ -134,7 +134,7 @@ as a color of the upgrade you bought. It shows progression more.
 - Not very likely.
 - "If it looked nicer and the readability was better, I would consider playing it again."  
 
-3. Jason Alvarez:
+3. Melanie Nagel:
 - The tutorial was mostly helpful but could be improved by having an option to manually "repeat" or "review" certain mechanics after finishing it, without needing to restart everything. Maybe a controls menu they can access mid-game.
 - Rates the controls a 7. Movement and basic attacks were intuitive, but dodge could be better mapped (suggested something like double-tap movement key or a different hotkey).
 - Thought the health, mana, and stamina bars were useful once he noticed them — initially forgot to check them because they are small and placed a bit high on the screen.
