@@ -80,6 +80,12 @@
 - They were able to control the player very well and seemed inutitive overall.
 - They were really impressed but at times got a bit upset with the difficulty of some of the enemies. They were drawn to the ranged combat.
 
+2. Brienne Harvey:
+- The user missed the tutorial button the first time, went straight in to a game round, died, and then did the tutorial. Had to repeat the tutorial a couple of times because the text moved by too fast, and font was hard to read.
+- The player got through a few rounds, but during those rounds, did not take into account the health, stamina, and mana bars, so would spam attacks. Barely used the dodge function. Did not notice the timer at the top, so was confused when the round would end, and change to the shop. Navigated the shop with minimal trouble. Again because of the font, it was bit difficult to read for them.
+- Control of the character (moving, melle, and ranged attacks) was pretty good/smooth.
+- Overall, not the best first impression from the user. Got fairly frusturated with the difficulty and accessibility of it. 
+
 ### Reflection
 1. Willam Merrit
 - It doesnt tell you that you can left click to hit things only E. It does not give you an objective that you are supposed to defend the middle.
