@@ -90,7 +90,7 @@
 - The user moved through the tutorial relatively quickly, but needed to double-check the control instructions after missing a couple of mechanics (especially dodge and ranged attack).
 - During the first full round, the user did well moving and attacking but took a lot of damage because they forgot to monitor stamina and mana usage.
 - They made it to the shop after the second round, explored the items easily, and purchased a healing item, but forgot to actually use it in the next round.
-- Overall, Jason stayed pretty positive, was engaged, and laughed at some of the tougher enemy moments. He appreciated the flow of rounds even when he lost.
+- Overall, Melanie stayed pretty positive, was engaged, and laughed at some of the tougher enemy moments. She appreciated the flow of rounds even when she lost.
 
 ### Reflection
 1. Willam Merrit:
@@ -137,21 +137,21 @@ as a color of the upgrade you bought. It shows progression more.
 3. Melanie Nagel:
 - The tutorial was mostly helpful but could be improved by having an option to manually "repeat" or "review" certain mechanics after finishing it, without needing to restart everything. Maybe a controls menu they can access mid-game.
 - Rates the controls a 7. Movement and basic attacks were intuitive, but dodge could be better mapped (suggested something like double-tap movement key or a different hotkey).
-- Thought the health, mana, and stamina bars were useful once he noticed them — initially forgot to check them because they are small and placed a bit high on the screen.
+- Thought the health, mana, and stamina bars were useful once she noticed them — initially forgot to check them because they are small and placed a bit high on the screen.
 - Rates the shop a 9 for ease of use. Said it was straightforward, liked hovering over items to see the description and price. Minor note: wished you could preview what the item effect would actually look like after buying it.
-- Minor confusion: Jason said it was not obvious that stamina was limiting his ability to spam dodge or melee attacks at first. He suggested a quick pop-up or icon warning when you try to dodge without stamina.
+- Minor confusion: Melanie said it was not obvious that stamina was limiting her ability to spam dodge or melee attacks at first. He suggested a quick pop-up or icon warning when you try to dodge without stamina.
 - Found the narrative interesting but felt it needed "a little more spice" — suggested a short animated intro or more dialogue in-between rounds.
-- Described the art style as "retro cartoonish" and said it fit the overall mood, although he thought adding a little more color contrast between enemies and background would help in hectic moments.
-- Rated engagement pretty highly. Said it was "easy to lose track of time in a good way" once he got into the rhythm of dodging and fighting.
+- Described the art style as "retro cartoonish" and said it fit the overall mood, although she thought adding a little more color contrast between enemies and background would help in hectic moments.
+- Rated engagement pretty highly. Said it was "easy to lose track of time in a good way" once she got into the rhythm of dodging and fighting.
 - Felt the first round was a little too easy, but by the second or third round, things escalated nicely. Appreciated the challenge curve but recommended spawning new enemy types earlier.
-- Jason has played a few roguelites like Enter the Gungeon and Hades, and said this game felt much more "bite-sized" and accessible, more focused on short play sessions rather than big commitment runs.
+- Melanie has played a few roguelites like Enter the Gungeon and Hades, and said this game felt much more "bite-sized" and accessible, more focused on short play sessions rather than big commitment runs.
 - Thought the playtime was "just right" for casual sessions. Mentioned this would be a good game to play "when you have 10–15 minutes."
 - Favorite feature: the shop items and upgrades. Liked seeing tangible improvements between rounds and said it made progression satisfying.
-- Least favorite feature: no clear indicator when you were out of stamina mid-combat. Sometimes it looked like the game ignored his inputs but it was actually a stamina issue.
+- Least favorite feature: no clear indicator when you were out of stamina mid-combat. Sometimes it looked like the game ignored her inputs but it was actually a stamina issue.
 - Unique aspect: said the mini-round based structure (short rounds plus a shop phase) felt different from other roguelites that usually have long continuous runs.
 - Wished there were "more dramatic" ultimate abilities or power-ups you could earn across multiple rounds (kind of like building up a super move after doing well).
 - Very likely to play again.
-- Said he'd love to see daily challenges or randomized enemy modifiers in future updates to keep it fresh over time.
+- Said she'd love to see daily challenges or randomized enemy modifiers in future updates to keep it fresh over time.
 
 
 
