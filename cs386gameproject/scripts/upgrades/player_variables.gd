@@ -9,3 +9,5 @@ extends Node
 @onready var sword_scale: float = 1.0
 
 @onready var projectile_scale: float = 1.0
+
+@onready var dash_scale: float = 1.0
