@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs43au0xsb7po"
-path="res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"
+uid="uid://c0u784bv2e41m"
+path="res://.godot/imported/hephaestus.png-6eb6a613cd06b9913b5e05052ae6f18e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/laurel.PNG"
-dest_files=["res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"]
+source_file="res://assets/items/upgrades/hephaestus.png"
+dest_files=["res://.godot/imported/hephaestus.png-6eb6a613cd06b9913b5e05052ae6f18e.ctex"]
 
 [params]
 

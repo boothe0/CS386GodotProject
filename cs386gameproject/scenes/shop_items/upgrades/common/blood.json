@@ -1,5 +1,5 @@
 {
-  "texture": "res://assets/items/upgrades/Blood.png",
+  "texture": "res://assets/items/upgrades/blood.png",
   "name": "Blood of Ares",
   "price": 10,
   "consumable": false,
