@@ -42,7 +42,7 @@ var last_direction = Vector2.DOWN
 var last_movement_direction = Vector2.DOWN
 var dash_direction = Vector2()
 @export var dodge_cost = 3
-@export var dash_speed = 20
+@export var dash_speed = 20 * PlayerVariables.dash_scale
 @export var friction = .5
 
 # misc (for now)
