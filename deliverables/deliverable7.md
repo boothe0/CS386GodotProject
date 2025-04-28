@@ -165,3 +165,10 @@ as a color of the upgrade you bought. It shows progression more.
 
 
 ## Teamwork
+
+- Asher (16.7%) - Verification
+- Chandler (16.7%) - Acceptance
+- Camelia (16.7%) - Script for validation
+- Elizabeth (16.7%) - Results and reflection for user #1, William Merritt
+- Maya (16.7%) - Results and reflection for user #2, Brienne Harvey
+- Ethan (16.7%) - Results and reflection for user #3, Melanie Nagel
