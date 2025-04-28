@@ -6,10 +6,10 @@ Tiny Roguelite is a roguelite game that allows busy fans of the genre to play wi
 ## Verification
 
 - Test framework: GUT (Godot Unit Test)
-- ![Autmated unit tests](https://github.com/boothe0/CS386GodotProject/tree/main/cs386gameproject/tests/unit_tests)
+- [Automated unit tests](https://github.com/boothe0/CS386GodotProject/tree/main/cs386gameproject/tests/unit_tests)
 - An example of a test case that makes use of mock objects:
-    - ![Mock objects used for testing](https://github.com/boothe0/CS386GodotProject/tree/main/cs386gameproject/tests/mock_objects)
-    - ![Test using the mock player as a target](https://github.com/boothe0/CS386GodotProject/blob/main/cs386gameproject/tests/mock_objects/player.gd)
+    - [Mock objects used for testing](https://github.com/boothe0/CS386GodotProject/tree/main/cs386gameproject/tests/mock_objects)
+    - [Test using the mock player as a target](https://github.com/boothe0/CS386GodotProject/blob/main/cs386gameproject/tests/mock_objects/player.gd)
     - This automated unit test checks that
       1. The player is taking the appropriate amount of damage
       2. The player dies when they are at or below 0hp
@@ -158,25 +158,6 @@ as a color of the upgrade you bought. It shows progression more.
 - Wished there were "more dramatic" ultimate abilities or power-ups you could earn across multiple rounds (kind of like building up a super move after doing well).
 - Very likely to play again.
 - Said she'd love to see daily challenges or randomized enemy modifiers in future updates to keep it fresh over time.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
