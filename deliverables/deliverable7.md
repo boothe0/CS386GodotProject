@@ -1,6 +1,7 @@
 # Deliverable 7: Verification and Validation
 
 ## Description
+Tiny Roguelite is a roguelite game that allows busy fans of the genre to play without having to make a large time commitment, providing a short-form version of the genre that still contains all the features found in a traditional rougelite game. This game allows players to complete a run in under twenty minutes while still being immersed in an engaging story and multiple rounds of combat. The game's combat system enables players to attack enemies with melee and ranged attacks, as well as keeping track of both the player's and the enemies' health and stamina. The player's main objective during a battle is to defend an object that is located at the center of the game arena from an onslaught of enemies who are moving in to attack from every direction. This constant onslaught of enemies combined with the stamina system requires the player to strategically attack based on their current strength and capabilites, adding difficulty to the game. Moreover, at the end of each round, the player can use the coins they collected from defeating enemies to purchase upgrades and consumables in the game's shop that increase their strength so that in future rounds they can attack enemies more efficiently.
 
 ## Verification
 
