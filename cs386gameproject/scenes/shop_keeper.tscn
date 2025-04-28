@@ -1,29 +1,29 @@
 [gd_scene load_steps=8 format=3 uid="uid://bd5hpw8tky5b4"]
 
-[ext_resource type="Script" uid="uid://0xcmuvxvo72c" path="res://scripts/shop_keeper.gd" id="1_0qv5c"]
-[ext_resource type="Texture2D" uid="uid://b52jwvyul4bvv" path="res://assets/16x16 Magical Forest Asset Pack/Characters/Blue DefaultCharacter-Idle.png" id="1_ddbw7"]
+[ext_resource type="Script" path="res://scripts/shop_keeper.gd" id="1_0qv5c"]
+[ext_resource type="Texture2D" uid="uid://ccehc4m2ug82d" path="res://assets/Characters/Shopkeeper.png" id="2_0h0nv"]
 [ext_resource type="PackedScene" uid="uid://bp43gmbaeokfh" path="res://scenes/interactables/shopkeep.tscn" id="3_qrwxy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5fws6"]
 radius = 7.0
 height = 14.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_klubw"]
-atlas = ExtResource("1_ddbw7")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygh0a"]
+atlas = ExtResource("2_0h0nv")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_57eju"]
-atlas = ExtResource("1_ddbw7")
+[sub_resource type="AtlasTexture" id="AtlasTexture_nku6p"]
+atlas = ExtResource("2_0h0nv")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iv8lg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_klubw")
+"texture": SubResource("AtlasTexture_ygh0a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_57eju")
+"texture": SubResource("AtlasTexture_nku6p")
 }],
 "loop": true,
 "name": &"idleAnimation",
