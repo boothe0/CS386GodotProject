@@ -24,6 +24,11 @@ Tiny Roguelite is a roguelite game that allows busy fans of the genre to play wi
 
 
 ## Acceptance Test
+- Framework: GUT
+- Link to test: https://github.com/boothe0/CS386GodotProject/blob/deliverable-7/cs386gameproject/tests/acceptance_tests/test_move_up.gd
+- In this test, I tried to test if the player character would move upwards on the screen. The player did not move within the alotted frames. This might be a failure on using GUT.
+- ![testfail](https://imgur.com/2KwNPRs.png)
+
 
 ## Validation
 
