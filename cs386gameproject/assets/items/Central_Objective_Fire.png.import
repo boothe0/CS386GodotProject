@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i1d66wojqhrd"
-path="res://.godot/imported/Ears 000.png-9525c6521aa844180ea8b068a6f6c737.ctex"
+uid="uid://bios31a02bdp0"
+path="res://.godot/imported/Central_Objective_Fire.png-c7318b9f41827c4b8f86d325751cdef1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cats Download/Markings/Ears 000.png"
-dest_files=["res://.godot/imported/Ears 000.png-9525c6521aa844180ea8b068a6f6c737.ctex"]
+source_file="res://assets/items/Central_Objective_Fire.png"
+dest_files=["res://.godot/imported/Central_Objective_Fire.png-c7318b9f41827c4b8f86d325751cdef1.ctex"]
 
 [params]
 
