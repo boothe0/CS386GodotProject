@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjdl4r4yttfee"
-path="res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"
+uid="uid://bs43au0xsb7po"
+path="res://.godot/imported/laurel.png-c608ccc8c42f11e8d2751d6b15d42795.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/upgrades/laurel.PNG"
-dest_files=["res://.godot/imported/laurel.PNG-0d67c749bcbb39daeaf6a25e25756680.ctex"]
+source_file="res://assets/items/upgrades/laurel.png"
+dest_files=["res://.godot/imported/laurel.png-c608ccc8c42f11e8d2751d6b15d42795.ctex"]
 
 [params]
 
