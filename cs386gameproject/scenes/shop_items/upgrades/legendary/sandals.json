@@ -1,8 +1,0 @@
-{
-  "texture": "res://assets/items/upgrades/sandals.png",
-  "name": "Marathon Sandals",
-  "price": 25,
-  "consumable": false,
-  "description": "+ dash distance",
-  "script": "res://scripts/upgrades/sandals.gd"
-}
