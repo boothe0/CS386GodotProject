@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlhra0wjxnlvj"]
+[gd_scene load_steps=5 format=3 uid="uid://dlhra0wjxnlvj"]
 
-[ext_resource type="Script" uid="uid://hcujhl5srhpe" path="res://scripts/center_objective.gd" id="1_bjelu"]
-[ext_resource type="Texture2D" uid="uid://dvouhp4mkk1by" path="res://assets/Cats Download/orange_0.png" id="1_ni23r"]
+[ext_resource type="Script" path="res://scripts/center_objective.gd" id="1_bjelu"]
+[ext_resource type="Texture2D" uid="uid://bios31a02bdp0" path="res://assets/items/Central_Objective_Fire.png" id="2_5t3lp"]
+[ext_resource type="Texture2D" uid="uid://dnw57o2j5gdaw" path="res://assets/items/Shadow.png" id="3_ecae5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fn2pe"]
 size = Vector2(12, 26)
@@ -10,9 +11,9 @@ size = Vector2(12, 26)
 script = ExtResource("1_bjelu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ni23r")
-region_enabled = true
-region_rect = Rect2(10, 33, 11, 25)
+texture = ExtResource("2_5t3lp")
+hframes = 11
+region_rect = Rect2(0, 0, 24, 24)
 
 [node name="ObjectiveHitbox" type="Area2D" parent="."]
 collision_layer = 7
@@ -22,6 +23,10 @@ collision_mask = 7
 shape = SubResource("RectangleShape2D_fn2pe")
 
 [node name="DamageTimer" type="Timer" parent="."]
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(-2, -1)
+texture = ExtResource("3_ecae5")
 
 [connection signal="body_entered" from="ObjectiveHitbox" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="ObjectiveHitbox" to="." method="_on_area_2d_body_exited"]
